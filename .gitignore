@@ -1,0 +1,25 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Data / frozen extracts — large, reproducible from the pinned extract
+data/
+extracts/
+*.parquet
+*.duckdb
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

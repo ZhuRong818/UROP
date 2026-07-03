@@ -1,0 +1,45 @@
+# EventX frozen-extract config. Pin this per extract version; downstream work runs
+# against the frozen copy, never live calls (guardrail A3).
+
+extract:
+  version: "v0"            # bump on every re-pull; recorded in meta.extract_version
+  # config_hash + row_counts are written by the ingest job, not by hand.
+
+api:
+  base_url_env: FINDATA_BASE_URL   # value lives in .env, not here
+  token_env: FINDATA_TOKEN
+  rpm: 90                  # stay under the 100 req/min cap with headroom
+
+db:
+  # Connection comes from env (PGHOST/PGPORT/PGDATABASE/PGUSER/PGPASSWORD); see .env.
+  schemas: [raw, curated, meta]
+
+# Study window — a dense 12–18-month span with simultaneous KOL+news+PM coverage.
+# Provisional; finalize after coverage analysis (implemenation_plan §2.2).
+window:
+  start: "2024-01-01T00:00:00Z"
+  end: "2025-06-30T23:59:59Z"
+
+venues: [polymarket, kalshi]
+
+# Bar reconstruction (guardrail C7/C8).
+bars:
+  base_freq_min: 1
+  logodds_clip_eps: 1.0e-4   # clip p to [eps, 1-eps] before ln(p/(1-p))
+  price_source: midprice_then_last   # orderbook mid where L2 exists, else last trade
+
+# Jump labels (guardrail C8/C9) — calibrate on an early held-out slice, never the test period.
+labels:
+  horizons_min: [5, 30, 120, 360, 1440]   # 5m, 30m, 2h, 6h, 24h
+  k_sigma: 4.0
+  vol_window_bars: 240
+  min_trades: 3
+  min_notional: 100.0
+  terminal_convergence_p: 0.98   # exclude bars once |p-0.5| implies p>=0.98 or <=0.02 and stays
+
+# Purged + embargoed walk-forward CV (guardrail B5).
+splits:
+  n_splits: 5
+  embargo_frac: 0.01
+  # Final contiguous block held out untouched for headline numbers.
+  holdout_frac: 0.2
