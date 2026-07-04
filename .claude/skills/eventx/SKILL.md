@@ -58,10 +58,21 @@ blindly.
 
 ## C. Measurement mechanics
 
-7. **Reconstruct bars from trades**, not the candle endpoint. Validate the reconstruction
-   against `/candles` only on the ~7-month overlap.
-   *Why:* Polymarket candles are only ~7 months — too short for a uniform label across the
-   full 12–18-month window.
+7. **Trade history is retained only for a recent rolling window (~6 weeks); older intraday
+   data exists ONLY as candles.** Verified 2026-07-04: on Polymarket, markets with real
+   daily-candle volume back to 2025-07 return **zero** trades before a hard ~2026-05-21
+   wall (the `to` cursor works — the trades simply are not retained). Kalshi shows the same:
+   no trades reachable before 2025 on any market. So:
+   - **Recent window (within retention):** reconstruct bars from trades (finest, true
+     microstructure), and validate the reconstruction against `/candles` on the overlap.
+   - **Historical window (2025 and earlier):** trades do not exist — you must fall back to
+     the candle endpoint (`bucket_ts, open/high/low/close, volume`). Daily reaches back
+     furthest; hourly (60m) → ~7 months; 15m is row-capped at 5000; 1m/5m are recent-only.
+   Treat the retention boundary as a **granularity seam** and document it; never assume a
+   uniform trade-reconstructed bar exists across the full study window.
+   *Why:* the plan assumed trades go back to 2020 and candles are the short/validation-only
+   source — the API is the reverse. Silently pulling `/trades` for a 2025 window yields
+   empty pages, not an error, and would drop the entire historical spine without warning.
 8. **Work in log-odds space** `y = ln(p/(1−p))` with `[ε, 1−ε]` clipping; detect jumps with
    an adaptive threshold `k · rolling σ(Δy)`.
    *Why:* a 0.02→0.05 move is large in odds but tiny in raw price — a fixed raw threshold

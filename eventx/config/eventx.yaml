@@ -14,19 +14,41 @@ db:
   # Connection comes from env (PGHOST/PGPORT/PGDATABASE/PGUSER/PGPASSWORD); see .env.
   schemas: [raw, curated, meta]
 
+# Data availability — VERIFIED against the live API 2026-07-04 (guardrail C7).
+# The findata API retains individual TRADES for only a recent rolling window (~6 weeks);
+# older intraday data exists ONLY as candles. This inverts the plan's assumption.
+#   * Polymarket trades: hard retention wall ~2026-05-21. Markets with real daily-candle
+#     volume back to 2025-07 return ZERO trades before the wall (the `to` cursor works).
+#   * Kalshi trades: no trades reachable before 2025 on any current-universe market.
+#   * Candles retain deeper history: daily furthest back; 60m ~7 months; 15m row-capped at
+#     5000; 1m/5m recent-only. Fields: bucket_ts, open/high/low/close, volume.
+# Implication: trade-reconstructed bars are only possible inside the retention window.
+# Any historical (2025-) window must use candle-based bars — a documented granularity seam.
+data_availability:
+  trade_retention_wall_polymarket: "2026-05-21T00:00:00Z"   # earliest trade reachable; re-verify per pull
+  historical_bar_source: candles                            # 2025- has no trades; candles only
+  candle_intervals_min: [1, 5, 15, 60, 1440]
+  candle_row_cap: 5000                                      # observed cap on finer intervals
+
 # Study window — a dense 12–18-month span with simultaneous KOL+news+PM coverage.
-# Provisional; finalize after coverage analysis (implemenation_plan §2.2).
+# PROVISIONAL and CURRENTLY UNREALIZABLE AT TICK LEVEL: this span predates the trade
+# retention wall, so tick-based bars do not exist for it. Pending user design decision —
+# (A) forward-collect a tick window from now, (B) candle-based bars for this historical
+# span, or (C) hybrid with a granularity seam. See guardrail C7.
 window:
   start: "2024-01-01T00:00:00Z"
   end: "2025-06-30T23:59:59Z"
 
 venues: [polymarket, kalshi]
 
-# Bar reconstruction (guardrail C7/C8).
+# Bar reconstruction (guardrail C7/C8). Trades where retained, else candles (see
+# data_availability). base_freq_min applies to the trade-reconstructed window; historical
+# candle-sourced bars are limited to available candle intervals (60m+ for deep history).
 bars:
   base_freq_min: 1
   logodds_clip_eps: 1.0e-4   # clip p to [eps, 1-eps] before ln(p/(1-p))
   price_source: midprice_then_last   # orderbook mid where L2 exists, else last trade
+  historical_candle_interval_min: 60   # coarsest reliable deep-history bar (guardrail C7 seam)
 
 # Jump labels (guardrail C8/C9) — calibrate on an early held-out slice, never the test period.
 labels:
