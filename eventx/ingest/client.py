@@ -27,8 +27,17 @@ from eventx.settings import ApiSettings
 
 log = logging.getLogger(__name__)
 
-# Retry on transient transport errors and on the status codes we re-raise below.
-_RETRYABLE = (httpx.HTTPStatusError, httpx.TransportError)
+# Only these HTTP statuses are worth retrying; 4xx and a deterministic 500 are not
+# (retrying them just wastes the request budget — e.g. the markets/search 500).
+RETRYABLE_STATUS = frozenset({429, 502, 503, 504})
+
+
+class RetryableHTTPError(Exception):
+    """A transient HTTP status we should retry."""
+
+
+# Retry on transient transport errors (timeouts/connect) and retryable statuses only.
+_RETRYABLE = (RetryableHTTPError, httpx.TransportError)
 
 
 class FindataClient:
@@ -76,22 +85,23 @@ class FindataClient:
         reraise=True,
     )
     def get(self, path: str, **params: Any) -> Any:
-        """GET a JSON path. Retries transient errors with exponential backoff.
+        """GET a JSON path.
 
-        429: honor Retry-After, then re-raise to trigger a retry.
-        503: Lumid unreachable / fail-closed — re-raise to retry with backoff.
+        Retries (with backoff) only transient failures: transport timeouts/errors and
+        the statuses in RETRYABLE_STATUS. 429 honors Retry-After first. All other 4xx/5xx
+        (incl. a deterministic 500) raise immediately — the caller re-runs, resumably.
         """
         self._throttle()
         r = self._client.get(path, params=params)
         if r.status_code == 429:
             retry_after = int(r.headers.get("Retry-After", "30"))
-            log.warning("429 rate-limited on %s; sleeping %ss", path, retry_after)
+            log.warning("429 on %s; sleeping %ss then retrying", path, retry_after)
             time.sleep(retry_after)
-            r.raise_for_status()  # -> HTTPStatusError -> tenacity retry
-        if r.status_code == 503:
-            log.warning("503 on %s (Lumid unreachable); backing off", path)
-            r.raise_for_status()
-        r.raise_for_status()
+            raise RetryableHTTPError(f"429 on {path}")
+        if r.status_code in RETRYABLE_STATUS:
+            log.warning("%s on %s; backing off then retrying", r.status_code, path)
+            raise RetryableHTTPError(f"{r.status_code} on {path}")
+        r.raise_for_status()  # non-retryable 4xx/5xx -> raise immediately
         return r.json()
 
     def paginate(
