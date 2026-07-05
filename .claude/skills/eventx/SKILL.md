@@ -65,14 +65,25 @@ blindly.
    no trades reachable before 2025 on any market. So:
    - **Recent window (within retention):** reconstruct bars from trades (finest, true
      microstructure), and validate the reconstruction against `/candles` on the overlap.
-   - **Historical window (2025 and earlier):** trades do not exist — you must fall back to
-     the candle endpoint (`bucket_ts, open/high/low/close, volume`). Daily reaches back
-     furthest; hourly (60m) → ~7 months; 15m is row-capped at 5000; 1m/5m are recent-only.
-   Treat the retention boundary as a **granularity seam** and document it; never assume a
-   uniform trade-reconstructed bar exists across the full study window.
+   - **Historical window:** trades do not exist — fall back to the candle endpoint
+     (`bucket_ts, open/high/low/close, volume`). **`interval` is integer MINUTES:
+     `1|5|15|60|1440`** (never `1m|1h|1d`). Archive coverage floors (developer-confirmed
+     2026-07, and the 60m floor independently verified):
+     - **Polymarket:** daily (`1440`) from **2024-01-02**; `15` & `60` only from
+       **2025-12-05**; `1`/`5` recent-only (finer intervals also row-capped at 5000). So
+       for any Polymarket market older than ~Dec 2025, **only `interval=1440` returns rows**
+       — sub-daily silently returns empty.
+     - **Kalshi:** all intervals back to **2021-06** (far richer than Polymarket).
+   This makes the historical granularity seam **asymmetric across venues**: Polymarket is
+   daily-only before Dec 2025 while Kalshi keeps full resolution — account for it in labels
+   and features rather than assuming a uniform bar. Never assume a uniform trade-
+   reconstructed bar exists across the full study window.
    *Why:* the plan assumed trades go back to 2020 and candles are the short/validation-only
-   source — the API is the reverse. Silently pulling `/trades` for a 2025 window yields
-   empty pages, not an error, and would drop the entire historical spine without warning.
+   source — the API is the reverse. Silently pulling `/trades` (or a sub-daily Polymarket
+   `interval` in 2024–25) yields empty pages, not an error, and would drop the historical
+   spine without warning. **Separately unresolved:** enumerating old *resolved* market IDs —
+   `lqt` lists only current-active markets, `markets/search` is broken, and the lakehouse
+   browse tool was unreachable — so a historical candle spine needs an enumeration path first.
 8. **Work in log-odds space** `y = ln(p/(1−p))` with `[ε, 1−ε]` clipping; detect jumps with
    an adaptive threshold `k · rolling σ(Δy)`.
    *Why:* a 0.02→0.05 move is large in odds but tiny in raw price — a fixed raw threshold

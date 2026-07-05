@@ -14,21 +14,30 @@ db:
   # Connection comes from env (PGHOST/PGPORT/PGDATABASE/PGUSER/PGPASSWORD); see .env.
   schemas: [raw, curated, meta]
 
-# Data availability — VERIFIED against the live API 2026-07-04 (guardrail C7).
-# The findata API retains individual TRADES for only a recent rolling window (~6 weeks);
-# older intraday data exists ONLY as candles. This inverts the plan's assumption.
-#   * Polymarket trades: hard retention wall ~2026-05-21. Markets with real daily-candle
-#     volume back to 2025-07 return ZERO trades before the wall (the `to` cursor works).
+# Data availability — VERIFIED against the live API 2026-07-04 + developer-confirmed
+# archive floors (guardrail C7). `interval` is integer MINUTES (1|5|15|60|1440), not 1m/1h.
+# The API retains individual TRADES for only a recent rolling window (~6 weeks); older
+# intraday data exists ONLY as candles, and Polymarket candle depth is interval-dependent.
+#   * Polymarket trades: hard retention wall ~2026-05-21 (`to` cursor works; older = ZERO).
 #   * Kalshi trades: no trades reachable before 2025 on any current-universe market.
-#   * Candles retain deeper history: daily furthest back; 60m ~7 months; 15m row-capped at
-#     5000; 1m/5m recent-only. Fields: bucket_ts, open/high/low/close, volume.
-# Implication: trade-reconstructed bars are only possible inside the retention window.
-# Any historical (2025-) window must use candle-based bars — a documented granularity seam.
+#   * Polymarket candle floors: daily(1440) from 2024-01-02; 15 & 60 only from 2025-12-05
+#     (60m floor independently verified); 1/5 recent-only + row-capped at 5000. So for any
+#     Polymarket market older than ~Dec 2025, ONLY interval=1440 returns rows.
+#   * Kalshi candles: all intervals back to 2021-06 (far richer than Polymarket).
+# Granularity seam is ASYMMETRIC: Polymarket daily-only pre-Dec-2025, Kalshi full-res to 2021.
+# Still-open blocker: enumerating old RESOLVED market IDs (lqt = current-active only;
+# markets/search broken; lakehouse browse tool unreachable) — needed before any historical spine.
 data_availability:
   trade_retention_wall_polymarket: "2026-05-21T00:00:00Z"   # earliest trade reachable; re-verify per pull
-  historical_bar_source: candles                            # 2025- has no trades; candles only
-  candle_intervals_min: [1, 5, 15, 60, 1440]
+  historical_bar_source: candles                            # older windows have no trades; candles only
+  candle_intervals_min: [1, 5, 15, 60, 1440]                # interval = integer minutes
   candle_row_cap: 5000                                      # observed cap on finer intervals
+  polymarket_candle_floor:
+    "1440": "2024-01-02"
+    "60": "2025-12-05"
+    "15": "2025-12-05"
+    "1_5": recent_only
+  kalshi_candle_floor_all_intervals: "2021-06-01"
 
 # Study window — a dense 12–18-month span with simultaneous KOL+news+PM coverage.
 # PROVISIONAL and CURRENTLY UNREALIZABLE AT TICK LEVEL: this span predates the trade
