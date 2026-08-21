@@ -1,6 +1,12 @@
 # EventX — Implementation Plan v2 (Core: T1, T3, T5)
 
-Grounded in the `findata` API at `https://kv.run:5000/`. Assumes Python 3.11+, PostgreSQL, and the v4 research plan. Where the API doc names a data domain but not an exact path/schema (historical L2 orderbook, open-interest history, holders/leaderboard, matched pairs), **confirm the real shape via the OpenAPI spec or the `catalog_table_schema` / `catalog_table_profile` MCP tools before coding.**
+Grounded in the `findata` API at `https://lum.id/findata/`. Assumes Python 3.11+, PostgreSQL, and the v4 research plan. Where the API doc names a data domain but not an exact path/schema (historical L2 orderbook, open-interest history, holders/leaderboard, matched pairs), **confirm the real shape via the OpenAPI spec or the `catalog_table_schema` / `catalog_table_profile` MCP tools before coding.**
+
+> **v1 scope decision (2026-07-22).** The initial runnable artifact is a retained-trade
+> pilot covering `2026-05-22T00:00:00Z`–`2026-07-22T23:59:59Z`. The earlier proposed
+> 2024–2025 window is not viable for a uniform trade-reconstructed label because the
+> Polymarket trade archive retains only a recent rolling window. A historical
+> candle-only variant is explicitly deferred rather than silently mixing label sources.
 
 **v2 changes (all before writing pipeline code):** (1) explicit **outcome/token normalization** — the prediction unit is now per outcome, not per market; (2) actual `resolution_ts` is **never a feature**, only a label filter; (3) **corrected purged-split** using a `Timedelta` purge; (4) **eligibility (pre-*t*) separated from label-validity (forward)** so the benchmark never conditions on future liquidity; (5) `price_logodds` + `price_source` flag replaces the misleading `mid_logodds`; (6) a **deterministic tweet/news↔market matching rule** with a released association table; (7) **stratified nulls**. Plus a toy end-to-end slice before full ingestion.
 

@@ -1,0 +1,311 @@
+{
+  "association_rules": {
+    "accepted_news_path": "eventx-v2.1-news-v1-source-path",
+    "kol_branch": "ineligible_failed_fresh_kol_v2_audit",
+    "kol_v2_hard_candidate_recall": 0.6327,
+    "kol_v2_precision": 0.8378,
+    "minimum_precision": 0.85,
+    "minimum_recall": 0.9,
+    "opened_kol_pair_exclusions": 450
+  },
+  "authorization": {
+    "authorized_at": "2026-08-17T07:55:29Z",
+    "scope": "freeze the remaining v2.2 news completeness, point-in-time availability, hypothesis, undefined-fold, execution-order, threshold-language, and positioning clarifications",
+    "source": "explicit_user_direction_before_labels"
+  },
+  "cohort": {
+    "categories_present": [
+      "politics",
+      "sports",
+      "other"
+    ],
+    "frozen_market_count": 14,
+    "reselection_permitted": false,
+    "selected_markets_path": "data/v2_1/cohort/selected_markets.jsonl",
+    "selected_markets_sha256": "932b995f8a589065db2c841789121d6de7f22c6b7a22f1dc70b4b8bef07d553c",
+    "venues": [
+      "polymarket",
+      "kalshi"
+    ]
+  },
+  "confirmatory_comparison": {
+    "candidate": "b1_market_core_news",
+    "reference": "b0_market_only",
+    "scientific_positioning": "prospective_protocol_validation_study_of_incremental_news_information",
+    "tests_kol_incremental_information": false
+  },
+  "confirmatory_hypotheses": {
+    "h1": "AP(B1) - AP(B0) > 0",
+    "h2": "Brier(B0) - Brier(B1) > 0",
+    "h3": "both_h1_and_h2_improvements_positive_in_at_least_4_of_5_outer_folds",
+    "h4": "paired_moving_block_bootstrap_95pct_lower_bound_for_Brier(B0)-Brier(B1) > 0",
+    "h5": "Brier(B0)-Brier(B1) >= 0_in_each_of_polymarket_and_kalshi",
+    "historical_kol_h1_h6_run": false,
+    "required_for_b1_promotion": [
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5"
+    ]
+  },
+  "confirmatory_learner": {
+    "epochs": 8,
+    "l2": 0.0001,
+    "learning_rate": 0.02,
+    "model": "standardized_logistic_sgd",
+    "seed_ensemble": [
+      11,
+      23,
+      47
+    ],
+    "transform": {
+      "count_and_notional": "log1p",
+      "otherwise": "identity"
+    }
+  },
+  "created_at": "2026-08-17T07:55:29Z",
+  "deadline": {
+    "candidate_freeze_no_later_than": "2026-10-01T00:00:00Z",
+    "completion_at": "2026-10-31T23:59:59Z",
+    "deliverables": "final_result_report_datasheet_manifests_reproducibility_package"
+  },
+  "economic_significance": {
+    "directional_pnl_permitted": false,
+    "reason": "absolute_jump_target_has_no_trading_direction",
+    "status": "removed_from_scientific_completion",
+    "value_of_information_outputs": [
+      "alert_rate",
+      "lead_time",
+      "calibration",
+      "development_frozen_decision_curve_net_benefit"
+    ]
+  },
+  "eligibility": {
+    "forward_liquidity_filter": false,
+    "min_notional_trailing_240m": 100.0,
+    "min_trades_trailing_240m": 3,
+    "price_age_robustness_minutes": [
+      30,
+      60
+    ],
+    "resolution_ts_feature": false,
+    "terminal_exclusion": true,
+    "trade_arrival_diagnostic": true
+  },
+  "execution_order": [
+    "close_and_reconcile_exact_development_sources",
+    "pass_and_freeze_label_blind_data_sufficiency_gate",
+    "run_label_blind_synthetic_14_market_cluster_power_simulation",
+    "freeze_power_simulation_configuration_seed_and_output",
+    "construct_price_grid_eligibility_and_labels",
+    "run_frozen_b0_b1_development_comparison_once"
+  ],
+  "features": {
+    "b0_market": [
+      "price_logodds",
+      "momentum_5m",
+      "momentum_30m",
+      "momentum_120m",
+      "realized_vol_30m",
+      "realized_vol_240m",
+      "trade_count_60m",
+      "trade_count_240m",
+      "notional_60m",
+      "notional_240m",
+      "minutes_since_trade",
+      "venue_indicator"
+    ],
+    "b1_core_news": [
+      "news_article_count_60m",
+      "news_article_count_360m",
+      "news_article_count_1440m",
+      "news_symbol_mapped"
+    ],
+    "b1_rolling_window_time": "available_at",
+    "b2_b3_t5_status": "ineligible_not_on_october_critical_path"
+  },
+  "historical_reuse": {
+    "allowed": true,
+    "allowed_roles": [
+      "trailing_feature_warmup",
+      "pipeline_integrity",
+      "coverage_missingness",
+      "descriptive_robustness"
+    ],
+    "archive_replaces_prospective_windows": false,
+    "deduplication_required": true,
+    "retrieval_provenance_required": true,
+    "v1_labels_or_metrics_for_tuning": false
+  },
+  "holdout": {
+    "candidate_count_max": 1,
+    "consumption_receipt_required": true,
+    "end_exclusive": "2026-10-22T00:00:00Z",
+    "labels_uninspected": true,
+    "news_censoring_contract_identical_to_development": true,
+    "reruns_permitted": false,
+    "start": "2026-10-01T00:00:00Z"
+  },
+  "labels": {
+    "cadence_min": 5,
+    "horizons_min": [
+      5,
+      30,
+      120,
+      360,
+      1440
+    ],
+    "paper_language": "The threshold is a preregistered heuristic event definition inherited from the pilot protocol and should not be interpreted as a Gaussian four-standard-deviation event.",
+    "primary_horizon_min": 30,
+    "target": "absolute_forward_logodds_jump",
+    "threshold": "4 * trailing_sigma_1m_240 * sqrt(horizon_min / 30)",
+    "threshold_anchor_min": 30,
+    "threshold_anchor_scale_in_one_minute_sigma_units": 4.0,
+    "threshold_is_four_horizon_sigmas": false,
+    "threshold_semantics": "inherited_heuristic_30m_anchor_in_trailing_one_minute_sigma_units",
+    "volatility_min_observations": 30,
+    "volatility_window_min": 240
+  },
+  "metrics": {
+    "calibration": "brier",
+    "primary": "average_precision",
+    "secondary": [
+      "ece_10_equal_frequency",
+      "roc_auc",
+      "lead_time",
+      "calibration_slope",
+      "calibration_intercept"
+    ]
+  },
+  "news_availability": {
+    "conflicting_published_at_for_same_record": "quarantine_until_reconciled",
+    "first_seen_at_definition": "earliest_successful_eventx_retrieval_time_for_the_stable_news_record_across_valid_lumid_endpoints",
+    "historical_backfill_may_backdate_primary_features": false,
+    "invalid_or_missing_published_at": "exclude_from_b1_primary",
+    "primary_feature_time": "max(published_at, first_seen_at)",
+    "published_at_only_role": "separate_oracle_sensitivity_only_cannot_rescue_primary",
+    "record_ingestion_latency": true,
+    "retrieval_time_retained": true
+  },
+  "news_collection": {
+    "active_legacy_collector_compliant": false,
+    "b1_may_run_with_unresolved_censoring": false,
+    "cap_alarm_comparison": "returned_rows >= 200",
+    "checkpoint_advances_on_cap_or_failure": false,
+    "collector_path": "eventx/tasks/collect_v2_3_news.py",
+    "contract_path": "eventx/release/v2_3/news_collection_contract.json",
+    "contract_sha256": "32cd7ca0ada2f94f827f3ecc87997244cf856ba0acebfb1c45e2533fd4510489",
+    "endpoint": "/news/latest",
+    "holdout_policy_identical": true,
+    "max_success_gap_seconds": 300,
+    "poll_seconds": 60,
+    "request_limit": 200,
+    "unrecoverable_interval_disposition": "b1_incomplete_never_zero_news"
+  },
+  "paper_positioning": {
+    "primary_conclusion_scope": "incremental_news_information_on_the_frozen_14_market_cohort",
+    "required_kol_disclosure": "EventX KOL versus market-plus-news hypothesis deferred because the preregistered KOL association rule failed validation",
+    "required_sample_size_disclosure": "Temporal row count provides precision conditional on the selected markets and does not create hundreds of thousands of independent market observations.",
+    "study_title": "A prospective protocol-validation study of incremental news information in prediction-market repricing"
+  },
+  "power_analysis": {
+    "empirical_labels_prevalence_or_outcome_paths_permitted": false,
+    "execution_position": "after_frozen_data_gate_before_any_label_construction",
+    "label_blind_synthetic_only": true,
+    "market_clusters": 14,
+    "may_change_protocol": false,
+    "output_freeze_required": true,
+    "required_before_labels": true,
+    "row_count_is_not_independent_sample_size": true
+  },
+  "price": {
+    "candle_role": "separate_fallback_diagnostic_only",
+    "clip_epsilon": 0.0001,
+    "l2_midpoint_role": "separate_robustness_measurement_ceiling_only",
+    "primary": "latest_canonical_yes_trade_at_or_before_t_carried_forward",
+    "primary_source_switching_permitted": false,
+    "record_price_age_minutes": true
+  },
+  "prior_protocol": {
+    "manifest_path": "eventx/release/v2_2/preregistration_manifest.json",
+    "manifest_sha256": "d7de971665f4a8db9d6b8963fcd1433dc0ddd81b16cff0ffaacdb0b90b58bb58",
+    "path": "eventx/release/v2_2/protocol.json",
+    "protocol_id": "eventx-v2.2-october-pilot-fixes-20260817",
+    "sha256": "63dd1764becf3be3186cd2ff12c2651c2568cb344b34506e513ff20183c1404c",
+    "status": "superseded_before_development_and_holdout_labels"
+  },
+  "prior_v1_holdout": {
+    "dataset_id": "eventx-oot-7c4fd487edb3928b9253",
+    "reuse_permitted": false,
+    "status": "consumed"
+  },
+  "promotion_gate": {
+    "aggregate_brier_improvement_positive": true,
+    "aggregate_delta_ap_positive": true,
+    "both_metrics_positive_folds_min": 4,
+    "brier_bootstrap_ci_lower_above_zero": true,
+    "undefined_aggregate_required_metric": "corresponding_condition_unsatisfied",
+    "undefined_fold_metric": "fold_does_not_count_as_positive",
+    "undefined_metrics_may_be_dropped_imputed_or_zero_filled": false,
+    "undefined_venue_required_metric": "venue_condition_unsatisfied",
+    "venue_brier_nonnegative": true
+  },
+  "protocol_id": "eventx-v2.3-news-availability-clarifications-20260817",
+  "source_policy": {
+    "external_observations": "lumid_only_valid_openapi_endpoints",
+    "non_lumid_substitution_permitted": false
+  },
+  "splits": {
+    "bootstrap_block_min": 360,
+    "bootstrap_samples": 5000,
+    "bootstrap_seed": 61,
+    "market_group": "sha256(venue + ':' + market_id) mod 5",
+    "n_outer_folds": 5,
+    "purge": "equal_to_horizon",
+    "type": "expanding_window_with_held_out_market_group"
+  },
+  "status": "preregistered_labels_uninspected",
+  "supersession": {
+    "changes": [
+      "news_response_cap_and_gap_contract",
+      "point_in_time_news_availability",
+      "explicit_b1_vs_b0_hypotheses",
+      "undefined_confirmatory_metric_disposition",
+      "power_simulation_execution_order",
+      "threshold_paper_language",
+      "october_study_positioning"
+    ],
+    "frozen_cohort_taxonomy_association_features_price_labels_eligibility_learner_splits_metrics_thresholds_dates_and_holdout_retained": true
+  },
+  "t5": {
+    "runs_in_v2_3": false,
+    "status": "ineligible_failed_kol_association_gate"
+  },
+  "windows": {
+    "development": {
+      "end_exclusive": "2026-09-28T00:00:00Z",
+      "start": "2026-08-08T00:00:00Z"
+    },
+    "finalization": {
+      "end_exclusive": "2026-11-01T00:00:00Z",
+      "start": "2026-10-22T00:00:00Z"
+    },
+    "holdout": {
+      "end_exclusive": "2026-10-22T00:00:00Z",
+      "start": "2026-10-01T00:00:00Z"
+    },
+    "reconciliation_freeze": {
+      "end_exclusive": "2026-10-01T00:00:00Z",
+      "start": "2026-09-28T00:00:00Z"
+    },
+    "selection": {
+      "end_exclusive": "2026-08-08T00:00:00Z",
+      "start": "2026-08-01T00:00:00Z"
+    },
+    "warmup": {
+      "end_exclusive": "2026-08-01T00:00:00Z",
+      "start": "2026-07-31T00:00:00Z"
+    }
+  }
+}

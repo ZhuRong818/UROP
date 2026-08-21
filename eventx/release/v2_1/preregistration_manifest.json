@@ -1,0 +1,63 @@
+{
+  "artifacts": {
+    "october_deadline_amendment": {
+      "bytes": 5153,
+      "path": "eventx/release/v2_1/PREREGISTRATION_AMENDMENT.md",
+      "sha256": "9706e8df80f985d2829923475eae8931d82f0dec4490502514a4998d8bdfb3e1"
+    },
+    "protocol": {
+      "bytes": 6284,
+      "path": "eventx/release/v2_1/protocol.json",
+      "sha256": "37b932cec6d40d48886b10ec00bb402256a52c9ee910d4575194c2478ad0e87a"
+    },
+    "taxonomy_guide": {
+      "bytes": 2787,
+      "path": "eventx/release/v2/TAXONOMY_GUIDE.md",
+      "sha256": "9f9f22283284ef5878e20122cc77ec0113d6618d9d53dfe8467a95c4b3eb0839"
+    },
+    "verification_program": {
+      "bytes": 4517,
+      "path": "eventx/tasks/verify_v2_1_preregistration.py",
+      "sha256": "3a5c951330cd9cd74eceda994ceba2360112669cc8c387bf4cfd3ba3ff3a3fe8"
+    }
+  },
+  "created_at": "2026-07-31T07:22:07Z",
+  "label_seal": {
+    "development_labels_created": false,
+    "development_labels_inspected": false,
+    "development_window_start": "2026-08-08T00:00:00Z",
+    "holdout_labels_created": false,
+    "holdout_labels_inspected": false,
+    "holdout_window_start": "2026-10-01T00:00:00Z"
+  },
+  "locked": true,
+  "policy": {
+    "changes_require_new_protocol_id": true,
+    "finish_by": "2026-10-31T23:59:59Z",
+    "future_holdout_reruns_permitted": false,
+    "performance_driven_protocol_changes_permitted": false,
+    "prior_v1_holdout_reuse_permitted": false
+  },
+  "preregistration_schema": 1,
+  "prior_protocol_integrity": {
+    "manifest_path": "eventx/release/v2/preregistration_manifest.json",
+    "manifest_sha256": "ded459721e4b13252c653edff2a4290c89619b4b4770852a0227011308525df5",
+    "protocol_id": "eventx-v2-preregistered-20260731",
+    "protocol_path": "eventx/release/v2/protocol.json",
+    "protocol_sha256": "07882cda7c552fc1abc613f75de9079b16c1ce62fe2593a69c6d62494379c89c",
+    "status": "superseded_before_selection_and_labels"
+  },
+  "prior_v1_integrity": {
+    "dataset_id": "eventx-oot-7c4fd487edb3928b9253",
+    "receipt_path": "data/v1_oot_20260723_20260730/holdout_consumption_receipt.json",
+    "receipt_sha256": "b164bd11479dfbf81239cfd8d7a4da6b57dfcc4cf1423e0bd9f7069f46722e8e",
+    "rerun_permitted": false,
+    "status": "consumed"
+  },
+  "protocol": {
+    "path": "eventx/release/v2_1/protocol.json",
+    "sha256": "37b932cec6d40d48886b10ec00bb402256a52c9ee910d4575194c2478ad0e87a"
+  },
+  "protocol_id": "eventx-v2.1-october-deadline-20260731",
+  "status": "preregistered_labels_uninspected"
+}

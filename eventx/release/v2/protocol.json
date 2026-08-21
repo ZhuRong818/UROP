@@ -1,0 +1,207 @@
+{
+  "association_rules": {
+    "audit_required": true,
+    "minimum_precision": 0.85,
+    "minimum_recall": 0.9,
+    "must_freeze_before_development_labels": true
+  },
+  "authorization": {
+    "authorized_at": "2026-07-31T06:30:00Z",
+    "scope": "start a separately preregistered EventX v2 research cycle",
+    "source": "explicit_user_instruction"
+  },
+  "cohort": {
+    "binary_only": true,
+    "canonical_side": "YES",
+    "categories": [
+      "politics",
+      "crypto",
+      "sports",
+      "macro",
+      "other"
+    ],
+    "density_score": "log1p(trades) + log1p(notional) + 0.1 * active_hours",
+    "max_per_venue_category": 40,
+    "selection_basis": "selection_window_activity_only",
+    "thresholds": {
+      "last_trade_staleness_hours_max": 72,
+      "min_active_days": 3,
+      "min_notional": 1000.0,
+      "min_trades": 100,
+      "scheduled_close_at_or_after": "2026-11-01T00:00:00Z"
+    },
+    "tie_break": "ascending_market_id",
+    "venues": [
+      "polymarket",
+      "kalshi"
+    ]
+  },
+  "confirmatory_comparison": {
+    "candidate": "b3_market_news_residualized_sparse_kol",
+    "reference": "b1_market_core_news"
+  },
+  "confirmatory_learner": {
+    "epochs": 8,
+    "l2": 0.0001,
+    "learning_rate": 0.02,
+    "model": "standardized_logistic_sgd",
+    "seed_ensemble": [
+      11,
+      23,
+      47
+    ],
+    "transform": {
+      "count_and_notional": "log1p",
+      "otherwise": "identity"
+    }
+  },
+  "created_at": "2026-07-31T06:30:00Z",
+  "eligibility": {
+    "forward_liquidity_filter": false,
+    "min_notional_trailing_240m": 100.0,
+    "min_trades_trailing_240m": 3,
+    "resolution_ts_feature": false,
+    "terminal_exclusion": true
+  },
+  "features": {
+    "b0_market": [
+      "price_logodds",
+      "momentum_5m",
+      "momentum_30m",
+      "momentum_120m",
+      "realized_vol_30m",
+      "realized_vol_240m",
+      "trade_count_60m",
+      "trade_count_240m",
+      "notional_60m",
+      "notional_240m",
+      "minutes_since_trade",
+      "venue_indicator"
+    ],
+    "b1_core_news": [
+      "news_article_count_60m",
+      "news_article_count_360m",
+      "news_article_count_1440m",
+      "news_symbol_mapped"
+    ],
+    "b2_sparse_kol": [
+      "kol_tweet_count_30m",
+      "kol_tweet_count_360m",
+      "kol_unique_handles_30m",
+      "kol_unique_handles_360m",
+      "kol_handle_entropy_24h",
+      "kol_minutes_since_latest"
+    ],
+    "b3_kol_residualization": {
+      "inputs": "b0_plus_b1",
+      "method": "training_fold_ridge",
+      "penalty": 1.0
+    }
+  },
+  "holdout": {
+    "candidate_count_max": 1,
+    "consumption_receipt_required": true,
+    "end_exclusive": "2026-12-01T00:00:00Z",
+    "labels_uninspected": true,
+    "reruns_permitted": false,
+    "start": "2026-11-01T00:00:00Z"
+  },
+  "labels": {
+    "cadence_min": 5,
+    "horizons_min": [
+      5,
+      30,
+      120,
+      360,
+      1440
+    ],
+    "primary_horizon_min": 30,
+    "threshold": "4 * trailing_sigma_1m_240 * sqrt(horizon_min / 30)",
+    "target": "absolute_forward_logodds_jump",
+    "volatility_min_observations": 30,
+    "volatility_window_min": 240
+  },
+  "metrics": {
+    "calibration": "brier",
+    "primary": "average_precision",
+    "secondary": [
+      "ece_10_equal_frequency",
+      "roc_auc",
+      "lead_time",
+      "calibration_slope",
+      "calibration_intercept"
+    ]
+  },
+  "null_tests": {
+    "permutations": 500,
+    "required_for_promoted_kol_candidate": true,
+    "strata": [
+      "corrected_category",
+      "venue",
+      "utc_calendar_day"
+    ],
+    "timestamp_offsets_days": [
+      -7,
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "prior_v1_holdout": {
+    "dataset_id": "eventx-oot-7c4fd487edb3928b9253",
+    "reuse_permitted": false,
+    "status": "consumed"
+  },
+  "promotion_gate": {
+    "aggregate_brier_improvement_positive": true,
+    "aggregate_delta_ap_positive": true,
+    "brier_bootstrap_ci_lower_above_zero": true,
+    "both_metrics_positive_folds_min": 4,
+    "venue_brier_nonnegative": true
+  },
+  "protocol_id": "eventx-v2-preregistered-20260731",
+  "protocol_schema": 1,
+  "splits": {
+    "bootstrap_block_min": 360,
+    "bootstrap_samples": 5000,
+    "bootstrap_seed": 61,
+    "market_group": "sha256(venue + ':' + market_id) mod 5",
+    "n_outer_folds": 5,
+    "purge": "equal_to_horizon",
+    "type": "expanding_window_with_held_out_market_group"
+  },
+  "status": "preregistered_labels_uninspected",
+  "t5": {
+    "fdr_method": "benjamini_hochberg",
+    "fdr_q": 0.05,
+    "runs_only_if_b3_promoted": true
+  },
+  "windows": {
+    "development": {
+      "end_exclusive": "2026-11-01T00:00:00Z",
+      "start": "2026-08-15T00:00:00Z"
+    },
+    "holdout": {
+      "end_exclusive": "2026-12-01T00:00:00Z",
+      "start": "2026-11-01T00:00:00Z"
+    },
+    "selection": {
+      "end_exclusive": "2026-08-15T00:00:00Z",
+      "start": "2026-08-01T00:00:00Z"
+    },
+    "warmup": {
+      "end_exclusive": "2026-08-01T00:00:00Z",
+      "start": "2026-07-31T00:00:00Z"
+    }
+  }
+}

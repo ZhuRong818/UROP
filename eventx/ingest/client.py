@@ -1,4 +1,4 @@
-"""Rate-limited, resumable, idempotent client for the findata API (https://kv.run:5000).
+"""Rate-limited, resumable, idempotent client for the findata API (https://lum.id/findata).
 
 Guardrail A2: 100 req/min + auth on every route means every pull is a multi-hour,
 resumable batch job. This client enforces the throttle and the retry/backoff policy;

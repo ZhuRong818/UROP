@@ -1,0 +1,182 @@
+{
+  "artifacts": {
+    "combined_b3_failure_diagnostic_json": {
+      "bytes": 89797,
+      "path": "data/v1/toy/combined_b3_failure_diagnostic.json",
+      "sha256": "56b0abb0e5e7ef7e02d1df8b2be988615ba8803cd15be16cfcadec7a52e68da5"
+    },
+    "combined_b3_failure_diagnostic_memo": {
+      "bytes": 3308,
+      "path": "data/v1/toy/combined_b3_failure_diagnostic.md",
+      "sha256": "a4b428557faecb69bec71b09e3cdd78d5bd5913472c6313c1ed649e1e3b5624a"
+    },
+    "combined_b3_walk_forward": {
+      "bytes": 68084,
+      "path": "data/v1/toy/combined_b3_walk_forward_cv_5m.json",
+      "sha256": "23c9f3ecb770cff028cf516dbc28776df8b52fed580b939a5fc49066c271d652"
+    },
+    "development_freeze": {
+      "bytes": 2231,
+      "path": "data/v1/toy/frozen_manifest.json",
+      "sha256": "db076d3b9bd48897c590bb933c9b619657201a2c168f954e76ef346af28c4f88"
+    },
+    "development_labels": {
+      "bytes": 1320256304,
+      "path": "data/v1/toy/labels_30m.jsonl",
+      "sha256": "b70d290b8d60b5950958e5ee9f6499284dbc3584cad3b674bd00ffdb8ad41a1e"
+    },
+    "editorial_review": {
+      "bytes": 1712,
+      "path": "eventx/release/v1/EDITORIAL_REVIEW.md",
+      "sha256": "12d56e91901f58c2b57d85b7854ef550988bae464680b22bcb3766ea91eb5ccc"
+    },
+    "final_baseline_freeze": {
+      "bytes": 5196,
+      "path": "data/v1/toy/final_baseline_freeze_manifest.json",
+      "sha256": "0d0f93b6f50c60381a38f19daf64123a5efccc9bfa5c6c36d7f99ad550ee37e4"
+    },
+    "final_evaluation_report": {
+      "bytes": 1825,
+      "path": "data/v1_oot_20260723_20260730/final_evaluation_report.md",
+      "sha256": "58a442f45b3c4fa7eec737dc253965b03fc9840ef2de61c56e771ff703977042"
+    },
+    "final_research_report": {
+      "bytes": 13852,
+      "path": "eventx/release/v1/FINAL_RESEARCH_REPORT.md",
+      "sha256": "239c1075fdcbd226bdd72332db2686e3ec0460c82a141b2414eec56b69d3ee29"
+    },
+    "holdout_consumption_receipt": {
+      "bytes": 439,
+      "path": "data/v1_oot_20260723_20260730/holdout_consumption_receipt.json",
+      "sha256": "b164bd11479dfbf81239cfd8d7a4da6b57dfcc4cf1423e0bd9f7069f46722e8e"
+    },
+    "kol_nested_gated_walk_forward": {
+      "bytes": 67755,
+      "path": "data/v1/toy/b1_gated_nested_cv_5m.json",
+      "sha256": "9026a1bb1a0928501560dfa781dcb9166cece0a43f76c810fc51187828883a5f"
+    },
+    "kol_rule_v3_freeze": {
+      "bytes": 2667,
+      "path": "data/v1/curated/kol_rule_v3_frozen_manifest.json",
+      "sha256": "18bf313bd7d9886440d2c2a85d3e4efd083b0ccdd042f9e8e1f46e9d3a388b1f"
+    },
+    "kol_walk_forward": {
+      "bytes": 11146,
+      "path": "data/v1/toy/b1_walk_forward_cv_5m.json",
+      "sha256": "78f13dfe2a56456c80e725b57dfa319455c2a8bf757c2f3694c4818890a0278c"
+    },
+    "news_core_walk_forward": {
+      "bytes": 15917,
+      "path": "data/v1/toy/news_b1_walk_forward_cv_5m.json",
+      "sha256": "f5a068ccd87f75e4af02a97fc3eacfc4af00a2840e2649aa6f5172f791a33ea1"
+    },
+    "news_rich_walk_forward": {
+      "bytes": 19518,
+      "path": "data/v1/toy/news_b1_walk_forward_cv_5m_rich.json",
+      "sha256": "e228cd50eaae030f3c8b0522a46818755e105bbf792f91e1613ae635a1f24332"
+    },
+    "news_rule_v1_freeze": {
+      "bytes": 2894,
+      "path": "data/v1/curated/news_rule_v1_frozen_manifest.json",
+      "sha256": "db6ea63f1bbc06ca87a2183ee27da0a96b78046f8c67cb7c095ed4c9d93e96b2"
+    },
+    "oot_final_result": {
+      "bytes": 3411,
+      "path": "data/v1_oot_20260723_20260730/b0_oot_final_result.json",
+      "sha256": "18306a8b814cec48f2acdce3fe93e06f33ee5c0d3cf41344d11339bb5e102a6a"
+    },
+    "oot_freeze": {
+      "bytes": 5482,
+      "path": "data/v1_oot_20260723_20260730/frozen_holdout_manifest.json",
+      "sha256": "737624dffdaac0b65ca78700c35a116235efb74d4032818ef1f7320345db4e17"
+    },
+    "oot_labels": {
+      "bytes": 140415030,
+      "path": "data/v1_oot_20260723_20260730/holdout/labels_30m.jsonl",
+      "sha256": "78327475b0bf2b3296355091ef95db62069e2665844c8f503d983098789a0711"
+    },
+    "oot_raw_trades": {
+      "bytes": 965634,
+      "path": "data/v1_oot_20260723_20260730/raw/trades_polymarket.jsonl",
+      "sha256": "c14f412a41656b7db2075142e623bca927eb8a5b011df6e5a52f064ade07baab"
+    },
+    "pilot_datasheet": {
+      "bytes": 11569,
+      "path": "eventx/release/v1/DATASHEET.md",
+      "sha256": "e6b72390b6c622ef07e3a9c2c50432d6fa1ff81b8beb3f254e93fe0e3fa1d83c"
+    },
+    "public_release_checklist": {
+      "bytes": 3162,
+      "path": "eventx/release/v1/PUBLIC_RELEASE_CHECKLIST.md",
+      "sha256": "fe165fd5f4f28a3784424905dd00ea3bea5ed53a5a8515d6e95e2fc917118128"
+    },
+    "release_index": {
+      "bytes": 4364,
+      "path": "eventx/release/v1/README.md",
+      "sha256": "c4e628140b2d11e4708ce027c2945289a4ee9795fb36d711d5741a9e53e9ede7"
+    },
+    "release_verifier": {
+      "bytes": 5056,
+      "path": "eventx/release/verify_v1_release.py",
+      "sha256": "c332ef2cd13485b9b3062f23c3ea0ada2ad790ec642521f4bb714077110728a7"
+    },
+    "selected_market_cohort": {
+      "bytes": 15268,
+      "path": "data/v1/toy/selected_markets.jsonl",
+      "sha256": "88b8e52f41faf6d28f827d707b48c17ce6ce50e1839c9f39949479ff0f520cf8"
+    }
+  },
+  "canonical_decision": {
+    "candidate_status": {
+      "b0_market_only": "retained_reference",
+      "b1_market_plus_core_news": "rejected",
+      "b2_market_plus_kol": "rejected",
+      "b3_market_plus_core_news_plus_kol": "rejected",
+      "market_plus_rich_news": "rejected",
+      "nested_gated_kol": "rejected"
+    },
+    "final_oot_metrics": {
+      "average_precision": 0.13552655572629174,
+      "brier": 0.08418950175115808,
+      "jump_rate": 0.09219858156028368,
+      "mean_prediction": 0.11940602136135044,
+      "positives": 130,
+      "rows": 1410
+    },
+    "reference_model": "b0_market_only"
+  },
+  "canonical_result": {
+    "path": "data/v1_oot_20260723_20260730/b0_oot_final_result.json",
+    "sha256": "18306a8b814cec48f2acdce3fe93e06f33ee5c0d3cf41344d11339bb5e102a6a"
+  },
+  "created_at": "2026-07-31T11:46:17+08:00",
+  "dataset_ids": {
+    "development": "eventx-toy-ceea70842baa88753929",
+    "out_of_time": "eventx-oot-7c4fd487edb3928b9253"
+  },
+  "distribution": {
+    "decision": "no_go",
+    "reason": "Licensing, upstream-rights, privacy, dual-use, secret-scan, clean-room reproduction, maintenance, and archival requirements remain open.",
+    "redistribution_cleared": false
+  },
+  "integrity_guards": {
+    "consumption_receipt": {
+      "path": "data/v1_oot_20260723_20260730/holdout_consumption_receipt.json",
+      "sha256": "b164bd11479dfbf81239cfd8d7a4da6b57dfcc4cf1423e0bd9f7069f46722e8e"
+    },
+    "current_holdout_state": "consumed",
+    "post_evaluation_policy": "This result consumes the frozen OOT holdout. No feature, model, eligibility, or hyperparameter changes may be justified from it.",
+    "rerun_permitted": false
+  },
+  "release_id": "eventx-v1-pilot-20260731",
+  "release_schema": 1,
+  "scope": {
+    "cadence_min": 5,
+    "horizon_min": 30,
+    "outcomes": 20,
+    "release_type": "frozen_internal_pilot_reference",
+    "venue": "polymarket"
+  },
+  "status": "complete_holdout_consumed",
+  "updated_at": "2026-07-31T12:03:14+08:00"
+}

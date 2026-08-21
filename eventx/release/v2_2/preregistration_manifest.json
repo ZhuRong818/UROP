@@ -1,0 +1,102 @@
+{
+  "artifacts": {
+    "option_a_amendment": {
+      "bytes": 8625,
+      "path": "eventx/release/v2_2/PREREGISTRATION_AMENDMENT.md",
+      "sha256": "f40374a4dc6b98b4a62c86f5bdb49974fe7f074423a3bf4385a68ca135b90151"
+    },
+    "protocol": {
+      "bytes": 7522,
+      "path": "eventx/release/v2_2/protocol.json",
+      "sha256": "63dd1764becf3be3186cd2ff12c2651c2568cb344b34506e513ff20183c1404c"
+    },
+    "verification_program": {
+      "bytes": 7736,
+      "path": "eventx/tasks/verify_v2_2_preregistration.py",
+      "sha256": "0a4312645260693ba8980c9a8b4be68653276d4e15b8d38a1ad8d4e4b34dc5d5"
+    },
+    "label_blind_lumid_audit_program": {
+      "bytes": 32314,
+      "path": "eventx/tasks/audit_v2_2_lumid_subwindow.py",
+      "sha256": "18e601baa2c00af27f5655844781c46ce0ec0d8b1624a44d1b3dc8d8e6b9d041"
+    },
+    "taxonomy_guide": {
+      "bytes": 2787,
+      "path": "eventx/release/v2/TAXONOMY_GUIDE.md",
+      "sha256": "9f9f22283284ef5878e20122cc77ec0113d6618d9d53dfe8467a95c4b3eb0839"
+    },
+    "taxonomy_freeze_manifest": {
+      "bytes": 1922,
+      "path": "data/v2_1/taxonomy/taxonomy_freeze_manifest.json",
+      "sha256": "d82e90cc227dea2e78cfa33afd2e3a9f6c862fb7626ac5d3592d9497a051ea0c"
+    },
+    "selected_markets": {
+      "bytes": 7568,
+      "path": "data/v2_1/cohort/selected_markets.jsonl",
+      "sha256": "932b995f8a589065db2c841789121d6de7f22c6b7a22f1dc70b4b8bef07d553c"
+    },
+    "cohort_freeze_manifest": {
+      "bytes": 1349,
+      "path": "data/v2_1/cohort/cohort_freeze_manifest.json",
+      "sha256": "5e9d489004c27565d887626a249a64ee3768529a7655afbe92011aa97084bd82"
+    },
+    "accepted_news_association_audit": {
+      "bytes": 2169,
+      "path": "data/v2_1/association/v1_audit/association_audit_report.json",
+      "sha256": "d024d787a2ab5808943de93b87f3c0948830827fdeaebbcd203bea635f674d53"
+    },
+    "accepted_market_specs": {
+      "bytes": 6499,
+      "path": "data/v2_1/association/v1_audit/market_specs.jsonl",
+      "sha256": "3f2710559845f5c2cadca63fb280d0b8db7ebc70b37b80a6aace325b8a2f9342"
+    },
+    "failed_kol_v2_gate_result": {
+      "bytes": 2330,
+      "path": "data/v2_1/association/kol_v2_audit/kol_v2_failed_audit_result_manifest.json",
+      "sha256": "29dd99bbd0507ed0252197b429e2a58a2d2cb379e11a2569442a6bef405af93b"
+    }
+  },
+  "created_at": "2026-08-17T05:50:49Z",
+  "label_seal": {
+    "development_labels_created": false,
+    "development_labels_inspected": false,
+    "development_window_end_exclusive": "2026-09-28T00:00:00Z",
+    "development_window_start": "2026-08-08T00:00:00Z",
+    "holdout_labels_created": false,
+    "holdout_labels_inspected": false,
+    "holdout_window_start": "2026-10-01T00:00:00Z"
+  },
+  "locked": true,
+  "policy": {
+    "candidate_freeze_no_later_than": "2026-10-01T00:00:00Z",
+    "changes_require_new_protocol_id": true,
+    "external_observations_must_use_valid_lumid_endpoints": true,
+    "finish_by": "2026-10-31T23:59:59Z",
+    "future_holdout_reruns_permitted": false,
+    "non_lumid_substitution_permitted": false,
+    "performance_driven_protocol_changes_permitted": false,
+    "prior_v1_holdout_reuse_permitted": false
+  },
+  "preregistration_schema": 1,
+  "prior_protocol_integrity": {
+    "manifest_path": "eventx/release/v2_1/preregistration_manifest.json",
+    "manifest_sha256": "5bb2eee34360fc4a85be73d183f835aff36837b78011bc8c863eb981e1c02597",
+    "protocol_id": "eventx-v2.1-october-deadline-20260731",
+    "protocol_path": "eventx/release/v2_1/protocol.json",
+    "protocol_sha256": "37b932cec6d40d48886b10ec00bb402256a52c9ee910d4575194c2478ad0e87a",
+    "status": "superseded_before_development_and_holdout_labels"
+  },
+  "prior_v1_integrity": {
+    "dataset_id": "eventx-oot-7c4fd487edb3928b9253",
+    "receipt_path": "data/v1_oot_20260723_20260730/holdout_consumption_receipt.json",
+    "receipt_sha256": "b164bd11479dfbf81239cfd8d7a4da6b57dfcc4cf1423e0bd9f7069f46722e8e",
+    "rerun_permitted": false,
+    "status": "consumed"
+  },
+  "protocol": {
+    "path": "eventx/release/v2_2/protocol.json",
+    "sha256": "63dd1764becf3be3186cd2ff12c2651c2568cb344b34506e513ff20183c1404c"
+  },
+  "protocol_id": "eventx-v2.2-october-pilot-fixes-20260817",
+  "status": "preregistered_labels_uninspected"
+}

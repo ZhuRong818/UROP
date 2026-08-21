@@ -2,7 +2,7 @@
 # against the frozen copy, never live calls (guardrail A3).
 
 extract:
-  version: "v0"            # bump on every re-pull; recorded in meta.extract_version
+  version: "v1"            # bump on every re-pull; recorded in meta.extract_version
   # config_hash + row_counts are written by the ingest job, not by hand.
 
 api:
@@ -25,13 +25,17 @@ db:
 #     Polymarket market older than ~Dec 2025, ONLY interval=1440 returns rows.
 #   * Kalshi candles: all intervals back to 2021-06 (far richer than Polymarket).
 # Granularity seam is ASYMMETRIC: Polymarket daily-only pre-Dec-2025, Kalshi full-res to 2021.
-# Still-open blocker: enumerating old RESOLVED market IDs (lqt = current-active only;
-# markets/search broken; lakehouse browse tool unreachable) — needed before any historical spine.
+# RANGE FILTER FIXED (verified 2026-07-06): /candles now honors from/to (RFC3339 ONLY — bare
+# YYYY-MM-DD and epoch both 400). The 5000/call cap remains, but is now bypassable by walking
+# `to` backward with `from` pinned at the floor — verified pulling 11,518 15m bars to the exact
+# 2025-12-05 floor. So the deep-intraday RETRIEVAL blocker is solved; enumeration of old
+# RESOLVED markets is still open (markets/search still 500s; lqt = current-active only).
 data_availability:
   trade_retention_wall_polymarket: "2026-05-21T00:00:00Z"   # earliest trade reachable; re-verify per pull
   historical_bar_source: candles                            # older windows have no trades; candles only
   candle_intervals_min: [1, 5, 15, 60, 1440]                # interval = integer minutes
-  candle_row_cap: 5000                                      # observed cap on finer intervals
+  candle_row_cap: 5000                                      # per-call cap; page via from/to (RFC3339)
+  candle_range_params: [from, to]                           # RFC3339 only; since/until are IGNORED
   polymarket_candle_floor:
     "1440": "2024-01-02"
     "60": "2025-12-05"
@@ -39,14 +43,24 @@ data_availability:
     "1_5": recent_only
   kalshi_candle_floor_all_intervals: "2021-06-01"
 
-# Study window — a dense 12–18-month span with simultaneous KOL+news+PM coverage.
-# PROVISIONAL and CURRENTLY UNREALIZABLE AT TICK LEVEL: this span predates the trade
-# retention wall, so tick-based bars do not exist for it. Pending user design decision —
-# (A) forward-collect a tick window from now, (B) candle-based bars for this historical
-# span, or (C) hybrid with a granularity seam. See guardrail C7.
+# Candle batch-pull (guardrail A2 resumable job). Pull each interval per qualified market,
+# walking `to` backward from now to the venue floor. Finer intervals return less history on
+# Polymarket (server returns only what exists); Kalshi returns all back to 2021-06.
+candles:
+  intervals_min: [1440, 60, 15]        # daily spine + intraday; add 5,1 for recent microstructure
+  page_limit: 5000                     # server hard cap per call
+  floor:
+    polymarket: "2024-01-01T00:00:00Z" # deepest archive floor (daily); finer intervals stop earlier
+    kalshi: "2021-06-01T00:00:00Z"
+
+# Study window — v1 retained-trade pilot.  The original 2024–2025 proposal cannot
+# support trade-reconstructed bars because Polymarket's retained trade archive begins
+# around 2026-05-21.  This intentionally shorter pilot is the only current window
+# with uniform trade-level labels; a historical candle-only track remains future work.
 window:
-  start: "2024-01-01T00:00:00Z"
-  end: "2025-06-30T23:59:59Z"
+  start: "2026-05-22T00:00:00Z"
+  end: "2026-07-22T23:59:59Z"
+  mode: retained_trade_pilot
 
 venues: [polymarket, kalshi]
 
@@ -72,5 +86,7 @@ labels:
 splits:
   n_splits: 5
   embargo_frac: 0.01
+  # Middle contiguous block used for model selection and calibration.
+  validation_frac: 0.2
   # Final contiguous block held out untouched for headline numbers.
   holdout_frac: 0.2

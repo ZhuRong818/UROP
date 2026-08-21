@@ -1,0 +1,280 @@
+{
+  "global": {
+    "candidate_prospect_signals": [
+      "ad buy",
+      "ad",
+      "ahead",
+      "attack ad",
+      "ballot",
+      "campaign",
+      "candidacy",
+      "convention",
+      "debate",
+      "endorse",
+      "endorsed",
+      "endorsement",
+      "election",
+      "fundraising",
+      "lead",
+      "margin",
+      "nomination",
+      "nominee",
+      "opponent",
+      "poll",
+      "polling",
+      "primary",
+      "race",
+      "running mate",
+      "runoff",
+      "spending",
+      "survey",
+      "targeting",
+      "tie",
+      "vote share",
+      "withdraw",
+      "withdrew"
+    ],
+    "failed_order_markers": [
+      "balance insufficient",
+      "cancelled order",
+      "failed order",
+      "insufficient balance",
+      "insufficient funds",
+      "order cancelled",
+      "order failed",
+      "order rejected",
+      "rejected order",
+      "下单失败",
+      "余额不足",
+      "状态 失败"
+    ],
+    "geopolitical_conflict_signals": [
+      "attack",
+      "attacks",
+      "conflict",
+      "strike",
+      "strikes",
+      "threat",
+      "threaten",
+      "war"
+    ],
+    "geopolitical_direct_capacity_signals": [
+      "air base",
+      "air bases",
+      "ballistic missile",
+      "blockade",
+      "casualties",
+      "drone",
+      "drones",
+      "enlist",
+      "intelligence assistance",
+      "invasion",
+      "military",
+      "missile",
+      "missiles",
+      "mobilization",
+      "mobilisation",
+      "satellite surveillance",
+      "supply",
+      "troop",
+      "troops",
+      "weapon",
+      "weapons"
+    ],
+    "invasion_escalation_without_us": [
+      "avenge",
+      "avenging",
+      "retaliate",
+      "retaliation",
+      "revenge",
+      "vows revenge"
+    ],
+    "officeholder_status_signals": [
+      "appointed",
+      "deposed",
+      "died",
+      "gone",
+      "head of state",
+      "in power",
+      "killed",
+      "leader",
+      "named leader",
+      "ousted",
+      "president",
+      "removal",
+      "removal from power",
+      "removed from power",
+      "remains in power",
+      "replaced",
+      "resigned",
+      "successor",
+      "supreme leader"
+    ],
+    "portuguese_candidate_signals": [
+      "campanha",
+      "candidato",
+      "candidatura",
+      "convencao",
+      "corrida eleitoral",
+      "eleicao",
+      "eleitoral",
+      "empate",
+      "margem",
+      "pesquisa",
+      "presidencia",
+      "presidencial",
+      "primeiro turno",
+      "segundo turno",
+      "turno",
+      "vantagem",
+      "voto",
+      "votos"
+    ],
+    "realized_market_signals": [
+      "bet",
+      "bought",
+      "implied probability",
+      "odds",
+      "payoff",
+      "payout",
+      "position",
+      "price",
+      "probability",
+      "return",
+      "sold",
+      "stake",
+      "wager"
+    ],
+    "scandal_signals": [
+      "accused",
+      "arrest",
+      "charges",
+      "corruption",
+      "fraud",
+      "fraude",
+      "fraudes",
+      "illegal",
+      "ilegalidade",
+      "inss",
+      "investigated",
+      "investigada",
+      "investigation",
+      "irregularity",
+      "scandal"
+    ],
+    "sanction_action_signals": [
+      "approve",
+      "approved",
+      "enact",
+      "enacted",
+      "impose",
+      "imposed",
+      "passes",
+      "passed"
+    ],
+    "sanction_signals": [
+      "sanction",
+      "sanctions"
+    ],
+    "sports_performance_signals": [
+      "assist",
+      "assists",
+      "ballon d or",
+      "champion",
+      "final",
+      "goal",
+      "goals",
+      "halbfinale",
+      "injury",
+      "match",
+      "player",
+      "prognose",
+      "quarterfinal",
+      "score",
+      "semifinal",
+      "title",
+      "tournament",
+      "trophy",
+      "viertelfinale",
+      "win",
+      "world cup",
+      "wm"
+    ]
+  },
+  "lexical_spec_version": "eventx-v2.1-kol-lexical-spec-v2-candidate",
+  "markets": {
+    "0x12dc2b61723b2a54fc1947a307389b5f32038e7a29a0e936ad1fe410b969d06a": {
+      "identity_any": ["harry kane"],
+      "profile": "individual_sports_award"
+    },
+    "0x1a01bf78f56a507fcb666d564d8c8b91b0750679163ed6e96746102c9b7d285d": {
+      "identity_all": [["flavio", "bolsonaro"]],
+      "identity_any": ["flavio bolsonaro"],
+      "profile": "candidate_election"
+    },
+    "0x25fb28382075f418a944a781a9f8840e2f541152eea0d9798d1cabfa1466adbb": {
+      "identity_any": ["mojtaba khamenei"],
+      "profile": "officeholder_status"
+    },
+    "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846": {
+      "country_any": ["iran", "iranian"],
+      "profile": "us_invasion",
+      "us_any": ["america", "american", "u s", "united states", "us"]
+    },
+    "0x6557ff312837c0707d82bc2def893572289e012cff21a264593c6551f85d7e50": {
+      "identity_any": ["russia", "russian"],
+      "profile": "territorial_advance",
+      "territory_context_any": ["dobropillia", "dopropillia", "ukraine", "ukrainian"]
+    },
+    "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f": {
+      "identity_any": ["maduro", "nicolas maduro"],
+      "profile": "officeholder_status"
+    },
+    "0x8e1e5c26dec73aee98230dc0ef93a294142587ca24190c4728d4b7ff831a22e0": {
+      "peace_any": ["ceasefire", "deal", "negotiation", "negotiations", "peace", "talk", "talks"],
+      "profile": "peace_talks",
+      "russia_any": ["russia", "russian"],
+      "ukraine_any": ["ukraine", "ukrainian"]
+    },
+    "0x9cb23d04b2ded06147482076688b69b487a8d982c63ebdda2ab3678cf27cf390": {
+      "identity_any": ["clarity act"],
+      "profile": "legislation",
+      "signal_any": ["act", "bill", "house", "law", "pass", "passed", "senate", "sign", "signed", "vote"]
+    },
+    "0xdf8e2dc5860027decbe6164555c3c1c9645c3bd33e16b9dc57ca87125047d4a8": {
+      "identity_any": ["lula", "lula da silva", "luiz inacio lula", "luiz inacio lula da silva"],
+      "profile": "candidate_election"
+    },
+    "0xe51b0cdb413eb9a18243e70c1f33705cdab18f4149b867f32f05650e758d8070": {
+      "identity_any": ["russia", "russian"],
+      "profile": "territorial_advance",
+      "territory_context_any": ["dobropillia", "dopropillia", "ukraine", "ukrainian"]
+    },
+    "CONTROLH-2026-R": {
+      "chamber_any": ["house", "house of representatives"],
+      "profile": "single_chamber_control",
+      "prospect_any": ["chance", "control", "flip", "forecast", "majority", "midterm", "odds", "seat", "seats"],
+      "subject_any": ["gop", "republican", "republicans"]
+    },
+    "KXBALANCEPOWERCOMBO-27FEB-DD": {
+      "house_any": ["house", "house of representatives"],
+      "profile": "composite_chamber_control",
+      "prospect_any": ["campaign", "candidate", "control", "election", "field", "majority", "midterm", "nomination", "nominee", "poll", "primary", "race", "seat", "seats", "withdraw", "withdrew", "win"],
+      "senate_any": ["senate"],
+      "subject_any": ["democrat", "democratic", "democrats"]
+    },
+    "KXGOVFLNOMR-26-JFIS": {
+      "identity_any": ["fishback", "james fishback"],
+      "profile": "candidate_election"
+    },
+    "SENATEME-26-D": {
+      "geography_any": ["maine"],
+      "profile": "party_race",
+      "prospect_any": ["candidate", "election", "nomination", "nominee", "poll", "primary", "race", "seat", "withdraw", "withdrew"],
+      "subject_any": ["democrat", "democratic", "democrats"],
+      "venue_any": ["senate"]
+    }
+  },
+  "rule_version": "eventx-v2.1-kol-association-rule-v2-candidate",
+  "scope": "kol_only"
+}

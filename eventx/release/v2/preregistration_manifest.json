@@ -1,0 +1,54 @@
+{
+  "artifacts": {
+    "preregistration_document": {
+      "bytes": 12163,
+      "path": "eventx/release/v2/PREREGISTRATION.md",
+      "sha256": "b84764b2fb43ba764d1378505cfd4cdde934a3caff0150e1369c719f22217211"
+    },
+    "protocol": {
+      "bytes": 5055,
+      "path": "eventx/release/v2/protocol.json",
+      "sha256": "07882cda7c552fc1abc613f75de9079b16c1ce62fe2593a69c6d62494379c89c"
+    },
+    "taxonomy_guide": {
+      "bytes": 2787,
+      "path": "eventx/release/v2/TAXONOMY_GUIDE.md",
+      "sha256": "9f9f22283284ef5878e20122cc77ec0113d6618d9d53dfe8467a95c4b3eb0839"
+    },
+    "verification_program": {
+      "bytes": 5338,
+      "path": "eventx/tasks/verify_v2_preregistration.py",
+      "sha256": "59c79a86d64f995c8d74c9339ba150913cc8b225d2ab3836aea108c40a00fb61"
+    }
+  },
+  "created_at": "2026-07-31T06:30:00Z",
+  "label_seal": {
+    "development_labels_created": false,
+    "development_labels_inspected": false,
+    "development_window_start": "2026-08-15T00:00:00Z",
+    "holdout_labels_created": false,
+    "holdout_labels_inspected": false,
+    "holdout_window_start": "2026-11-01T00:00:00Z"
+  },
+  "locked": true,
+  "policy": {
+    "changes_require_new_protocol_id": true,
+    "future_holdout_reruns_permitted": false,
+    "performance_driven_protocol_changes_permitted": false,
+    "prior_v1_holdout_reuse_permitted": false
+  },
+  "preregistration_schema": 1,
+  "prior_v1_integrity": {
+    "dataset_id": "eventx-oot-7c4fd487edb3928b9253",
+    "receipt_path": "data/v1_oot_20260723_20260730/holdout_consumption_receipt.json",
+    "receipt_sha256": "b164bd11479dfbf81239cfd8d7a4da6b57dfcc4cf1423e0bd9f7069f46722e8e",
+    "rerun_permitted": false,
+    "status": "consumed"
+  },
+  "protocol": {
+    "path": "eventx/release/v2/protocol.json",
+    "sha256": "07882cda7c552fc1abc613f75de9079b16c1ce62fe2593a69c6d62494379c89c"
+  },
+  "protocol_id": "eventx-v2-preregistered-20260731",
+  "status": "preregistered_labels_uninspected"
+}

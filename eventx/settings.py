@@ -33,7 +33,7 @@ class ApiSettings:
     def from_env(cls) -> "ApiSettings":
         return cls(
             token=require_env("FINDATA_TOKEN"),
-            base_url=os.environ.get("FINDATA_BASE_URL", "https://kv.run:5000"),
+            base_url=os.environ.get("FINDATA_BASE_URL", "https://lum.id/findata"),
         )
 
 

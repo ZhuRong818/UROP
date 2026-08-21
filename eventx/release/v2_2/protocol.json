@@ -1,0 +1,248 @@
+{
+  "association_rules": {
+    "accepted_news_path": "eventx-v2.1-news-v1-source-path",
+    "kol_branch": "ineligible_failed_fresh_kol_v2_audit",
+    "kol_v2_hard_candidate_recall": 0.6327,
+    "kol_v2_precision": 0.8378,
+    "minimum_precision": 0.85,
+    "minimum_recall": 0.9,
+    "opened_kol_pair_exclusions": 450
+  },
+  "authorization": {
+    "authorized_at": "2026-08-17T05:50:49Z",
+    "scope": "create and freeze the Option-A v2.2 amendment and run a label-blind Lumid subwindow drill",
+    "source": "explicit_user_authorization"
+  },
+  "cohort": {
+    "categories_present": [
+      "politics",
+      "sports",
+      "other"
+    ],
+    "frozen_market_count": 14,
+    "reselection_permitted": false,
+    "selected_markets_path": "data/v2_1/cohort/selected_markets.jsonl",
+    "selected_markets_sha256": "932b995f8a589065db2c841789121d6de7f22c6b7a22f1dc70b4b8bef07d553c",
+    "venues": [
+      "polymarket",
+      "kalshi"
+    ]
+  },
+  "confirmatory_comparison": {
+    "candidate": "b1_market_core_news",
+    "reference": "b0_market_only",
+    "scientific_positioning": "prospective_protocol_validation_pilot",
+    "tests_kol_incremental_information": false
+  },
+  "confirmatory_learner": {
+    "epochs": 8,
+    "l2": 0.0001,
+    "learning_rate": 0.02,
+    "model": "standardized_logistic_sgd",
+    "seed_ensemble": [
+      11,
+      23,
+      47
+    ],
+    "transform": {
+      "count_and_notional": "log1p",
+      "otherwise": "identity"
+    }
+  },
+  "created_at": "2026-08-17T05:50:49Z",
+  "deadline": {
+    "candidate_freeze_no_later_than": "2026-10-01T00:00:00Z",
+    "completion_at": "2026-10-31T23:59:59Z",
+    "deliverables": "final_result_report_datasheet_manifests_reproducibility_package"
+  },
+  "economic_significance": {
+    "directional_pnl_permitted": false,
+    "reason": "absolute_jump_target_has_no_trading_direction",
+    "status": "removed_from_scientific_completion",
+    "value_of_information_outputs": [
+      "alert_rate",
+      "lead_time",
+      "calibration",
+      "development_frozen_decision_curve_net_benefit"
+    ]
+  },
+  "eligibility": {
+    "forward_liquidity_filter": false,
+    "min_notional_trailing_240m": 100.0,
+    "min_trades_trailing_240m": 3,
+    "price_age_robustness_minutes": [
+      30,
+      60
+    ],
+    "resolution_ts_feature": false,
+    "terminal_exclusion": true,
+    "trade_arrival_diagnostic": true
+  },
+  "features": {
+    "b0_market": [
+      "price_logodds",
+      "momentum_5m",
+      "momentum_30m",
+      "momentum_120m",
+      "realized_vol_30m",
+      "realized_vol_240m",
+      "trade_count_60m",
+      "trade_count_240m",
+      "notional_60m",
+      "notional_240m",
+      "minutes_since_trade",
+      "venue_indicator"
+    ],
+    "b1_core_news": [
+      "news_article_count_60m",
+      "news_article_count_360m",
+      "news_article_count_1440m",
+      "news_symbol_mapped"
+    ],
+    "b2_b3_t5_status": "ineligible_not_on_october_critical_path"
+  },
+  "historical_reuse": {
+    "allowed": true,
+    "allowed_roles": [
+      "trailing_feature_warmup",
+      "pipeline_integrity",
+      "coverage_missingness",
+      "descriptive_robustness"
+    ],
+    "archive_replaces_prospective_windows": false,
+    "deduplication_required": true,
+    "retrieval_provenance_required": true,
+    "v1_labels_or_metrics_for_tuning": false
+  },
+  "holdout": {
+    "candidate_count_max": 1,
+    "consumption_receipt_required": true,
+    "end_exclusive": "2026-10-22T00:00:00Z",
+    "labels_uninspected": true,
+    "reruns_permitted": false,
+    "start": "2026-10-01T00:00:00Z"
+  },
+  "labels": {
+    "cadence_min": 5,
+    "horizons_min": [
+      5,
+      30,
+      120,
+      360,
+      1440
+    ],
+    "primary_horizon_min": 30,
+    "target": "absolute_forward_logodds_jump",
+    "threshold": "4 * trailing_sigma_1m_240 * sqrt(horizon_min / 30)",
+    "threshold_anchor_min": 30,
+    "threshold_anchor_scale_in_one_minute_sigma_units": 4.0,
+    "threshold_is_four_horizon_sigmas": false,
+    "threshold_semantics": "inherited_heuristic_30m_anchor_in_trailing_one_minute_sigma_units",
+    "volatility_min_observations": 30,
+    "volatility_window_min": 240
+  },
+  "metrics": {
+    "calibration": "brier",
+    "primary": "average_precision",
+    "secondary": [
+      "ece_10_equal_frequency",
+      "roc_auc",
+      "lead_time",
+      "calibration_slope",
+      "calibration_intercept"
+    ]
+  },
+  "power_analysis": {
+    "label_blind_synthetic_only": true,
+    "market_clusters": 14,
+    "may_change_protocol": false,
+    "required_before_labels": true,
+    "row_count_is_not_independent_sample_size": true
+  },
+  "price": {
+    "candle_role": "separate_fallback_diagnostic_only",
+    "l2_midpoint_role": "separate_robustness_measurement_ceiling_only",
+    "primary": "latest_canonical_yes_trade_at_or_before_t_carried_forward",
+    "primary_source_switching_permitted": false,
+    "record_price_age_minutes": true,
+    "clip_epsilon": 0.0001
+  },
+  "prior_protocol": {
+    "manifest_path": "eventx/release/v2_1/preregistration_manifest.json",
+    "manifest_sha256": "5bb2eee34360fc4a85be73d183f835aff36837b78011bc8c863eb981e1c02597",
+    "path": "eventx/release/v2_1/protocol.json",
+    "protocol_id": "eventx-v2.1-october-deadline-20260731",
+    "sha256": "37b932cec6d40d48886b10ec00bb402256a52c9ee910d4575194c2478ad0e87a",
+    "status": "superseded_before_development_and_holdout_labels"
+  },
+  "prior_v1_holdout": {
+    "dataset_id": "eventx-oot-7c4fd487edb3928b9253",
+    "reuse_permitted": false,
+    "status": "consumed"
+  },
+  "promotion_gate": {
+    "aggregate_brier_improvement_positive": true,
+    "aggregate_delta_ap_positive": true,
+    "both_metrics_positive_folds_min": 4,
+    "brier_bootstrap_ci_lower_above_zero": true,
+    "venue_brier_nonnegative": true
+  },
+  "protocol_id": "eventx-v2.2-october-pilot-fixes-20260817",
+  "source_policy": {
+    "external_observations": "lumid_only_valid_openapi_endpoints",
+    "non_lumid_substitution_permitted": false
+  },
+  "splits": {
+    "bootstrap_block_min": 360,
+    "bootstrap_samples": 5000,
+    "bootstrap_seed": 61,
+    "market_group": "sha256(venue + ':' + market_id) mod 5",
+    "n_outer_folds": 5,
+    "purge": "equal_to_horizon",
+    "type": "expanding_window_with_held_out_market_group"
+  },
+  "status": "preregistered_labels_uninspected",
+  "supersession": {
+    "changes": [
+      "development_end_and_reconciliation_buffer",
+      "confirmatory_comparison_b1_vs_b0",
+      "uniform_last_trade_primary_price",
+      "threshold_semantics_clarification_without_formula_change",
+      "price_freshness_robustness",
+      "economic_significance_disposition",
+      "pilot_claim_positioning"
+    ],
+    "frozen_cohort_taxonomy_news_rule_learner_splits_metrics_promotion_and_holdout_retained": true
+  },
+  "t5": {
+    "runs_in_v2_2": false,
+    "status": "ineligible_failed_kol_association_gate"
+  },
+  "windows": {
+    "development": {
+      "end_exclusive": "2026-09-28T00:00:00Z",
+      "start": "2026-08-08T00:00:00Z"
+    },
+    "finalization": {
+      "end_exclusive": "2026-11-01T00:00:00Z",
+      "start": "2026-10-22T00:00:00Z"
+    },
+    "holdout": {
+      "end_exclusive": "2026-10-22T00:00:00Z",
+      "start": "2026-10-01T00:00:00Z"
+    },
+    "reconciliation_freeze": {
+      "end_exclusive": "2026-10-01T00:00:00Z",
+      "start": "2026-09-28T00:00:00Z"
+    },
+    "selection": {
+      "end_exclusive": "2026-08-08T00:00:00Z",
+      "start": "2026-08-01T00:00:00Z"
+    },
+    "warmup": {
+      "end_exclusive": "2026-08-01T00:00:00Z",
+      "start": "2026-07-31T00:00:00Z"
+    }
+  }
+}
+

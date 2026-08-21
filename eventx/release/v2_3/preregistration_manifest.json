@@ -1,0 +1,133 @@
+{
+  "artifacts": {
+    "v2_3_amendment": {
+      "bytes": 8825,
+      "path": "eventx/release/v2_3/PREREGISTRATION_AMENDMENT.md",
+      "sha256": "52a93f473eba04498c060ad4e12138db557bf18533862ad3585a8e0ac723cc20"
+    },
+    "protocol": {
+      "bytes": 11185,
+      "path": "eventx/release/v2_3/protocol.json",
+      "sha256": "1f9bda7b2433cf2b95ee530f4fd28630a9a6e032671c0350eb975285d963b2e1"
+    },
+    "news_collection_contract": {
+      "bytes": 3140,
+      "path": "eventx/release/v2_3/news_collection_contract.json",
+      "sha256": "32cd7ca0ada2f94f827f3ecc87997244cf856ba0acebfb1c45e2533fd4510489"
+    },
+    "news_collector_program": {
+      "bytes": 21763,
+      "path": "eventx/tasks/collect_v2_3_news.py",
+      "sha256": "71b1665d4ddcbf26aea3fd4982a16ce69f82fe72dbae515ba459950eb988ec29"
+    },
+    "news_contract_verification_program": {
+      "bytes": 7252,
+      "path": "eventx/tasks/verify_v2_3_news_contract.py",
+      "sha256": "c0e6f94ed40d29350a87801a8bf6657623b5415ed0aa337bc62549fe91fa571b"
+    },
+    "preregistration_verification_program": {
+      "bytes": 13654,
+      "path": "eventx/tasks/verify_v2_3_preregistration.py",
+      "sha256": "7c28cf2415a1c89b2da1ef41f9942ccc75913fbe1cb1695f6a76549b9cd37feb"
+    },
+    "saved_lumid_openapi_contract": {
+      "bytes": 60791,
+      "path": "data/v2_2/planning/lumid_subwindow_20260808_20260817/lumid_openapi.json",
+      "sha256": "ef50330e2725b2c725e2049a93d248e09da98d4ccf0aaa70375f077e6680be22"
+    },
+    "incomplete_news_audit_manifest": {
+      "bytes": 2800,
+      "path": "data/v2_2/planning/lumid_subwindow_20260808_20260817/audit_manifest.json",
+      "sha256": "230b825286b364fac51f332182d2ba85222f2765f5d1fa461a1df8914cdce5b7"
+    },
+    "news_truncation_diagnosis": {
+      "bytes": 3093,
+      "path": "data/v2_2/planning/NEWS_TRUNCATION_DIAGNOSIS_20260817.md",
+      "sha256": "ded393ed16709df4344a59cde9f78a784b4ffc3bcb47c64111220dea25a94549"
+    },
+    "taxonomy_guide": {
+      "bytes": 2787,
+      "path": "eventx/release/v2/TAXONOMY_GUIDE.md",
+      "sha256": "9f9f22283284ef5878e20122cc77ec0113d6618d9d53dfe8467a95c4b3eb0839"
+    },
+    "taxonomy_freeze_manifest": {
+      "bytes": 1922,
+      "path": "data/v2_1/taxonomy/taxonomy_freeze_manifest.json",
+      "sha256": "d82e90cc227dea2e78cfa33afd2e3a9f6c862fb7626ac5d3592d9497a051ea0c"
+    },
+    "selected_markets": {
+      "bytes": 7568,
+      "path": "data/v2_1/cohort/selected_markets.jsonl",
+      "sha256": "932b995f8a589065db2c841789121d6de7f22c6b7a22f1dc70b4b8bef07d553c"
+    },
+    "cohort_freeze_manifest": {
+      "bytes": 1349,
+      "path": "data/v2_1/cohort/cohort_freeze_manifest.json",
+      "sha256": "5e9d489004c27565d887626a249a64ee3768529a7655afbe92011aa97084bd82"
+    },
+    "accepted_news_association_audit": {
+      "bytes": 2169,
+      "path": "data/v2_1/association/v1_audit/association_audit_report.json",
+      "sha256": "d024d787a2ab5808943de93b87f3c0948830827fdeaebbcd203bea635f674d53"
+    },
+    "accepted_market_specs": {
+      "bytes": 6499,
+      "path": "data/v2_1/association/v1_audit/market_specs.jsonl",
+      "sha256": "3f2710559845f5c2cadca63fb280d0b8db7ebc70b37b80a6aace325b8a2f9342"
+    },
+    "failed_kol_v2_gate_result": {
+      "bytes": 2330,
+      "path": "data/v2_1/association/kol_v2_audit/kol_v2_failed_audit_result_manifest.json",
+      "sha256": "29dd99bbd0507ed0252197b429e2a58a2d2cb379e11a2569442a6bef405af93b"
+    }
+  },
+  "created_at": "2026-08-17T07:55:29Z",
+  "label_seal": {
+    "development_labels_created": false,
+    "development_labels_inspected": false,
+    "development_window_end_exclusive": "2026-09-28T00:00:00Z",
+    "development_window_start": "2026-08-08T00:00:00Z",
+    "holdout_labels_created": false,
+    "holdout_labels_inspected": false,
+    "holdout_window_start": "2026-10-01T00:00:00Z"
+  },
+  "locked": true,
+  "policy": {
+    "candidate_freeze_no_later_than": "2026-10-01T00:00:00Z",
+    "changes_require_new_protocol_id": true,
+    "external_observations_must_use_valid_lumid_endpoints": true,
+    "finish_by": "2026-10-31T23:59:59Z",
+    "future_holdout_reruns_permitted": false,
+    "news_censoring_contract_applies_to_development_and_holdout": true,
+    "non_lumid_substitution_permitted": false,
+    "performance_driven_protocol_changes_permitted": false,
+    "prior_v1_holdout_reuse_permitted": false
+  },
+  "preregistration_schema": 1,
+  "prior_incomplete_news_audit": {
+    "path": "data/v2_2/planning/lumid_subwindow_20260808_20260817/audit_manifest.json",
+    "sha256": "230b825286b364fac51f332182d2ba85222f2765f5d1fa461a1df8914cdce5b7",
+    "status": "incomplete_news_latest_truncation_risk"
+  },
+  "prior_protocol_integrity": {
+    "manifest_path": "eventx/release/v2_2/preregistration_manifest.json",
+    "manifest_sha256": "d7de971665f4a8db9d6b8963fcd1433dc0ddd81b16cff0ffaacdb0b90b58bb58",
+    "protocol_id": "eventx-v2.2-october-pilot-fixes-20260817",
+    "protocol_path": "eventx/release/v2_2/protocol.json",
+    "protocol_sha256": "63dd1764becf3be3186cd2ff12c2651c2568cb344b34506e513ff20183c1404c",
+    "status": "superseded_before_development_and_holdout_labels"
+  },
+  "prior_v1_integrity": {
+    "dataset_id": "eventx-oot-7c4fd487edb3928b9253",
+    "receipt_path": "data/v1_oot_20260723_20260730/holdout_consumption_receipt.json",
+    "receipt_sha256": "b164bd11479dfbf81239cfd8d7a4da6b57dfcc4cf1423e0bd9f7069f46722e8e",
+    "rerun_permitted": false,
+    "status": "consumed"
+  },
+  "protocol": {
+    "path": "eventx/release/v2_3/protocol.json",
+    "sha256": "1f9bda7b2433cf2b95ee530f4fd28630a9a6e032671c0350eb975285d963b2e1"
+  },
+  "protocol_id": "eventx-v2.3-news-availability-clarifications-20260817",
+  "status": "preregistered_labels_uninspected"
+}

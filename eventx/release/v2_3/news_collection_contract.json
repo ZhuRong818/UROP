@@ -1,0 +1,66 @@
+{
+  "availability": {
+    "conflicting_published_at_for_same_record": "quarantine_until_reconciled",
+    "first_seen_at_definition": "earliest_successful_eventx_retrieval_time_for_the_stable_news_record_across_valid_lumid_endpoints",
+    "historical_backfill_may_backdate_primary_features": false,
+    "invalid_or_missing_published_at": "exclude_from_b1_primary",
+    "primary_feature_time": "max(published_at, first_seen_at)",
+    "published_at_definition": "lumid_declared_publication_time_from_a_valid_news_endpoint",
+    "published_at_only_role": "separate_oracle_sensitivity_only_cannot_rescue_primary",
+    "record_ingestion_latency": true,
+    "record_publication_time_quality_flags": true,
+    "retrieval_time_retained": true
+  },
+  "censoring": {
+    "cap_alarm_comparison": "returned_rows >= response_cap_rows",
+    "checkpoint_advances_on_cap_alarm": false,
+    "checkpoint_advances_on_failed_request": false,
+    "complete_interval_requires": "uncapped_contiguous_response_or_independently_reconciled_lumid_export_with_schema_key_and_lineage_evidence",
+    "gap_alarm_comparison": "seconds_between_successful_requests > max_success_gap_seconds",
+    "holdout_policy_identical_to_development": true,
+    "potentially_censored_interval_start": "last_uncensored_checkpoint",
+    "unrecoverable_interval_definition": "a_potentially_censored_interval_not_proven_complete_by_the_final_data_gate",
+    "unrecoverable_interval_disposition": "b1_incomplete_never_zero_news"
+  },
+  "collection": {
+    "endpoint": "/news/latest",
+    "max_success_gap_seconds": 300,
+    "overlap_seconds": 300,
+    "poll_seconds": 60,
+    "response_cap_rows": 200,
+    "response_hash_required": true,
+    "response_row_count_required": true,
+    "retrieval_attempt_ledger_required": true,
+    "source": "lumid",
+    "stable_record_key": "article_id_or_id_or_uuid_or_url_plus_content_hash"
+  },
+  "contract_id": "eventx-v2.3-news-collection-contract-20260817",
+  "created_at": "2026-08-17T07:55:29Z",
+  "data_gate": {
+    "b1_may_run_with_unresolved_censored_intervals": false,
+    "b1_may_run_with_zero_filled_unrecoverable_intervals": false,
+    "required_for_development_labels": true,
+    "required_for_holdout_evaluation": true,
+    "required_state": "zero_unresolved_censored_intervals"
+  },
+  "implementation": {
+    "active_legacy_collector_is_compliant": false,
+    "collector_path": "eventx/tasks/collect_v2_3_news.py",
+    "legacy_collector_path": "eventx/tasks/collect_v2_1_prospective.py",
+    "migration_requires_explicit_process_restart_or_parallel_launch": true,
+    "synthetic_contract_tests_required": true
+  },
+  "openapi": {
+    "saved_contract_path": "data/v2_2/planning/lumid_subwindow_20260808_20260817/lumid_openapi.json",
+    "saved_contract_sha256": "ef50330e2725b2c725e2049a93d248e09da98d4ccf0aaa70375f077e6680be22",
+    "supported_latest_parameters": [
+      "since",
+      "category",
+      "limit"
+    ],
+    "upper_time_bound_supported": false,
+    "cursor_or_offset_supported": false
+  },
+  "protocol_id": "eventx-v2.3-news-availability-clarifications-20260817",
+  "status": "frozen_before_development_and_holdout_labels"
+}
