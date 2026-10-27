@@ -1,0 +1,74 @@
+{
+  "reviewer_id": "codex_scientific_reviewer_20261010",
+  "reviewer_role": "assistant scientific reviewer",
+  "independent_of_method_development_and_selection": false,
+  "project_relationship": "Assistant reviewer operating in the same project workspace. The repository records prior Codex involvement in preparation and internal claim review, so this response is a substantive review but does not satisfy the request for an independent human reviewer.",
+  "prior_exposure": "Extensive exposure through CURRENT_STATE.md, the revision-2 manuscript, its evidence and claim ledgers, frozen V3.1 protocol and implementation artifacts, V5 exploratory reports, and the review package. No V4 protected payloads or unreported outcomes were inspected, and no consumed evaluator was rerun.",
+  "conflicts": "Process conflict: the reviewer is an assistant in the same workspace and is not organizationally independent of the artifact-preparation process. No financial conflict identified from the supplied materials.",
+  "manuscript_reviewed": "MARKET_NEWS_PAPER_A_DRAFT_20261010_REV2.md",
+  "review_date": "2026-10-10",
+  "overall_assessment": "Major revision. The manuscript gives an unusually candid and mostly accurate account of a negative development-selection result, a B0-only historical holdout benchmark, and separate adaptive development controls. The central bounded conclusion is supported by the frozen artifacts reviewed. Submission should wait for the integrity chronology, implementation detail, literature coverage, release rights, authorship metadata, and independent-human-review items below.",
+  "fatal_validity_concerns": [],
+  "required_revisions": [
+    {
+      "location": "Sections 1, 7, and the integrity appendix",
+      "revision": "Add the original v1 test-block exposure to the chronology. State that a noncanonical B0 exposed that block, so it cannot be described as untouched, and distinguish it from the later V3.1 historical holdout and the still-sealed V4 confirmation window.",
+      "reason": "The current draft discloses the V3 data-gate correction and the V3.1 receipt-order deviation but omits this material prior exposure recorded in the canonical handoff."
+    },
+    {
+      "location": "Section 3.2",
+      "revision": "Complete the executable target specification: state that volatility is the population standard deviation of carried-forward one-minute log-odds changes, a zero volatility estimate produces label zero, the current and future prices are last executions at or before their grid times, and contradicted terminal timestamps earlier than the first valid execution are ignored while other rows require the full horizon to end by the known terminal time.",
+      "reason": "These behaviors are frozen in IMPLEMENTATION_SPEC.md and the hash-matching development/holdout builders but are not all recoverable from the present prose."
+    },
+    {
+      "location": "Sections 4 and 7",
+      "revision": "Label the V3.1 moving-block interval explicitly as conditional, design-specific uncertainty rather than population-general uncertainty, and state near its first use that it omits cross-market event-family and common-calendar dependence. Avoid treating its narrow width as an effective independent sample-size result.",
+      "reason": "The current limitations are correct but distant from the first inferential use; the resampling unit does not address the strongest dependence risks."
+    },
+    {
+      "location": "Sections 2 and References",
+      "revision": "Complete and document a broader primary-source literature search before submission, obtain and inspect the full Gong-Dimitrov paper, and position the paper against textual prediction-market forecasting, event-time microstructure, point-in-time retrieval, and evidence-grounding work without a first-of-kind claim.",
+      "reason": "The supplied comparison correctly calls itself focused and incomplete; that is adequate for review but not for a submission-ready novelty claim."
+    },
+    {
+      "location": "Submission package",
+      "revision": "Resolve author names, affiliations, contributions, funding and conflict statements, target-venue requirements, code ownership/license, provider permission for aggregate release, and reviewer consent. Exclude raw Lumid article text, provider payloads, and contract-rule bytes unless redistribution permission is established.",
+      "reason": "The release inventory identifies each item as unresolved, and hashes do not grant redistribution rights."
+    },
+    {
+      "location": "Review provenance",
+      "revision": "Obtain a scientific review from a qualified human who did not develop the methods or select the models, and preserve this assistant response as an internal substantive review rather than representing it as the requested independent review.",
+      "reason": "This reviewer is an assistant working inside the project workspace and cannot attest to human or organizational independence."
+    }
+  ],
+  "optional_extensions": [
+    "Add a compact chronology table separating the failed v3 gate, V3.1 development selection, candidate freeze, pre-receipt prevalence exposure, B0-only evaluation, opened V4 discovery, opened V5 adaptive controls, and pending V4 confirmation.",
+    "Provide a public synthetic-data reproduction of the feature and label pipeline after licensing is resolved, including boundary-time, zero-volatility, terminal-time, and stale-price cases.",
+    "Report descriptive results by event family or calendar episode only if they can be produced without reopening or tuning on consumed holdouts; otherwise reserve that analysis for a newly frozen study.",
+    "Consider a venue-appropriate supplement containing the exact manifest hashes and software versions while keeping restricted source bytes local."
+  ],
+  "claim_scope_assessment": "The title, abstract, results, discussion, and conclusion consistently describe a failed development promotion of B1 plus a B0-only holdout benchmark. They explicitly deny a held-out news comparison, universal news-null claim, causal interpretation, efficiency conclusion, trading-profit claim, and V4 confirmation. The V5 context and news comparisons are separated by cohort and selection history and are not presented as causal explanations. Subject to adding the omitted original-v1 exposure chronology, the claim scope is appropriate.",
+  "cohort_and_clock_assessment": "Revision 2 clearly discloses that cohort membership is outcome-blind but retrospective: activity uses the full development interval and metadata need only predate development close, not every decision time. It correctly says this is not a deployable point-in-time universe rule. The news availability clock and last-trade-at-or-before-t policy are accurately summarized. The manuscript should add the frozen zero-volatility and contradicted-terminal behaviors so the implementation can be reproduced from the paper.",
+  "chronology_and_selection_assessment": "The V3.1 selection chronology, B0 fallback, one-shot B0 evaluation, pre-receipt exposure of 26,381 positives and prevalence 0.124604, and prohibition on reconstructing B1 are accurately disclosed. V4 discovery and V5 folds are repeatedly labeled opened or adaptive, and fold 5 is called a reporting fold. The main omission is the previously exposed original v1 test block, which should be included wherever the integrity history is summarized.",
+  "statistical_assumptions_assessment": "The manuscript appropriately limits the 5,000-sample within-market circular-block interval to the frozen cohort and calls V5 market-cluster intervals descriptive and selection-unadjusted. It also acknowledges related-family, event-reuse, and calendar-shock dependence and states that useful positive gains remain compatible with the exploratory interval. The strongest wording should be moved nearer the first V3.1 interval because the current design does not establish broad population coverage or an effective number of independent information episodes.",
+  "novelty_and_related_work_assessment": "The contribution is credible as an auditable negative selection study with conservative source clocks, a selected-model benchmark, and a demonstration that comparator strength and exposure context materially change interpretation. It is not a new learning algorithm or a demonstrated causal information-absorption result. The focused comparison is thoughtful but incomplete, and the SSRN paper has not received a full-method review. A wider primary-source search is required before asserting venue-level novelty.",
+  "implementation_reviewed": [
+    "eventx/release/v3_1_historical_primary/protocol.json",
+    "eventx/release/v3_1_historical_primary/IMPLEMENTATION_SPEC.md",
+    "eventx/release/v3_1_historical_primary/implementation_manifest.json",
+    "eventx/release/v3_1_historical_primary/holdout_implementation_manifest.json",
+    "eventx/release/v3_1_historical_primary/candidate_manifest.json",
+    "eventx/tasks/build_v3_1_historical_development_examples.py",
+    "eventx/tasks/build_v3_1_historical_holdout_examples.py",
+    "eventx/tasks/run_v3_1_historical_development_models.py",
+    "data/v3_1_historical/primary/holdout/holdout_consumption_receipt.json",
+    "eventx/release/v3_1_historical_primary/HOLDOUT_PROTOCOL_DEVIATION.md",
+    "data/v3_1_historical/primary/holdout/evaluation_manifest.json",
+    "eventx/release/paper_a_20261010/evidence.json",
+    "eventx/release/paper_a_20261010/TABLES.md",
+    "eventx/release/paper_a_review_20261010/preparation_checks.json"
+  ],
+  "source_rights_assessment": "Not cleared for public release. The proposed split is sensible: authored prose and approved aggregate tables may be releasable after author, provider, venue, and code-license review; raw article text, provider payloads, rule bytes, credentials, account identifiers, and protected V4 records should remain excluded absent explicit permission. Reviewer identity or submissions require consent and an anonymity decision.",
+  "suggested_venue": "A transparent empirical forecasting, prediction-market methods, or data-provenance venue that accepts carefully bounded negative results and extensive reproducibility appendices; choose the exact venue only after the literature and rights reviews.",
+  "ready_for_submission": false
+}

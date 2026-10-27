@@ -1,0 +1,10 @@
+{
+  "created_at_utc": "2026-09-28T13:38:31.188718+00:00",
+  "query_sha256": {
+    "cursor.sql": "15d4fb6367060af439ef16b20c67b36138e5c3c207d4919ccc08846bad9477c9",
+    "successors.sql": "32c96e609c8d0fe47c3b966c8dffba2caac0edccf96658b8306ca12a501ca093"
+  },
+  "scope": "opened V6 finnhub company-news endpoint cursor and five nearest completed successors; read only",
+  "script_sha256": "d18efcdffdac2867e5fe28d9dd02582c1960158535435794dd1e9b6fcbd8888a",
+  "written_before_request": true
+}

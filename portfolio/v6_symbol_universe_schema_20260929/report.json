@@ -1,0 +1,213 @@
+{
+  "base_url": "https://lum.id/findata",
+  "catalog_response_sha256": "828221ed563de205cb8b94480f678dce00b2787855f51577cd49117f1d67721d",
+  "catalog_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "description": "Every queryable column of reference.symbol_universe \u2014 what a SELECT returns, including server-stamped provenance columns and generated columns. Not an ingest/write model.",
+    "properties": {
+      "cik": {
+        "nullable": true,
+        "type": "string"
+      },
+      "country": {
+        "nullable": true,
+        "type": "string"
+      },
+      "currency": {
+        "nullable": true,
+        "type": "string"
+      },
+      "cusip": {
+        "nullable": true,
+        "type": "string"
+      },
+      "delisting_date": {
+        "format": "date",
+        "nullable": true,
+        "type": "string"
+      },
+      "exchange": {
+        "nullable": true,
+        "type": "string"
+      },
+      "ingest_ts": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "ipo_date": {
+        "format": "date",
+        "nullable": true,
+        "type": "string"
+      },
+      "is_actively_trading": {
+        "nullable": true,
+        "type": "boolean"
+      },
+      "is_etf": {
+        "nullable": true,
+        "type": "boolean"
+      },
+      "is_fund": {
+        "nullable": true,
+        "type": "boolean"
+      },
+      "isin": {
+        "nullable": true,
+        "type": "string"
+      },
+      "name": {
+        "nullable": true,
+        "type": "string"
+      },
+      "raw": {
+        "nullable": true,
+        "type": [
+          "object",
+          "array",
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      },
+      "source": {
+        "type": "string"
+      },
+      "source_endpoint": {
+        "type": "string"
+      },
+      "source_run_id": {
+        "type": "string"
+      },
+      "symbol": {
+        "type": "string"
+      },
+      "valid_from": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "valid_to": {
+        "format": "date-time",
+        "type": "string"
+      }
+    },
+    "required": [
+      "symbol",
+      "valid_from",
+      "valid_to",
+      "source",
+      "source_endpoint",
+      "source_run_id",
+      "ingest_ts"
+    ],
+    "title": "reference_symbol_universe",
+    "type": "object"
+  },
+  "catalog_status": 200,
+  "columns": [
+    {
+      "column_name": "symbol",
+      "data_type": "text",
+      "ordinal_position": 1
+    },
+    {
+      "column_name": "name",
+      "data_type": "text",
+      "ordinal_position": 2
+    },
+    {
+      "column_name": "exchange",
+      "data_type": "text",
+      "ordinal_position": 3
+    },
+    {
+      "column_name": "ipo_date",
+      "data_type": "date",
+      "ordinal_position": 4
+    },
+    {
+      "column_name": "delisting_date",
+      "data_type": "date",
+      "ordinal_position": 5
+    },
+    {
+      "column_name": "currency",
+      "data_type": "text",
+      "ordinal_position": 6
+    },
+    {
+      "column_name": "country",
+      "data_type": "text",
+      "ordinal_position": 7
+    },
+    {
+      "column_name": "cik",
+      "data_type": "text",
+      "ordinal_position": 8
+    },
+    {
+      "column_name": "isin",
+      "data_type": "text",
+      "ordinal_position": 9
+    },
+    {
+      "column_name": "cusip",
+      "data_type": "text",
+      "ordinal_position": 10
+    },
+    {
+      "column_name": "is_etf",
+      "data_type": "boolean",
+      "ordinal_position": 11
+    },
+    {
+      "column_name": "is_fund",
+      "data_type": "boolean",
+      "ordinal_position": 12
+    },
+    {
+      "column_name": "is_actively_trading",
+      "data_type": "boolean",
+      "ordinal_position": 13
+    },
+    {
+      "column_name": "valid_from",
+      "data_type": "timestamp with time zone",
+      "ordinal_position": 14
+    },
+    {
+      "column_name": "valid_to",
+      "data_type": "timestamp with time zone",
+      "ordinal_position": 15
+    },
+    {
+      "column_name": "source",
+      "data_type": "text",
+      "ordinal_position": 16
+    },
+    {
+      "column_name": "source_endpoint",
+      "data_type": "text",
+      "ordinal_position": 17
+    },
+    {
+      "column_name": "source_run_id",
+      "data_type": "uuid",
+      "ordinal_position": 18
+    },
+    {
+      "column_name": "ingest_ts",
+      "data_type": "timestamp with time zone",
+      "ordinal_position": 19
+    },
+    {
+      "column_name": "raw",
+      "data_type": "jsonb",
+      "ordinal_position": 20
+    }
+  ],
+  "materialized_status": 200,
+  "queried_at_utc": "2026-09-29T14:42:11.267122+00:00",
+  "retrieve_status": 200
+}

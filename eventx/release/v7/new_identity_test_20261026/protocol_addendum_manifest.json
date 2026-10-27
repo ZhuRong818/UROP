@@ -1,0 +1,9 @@
+{
+  "files": {
+    "data/v7/source_time_study_20261026_v03/development/frozen_models.joblib": "934e7a6304933bf09315405df4b8b7202646e505e1249d78ec934d03b1f3ba0b",
+    "eventx/release/v7/new_identity_test_20261026/protocol_addendum.json": "e860378228a16c37e996ed60c962185959d1968f72a2c9363564d1f7497d47ab",
+    "eventx/tasks/evaluate_v7_new_identity_v03_20261026.py": "c7332f07ed877accd6b92b7f89cd5082e0db7f5b071cd6b324f50c7b441aafaf",
+    "eventx/v7/clock_bounded_quote_inputs_20261026.py": "e91d5c7a08b10e1d1f0e1fdd1ab6fea146bf286b050953d45ad0128c1cec3ab5",
+    "eventx/v7/source_time_study_20261026_v03.py": "181f8c1080b0d35fee4dc985f67a2c7ed71e2391bb767f735a173045564ee224"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "base_url": "https://lum.id/findata",
+  "materialized_status": 200,
+  "queried_at_utc": "2026-09-29T15:07:29.438017+00:00",
+  "retrieve_status": 200,
+  "rows": [
+    {
+      "n_symbols": "3",
+      "previous_n_symbols": null,
+      "run_id": "63f23a05-d8d9-4740-b162-15db11b704a0",
+      "started_at": "2026-05-18T20:57:29.608659Z"
+    },
+    {
+      "n_symbols": "7851",
+      "previous_n_symbols": "3",
+      "run_id": "be2c7569-9cdb-4b77-a725-b1caee8225ae",
+      "started_at": "2026-05-18T20:59:04.862013Z"
+    },
+    {
+      "n_symbols": "10",
+      "previous_n_symbols": "7851",
+      "run_id": "9a1b1239-37ad-489a-9068-da43e0a443bd",
+      "started_at": "2026-05-20T17:21:53.648246Z"
+    },
+    {
+      "n_symbols": "7851",
+      "previous_n_symbols": "10",
+      "run_id": "f1799fbd-9d63-4f12-b8da-daa49468c68f",
+      "started_at": "2026-05-20T17:22:19.500123Z"
+    },
+    {
+      "n_symbols": "7258",
+      "previous_n_symbols": "7851",
+      "run_id": "0ec43614-88e1-4e56-8ec8-2b4612e5f441",
+      "started_at": "2026-05-28T22:30:01.346727Z"
+    },
+    {
+      "n_symbols": null,
+      "previous_n_symbols": "7258",
+      "run_id": "8f7c0d9b-84d8-4e87-b0d1-55902b7c71be",
+      "started_at": "2026-05-29T21:00:21.431921Z"
+    },
+    {
+      "n_symbols": "7258",
+      "previous_n_symbols": null,
+      "run_id": "f5ce857d-c995-4420-a741-e16ad140a8aa",
+      "started_at": "2026-05-29T21:15:01.710934Z"
+    },
+    {
+      "n_symbols": "7220",
+      "previous_n_symbols": "7258",
+      "run_id": "ce34ecc0-c1af-452c-af78-b8302ef151b5",
+      "started_at": "2026-06-27T19:15:01.818072Z"
+    }
+  ]
+}

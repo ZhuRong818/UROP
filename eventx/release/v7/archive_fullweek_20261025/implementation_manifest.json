@@ -1,0 +1,11 @@
+{
+  "files": {
+    "eventx/release/v7/archive_fullweek_20261025/policy.json": "ea95dffcac4e8b960518c2e0be39f09d88f673a8ac26b2cdf7f3e845ae3ff7bb",
+    "eventx/release/v7/archive_fullweek_20261025/observational_protocol.json": "dadb47dc6abb21cde77b85e51dd69b55740d3b791912ee01a4fd1600a9c41ae7",
+    "eventx/tasks/run_v7_archive_fullweek_20261025.py": "04f2e751f574142fb6ee0d337ff11490c201f7d378c7826f017d28bde1c191c4",
+    "eventx/tasks/run_v7_archive_week_pilot_20261025.py": "cebece37f3e5546350b5ab596453663c90c0a8de7db5d7272f1a0018fc8da3e1",
+    "eventx/v7/archive_ranges_20261024.py": "6f077026581b6e7ec556f46a9c52b75ec9daa67733d645873495c6df6a27689d",
+    "data/v7/archive_week_pilot_20261025/capture/manifest.json": "cb25d9e4d5622ca2da3f706f5ec0bb98c1b30a5332b12864229350a436241957",
+    "eventx/release/v7/archive_week_pilot_20261025/selection_manifest.json": "35f7e479675377db0dee8f631ca74c3db94edc35f081cf35d625e4b38d918d34"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-24T14:01:40.252149+00:00",
+  "authorization": "User requested continuing local research and usable forecasts after zero-forecast first shadow",
+  "book_max_age_seconds": 120,
+  "candidates": [
+    "weighted_midpoint",
+    "snapshot_ridge",
+    "short_ridge"
+  ],
+  "comparison": "All snapshot-eligible rows and separately all short-eligible rows; models compared only on identical keys",
+  "development_warning": "Outcomes already exposed in earlier related work; all comparisons exploratory",
+  "feature_tiers": {
+    "short": "Current valid book/status plus uninterrupted30m quote history",
+    "snapshot": "Current valid book and current status; no historical feature requirement"
+  },
+  "forecast_horizons_seconds": [
+    1800
+  ],
+  "forward_adjudication_delay_seconds": 120,
+  "forward_cohort": "Two source-pilot markets, selected from metadata; different cohort, no generalization guarantee",
+  "forward_emission_seconds": 30,
+  "forward_quotes": "No gaps>120s or failed quality receipts from decision through target; endpoint receipt must predate target",
+  "forward_start": "First future five-minute grid after activation; no missed grid backfill",
+  "forward_status": "Sampled status continuity, no gaps>360s from decision to horizon; scheduled_end alone never suffices; cannot exclude unobserved intrapoll status changes",
+  "grid_seconds": 300,
+  "horizon_seconds": 1800,
+  "mapping": "Exact YES token, condition and rules; current active/acceptingOrders true, closed false; resolution status posed and no dispute/resolved_at",
+  "market_resolution_prediction": false,
+  "max_spread": 0.05,
+  "measurement": "Receipt-clock sampled quotes, not latent continuous exchange price, executed trades or outcome probabilities",
+  "min_best_size": 10,
+  "minimum_training_markets": 3,
+  "minimum_training_rows": 100,
+  "models_promoted": false,
+  "new_eligibility": "Explicit new experiment, not a rescue or rerun of closed240m shadow",
+  "news_effect_evaluation": false,
+  "no_hyperparameter_search": true,
+  "no_significance_claim": "One short shared calendar period and overlapping targets; no independent news episodes",
+  "old_trade_model_and_gates_unchanged": true,
+  "positive_volatility_required": false,
+  "primary_metric": "MAE",
+  "primary_reference": "persistence",
+  "promotion": "None from retrospective result; forward shadow compares all fixed models",
+  "publication": "Baseline forecast available as research reference; candidates displayed separately; no claimed edge or trading recommendation",
+  "resolution_documentation": "https://docs.polymarket.com/api-reference/markets/get-resolution-state",
+  "ridge_alpha": 100.0,
+  "ridge_forecast_clip": [
+    0,
+    1
+  ],
+  "ridge_intercept": true,
+  "ridge_response": "midpoint(t+30)-midpoint(t)",
+  "secondary_metrics": [
+    "RMSE",
+    "mean_error",
+    "per-market MAE",
+    "coverage and missing endpoints"
+  ],
+  "source_reference": "data/v7/direct_source_pilot_20261022_v03/audits/20261024T060327Z_808a25",
+  "standardization": "Training-only population mean/std; zero std replaced by1",
+  "status": "exploratory quote-model study; no claim of confirmatory evidence or release effect",
+  "status_cadence_note": "360s is a separately specified tolerance for the original five-minute metadata cadence; does not relax the older trade-study policy",
+  "status_max_age_seconds": 360,
+  "target": "Last durably received quality-screened YES-book midpoint as of t+30min",
+  "target_unchanged": "30-minute receipt-clock midpoint with continuous forward quote/status coverage; no gaps filled",
+  "trading_enabled": false,
+  "training": "decision+30min <2026-10-24T00:00:00Z",
+  "validation": "decision>=2026-10-24T00:30:00Z; endpoint within fixed source snapshot",
+  "validation_designation": "Source-exposed retrospective development split, NOT untouched holdout",
+  "version": "memory_quote_20261024",
+  "zero_volatility_reason": "Continuous point forecasting includes unchanged markets; no positive-movement selection"
+}

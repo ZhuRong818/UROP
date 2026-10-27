@@ -1,0 +1,8 @@
+{
+  "change": "Original attempt had20s idle ReadTimeout; absence of data in that interval is not proof of a failed stream. This version uses180s total deadline and no idle read timeout.",
+  "created_at": "2026-10-18T15:06:29.675058+00:00",
+  "model_development": false,
+  "observation_seconds": 180,
+  "purpose": "SSE idle-timeout diagnosis only, same eight preselected markets",
+  "source": "Lumid prediction-markets/stream"
+}

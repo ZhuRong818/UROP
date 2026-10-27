@@ -1,0 +1,10 @@
+{
+  "files": {
+    "EVENTX_JUNE_OUT_OF_TIME_TEST_20261026.md": "10939965f64bec0790b4ca02db52e94a37e36d2ace0f63bb177fa93eda5767ce",
+    "data/v7/june_replication_20261026/bootstrap.json": "23051313089830a944a2ea15b35fc36c81b21a9735119dc720032475aadadbbd",
+    "data/v7/june_replication_20261026/evaluation/manifest.json": "9cb93435f009fc9c39e5323e7253eea1acf454493b1aa2578250cbf35373b3fd",
+    "data/v7/june_replication_20261026/source/capture_manifest.json": "6e0cebed7de85e1a1eca8856b7bd756bd27b75a74784bbb3d9d715946b89126f",
+    "eventx/release/v7/june_replication_20261026/implementation_manifest.json": "f94a71bd68c5007c40363b95f2ad2306a4f255a3070df50b1007ee2706853895",
+    "eventx/tasks/analyze_v7_june_replication_bootstrap_20261026.py": "018d93ec971e78b70b9f5537da4758aed48003d5eab3eb97dc2fe92a576e4b00"
+  }
+}

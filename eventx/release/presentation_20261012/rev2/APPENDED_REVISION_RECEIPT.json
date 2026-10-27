@@ -1,0 +1,103 @@
+{
+  "presentation_id": "pres_fe4c1b53f21bb8036a83438a524ca186",
+  "deck_id": "267708b9f2fa",
+  "theme_id": "zurich-light",
+  "slides": [
+    {
+      "title": "EventX: market-news research progress",
+      "subtitle": "Rationale, aims, achieved results and baseline improvements\n12 October 2026",
+      "slidenum": 14,
+      "layout": "title_and_subtitle",
+      "image_url": "https://slidesgpt.com/media/aa0be5ab1032.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Why study news beyond prediction-market prices?",
+      "subtitle": "The rationale is to measure information that market history may miss",
+      "slidenum": 15,
+      "layout": "title_and_two_columns",
+      "image_url": "https://slidesgpt.com/media/6b47ee0973a1.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Research aims and the forecast target",
+      "subtitle": "A large absolute movement in YES log odds over the next 30 minutes",
+      "slidenum": 16,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/9f7b7a0cdbe4.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Methods and baseline comparison design",
+      "subtitle": "Earlier training periods, later evaluation periods and identical comparison rows",
+      "slidenum": 17,
+      "layout": "quadrant_grid",
+      "image_url": "https://slidesgpt.com/media/6890f3e7c585.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Market model: 9.68% lower log loss than logistic",
+      "subtitle": "364,903 matched rows across 1,135 markets. Three forward folds. Exploratory.",
+      "slidenum": 18,
+      "layout": "data_table",
+      "image_url": "https://slidesgpt.com/media/69c48a9f5b1b.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Selected booster: a further 1.17% lower log loss",
+      "subtitle": "112,616 matched fold-5 rows. Selected using fold 4. Exploratory.",
+      "slidenum": 19,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/2b02cf10be6f.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Exposure correction gives the best score in this news trial",
+      "subtitle": "9,965 matched news-exposed rows. Folds 4–5. Log loss lower is better.",
+      "slidenum": 20,
+      "layout": "data_table",
+      "image_url": "https://slidesgpt.com/media/10a4d3b08b57.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "What we have achieved so far",
+      "subtitle": "Measured model gains and a more informative research framework",
+      "slidenum": 21,
+      "layout": "image_left_text_right",
+      "image_url": "https://slidesgpt.com/media/a6e936f16bf6.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Bottlenecks and the next research step",
+      "subtitle": "Timely contract evidence and independent evaluation now set the priority",
+      "slidenum": 22,
+      "layout": "title_and_body",
+      "image_url": "https://slidesgpt.com/media/6962786fd221.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Backup: methods, features and target definition",
+      "subtitle": "For questions after the timed presentation",
+      "slidenum": 23,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/c10a7b5b929e.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Backup: published performance is task-specific",
+      "subtitle": "Primary-source versions from the 10 October literature review",
+      "slidenum": 24,
+      "layout": "data_table",
+      "image_url": "https://slidesgpt.com/media/2a14b11a3972.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Backup: evidence status and confirmation",
+      "subtitle": "What the current results support",
+      "slidenum": 25,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/07bdca31f655.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "cohort_sha256": "30a7a861a566c28365f871cfb4594272adc85c058b9f13ed70a77a9be1e80d05",
+  "collector": {
+    "path": "eventx/tasks/collect_v4_confirmatory_warehouse.py",
+    "sha256": "e082a0b4e383e628258002d7f94d698d72b75314120f23e89f70a0ebcd48035f"
+  },
+  "created_after_warmup_test": true,
+  "labels_predictions_or_metrics_computed": false,
+  "news_warmup_first_day": "2026-08-30T00:00:00Z",
+  "protocol_id": "eventx-v4-confirmatory-polymarket-20260902",
+  "protocol_sha256": "0747a3e41be5d21a853cedfc824482fcf1c047115aaddec1ca2c4fff3feaee8c",
+  "status": "collector_frozen_before_future_holdout",
+  "trade_first_day": "2026-09-06T00:00:00Z"
+}

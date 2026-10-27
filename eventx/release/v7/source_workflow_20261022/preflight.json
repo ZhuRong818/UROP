@@ -1,0 +1,8 @@
+{
+  "source_audit": "data/v7/direct_source_pilot_20261022_v03/audits/20261022T111727Z_158a60",
+  "v2_trade_response_markets": 22,
+  "expected_markets": 22,
+  "exact_allowlist_match": true,
+  "scope_failures": 0,
+  "predictive_readiness": false
+}

@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-09-28T14:00:11.699875+00:00",
+  "paths": {
+    "prediction_market_tables": "/catalog/schemas/prediction_markets/tables",
+    "provenance_tables": "/catalog/schemas/provenance/tables"
+  },
+  "query_sha256": "49b36793153ea3891258d7faa67c3324152440ed0278bbd965b53bd777f47f61",
+  "scope": "two catalog table-list GETs plus one bounded information_schema table-name query; no market/news rows, labels or protected data",
+  "script_sha256": "d467213ad941d324d5165d3c0ad880162f613fbb6d3ac321eadec787cb256dce",
+  "written_before_requests": true
+}

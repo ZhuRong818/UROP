@@ -1,0 +1,14 @@
+{
+  "authorized_scope": "V7 source continuation only; original final audit then separate24h V03 source rehearsal; no protected evaluation",
+  "administrative_stop_at": "2026-10-25T12:00:00+00:00",
+  "original_run": "data/v7/direct_source_pilot_20261022/live",
+  "revised_run": "data/v7/direct_source_pilot_20261022_v03/live",
+  "revised_duration_seconds": 86400,
+  "event_activation_enabled": false,
+  "model_scoring_enabled": false,
+  "poll_seconds": 30,
+  "host_requirement": "Mac powered, lid open and connected, or independently configured always-on host. No wake/continuous-operation guarantee.",
+  "source_review_not_admission": true,
+  "halt_on": "scope/hash failure, missing completion evidence, failed child; explicit STOP; administrative deadline",
+  "continuation": "Source diagnostics may proceed despite measured original gaps; this is not a source-readiness promotion."
+}

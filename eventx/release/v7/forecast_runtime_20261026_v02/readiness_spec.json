@@ -1,0 +1,12 @@
+{
+  "clock_probe_interval_seconds": 60,
+  "duration_seconds": 3600,
+  "metadata_request_interval_seconds": 0.4,
+  "model_inference": false,
+  "poll_seconds": 60,
+  "prospective_test_started": false,
+  "scope": "Metadata-selected V02 live cohort; public WebSocket + metadata/resolution only",
+  "target_construction": false,
+  "version": "forecast_runtime_20261026_v02",
+  "websocket_url": "wss://ws-subscriptions-clob.polymarket.com/ws/market"
+}

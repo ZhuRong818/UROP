@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-25T07:39:36.916730+00:00",
+  "objective": "Calibrate fixedHGB7onnewdata and test original-cohort temporal transfer plus disjoint-family contract transfer",
+  "base_model": "data/v7/change_probability_20261025/development/frozen_models.joblib",
+  "base_model_retraining": false,
+  "never_retune_periods": [
+    "Apr25\u201327",
+    "Apr28\u201330",
+    "consumedOOT/V3.1",
+    "protectedV4"
+  ],
+  "cohorts": "Original20IDs retained even if expired. Add10newIDs from10distinct current event IDs disjoint from original20families;exclude1231protected IDs plus original5sample. Current metadata not PITproof. No selection by returns/forecast errors.",
+  "new_selection": "CachedApr21identity-only common non-boundary IDs with>=2books/hour;seededSHA256 transport-v1:,max160metadata lookups;first10exactbinary mappings with rules,start<May1,end>May7,current family IDs nonoverlapping. Freeze before any new May prices.",
+  "calibration_dates": [
+    "2026-05-01",
+    "2026-05-02",
+    "2026-05-03"
+  ],
+  "calibration_cohort": "Original20only;new10not read until test",
+  "calibration_fit": "May1\u20132;minimum500rows,30positives,30negatives",
+  "calibration_select": "May3;minimum100rows,10positives,10negatives;lowest logloss,tie1e-12 favors identity/intercept/sigmoid order. If insufficient,identity only.",
+  "calibration_candidates": [
+    "identity a=1,b=0",
+    "intercept-only a=1,b in[-5,5]",
+    "monotone sigmoid a in[.05,5],b in[-5,5]"
+  ],
+  "calibration_loss": "mean logistic loss of a*logit(p)+b plus .001*((a-1)^2+b^2);L-BFGS-B. Positive slope preserves ranking. No weighting or oversampling.",
+  "refit": "Refit chosen calibration onMay1\u20133original20;freeze beforeMay4\u20136retrieval. No base model feature/hyperparameter changes.",
+  "test_dates": [
+    "2026-05-04",
+    "2026-05-05",
+    "2026-05-06"
+  ],
+  "test_cohort": "Original20andnew10;primaryresults separate by cohort,combined descriptive only",
+  "controls": [
+    "rawHGB7",
+    "selected calibratedHGB7",
+    "frozen old global/market/activity baselines",
+    "updated global event rate fromMay1\u20133original20,Beta(1,1)smoothed;not test-fitted"
+  ],
+  "task_and_eligibility": "Unchanged any30m observed midpoint change>1e-12,fresh current/endpoint<=120s,unique direct quote pairs,spread<=.05,interior/noncrossed;explicit missinglag flags. Original strict secondary unchanged.",
+  "grid": "00:30\u201323:25UTC every5m,276grids/market/day;16560calibration and24840testscheduled",
+  "source_budget": "72hours calibration+72hours test,16MiB/file,4groups/file,2workers;total upper bound2415919104archive bytes. Existing arrays not modified. May1\u20136predates protected periods;exclude1231IDs before retained analysis.",
+  "report": [
+    "LL/Brier/AP/AUC bycohort",
+    "raw vs calibrated",
+    "each baseline",
+    "strict and nonoverlap secondary",
+    "per-day/per-market",
+    "fixed probability-bin calibration",
+    "coverage and missingness for all IDs"
+  ],
+  "claims": "New historical dates and new eventIDs;not prospective,not guaranteed independent shocks,not tradable/news-value result. No significance claim based on3dates. Preserve any failed calibration/transfer result,do not retune onMay4\u20136.",
+  "qa": [
+    "identity transform invariance",
+    "monotonic positive-slope probabilities",
+    "synthetic underprediction correction"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/pmxt-dev/polymarket-orderbook-collector",
+  "commit": "cb0f6631556bf460d03594fe20f9bbd020b47d19",
+  "commit_date": "2026-07-31T13:03:32-07:00",
+  "historical_may_deployment_verified": false,
+  "files": {
+    "services/r2-archive/exporter/run.py": "f7b13c2b73528cb88a8da035ddc5cefc4eea640cdd7f16b0a068cc316b1a593c",
+    "shared/rust/polymarket-orderbook-rust/src/sink.rs": "caeb3da2195a35bb6bcc44f3f0025ebd748ad143cd21f973b80af46edaa14d89",
+    "shared/rust/polymarket-orderbook-rust/src/events.rs": "337710acff8da22f8ffe123b90117129332c32e78bd0aba3440cd697c86ea441",
+    "shared/rust/polymarket-orderbook-rust/src/ws/dedup.rs": "9067e058cf6b232395fec6fa1d5514d2b9b95a9d7a80f2e0547097b3ff7695f6",
+    "shared/rust/polymarket-orderbook-rust/src/config.rs": "99cf2aaf7a36fe92b1f8f2ab1a8516c53aadd16397c487873de565a475bdb512"
+  }
+}

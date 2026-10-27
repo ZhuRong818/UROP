@@ -1,0 +1,21 @@
+{
+  "role": "synthetic development screen; not forecasting confirmation or inference certification",
+  "seed": 20261010,
+  "replications_per_cell": 4096,
+  "calendar_days": [30, 60, 120],
+  "cases": ["independent_days", "ar_0_5", "ar_0_9", "regime_random_half_shift"],
+  "episodes_per_day": "Poisson(1.5), capped at four, zero-event calendar days retained",
+  "paired_loss_difference": "gain + shared calendar shock + episode noise; this directly models loss differences, not fitted forecast probabilities",
+  "calendar_shock_sd_nats": 0.02,
+  "episode_noise_sd_nats": 0.02,
+  "regime_shift_sd_nats": 0.015,
+  "gains_nats": [0.0, 0.001, 0.003],
+  "estimand": "equal-weight mean paired loss difference across simulated information episodes",
+  "candidates": ["iid_episode_normal", "calendar_cluster_normal", "bartlett_hac_14_normal"],
+  "oracle": "known-DGP conditional variance; design reference only, unavailable on real data",
+  "nominal_interval_coverage": 0.95,
+  "screen_acceptance": "in every declared cell: Wilson 95% lower coverage bound >=0.93 and upper two-sided type-I bound <=0.07",
+  "gain_power": "lower 95% interval bound above zero; separately report with point gain >=0.001, a sensitivity threshold not a V7 adopted utility rule",
+  "mde_reference": "(normal 0.975 quantile + normal 0.8 quantile) times median known-DGP standard error",
+  "limits": ["Assumed noise scales, not estimated EventX scales", "No proof for real episode/family/calendar dependencies", "No forecast fitting or test-label access", "No adoption from passing a subset of cells", "Prior failed inference screens remain failed"]
+}

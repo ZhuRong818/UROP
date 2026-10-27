@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-26T11:44:56.117304+00:00",
+  "cohort": "Same 60 fixed IDs (development50 + training_excluded10), including expired and zero-coverage contracts. No replacement.",
+  "dates": [
+    "2026-06-01",
+    "2026-06-02",
+    "2026-06-03",
+    "2026-06-04",
+    "2026-06-05",
+    "2026-06-06",
+    "2026-06-07"
+  ],
+  "integrity": "Evaluate exactly once after source freeze; report regardless of outcome.",
+  "interpretation": "Historical retrospective replay; dependent observations; convenience cohort. Not prospective, not news value, not trading profit.",
+  "model_freeze": "Same frozen bundles hashed in the 25 October replication. No calibration, refit, threshold or eligibility change.",
+  "models": [
+    "global_rate",
+    "market_rate",
+    "activity_logit",
+    "row_hgb7",
+    "legacy_hgb7"
+  ],
+  "objective": "Fresh out-of-time test of the unchanged May7-9 quote-change booster on an unopened week three weeks after training. No new fit or model selection.",
+  "primary": "Row-weighted matched log loss of row_hgb7 vs activity_logit, separately development50 and training_excluded10. Pass = lower LL than activity_logit and global_rate on development50 with no higher Brier.",
+  "reporting_floor": "Fewer than 100 known outcomes, 20 positives or 20 negatives in a cohort = insufficient for comparison.",
+  "secondary": "Brier, AP, AUC, family-macro LL, per-date, per-contract, strict, nonoverlap, calibration bins, missing-label bounds, contract-clustered bootstrap CI of LL difference (added as analysis-only, reported regardless of sign).",
+  "selected": "row_hgb7",
+  "source": "168 hourly pmxt archive files; same fetch code, caps and single transport retry as 25 October.",
+  "target": "Endpoint midpoint differs after 30 minutes by >1e-12; unchanged 18 features and freshness/endpoint gates.",
+  "unopened_basis": "No quote-change study has read June prices. Window is before consumed OOT [2026-07-23,2026-07-30], V3.1 [2026-07-22,2026-08-08) and V4 [2026-09-06,2026-10-30); 1231 protected IDs filtered at decode."
+}

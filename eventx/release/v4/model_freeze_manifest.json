@@ -1,0 +1,19 @@
+{
+  "all_four_models_required_on_identical_confirmatory_rows": true,
+  "created_at": "2026-09-03T02:05:42Z",
+  "discovery_result_known_at_model_freeze": true,
+  "future_holdout_outcomes_or_predictions_inspected": false,
+  "hashes": {
+    "data/v4/discovery/examples/manifest.json": "aad72231cf6b6d34e1d36d8a79dd689e35f82cb21bfc24886c4f30e27f61b8b4",
+    "data/v4/discovery/models/frozen_models.json": "7bc70ad6cd8493e87de92a8ca5e6510bd6a0b5adeefde1e30c7e5a655eed30e5",
+    "data/v4/discovery/models/manifest.json": "e33336ef9e0195c4b66b19654bff835b5a6f9510755a58e6c9bea6ced04e1a85",
+    "data/v4/discovery/models/result.json": "067ceebb0c491c38c590e69fdf8a2e88d8feaaf0a91c9467f72d8f4e1f5b0fc4",
+    "data/v4/discovery/prepared/manifest.json": "00c150159c3238934f81f3160a3ab8834f04ea5716bf91823d372a84084d441b",
+    "data/v4/discovery/prepared/semantic_model.joblib": "98a070c574190b6e8b07d12abe8fc96dee36f2e516ed457b74ba3b694c8c4164",
+    "eventx/release/v4/collection_manifest.json": "dc1483019f73831f33b336402a86bd8a09bc4c57485773f2964196b67fe32726",
+    "eventx/release/v4/preregistration_manifest.json": "e64fd489b3f8171add9e8bc3b6bda49f8e85b6945d459711fbf31d36382f0e35"
+  },
+  "model_bundle_internal_sha256": "c96b01b417b436e8748c5e74ed93ee1442e5133134c7a523555954f240ae677b",
+  "protocol_id": "eventx-v4-confirmatory-polymarket-20260902",
+  "status": "all_confirmatory_models_frozen_before_2026-09-06_holdout"
+}

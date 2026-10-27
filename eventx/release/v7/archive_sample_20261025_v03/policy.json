@@ -1,0 +1,34 @@
+{
+  "allowed_clock_interval": [
+    "2026-04-21T12:00:00Z",
+    "2026-04-21T14:00:00Z"
+  ],
+  "at": "2026-10-25T01:10:30.388417+00:00",
+  "byte_budget_is_per_attempt": true,
+  "current_metadata": "Only identity/question/rules/token/end/status projection retained; present status is not historical status proof",
+  "excluded_id_count": 1231,
+  "forecast_eligibility": "Snapshot-only receipt-age<=120s and observed-quality coverage; historical status unavailable =>zero fully admitted forecasts",
+  "groups_per_hour": [
+    0
+  ],
+  "hours": [
+    "2026-04-21T12",
+    "2026-04-21T13"
+  ],
+  "mapping_correction": "V03 queries default metadata, then closed=true on an empty result; current closure is not historical status. Evidence: data/v7/archive_mapping_diagnosis_20261025/manifest.json",
+  "max_bytes": 100663296,
+  "max_metadata_candidates": 16,
+  "max_selected_markets": 5,
+  "models_fitted_or_scored": false,
+  "performance_labels_constructed": false,
+  "physical_read_note": "Arrow may decode excluded-market April column values; no held-out period is read. Those April rows are not inspected, analyzed or retained in the selected panel.",
+  "protected_periods_not_read": [
+    "v1 OOT July23\u201330 plus July22warmup",
+    "v3.1 July22\u2013Aug8",
+    "v4 Sep6\u2013Oct30"
+  ],
+  "replay": "Diagnostic level-update assumption; ambiguous ties/missing updates prevent exact replay certification",
+  "scope": "New V7 external archive source audit, not EventX v2 research or a model evaluation",
+  "scope_correction": "V01 entire-row-group exclusion found zero usable groups. April predates all frozen evaluations; V02 permits mixed April column chunks and excludes cohort IDs before economic analysis/retained rows.",
+  "selection": "Sorted nonexcluded condition IDs common to both hours, excluding row-group boundary IDs; at least2book events in identity-only data; current metadata has exact binary mapping and scheduled end beyond sample"
+}

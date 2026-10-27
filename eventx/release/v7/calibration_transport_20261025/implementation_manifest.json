@@ -1,0 +1,14 @@
+{
+  "files": {
+    "eventx/release/v7/calibration_transport_20261025/protocol.json": "2eee717f1a4f9521c07c9cd0ed4acfea2bfc18efbbe6e07fda982dc10fdefcf7",
+    "eventx/tasks/run_v7_calibration_transport_20261025.py": "f5d23495a619317884cfacffe370ac8ec177f81aee614be66defbe2c1249f48c",
+    "eventx/v7/calibration_transport_20261025.py": "a6ba3426ef125b52cb88b239cba7e894a35cc8499b42491104d8d76820a45385",
+    "eventx/tasks/research_v7_change_probability_20261025.py": "e32d11a1e45091242fdcd2739f26355fcb62e72fe812b8018f56535244d608b5",
+    "eventx/tasks/evaluate_v7_observational_quotes_20261025.py": "eca5f4f40a3738d78306e3ee3e142c34ed6d40268ab6ca7a00d683005d6ed217",
+    "eventx/tasks/run_v7_archive_week_pilot_20261025.py": "cebece37f3e5546350b5ab596453663c90c0a8de7db5d7272f1a0018fc8da3e1",
+    "eventx/v7/archive_ranges_20261024.py": "6f077026581b6e7ec556f46a9c52b75ec9daa67733d645873495c6df6a27689d",
+    "data/v7/change_probability_20261025/development/manifest.json": "f378eb2e989b03a8018e83a882533dc6d94dfb244c3d26dcbfeaa36b04b69995",
+    "data/v7/change_probability_20261025/development/frozen_models.joblib": "a6ad0f424c0d5acdc69865f4072dcfbe3c1151652e6998dc61f2cc30c1185762",
+    "eventx/release/v7/archive_week_pilot_20261025/selection_manifest.json": "35f7e479675377db0dee8f631ca74c3db94edc35f081cf35d625e4b38d918d34"
+  }
+}

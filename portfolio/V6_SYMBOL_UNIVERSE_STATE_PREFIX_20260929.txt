@@ -1,0 +1,15 @@
+Direct live V6 roster check: `reference.symbol_universe` contains
+one FMP-seed row each for NVDA and MSTR, ingested 19 May before all nine scoped
+article clocks, with `valid_to=null`, active and non-ETF/non-fund flags. This is
+reference membership, **not** proof of inclusion in any Finnhub request.
+The live roster has 7,851 distinct symbols: 593 ETF/fund and 7,258 others,
+making ETF/fund exclusion a plausible but unproven collector-filter hypothesis.
+Live run arguments date 7,851→7,258 to 28 May 22:30 UTC and 7,258→7,220
+to 27 June 19:15 UTC; per-run symbol lists and pages remain unreceipted.
+The user-relayed sweep found no queryable **per-run** symbol/page or historical
+cursor receipts; retained loader file logs remain the owner question. Failed
+windows, zero-news and market-status cells stay unknown; V6 support 0/8,844.
+The reported audit-log credential exposure has a sanitized, unsent owner handoff.
+Evidence: `eventx/release/v6/V6_SYMBOL_UNIVERSE_RECONCILIATION_20260929.md`,
+`eventx/release/v6/V6_SOURCE_RECEIPT_SWEEP_20260929.md` and
+`portfolio/LUMID_AUDIT_LOG_SECURITY_HANDOFF_20260929.md`.

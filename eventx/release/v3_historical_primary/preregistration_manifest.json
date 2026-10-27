@@ -1,0 +1,44 @@
+{
+  "manifest_id": "eventx-v3-historical-primary-preregistration-20260902",
+  "protocol_id": "eventx-v3-historical-primary-20260902",
+  "created_at": "2026-09-02T02:47:00Z",
+  "labels_or_outcomes_inspected": false,
+  "artifacts": [
+    {
+      "path": "eventx/release/v3_historical_primary/protocol.json",
+      "sha256": "13dfb4bd4c4f7a2240aea89ecac85f2a08376f406339628269bd60a2783c8e65"
+    },
+    {
+      "path": "eventx/release/v3_historical_primary/PREREGISTRATION.md",
+      "sha256": "95315b0fb6cd67d350c84283327ba3480c1fd0200537aa012d71596c7665e8cf"
+    },
+    {
+      "path": "data/v3_historical/primary/label_blind_inputs/cohort.jsonl",
+      "sha256": "8e06bbc5f29124768f211b980a0a76c8a79286047acfb7c7c105862174f1d08d"
+    },
+    {
+      "path": "data/v3_historical/primary/label_blind_inputs/development_association_counts.jsonl",
+      "sha256": "8601f9e159a3d12c08623eb87b4e41b88585691d7bb4016f7eb910249a6d6b18"
+    },
+    {
+      "path": "data/v3_historical/primary/label_blind_inputs/report.json",
+      "sha256": "932c57de51bf49b471d1c7e48c1c15199cc0d9082c9d5ab2a2cb52d45b01b940"
+    },
+    {
+      "path": "data/v3_historical/provenance_audit_v2/report.json",
+      "sha256": "9f0363a2ab5c3026d84d1ebeaa42a89937efec36b921b0308ac350e7f689c037"
+    },
+    {
+      "path": "eventx/features/v2_1_association.py",
+      "sha256": "51cf717f126241fcce2370056dea0b459ac1d4edb22ad301010fa23bd81a61d1"
+    },
+    {
+      "path": "eventx/tasks/build_v2_1_taxonomy.py",
+      "sha256": "8d40c53f9413081b82c0769a85fb66b70e92683972e08585af4c76144056c173"
+    },
+    {
+      "path": "eventx/release/v2_3/protocol.json",
+      "sha256": "1f9bda7b2433cf2b95ee530f4fd28630a9a6e032671c0350eb975285d963b2e1"
+    }
+  ]
+}

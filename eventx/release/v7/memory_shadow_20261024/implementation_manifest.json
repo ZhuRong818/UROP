@@ -1,0 +1,19 @@
+{
+  "locked_files": {
+    "data/v7/memory_quote_20261024/development/manifest.json": "471fa4dc986ef07706d74b888c3d3273095d6b9c9a734e0b9e25e79f3957d59f",
+    "data/v7/memory_quote_20261024/development/models.json": "2ad1829f364a61166651ece3bc3e01ce63693af92d74fc80d8ab1c06e4015204",
+    "eventx/release/v7/memory_quote_20261024/forward_cohort.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/memory_quote_20261024/implementation_manifest.json": "da00b3a904fde8f85d99ae4f85cb88340838fb68a8666ca9651b8df826390f8a",
+    "eventx/release/v7/memory_quote_20261024/policy.json": "00d169bb5af933ea076e7198c46b4d43b0c47242af3899cac6b016769fe8eeec",
+    "eventx/release/v7/memory_shadow_20261024/activation_policy.json": "517b40662441089e85e43bc8dbdadc5bbd27219aad6dc2f2bf7822f7aa3e044e",
+    "eventx/release/v7/memory_shadow_20261024/com.eventx.memory-shadow.20261024.plist": "bd4ad663ea362447cda434a7440e91285ab0bbd3caeb3ac5f49abf431412950c",
+    "eventx/release/v7/quote_source_20261024_v02/implementation_manifest.json": "4aae9f602e982a04d778cb42256dbe163a3b63e593cab50948b9e750863a3355",
+    "eventx/tasks/launch_v7_memory_shadow_20261024.py": "341245a202f8f7f7107ec1e218369137f011725b317ef3f6b03bf55accaffac3",
+    "eventx/tasks/prepare_v7_memory_shadow_20261024.py": "97d05e0a27afbddd060b71cc5f202065c0a005df8360f0db6377561303498983",
+    "eventx/tasks/run_v7_memory_shadow_20261024.py": "ac296ea29ce14f8dfe2e61b2993024b4058067519a581c2c9f3e7e0b4488e7b7",
+    "eventx/tasks/run_v7_quote_experiment_20261024.py": "fa4dc03ab8eb5f847a6bb49cb41004d73bb34a7c2e65d4a64d31000e7b1e5a77",
+    "eventx/tasks/show_v7_quote_forecasts_20261024.py": "b53b0bfd34da8e9d4b48fe4a82b051fe23a17e0ad216a1a436c41aa541156c0f",
+    "eventx/v7/memory_quote_20261024.py": "98c7ce29de46ec7557fab033b75de1a603773cd1a0a7ff19c22d5de6285f9ed8",
+    "eventx/v7/quote_experiment_20261024.py": "e967e5c33f7712c3a9fce7bdaa9b7519effd913632778dffe577791a9ff315ee"
+  }
+}

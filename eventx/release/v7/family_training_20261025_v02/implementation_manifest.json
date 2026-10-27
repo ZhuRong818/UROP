@@ -1,0 +1,11 @@
+{
+  "files": {
+    "eventx/release/v7/family_training_20261025_v02/protocol.json": "bf85eda9b5a360d0fe6060bb816f2c3bf96ede4e9b58d279e26233433271b49e",
+    "eventx/tasks/run_v7_family_training_20261025_v02.py": "6f67bb917f898f934ddfb44cdbc605a22a729a279bbcf45ac57a33af0a2f98f4",
+    "eventx/v7/family_capture_20261025_v02.py": "b3ac0d519ad113eec1df43db33539b5ca5ccd876ed2cfc792496db34130334b4",
+    "eventx/release/v7/family_training_20261025/implementation_manifest.json": "af88cbf7af1e2cd158d29e6fec458f73e0efe2028476fe4c088d5c22c9053fa8",
+    "data/v7/family_training_20261025/cohort/manifest.json": "ba3d5ef644e7518155a6341e3f93a10e49e980468d2cee6485798acbbc987fcb",
+    "eventx/v7/calibration_transport_20261025.py": "a6ba3426ef125b52cb88b239cba7e894a35cc8499b42491104d8d76820a45385",
+    "eventx/tasks/research_v7_change_probability_20261025.py": "e32d11a1e45091242fdcd2739f26355fcb62e72fe812b8018f56535244d608b5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "review_date": "2026-10-10",
+  "artifacts": {
+    "eventx/release/literature_baselines_20261010/evidence.json": "7531ccfe27f6f69d759050c006a3a3e3a7aa7bcbf05031b5409f89efc49099ff",
+    "MARKET_NEWS_EXTERNAL_BASELINE_COMPARISON_20261010.md": "fdfe8c19f72495d715a91181fdf1a0c74a9051fe50adbe2c7e574ae9d81cd843",
+    "eventx/release/literature_baselines_20261010/publication_checks.json": "c427ea294ec117548c2c73162ae905f3b9a94c29b268ab6eafb2f7e56fbedf33"
+  },
+  "local_source_sha256": {
+    "data/v5/no_terminal_baseline_diagnostic_20261009/report.json": "2eb4eba544204dc972b5d40895b32d59d28f415ba48bcbabcee17b933b4f329c",
+    "data/v5/opened_news_offset_trial_20261009/report.json": "37c9832136b939168436c40747b0ce4b797b6a02ea5ff2dddf66abaae7ac69cd",
+    "data/v5/method_screen_observed_row_join_20261009/report.json": "7300dd2a38aea559c9d1c9c18072de5ff039ccc8e84ca0fdadad334ada463b88"
+  },
+  "external_sources_are": "manual primary-source transcriptions with versions and locators; web documents not locally hash-locked"
+}

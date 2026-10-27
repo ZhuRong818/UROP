@@ -1,0 +1,20 @@
+{
+  "locked_files": {
+    "eventx/release/v7/expansion_source_pilot_20261024/implementation_manifest.json": "8b74c8248ffba52052c8e855bc7714911661538f92f5b14375371deffc39cd05",
+    "eventx/release/v7/market_capture_20261018/protected_ids.json": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b",
+    "eventx/release/v7/memory_quote_20261024/implementation_manifest.json": "da00b3a904fde8f85d99ae4f85cb88340838fb68a8666ca9651b8df826390f8a",
+    "eventx/release/v7/quote_source_20261024_v02/com.eventx.quote-source.20261024-v02.plist": "88e2514bf7b831937f3e61fd20e4557087f54a2d56c04fac6b84f4bf6a1280b6",
+    "eventx/release/v7/quote_source_20261024_v02/enrollment_report.json": "fd054f6c71eec3d362b8866128dfd4a07559e8e0b6980f615c89890edf24964d",
+    "eventx/release/v7/quote_source_20261024_v02/episode_reservation.json": "0f63f6ca9531624c724a9bebc0ac82eedbd7f90e4f39c73e0915a7d8a674116e",
+    "eventx/release/v7/quote_source_20261024_v02/evidence_link_plan.jsonl": "7771f831e064e072503e1eaec8493ffd4117b81571145ef1ba12479949cde626",
+    "eventx/release/v7/quote_source_20261024_v02/sample.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/quote_source_20261024_v02/spec.json": "aa582056c27cb0093407f7b501e786b68d427fd9104ba9fd1625d64dc235d423",
+    "eventx/tasks/audit_v7_direct_pilot_20261022_v03.py": "ca3482f0d56dc1bdc474651afbd9e921209dc1b4c1e51dc71d3cf78eab8097ad",
+    "eventx/tasks/collect_v7_direct_pilot_20261022_v03.py": "cdecc41eff8d5e09a521973e5620b1117009c86b4bfeb16d5f4253d7aa4bfd1b",
+    "eventx/tasks/collect_v7_expansion_pilot_20261024.py": "86f1dce9948409ebb43ca99606262d6493486e705c197b4cda9ac90c2baf3c7f",
+    "eventx/tasks/collect_v7_quote_source_20261024_v02.py": "5af42a4b90c842b19906c1f22107ef19b5986f3f6af5ed1d5b8291e1848bb687",
+    "eventx/tasks/launch_v7_quote_source_20261024_v02.py": "51ed6f6fc9d4f63b0b40c9efb1a158ed36d443a1a0f6ec041739bab3647b7a0a",
+    "eventx/tasks/prepare_v7_quote_source_20261024_v02.py": "4988d854a08e687462e878b4c648ee3bf0d8a1cf18087cbbc86ded0de89ad54c",
+    "eventx/v7/source_request_scheduler_v02.py": "1a941743d134e2661cd93dd686979edc3ff294c5730fae1040956897b90d6b6b"
+  }
+}

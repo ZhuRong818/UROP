@@ -1,0 +1,18 @@
+{
+  "completed_at": "2026-09-02T08:31:03.922054Z",
+  "historical_holdout_read": false,
+  "labels_or_outcomes_read": false,
+  "protocol_id": "eventx-v3.1-historical-primary-20260902",
+  "runtime": {
+    "numpy": "2.0.2",
+    "python": "3.12.13",
+    "scikit_learn": "1.7.2",
+    "scipy": "1.18.1"
+  },
+  "status": "synthetic_contract_tests_passed_before_development_labels",
+  "tests": [
+    "point_in_time_example_construction",
+    "fixed_logistic_sgd",
+    "paired_circular_brier_bootstrap"
+  ]
+}

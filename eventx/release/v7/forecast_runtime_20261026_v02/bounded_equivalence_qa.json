@@ -1,0 +1,9 @@
+{
+  "checks": 510,
+  "examples": [],
+  "final_cutoff": 1793028304.9189026,
+  "horizon_seconds": 2700,
+  "mismatches": 0,
+  "passed": true,
+  "pruning_exercised": true
+}

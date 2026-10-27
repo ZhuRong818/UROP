@@ -1,0 +1,96 @@
+{
+  "revision": 4,
+  "prepared_at": "2026-10-12",
+  "results_through": "2026-10-12",
+  "main_slides": 10,
+  "backup_slides": 3,
+  "planned_seconds": 600,
+  "spoken_words": 1152,
+  "sources": [
+    {
+      "path": "data/v5/market_condition_tuning_20261012/MODEL_CARD.md",
+      "sha256": "36ee99dbffa79f5578434cedb1cb0380c357d0c6a6995b3ae4c076897506f2cb"
+    },
+    {
+      "path": "data/v5/market_condition_tuning_20261012/report.json",
+      "sha256": "cac59ecb546bf3edf876b3bfd150f2032c8b14560df6e3a2d64ff28191dcf31d"
+    },
+    {
+      "path": "data/v5/market_condition_tuning_20261012/selection_receipt.json",
+      "sha256": "445a401686f6d6c5dde1938010ba3a2449fac83a0f6787e81edc77f9760eeefd"
+    },
+    {
+      "path": "data/v5/market_learner_screen_20261009/report.json",
+      "sha256": "8f2c372b445ec9429b6cdb70612f9d63db9c018f78eb369f530bbab9577e3f05"
+    },
+    {
+      "path": "data/v5/method_screen_observed_row_join_20261009/report.json",
+      "sha256": "7300dd2a38aea559c9d1c9c18072de5ff039ccc8e84ca0fdadad334ada463b88"
+    },
+    {
+      "path": "data/v5/no_terminal_baseline_diagnostic_20261009/report.json",
+      "sha256": "2eb4eba544204dc972b5d40895b32d59d28f415ba48bcbabcee17b933b4f329c"
+    },
+    {
+      "path": "data/v5/opened_news_offset_trial_20261009/report.json",
+      "sha256": "37c9832136b939168436c40747b0ce4b797b6a02ea5ff2dddf66abaae7ac69cd"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/TABLES.md",
+      "sha256": "e5ad2c0ea0a9252bff4cfa7b2cbd335e3db555d2a727c57ba362ec1503ee191e"
+    },
+    {
+      "path": "eventx/release/v4/protocol.json",
+      "sha256": "0747a3e41be5d21a853cedfc824482fcf1c047115aaddec1ca2c4fff3feaee8c"
+    },
+    {
+      "path": "eventx/release/v5/PROTOCOL_V1_1.md",
+      "sha256": "00ae01910e6b2918febe32bdae3ae1c660f49503b064e6c9bc6c012e13a841cb"
+    },
+    {
+      "path": "eventx/release/v7/pilot_20261010/EVENT_COVERAGE_AND_MISSED_EVIDENCE_20261012.md",
+      "sha256": "2352495a0c720458af8be4028567157e8905ec7113f4e2c5f2956f8fa84245e9"
+    },
+    {
+      "path": "eventx/release/v7/pilot_20261010/SIGNED_EVIDENCE_V03_REPAIR_20261012.md",
+      "sha256": "71dc9de9f416a7b16d883b28057e56d57c941b61032ca06e875b7543dacd01d0"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "eventx/release/presentation_20261012/rev4/UPDATE_REQUEST.json",
+      "sha256": "a982975535c2a22438105ab3c0d7ed7d51973e2c531ce67da39956e128e02b5b"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev4/DETAILED_EXPLANATION.md",
+      "sha256": "c0ec232f6a4d1658b306988c2741644e169bac4373ab437c8ab5294aaa6eade7"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev4/EVENTX_PROGRESS_PRESENTATION.html",
+      "sha256": "669695de776534e8f0ecc7690ad9a013f40d9c89c56408e8d3e8f050ea2518ba"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev4/SLIDE_CONTENT.json",
+      "sha256": "4e38c0062c1812ea8643651dcfbc638f35a40d6e03d13743b1f91f59b6861114"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev4/EDIT_RECEIPT.json",
+      "sha256": "1b94b4562561dde88782a4e5fbfd3a21cd5491feaff84eaf914e32df4a23a20f"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev4/README.md",
+      "sha256": "10654e39c2149acbecd47a6352a3c24963049fe09239d5eba25b1dc42cf1e798"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev4/SPEAKER_SCRIPT.md",
+      "sha256": "f304214aabd9489e6b76722b312ad6e84413dc729178579779e3025dbc6fb939"
+    }
+  ],
+  "visual_review": "Four newly rendered slides inspected; no clipping observed. Nine original images retained.",
+  "checks": {
+    "embedded_images": 13,
+    "exact_approved_statement": true,
+    "main_talk_seconds": 600,
+    "protected_evaluation_access": false
+  }
+}

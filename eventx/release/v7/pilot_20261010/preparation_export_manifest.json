@@ -1,0 +1,30 @@
+{
+  "role": "development preparation and scientific planning export",
+  "inputs": {
+    "data/v7/macro_pilot_20261010/manifest.json": "30bd1b70d44fceb495b18888c1da083fb50e38c48c00769e329748e1b02d0883",
+    "data/v7/macro_metadata_20261010/supplement_manifest.json": "33a5d5ee4461699fb23c8ceefba0a98ef340648670b37b23b3ca97584811506b",
+    "data/v7/macro_feasibility_20261010/manifest.json": "6259f2a958cb74077ad5c70b22a6a9a4227214c8c1e016da0fb2ce63304bc438",
+    "data/v7/episode_inference_screen_20261010/manifest.json": "56658a872e0a728f14c795f287a63c68560dde6eeffba0a4b19e12a8c2ddb654",
+    "data/v4/health_checks/20261010T004011Z/report.json": "da62cc1f719269ddd4d78d840651bb354dee465542ee88f3eaba0b9cd5633216",
+    "eventx/tasks/export_v7_macro_preparation_20261010.py": "c484b9ae987e278ca666e97eae14287b915117124ed68784e155d4b144520fc0"
+  },
+  "outputs": {
+    "ANNOTATION_RUBRIC.md": "ac72a00afe81ab86d0421a3f49a4eacab4ffb0146efc4753126dcca0a74aa43a",
+    "INFERENCE_SCREEN_SPEC.json": "0f826fb429536176a3ab227d1846067a4d720d0486557dd8406d3b0bfa8bc9cf",
+    "PREPARATION_RESULTS.md": "de9e49e38e61e05bb740eca5d8fde79b290f9b7341f320fde77a6ea46c0c484a",
+    "REVIEW_HANDOFF.md": "d72e7bb69de23f2ebb6166918f87ae84e4c34b93e5a9510554fcd014c8ede246",
+    "SAMPLING_PLAN.md": "f6c27773eb0093f99f8ba791ef24e9d250488d25c52d6771fcadcd58e5e3dc87",
+    "STUDY_SPEC.md": "b10d71de087394f148034965096c8af458b8df374c8cbcf8574977bbae951f76",
+    "availability_lag.pdf": "d938ed165c2df752834faedce00b10b65e7804494cedf5095092a11bd1b04c18",
+    "availability_lag.png": "88d265c73ab9039b3eb13c0edb43c369c081f285c4f5efc063a21e3bb3baa3d6",
+    "availability_lag.svg": "db5021fdabcd7bc0bb7dd3b55319252d9dee6139a758dc98ed00733bd0de2347",
+    "inference_coverage.pdf": "0e2a8ce30992e2ddc39dd150ccbabbf99189fd5a3cff67a7658aa01a32636a79",
+    "inference_coverage.png": "356ce8757442624724b26e87c063d117944c0ec34a8b1e527d0ab1ea3aa88131",
+    "inference_coverage.svg": "e496562293750cac20b79c25faff18070f440f6e865ebac4eb6641321b0fede4"
+  },
+  "root_report": {
+    "path": "MARKET_NEWS_NEXT_STEPS_EXECUTION_20261010.md",
+    "sha256": "ca7b4c6c1cbde919277dd49780af5295f68192b4516d46633004b3355c251f5a"
+  },
+  "forecast_freeze": false
+}

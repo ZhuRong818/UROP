@@ -1,0 +1,6 @@
+{
+  "at": "2026-10-26T12:22:57.445869+00:00",
+  "opened_before_addendum": false,
+  "secondary_criterion": "hgb7 lower matched LL than full_logit and global_rate with contract-clustered 95% lower bound of gain vs full_logit > 0. Outcome informs whether V03 is fit for a larger live cohort; reported regardless.",
+  "secondary_model": "Frozen V03 14-feature source-time booster (hgb7) and its frozen global/market/full_logit baselines, i.e. the live-runtime model, scored on the same capture via evaluate_v7_new_identity_v03_20261026.py."
+}

@@ -1,0 +1,36 @@
+{
+  "artifacts": [
+    {
+      "path": "eventx/release/v3_1_historical_primary/protocol.json",
+      "sha256": "61cef4cb3c307509657b41f0156a73fe06ab245797729e27db5b1cfc1ff3861c"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/implementation_manifest.json",
+      "sha256": "f4ca34b2846ed74dc03630bd2d2c779dcec2092ad081c53e884ea1a535cd6779"
+    },
+    {
+      "path": "data/v3_1_historical/primary/development/examples_manifest.json",
+      "sha256": "dae0d488ada1d3e8911c62cdfd9ccaf513730281df478c2aa6a09f98115812db"
+    },
+    {
+      "path": "eventx/tasks/run_v3_1_historical_development_models.py",
+      "sha256": "d73434ee6af5d0da7883b815c71ca7cb5f82e537c43f649097423028a09f432e"
+    },
+    {
+      "path": "data/v3_1_historical/primary/development/oof_predictions.bin",
+      "sha256": "f8f7b562e9ab7e81b8bba6a3cb0173225d543a3ad304f0508240b2e05a55e6db"
+    },
+    {
+      "path": "data/v3_1_historical/primary/development/selection_result.json",
+      "sha256": "1f9148fa7988164f674b357444f13cc75cc82198bda194a0140783e9b55fab00"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/candidate.json",
+      "sha256": "1bf0e8b8d6ec068ad8ae5935f21789815055a51ddb911030f52cb881032ceed4"
+    }
+  ],
+  "candidate_count": 1,
+  "historical_holdout_read": false,
+  "protocol_id": "eventx-v3.1-historical-primary-20260902",
+  "status": "one_candidate_frozen_before_historical_holdout"
+}

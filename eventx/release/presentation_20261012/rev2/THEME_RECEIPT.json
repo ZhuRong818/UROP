@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "theme": {
+    "id": "zurich-light",
+    "name": "Zürich",
+    "category": "urban",
+    "description": "Modern Swiss Utility"
+  },
+  "slides": [
+    {
+      "slideNum": 1,
+      "image_url": "https://slidesgpt.com/media/2eeb44a885e5.png"
+    },
+    {
+      "slideNum": 2,
+      "image_url": "https://slidesgpt.com/media/71b5c973a388.png"
+    },
+    {
+      "slideNum": 3,
+      "image_url": "https://slidesgpt.com/media/ce1eb56e0336.png"
+    },
+    {
+      "slideNum": 4,
+      "image_url": "https://slidesgpt.com/media/7718b00ad9d0.png"
+    },
+    {
+      "slideNum": 5,
+      "image_url": "https://slidesgpt.com/media/41ef67d17c68.png"
+    },
+    {
+      "slideNum": 6,
+      "image_url": "https://slidesgpt.com/media/30b26e6438da.png"
+    },
+    {
+      "slideNum": 7,
+      "image_url": "https://slidesgpt.com/media/8dae6598cc1e.png"
+    },
+    {
+      "slideNum": 8,
+      "image_url": "https://slidesgpt.com/media/a2740c9e64c4.png"
+    },
+    {
+      "slideNum": 9,
+      "image_url": "https://slidesgpt.com/media/b3bfd37937b1.png"
+    },
+    {
+      "slideNum": 10,
+      "image_url": "https://slidesgpt.com/media/2b19ae4abeeb.png"
+    },
+    {
+      "slideNum": 12,
+      "image_url": "https://slidesgpt.com/media/b7f15387b880.png"
+    }
+  ],
+  "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+}

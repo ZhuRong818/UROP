@@ -1,0 +1,72 @@
+{
+  "prepared_at": "2026-10-12",
+  "result_cutoff": "2026-10-10",
+  "main_slides": 9,
+  "backup_slides": 3,
+  "planned_seconds": 600,
+  "spoken_words": 1149,
+  "runtime": "connected SlidesGPT; local Artifact Tool runtime unavailable",
+  "sources": [
+    {
+      "path": "data/v5/no_terminal_baseline_diagnostic_20261009/report.json",
+      "sha256": "2eb4eba544204dc972b5d40895b32d59d28f415ba48bcbabcee17b933b4f329c"
+    },
+    {
+      "path": "data/v5/opened_news_offset_trial_20261009/report.json",
+      "sha256": "37c9832136b939168436c40747b0ce4b797b6a02ea5ff2dddf66abaae7ac69cd"
+    },
+    {
+      "path": "data/v5/method_screen_observed_row_join_20261009/report.json",
+      "sha256": "7300dd2a38aea559c9d1c9c18072de5ff039ccc8e84ca0fdadad334ada463b88"
+    },
+    {
+      "path": "data/v7/signed_evidence_exploration_20261010/report.json",
+      "sha256": "c7a36598483315a0f985896519ac35863f6448ca9c1b2e617a6de584a1281cca"
+    },
+    {
+      "path": "eventx/release/literature_baselines_20261010/evidence.json",
+      "sha256": "7531ccfe27f6f69d759050c006a3a3e3a7aa7bcbf05031b5409f89efc49099ff"
+    },
+    {
+      "path": "eventx/release/v4/protocol.json",
+      "sha256": "0747a3e41be5d21a853cedfc824482fcf1c047115aaddec1ca2c4fff3feaee8c"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/TABLES.md",
+      "sha256": "e5ad2c0ea0a9252bff4cfa7b2cbd335e3db555d2a727c57ba362ec1503ee191e"
+    },
+    {
+      "path": "eventx/release/v5/PROTOCOL_V1_1.md",
+      "sha256": "00ae01910e6b2918febe32bdae3ae1c660f49503b064e6c9bc6c012e13a841cb"
+    }
+  ],
+  "new_research_evaluation": false,
+  "protected_outcome_payloads_accessed": false,
+  "review_status": "all_12_previews_inspected_individually; slide_12_wrapping_repaired_and_reinspected",
+  "presentation_id": "pres_fe4c1b53f21bb8036a83438a524ca186",
+  "deck_url": "https://slidesgpt.com/view/267708b9f2fa",
+  "local_pptx_export": false,
+  "powerpoint_application_validation": false,
+  "outputs": [
+    {
+      "path": "eventx/release/presentation_20261012/SPEAKER_SCRIPT.md",
+      "sha256": "2143b07da8965d9edd9b11e105fa976f6d37698fd43bb049f745ae1965296970"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/SLIDE_CONTENT.json",
+      "sha256": "0908d5bbc1364eb77f98357809aa90d092ee7c05ea96730679ba7d045fa662f2"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/DECK_RECEIPT.json",
+      "sha256": "8516eb4f6bdbeb53a1fb547dd369c9aeecb1c47c38d44d4aecc0286660179caf"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/SLIDE_12_REPAIR_RECEIPT.json",
+      "sha256": "553fe7415d45fbe4433dc33d90ce07c8af620e5be102660c8dfff6e9de18f255"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/README.md",
+      "sha256": "e5944d2608afd46d1fb030fc7429ec6f1737968e0672ae17033f3ecb3b4fb4bb"
+    }
+  ]
+}

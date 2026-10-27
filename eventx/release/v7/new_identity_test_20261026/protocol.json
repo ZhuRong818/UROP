@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-26T12:19:41.668412+00:00",
+  "dates": [
+    "2026-06-08",
+    "2026-06-09",
+    "2026-06-10",
+    "2026-06-11",
+    "2026-06-12",
+    "2026-06-13",
+    "2026-06-14"
+  ],
+  "integrity": "Each phase once; evaluate once; report regardless of outcome.",
+  "interpretation": "Historical replay with current metadata; new identities but same venue/time era. Not live, not news, not profit.",
+  "models": [
+    "global_rate",
+    "market_rate",
+    "activity_logit",
+    "row_hgb7",
+    "legacy_hgb7"
+  ],
+  "objective": "Transfer of the unchanged May7-9 row_hgb7 quote-change booster to never-used contracts on the unopened week June 8-14.",
+  "primary": "Matched row-weighted log loss row_hgb7 vs activity_logit. PASS = lower LL than activity_logit and global_rate, no higher Brier, AND contract-clustered 95% bootstrap lower bound of gain vs activity_logit > 0.",
+  "reporting_floor": "<100 known, <20 positives or <20 negatives, or <5 contributing contracts = insufficient.",
+  "secondary": "Brier, AP, AUC, equal-contract LL, per-date/per-contract wins, strict, nonoverlap, date-clustered bootstrap, missing-label bounds.",
+  "selected": "row_hgb7",
+  "selection": "Identity/event-type/clock columns only from 2026-06-07T12,T13 (consumed block); market IDs in [0x10,0x18) (disjoint from all earlier cohorts, all <0x0a); >=2 book events in both hours; not in 1231 protected IDs or earlier 60; SHA256(salt+id) order; Gamma metadata: binary Yes/No, 2 tokens, description, event IDs not in earlier cohorts, one contract per event, start<June8 and end>June15; first 40. No price/quote/outcome column before freeze. Shortfall is reported, not replaced.",
+  "target": "Midpoint differs after 30 minutes by >1e-12; same 18 features and gates as the June1-7 test."
+}

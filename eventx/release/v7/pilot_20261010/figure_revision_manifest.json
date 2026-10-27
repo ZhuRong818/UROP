@@ -1,0 +1,18 @@
+{
+  "role": "publication layout correction only",
+  "inputs": {
+    "eventx/tasks/export_v7_macro_figures_v2_20261010.py": "88a594989fd9948045c2e0be6f437d8d8f2a2bc91cffeb551c75e44a8848bf5a",
+    "eventx/release/v7/pilot_20261010/preparation_export_manifest.json": "6e65ae5dacf54e57bd5654a23146173676fc80dec3aedf7136c077b809460238"
+  },
+  "outputs": {
+    "eventx/release/v7/pilot_20261010/availability_lag_v2.pdf": "10838e46474a6ea5c7d59af6013135a68b6bf2985310a872ca5695ecfccbe52f",
+    "eventx/release/v7/pilot_20261010/availability_lag_v2.png": "2625b3114c9bba1b88c60431615120333aa8dacfcd5cfd6e74a14eee8998ba27",
+    "eventx/release/v7/pilot_20261010/availability_lag_v2.svg": "c4b2b23e4a8156d42b756cb9d255b9a0f7db605499d7a090841df1a3d0e218aa",
+    "eventx/release/v7/pilot_20261010/inference_coverage_v2.pdf": "d335188645bf62e0e797a4b7baaaef5c59051f90e31bb67ccd71400040186ae1",
+    "eventx/release/v7/pilot_20261010/inference_coverage_v2.png": "b4f15d5b2a40bee7e125af781b581f36b59c90f81c1880fd0f73e85fa74a7a0e",
+    "eventx/release/v7/pilot_20261010/inference_coverage_v2.svg": "a089b36d690cb0ddb6ffbbc3e7257b878b6d583ea441153ed530118d79df5183",
+    "eventx/release/v7/pilot_20261010/PREPARATION_RESULTS_REV2.md": "4678f385cfef3a71a363981e0adcbb842c470bac7ac844ff9804ffd682207062",
+    "MARKET_NEWS_NEXT_STEPS_EXECUTION_20261010_REV2.md": "7503fa9ae9f22621def6a2380490c5ea4862dc7a27acbbfd249091a234552dba"
+  },
+  "new_forecast_evaluation": false
+}

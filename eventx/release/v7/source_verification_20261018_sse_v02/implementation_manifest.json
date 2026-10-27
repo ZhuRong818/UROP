@@ -1,0 +1,7 @@
+{
+  "locked_files": {
+    "eventx/release/v7/source_verification_20261018/implementation_manifest.json": "d240833d89f21cec0f36934a4a79349902b8e8cfe28b7e224a8eb5810fad7f7b",
+    "eventx/release/v7/source_verification_20261018_sse_v02/plan.json": "52c728cb0ca6ea733f32e644ffaef3c393128194b21a25fba7b5d02c66b26a04",
+    "eventx/tasks/run_v7_sse_verification_20261018_v02.py": "fd94512fbe892423e388a7110f83d93396a9cc8be5aa6da7f24c7bb53307416f"
+  }
+}

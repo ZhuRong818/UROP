@@ -1,0 +1,289 @@
+{
+  "review_date": "2026-10-10",
+  "scope": "literature review and transcription of existing aggregate reports; no fitting or forecast evaluation",
+  "local_source_sha256": {
+    "data/v5/no_terminal_baseline_diagnostic_20261009/report.json": "2eb4eba544204dc972b5d40895b32d59d28f415ba48bcbabcee17b933b4f329c",
+    "data/v5/opened_news_offset_trial_20261009/report.json": "37c9832136b939168436c40747b0ce4b797b6a02ea5ff2dddf66abaae7ac69cd",
+    "data/v5/method_screen_observed_row_join_20261009/report.json": "7300dd2a38aea559c9d1c9c18072de5ff039ccc8e84ca0fdadad334ada463b88"
+  },
+  "local_comparisons": {
+    "market_no_terminal": {
+      "status": "opened_development_descriptive_diagnostic",
+      "source_predictions": "data/v5/algorithm_audit_20260907/predictions.npz",
+      "source_predictions_sha256": "4c8ee1d58b6f269a246a035ba6ceae6ac6a83deb6170f31de7ea5f82216f49b1",
+      "source_report": "data/v5/algorithm_audit_20260907/report.json",
+      "source_report_sha256": "8267e49832b628c1bbf97c67e99f6ef0716a42e92d8ca9f4db617355e6450441",
+      "comparison": "tree_no_terminal_vs_linear_no_terminal",
+      "rows": 364903,
+      "markets": 1135,
+      "linear_no_terminal": {
+        "log_loss": 0.451070194620173,
+        "brier": 0.14095175902738072,
+        "average_precision": 0.226649337226177
+      },
+      "tree_no_terminal": {
+        "log_loss": 0.407390960593757,
+        "brier": 0.1311063751226442,
+        "average_precision": 0.33496390193260034
+      },
+      "paired_improvement": {
+        "log_loss_nats_per_row": 0.04367923402641596,
+        "log_loss_percent_reduction": 9.683467129366953,
+        "brier": 0.009845383904736521,
+        "average_precision_gain": 0.10831456470642334,
+        "fold_log_loss_improvement": {
+          "3": 0.04146850572420198,
+          "4": 0.035979554879417876,
+          "5": 0.05360458841718282
+        },
+        "market_balanced_log_loss_improvement": 0.043821825097598716,
+        "market_cluster_95_interval": [
+          0.039575207326786405,
+          0.04768247137844157
+        ]
+      },
+      "interval_method": {
+        "unit": "market",
+        "resamples": 1000,
+        "numpy_rng_seed": 907,
+        "estimator": "resampled sum of paired row log-loss differences divided by resampled row count",
+        "quantiles": [
+          0.025,
+          0.975
+        ],
+        "limitation": "Descriptive interval on opened data; unadjusted for model search, related event families or shared calendar shocks"
+      },
+      "scope": "Reanalysis of existing frozen predictions only; no refit, model selection, protected holdout read or new source admission"
+    },
+    "fixed_offset_metrics": {
+      "context": {
+        "average_precision": 0.3740936273607686,
+        "brier": 0.10586141471979633,
+        "log_loss": 0.32753288432485494,
+        "mean_prediction": 0.14337027898790078,
+        "positives": 1447,
+        "prevalence": 0.1452082288008028,
+        "roc_auc": 0.7979467603301305,
+        "rows": 9965
+      },
+      "semantic": {
+        "average_precision": 0.3730290177461991,
+        "brier": 0.10618293910259585,
+        "log_loss": 0.3287869502413998,
+        "mean_prediction": 0.1438929532995396,
+        "positives": 1447,
+        "prevalence": 0.1452082288008028,
+        "roc_auc": 0.7942551185967747,
+        "rows": 9965
+      },
+      "timing": {
+        "average_precision": 0.3725863654696947,
+        "brier": 0.10598219990673337,
+        "log_loss": 0.3279424965033075,
+        "mean_prediction": 0.14409295506152883,
+        "positives": 1447,
+        "prevalence": 0.1452082288008028,
+        "roc_auc": 0.7970752776388161,
+        "rows": 9965
+      },
+      "tree_no_terminal": {
+        "average_precision": 0.37362659464877185,
+        "brier": 0.1070466495885913,
+        "log_loss": 0.33059117297293544,
+        "mean_prediction": 0.12630297014863864,
+        "positives": 1447,
+        "prevalence": 0.1452082288008028,
+        "roc_auc": 0.798060264429665,
+        "rows": 9965
+      }
+    },
+    "matched_fold5": {
+      "log_loss_improvements": {
+        "market_hgb_vs_frozen_tree": 0.0019466942334473714,
+        "selected_news_vs_market_hgb": -0.0008491177307750619,
+        "selected_news_vs_selected_context": -0.0005911422383715059
+      },
+      "markets": 99,
+      "metrics": {
+        "frozen_tree": {
+          "average_precision": 0.35084320290169374,
+          "brier": 0.07877132063759773,
+          "log_loss": 0.24567322135596179,
+          "mean_prediction": 0.09358872602350535,
+          "positives": 568,
+          "prevalence": 0.10541945063103192,
+          "roc_auc": 0.8531580562211443,
+          "rows": 5388
+        },
+        "selected_context": {
+          "average_precision": 0.35084320290169374,
+          "brier": 0.07817417906292247,
+          "log_loss": 0.24398450261491797,
+          "mean_prediction": 0.10727473916369713,
+          "positives": 568,
+          "prevalence": 0.10541945063103192,
+          "roc_auc": 0.8531580562211443,
+          "rows": 5388
+        },
+        "selected_market_hgb": {
+          "average_precision": 0.3554778299200714,
+          "brier": 0.07822983532104466,
+          "log_loss": 0.2437265271225144,
+          "mean_prediction": 0.09290229037602335,
+          "positives": 568,
+          "prevalence": 0.10541945063103192,
+          "roc_auc": 0.8550475571269943,
+          "rows": 5388
+        },
+        "selected_news": {
+          "average_precision": 0.35065638221862316,
+          "brier": 0.07826503756015236,
+          "log_loss": 0.24457564485328948,
+          "mean_prediction": 0.10909489992759444,
+          "positives": 568,
+          "prevalence": 0.10541945063103192,
+          "roc_auc": 0.8533436093740868,
+          "rows": 5388
+        }
+      },
+      "rows": 5388,
+      "selected_news_vs_market_hgb_market_cluster": {
+        "limitation": "opened-data, unadjusted for model search or shared calendar shocks",
+        "market_balanced_mean": 0.003494013812010707,
+        "market_cluster_95_interval": [
+          -0.0042213910428329565,
+          0.0029959244686553746
+        ],
+        "markets": 99,
+        "mean": -0.0008491177307750818,
+        "samples": 1000
+      }
+    }
+  },
+  "derived_arithmetic": {
+    "matched_news_logloss_percent_worse": 0.34838954167193403,
+    "fixed_semantic_logloss_minus_context": 0.0012540659165448664,
+    "halawi_base_retrieval_brier_percent_reduction": 9.708737864077666,
+    "halawi_blend_vs_crowd_brier_percent_reduction": 2.0134228187919483,
+    "hindcast_qwen32b_brier_percent_reduction_from_rounded_cells": 23.50427350427351
+  },
+  "external_sources": [
+    {
+      "title": "Modeling Volatility in Prediction Markets",
+      "url": "https://pages.stern.nyu.edu/~narchak/acm_ec_paper.pdf",
+      "version": "author PDF, 2009",
+      "locator": "Section 4.3",
+      "verification": "full text",
+      "metrics": {
+        "contracts": 51,
+        "structural_garch_best_contracts": 26,
+        "structural_beats_garch_among_remaining": 17,
+        "remaining_contracts": 25
+      }
+    },
+    {
+      "title": "When Do Markets Fully Process Public Information? Evidence from Real-Time Prediction Markets",
+      "url": "https://arxiv.org/html/2606.07811v1",
+      "version": "arXiv v1",
+      "locator": "Tables 5, 6, 11",
+      "verification": "full text",
+      "metrics": {
+        "contemporaneous_response": 0.638,
+        "contemporaneous_se": 0.01,
+        "raw_gap_drift_5min": 0.195,
+        "raw_gap_drift_15min": 0.236,
+        "net_gap_drift_5min": 0.459,
+        "net_gap_drift_15min": 0.484,
+        "midpoint_return_5min_all": 0.0039,
+        "executable_style_return_5min_all": -0.012
+      }
+    },
+    {
+      "title": "Improving prediction market forecasts by detecting and correcting possible over-reaction to price movements",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0377221718305575",
+      "version": "EJOR 2019",
+      "locator": "publisher abstract",
+      "verification": "abstract only; accepted PDF fetch failed",
+      "metrics": {
+        "markets": 6058,
+        "price_observations_lower_bound": 8400000,
+        "numeric_loss_improvement": null
+      }
+    },
+    {
+      "title": "Approaching Human-Level Forecasting with Language Models",
+      "url": "https://arxiv.org/html/2402.18563v1",
+      "version": "arXiv v1",
+      "locator": "Tables 3 and 5, Section 6.4",
+      "verification": "full text",
+      "metrics": {
+        "system_brier": 0.179,
+        "crowd_brier_table3": 0.149,
+        "blend_brier": 0.146,
+        "base_gpt4_no_retrieval_brier": 0.206,
+        "base_gpt4_retrieval_brier": 0.186
+      },
+      "note": "Table 5 caption gives a different crowd number (0.146); use explicit Table 3 cells for main crowd/blend comparison."
+    },
+    {
+      "title": "LLM-as-a-Prophet: Understanding Predictive Intelligence with Prophet Arena",
+      "url": "https://arxiv.org/html/2510.17638v1",
+      "version": "arXiv v1; OpenReview PDF challenge blocked final-version check",
+      "locator": "Table 2, Section 4.2.2",
+      "verification": "full text pinned preprint",
+      "metrics": {
+        "events": 1367,
+        "gpt5_high_brier": 0.184,
+        "gpt5_high_95ci_halfwidth": 0.006,
+        "market_brier": 0.187,
+        "market_95ci_halfwidth": 0.006
+      },
+      "note": "Event-weighted final-outcome score; no paired significance inferred from marginal intervals."
+    },
+    {
+      "title": "Hindcast: Replaying Prediction Markets to Evaluate LLM Forecasters",
+      "url": "https://arxiv.org/html/2607.14051v1",
+      "version": "arXiv v1",
+      "locator": "Section 4.1, Table 1",
+      "verification": "full text",
+      "metrics": {
+        "markets": 216,
+        "runs": 5,
+        "qwen32b_zero_shot_brier": 0.234,
+        "qwen32b_retrieval_brier": 0.179,
+        "zero_shot_accuracy_percent": 64.6,
+        "retrieval_accuracy_percent": 72.8
+      },
+      "note": "Resolved-side coverage selection and outcome balancing; retrieval gain is versus zero-shot, not market price."
+    },
+    {
+      "title": "Frontier LLMs Add Almost No Information Beyond the Market Price, and Two Years of Scaling Has Not Changed That",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6944258",
+      "version": "SSRN 2026 working paper",
+      "locator": "abstract",
+      "verification": "abstract only; no full-method numeric verification",
+      "metrics": {
+        "rounds": 25,
+        "approx_bias_corrected_incremental_ll_nats": 0.001,
+        "approx_human_positive_control_nats_one_round": 0.09
+      }
+    },
+    {
+      "title": "PolyBench: Benchmarking LLM Forecasting and Trading Capabilities on Live Prediction Market Data",
+      "url": "https://arxiv.org/html/2604.14199v1",
+      "version": "arXiv v1",
+      "locator": "Section 4.2, Table 5",
+      "verification": "full text",
+      "metrics": {
+        "base_lot_usd": 10,
+        "gemini_accuracy_percent": 75.0,
+        "gemini_cwr_percent": 6.2,
+        "mimo_accuracy_percent": 62.1,
+        "mimo_cwr_percent": 17.6
+      },
+      "note": "Selected executed positions; no Brier baseline; not EventX movement task."
+    }
+  ],
+  "direct_external_replication_performed": false,
+  "protected_payloads_opened": false
+}

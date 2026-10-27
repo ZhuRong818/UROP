@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-26T12:27:34.014480+00:00",
+  "clock": "Corrected epoch = latest valid SNTP estimate (pure-Python client, raw packets retained; >=2 hosts, one half-delay<=20 ms, intervals agree, residual half-width<=50 ms, |offset|<=2 s) extrapolated by monotonic time, valid <=360 s. Gate: valid estimate <=360 s old at decision and endpoint. Wall steps logged, audit-only. Raw wall times retained.",
+  "cohort_rules": {
+    "eligibility": "binary Yes/No, 2 tokens, description, active, not closed, acceptingOrders, enableOrderBook, single posed resolution row, one contract per event",
+    "excluded": "1231 archive-protected IDs (incl. 470 V4), 60 May cohort IDs, 40 June new-identity IDs",
+    "min_age_days": 7,
+    "min_end_date": "2026-11-10T00:00:00+00:00",
+    "min_volume24hr": 10000,
+    "order": "SHA256(salt+conditionId); volume only as floor",
+    "pages": 5,
+    "salt": "live-cohort-v02:",
+    "size": 30
+  },
+  "emission": "Decision durably written by grid+30 s (corrected time) else missed/abstained; endpoint receipt at +120 s with 30 s grace.",
+  "evaluation": "Once-only after window close + audit + consumption receipt. Primary: matched log loss hgb7 vs full_logit; also vs global_rate. Brier, AP, AUC, per-contract/date, nonoverlap, equal-contract LL, calibration, unknown-outcome bounds, contract-clustered bootstrap CI. Reporting floor: >=100 known, >=20 positives, >=20 negatives.",
+  "inputs": "V03 14 source-time features, 120 s freshness, spread<=0.05, 250 ms source-lead cap, unchanged.",
+  "limits": "No trading, news, or profit claim; one venue; dependent observations.",
+  "model": "Unchanged V03 frozen bundle data/v7/source_time_study_20261026_v03/development/frozen_models.joblib (hgb7 selected; global_rate, market_rate, full_logit baselines). No fit.",
+  "readiness_gate": "60-min rehearsal: monotonic deadline reached, no schema/scope errors, all clock estimates re-validate from raw packets, corrected stamps reproduce, >=10 fully ready decisions across >=3 markets after warmup.",
+  "supersedes": "forecast_runtime_20261026_v01 (frozen; fresh readiness FAILED on host-clock discipline). V01 artifacts unchanged.",
+  "target": "Observed YES midpoint differs 30 minutes later (>1e-12); unknown endpoints stay unknown.",
+  "transport": "Connected stream, pong<=35 s, 30 min since connect or REST cycle gap >120 s; all on corrected time.",
+  "version": "forecast_runtime_20261026_v02",
+  "window": "Seven full UTC days starting the first full UTC date after a separate activation receipt; grids 00:30-23:25 every 5 min."
+}

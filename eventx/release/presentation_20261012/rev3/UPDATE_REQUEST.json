@@ -1,0 +1,34 @@
+{
+  "quote": "Our nonlinear market model reduced development log loss by 9.68% relative to a logistic baseline. A further selected booster improved on an earlier tree by 1.17% in a separate comparison. Independent confirmation and incremental news gains remain outstanding.",
+  "slide": {
+    "title": "What we have achieved so far",
+    "subtitle": "Measured development gains and the remaining evidence requirements",
+    "layout": "image_left_text_right",
+    "slidenum": 8,
+    "force_edit": true,
+    "body": [
+      {
+        "point": "Nonlinear market model",
+        "description": "Our nonlinear market model reduced development log loss by 9.68% relative to a logistic baseline.",
+        "icon": "fa-chart-line",
+        "value": 0
+      },
+      {
+        "point": "Selected booster",
+        "description": "A further selected booster improved on an earlier tree by 1.17% in a separate comparison.",
+        "icon": "fa-chart-bar",
+        "value": 0
+      },
+      {
+        "point": "Evidence still needed",
+        "description": "Independent confirmation and incremental news gains remain outstanding.",
+        "icon": "fa-balance-scale",
+        "value": 0
+      }
+    ],
+    "image_caption": "University research team discussing completed forecasting experiments around table",
+    "image_id": "",
+    "talktrack": "8:05–9:05 (60 seconds)\n\nOur nonlinear market model reduced development log loss by 9.68% relative to a logistic baseline. A further selected booster improved on an earlier tree by 1.17% in a separate comparison. Independent confirmation and incremental news gains remain outstanding. The gains come from different comparison populations and should not be added. The first comparison contains 364,903 matched development rows. The booster comparison contains 112,616 matched fold-five rows. We also made the news comparison more demanding by controlling exposure and matching predictions exactly. Recovered resolution text now covers 116 of 120 macro review pairs, improving the review context. Paper A revision two consolidates the results and their limitations. Together, these achievements give us a stronger benchmark and a clearer basis for the next experiment.\n\nSources (not spoken):\n/Users/zhurong/UROP/data/v5/no_terminal_baseline_diagnostic_20261009/report.json\n/Users/zhurong/UROP/data/v5/market_learner_screen_20261009/report.json\n/Users/zhurong/UROP/data/v5/method_screen_observed_row_join_20261009/report.json\n/Users/zhurong/UROP/eventx/release/v7/pilot_20261010/PREPARATION_RESULTS_REV2.md\n/Users/zhurong/UROP/MARKET_NEWS_PAPER_A_DRAFT_20261010_REV2.md"
+  },
+  "notes": "8:05–9:05 (60 seconds)\n\nOur nonlinear market model reduced development log loss by 9.68% relative to a logistic baseline. A further selected booster improved on an earlier tree by 1.17% in a separate comparison. Independent confirmation and incremental news gains remain outstanding. The gains come from different comparison populations and should not be added. The first comparison contains 364,903 matched development rows. The booster comparison contains 112,616 matched fold-five rows. We also made the news comparison more demanding by controlling exposure and matching predictions exactly. Recovered resolution text now covers 116 of 120 macro review pairs, improving the review context. Paper A revision two consolidates the results and their limitations. Together, these achievements give us a stronger benchmark and a clearer basis for the next experiment.\n\nSources (not spoken):\n/Users/zhurong/UROP/data/v5/no_terminal_baseline_diagnostic_20261009/report.json\n/Users/zhurong/UROP/data/v5/market_learner_screen_20261009/report.json\n/Users/zhurong/UROP/data/v5/method_screen_observed_row_join_20261009/report.json\n/Users/zhurong/UROP/eventx/release/v7/pilot_20261010/PREPARATION_RESULTS_REV2.md\n/Users/zhurong/UROP/MARKET_NEWS_PAPER_A_DRAFT_20261010_REV2.md"
+}

@@ -1,0 +1,252 @@
+{
+  "changes": "Daily BEA calendar snapshots retained; BLS calendars verified via web because direct access403. Review reschedules; initial plan is not a guarantee.",
+  "events": [
+    {
+      "calendar_source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "Federal",
+          "2026"
+        ],
+        "kind": "document",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+        "url_status": "future naming hypothesis; official feed provides observed URLs"
+      },
+      "event_id": "fomc_2026-10-28",
+      "feed_ids": [
+        "fed_monetary",
+        "fed_speeches"
+      ],
+      "name": "FOMC statement",
+      "scheduled_at": "2026-10-28T18:00:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bea.gov/news/schedule",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "kind": "feed",
+        "url": "https://apps.bea.gov/rss/rss.xml"
+      },
+      "event_id": "gdp_2026-10-29",
+      "feed_ids": [
+        "bea_news"
+      ],
+      "name": "GDP advance estimate",
+      "scheduled_at": "2026-10-29T12:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bea.gov/news/schedule",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "Personal Income and Outlays",
+          "september",
+          "2026"
+        ],
+        "kind": "document",
+        "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026",
+        "url_status": "future naming hypothesis; RSS discovery provides observed URLs"
+      },
+      "event_id": "pce_2026-10-29",
+      "feed_ids": [
+        "bea_news"
+      ],
+      "name": "Personal Income and Outlays",
+      "scheduled_at": "2026-10-29T12:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "EMPLOYMENT SITUATION",
+          "OCTOBER 2026"
+        ],
+        "kind": "pdf",
+        "url": "https://www.dol.gov/newsroom/economicdata/empsit_11062026.pdf",
+        "url_status": "future naming hypothesis based on official recent copies; HTTP/content identity must be checked"
+      },
+      "event_id": "empsit_2026-11-06",
+      "feed_ids": [],
+      "name": "EMPLOYMENT SITUATION",
+      "scheduled_at": "2026-11-06T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "CONSUMER PRICE INDEX",
+          "OCTOBER 2026"
+        ],
+        "kind": "pdf",
+        "url": "https://www.dol.gov/newsroom/economicdata/cpi_11102026.pdf",
+        "url_status": "future naming hypothesis based on official recent copies; HTTP/content identity must be checked"
+      },
+      "event_id": "cpi_2026-11-10",
+      "feed_ids": [],
+      "name": "CONSUMER PRICE INDEX",
+      "scheduled_at": "2026-11-10T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "PRODUCER PRICE",
+          "OCTOBER 2026"
+        ],
+        "kind": "pdf",
+        "url": "https://www.dol.gov/newsroom/economicdata/ppi_11132026.pdf",
+        "url_status": "future naming hypothesis based on official recent copies; HTTP/content identity must be checked"
+      },
+      "event_id": "ppi_2026-11-13",
+      "feed_ids": [],
+      "name": "PRODUCER PRICE",
+      "scheduled_at": "2026-11-13T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bea.gov/news/schedule",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "kind": "feed",
+        "url": "https://apps.bea.gov/rss/rss.xml"
+      },
+      "event_id": "gdp_2026-11-25",
+      "feed_ids": [
+        "bea_news"
+      ],
+      "name": "GDP second estimate",
+      "scheduled_at": "2026-11-25T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bea.gov/news/schedule",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "Personal Income and Outlays",
+          "october",
+          "2026"
+        ],
+        "kind": "document",
+        "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026",
+        "url_status": "future naming hypothesis; RSS discovery provides observed URLs"
+      },
+      "event_id": "pce_2026-11-25",
+      "feed_ids": [
+        "bea_news"
+      ],
+      "name": "Personal Income and Outlays",
+      "scheduled_at": "2026-11-25T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/12_sched.htm",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "EMPLOYMENT SITUATION",
+          "NOVEMBER 2026"
+        ],
+        "kind": "pdf",
+        "url": "https://www.dol.gov/newsroom/economicdata/empsit_12042026.pdf",
+        "url_status": "future naming hypothesis based on official recent copies; HTTP/content identity must be checked"
+      },
+      "event_id": "empsit_2026-12-04",
+      "feed_ids": [],
+      "name": "EMPLOYMENT SITUATION",
+      "scheduled_at": "2026-12-04T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "Federal",
+          "2026"
+        ],
+        "kind": "document",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261209a.htm",
+        "url_status": "future naming hypothesis; official feed provides observed URLs"
+      },
+      "event_id": "fomc_2026-12-09",
+      "feed_ids": [
+        "fed_monetary",
+        "fed_speeches"
+      ],
+      "name": "FOMC statement",
+      "scheduled_at": "2026-12-09T19:00:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/12_sched.htm",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "CONSUMER PRICE INDEX",
+          "NOVEMBER 2026"
+        ],
+        "kind": "pdf",
+        "url": "https://www.dol.gov/newsroom/economicdata/cpi_12102026.pdf",
+        "url_status": "future naming hypothesis based on official recent copies; HTTP/content identity must be checked"
+      },
+      "event_id": "cpi_2026-12-10",
+      "feed_ids": [],
+      "name": "CONSUMER PRICE INDEX",
+      "scheduled_at": "2026-12-10T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/12_sched.htm",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "PRODUCER PRICE",
+          "NOVEMBER 2026"
+        ],
+        "kind": "pdf",
+        "url": "https://www.dol.gov/newsroom/economicdata/ppi_12152026.pdf",
+        "url_status": "future naming hypothesis based on official recent copies; HTTP/content identity must be checked"
+      },
+      "event_id": "ppi_2026-12-15",
+      "feed_ids": [],
+      "name": "PRODUCER PRICE",
+      "scheduled_at": "2026-12-15T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bea.gov/news/schedule",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "kind": "feed",
+        "url": "https://apps.bea.gov/rss/rss.xml"
+      },
+      "event_id": "gdp_2026-12-23",
+      "feed_ids": [
+        "bea_news"
+      ],
+      "name": "GDP third estimate",
+      "scheduled_at": "2026-12-23T13:30:00+00:00"
+    },
+    {
+      "calendar_source": "https://www.bea.gov/news/schedule",
+      "clock_limitation": "Announced schedule/standard release time, not authenticated actual first publication; changes require schedule revision.",
+      "document": {
+        "identity_terms": [
+          "Personal Income and Outlays",
+          "november",
+          "2026"
+        ],
+        "kind": "document",
+        "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-november-2026",
+        "url_status": "future naming hypothesis; RSS discovery provides observed URLs"
+      },
+      "event_id": "pce_2026-12-23",
+      "feed_ids": [
+        "bea_news"
+      ],
+      "name": "Personal Income and Outlays",
+      "scheduled_at": "2026-12-23T13:30:00+00:00"
+    }
+  ],
+  "independent_events_claimed": false,
+  "timezone": "America/New_York with DST conversion",
+  "verified_on": "2026-10-18"
+}

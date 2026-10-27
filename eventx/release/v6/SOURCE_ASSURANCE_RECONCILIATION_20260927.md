@@ -1,0 +1,21 @@
+# V6 source-assurance reconciliation after user clarification
+
+Date: 27 September 2026. This is a clarification of the prepared, unsent source request. It does not edit frozen source records, certify historical exposure or start an audit.
+
+## User statements and operational interpretation
+
+The user states that (1) the article headline/summary is the same version when published, (2) the market has an open time and its question, YES/NO side and resolution rules do not change, and (3) zero articles means no articles. Treat these as **user-attested source assumptions** for continued development, not as a newly received Lumid record. The earlier 14 September administrator assurance covers exact news text at recorded ingestion or updated revision availability; it explicitly did not equate publisher publication time with Lumid source arrival.
+
+The working experiment uses the Lumid feed. Public publication time and feed delivery time are different clocks. For article `102500031`, the preserved source row records `published_at=2026-05-23T11:00:00Z`, `ingest_ts=2026-05-23T15:16:32.801227Z`, and `available_at=2026-05-23T15:19:29.435984Z`. Using 11:00 as a Lumid-fed decision time would put the article into the model over four hours before recorded feed availability. The current source-availability gate therefore remains `available_at` (or an authenticated earlier Lumid delivery receipt), even if the text was publicly published unchanged at 11:00. A publisher-direct study would require a separately declared source and its own at-arrival evidence.
+
+All 15 contracts in the scoped V6 provider attachment have a nonnull start field in recovered metadata: one Kalshi `open_time`, 14 Polymarket `start_date`. The current enriched review cards omit these starts, so the comparison must join the preserved metadata rows. The 14 Polymarket start dates were previously classified as **nominal bounds**, not verified trading activation. The retrieved projection has no active/suspended/closed history. The user's stability assertion reduces the need for a full rule-version archive, but it does not establish that a market was actually tradable throughout `start_date ≤ t < end_date`, or that a later-ingested cached rule was available to a Lumid-fed model at earlier t. Compare source arrival with start and end, quarantine missing/invalid bounds, and seek exact activation/status semantics where needed.
+
+A zero count can be a valid no-news observation **when the declared query/feed window completed**. The frozen support ledger instead labels 268 contract-days `zero_export_rows_not_proven_empty`; five of nine hypothesis-bearing article source runs are marked failed. Those facts do not prove that relevant articles existed on zero days, but they prevent reclassifying incomplete or failed exports as complete zeros. Reconcile retries/committed pages or restrict to completed windows; preserve the historical unknown category until a new versioned evidence record supports a change.
+
+## Narrowed remaining request
+
+1. Confirm the operational meaning of Lumid `available_at` versus `published_at` for the exact recorded article bytes. If Lumid had an earlier live delivery than `available_at`, provide its receipt and clock. The user's same-version statement is retained; no general article-revision archive is requested unless contradictory records appear.
+2. Confirm that recovered `open_time` (Kalshi) and `start_date` (Polymarket) represent actual first tradable time, and provide any suspension/closure exceptions for the 15 scoped contracts. The user's immutable question/YES/rules statement is retained provisionally; ask for a field-specific exception only if one exists.
+3. Confirm that the five failed source runs were completed by identified retries, and that zero-export windows in the selected development feed truly mean zero retained articles for the declared query. Provide completion/page or equivalent provider receipt, or identify unresolved gaps.
+
+Do not alter the frozen `data/v6/support_ledger_20260926/` or `data/v6/source_role_diagnostic_20260926/` on the basis of conversation assertions. A later support-ledger version may change categories only with its exact new source evidence and a predeclared rule. V4 protected data, market outcomes and consumed holdouts remain outside scope.

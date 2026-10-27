@@ -1,0 +1,13 @@
+{
+  "locked_files": {
+    "data/v7/direct_source_pilot_20261022_v03/audits/20261024T060327Z_808a25/manifest.json": "3373e485b2aaab3a830c187de70721c2cff9300c5bed7e53f4d03e7b0099e2af",
+    "eventx/release/v7/direct_source_pilot_20261022_v03/sample.jsonl": "eaaa4892a96ba6600ab96eecf3171251e2fff225c4770e984e62973b33373173",
+    "eventx/release/v7/expansion_source_pilot_20261024/sample.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/quote_experiment_20261024/development_cohort.jsonl": "7a2429f008e507cb6d4e7e19c44519b493edb7d30d2433b92e0e8f3c6e3e3c30",
+    "eventx/release/v7/quote_experiment_20261024/forward_cohort.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/quote_experiment_20261024/policy.json": "9a1d1751733cab38be17c9b6061caeac6d6abc5756f14c1758a3e12d4ac87b40",
+    "eventx/tasks/freeze_v7_quote_experiment_20261024.py": "d3693a48e833016c296a09beab6047318b9be22788035a3a9b4875b2ded31688",
+    "eventx/tasks/run_v7_quote_experiment_20261024.py": "fa4dc03ab8eb5f847a6bb49cb41004d73bb34a7c2e65d4a64d31000e7b1e5a77",
+    "eventx/v7/quote_experiment_20261024.py": "e967e5c33f7712c3a9fce7bdaa9b7519effd913632778dffe577791a9ff315ee"
+  }
+}

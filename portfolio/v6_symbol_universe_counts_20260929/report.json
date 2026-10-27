@@ -1,0 +1,17 @@
+{
+  "base_url": "https://lum.id/findata",
+  "materialized_status": 200,
+  "queried_at_utc": "2026-09-29T15:04:24.341308+00:00",
+  "retrieve_status": 200,
+  "rows": [
+    {
+      "active_plain_rows": 3745,
+      "active_rows": 4118,
+      "distinct_symbols": 7851,
+      "etf_or_fund_rows": 593,
+      "latest_ingest": "2026-05-19T04:36:19.677695Z",
+      "neither_etf_nor_fund_rows": 7258,
+      "total_rows": 7851
+    }
+  ]
+}

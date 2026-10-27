@@ -1,0 +1,77 @@
+{
+  "artifacts": [
+    {
+      "path": "eventx/features/v4_news.py",
+      "sha256": "ed8a969bb7c6f346bf7c5120fd2439ec8c51a5cd2a06f15167abccbc27efd3e1"
+    },
+    {
+      "path": "eventx/tasks/audit_v4_confirmatory_collection.py",
+      "sha256": "4b430894019c20e02120d1626e991bf2e7950f4c746211e9bed6605c58c1cf08"
+    },
+    {
+      "path": "eventx/tasks/consume_v4_confirmatory_holdout.py",
+      "sha256": "39967b220afe49beec1e5eda6840149d09706e6df08c3e6d217add8d616070bc"
+    },
+    {
+      "path": "eventx/tasks/prepare_v4_confirmatory_inputs.py",
+      "sha256": "339640496316d700c9a1358680e83c1420f6ffc106c64bff96de8415bf0156c5"
+    },
+    {
+      "path": "eventx/tasks/build_v4_confirmatory_examples.py",
+      "sha256": "e52b0e87c8f9ed038df19a1b4c870c47c008a4b83a08f373100cfe6f8e4c8809"
+    },
+    {
+      "path": "eventx/tasks/evaluate_v4_confirmatory.py",
+      "sha256": "ebe846570ff5f9e261d3b292a8473bffc836fb4b5f7cae5834ed69eda41646a9"
+    },
+    {
+      "path": "eventx/tasks/test_v4_news_features.py",
+      "sha256": "a4fa4e2d6de63e882aea5a6b32aa95185902496bdf9ffd0b377cf57bb6d6b9c8"
+    },
+    {
+      "path": "eventx/tasks/test_v4_confirmatory_pipeline.py",
+      "sha256": "57210dc753ba5596363ea85f467bb47d7af3c922401000ae4942ff4eecb4b61f"
+    },
+    {
+      "path": "eventx/tasks/build_v3_1_historical_development_examples.py",
+      "sha256": "0b35da762babff094b23291e01b3f50d65725ad4a58b934e7612afde58ddd928"
+    },
+    {
+      "path": "eventx/tasks/build_v4_discovery_examples.py",
+      "sha256": "e81452755be60c321f90d6f9fae13bf381eecf0df38405dc48131aed51d2a103"
+    },
+    {
+      "path": "eventx/tasks/run_v4_discovery_models.py",
+      "sha256": "006fbdc9d162bfc0ee56da165fa394dac81fb490f53ce00c8744d7e81ae10fc1"
+    },
+    {
+      "path": "data/v4/discovery/prepared/semantic_model.joblib",
+      "sha256": "98a070c574190b6e8b07d12abe8fc96dee36f2e516ed457b74ba3b694c8c4164"
+    },
+    {
+      "path": "data/v4/discovery/models/frozen_models.json",
+      "sha256": "7bc70ad6cd8493e87de92a8ca5e6510bd6a0b5adeefde1e30c7e5a655eed30e5"
+    },
+    {
+      "path": "eventx/release/v4/protocol.json",
+      "sha256": "0747a3e41be5d21a853cedfc824482fcf1c047115aaddec1ca2c4fff3feaee8c"
+    },
+    {
+      "path": "eventx/release/v4/model_freeze_manifest.json",
+      "sha256": "0d4edd3f007e271adff71a57d18862fc4bccdbf13ccfbca55e946507625ece38"
+    }
+  ],
+  "created_at": "2026-09-03T02:29:58.519870Z",
+  "execution_order": [
+    "continuous sealed collection",
+    "audit_v4_confirmatory_collection",
+    "consume_v4_confirmatory_holdout",
+    "prepare_v4_confirmatory_inputs",
+    "build_v4_confirmatory_examples",
+    "evaluate_v4_confirmatory"
+  ],
+  "future_holdout_start": "2026-09-06T00:00:00Z",
+  "future_prices_labels_predictions_or_metrics_inspected": false,
+  "protocol_id": "eventx-v4-confirmatory-polymarket-20260902",
+  "status": "frozen_before_future_holdout"
+}

@@ -1,0 +1,21 @@
+{
+  "files": {
+    "data/v7/family_training_20261025_v02/cohort/manifest.json": "e6f9130764cbdebb3d63291ab3264415ff42b665405f2dd942122e6d61e11b2c",
+    "data/v7/family_training_20261025_v02/source_dev/capture_manifest.json": "2c1d298aa1d9501c0c6f30bcf67bb8f555e42cc1a6b45d92b0a2148234a0d278",
+    "eventx/release/v7/live_input_compatibility_20261026/delivery_manifest.json": "83f144b4050b8c5ad15415d797c8df91db8eefb5796acd384a31e10755dfa6f3",
+    "eventx/release/v7/market_capture_20261018/protected_ids.json": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b",
+    "eventx/release/v7/source_time_study_20261026/live_cohort.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/source_time_study_20261026/protocol.json": "7a189ccb32633e77cf1afad9c9d3d8199b0393343c0e49727372e2a31a3fea26",
+    "eventx/release/v7/source_time_study_20261026/readiness_spec.json": "824cd83ec09d0d4eac8a5adb047149752ef0d1dfbecd03c7d96d549644132a7a",
+    "eventx/tasks/check_v7_source_time_study_20261026.py": "d4629599b205662b44d32dd1a61320d8df8baa4e5a5a1df7021dffcf0554d732",
+    "eventx/tasks/collect_v7_direct_pilot_20261022_v03.py": "cdecc41eff8d5e09a521973e5620b1117009c86b4bfeb16d5f4253d7aa4bfd1b",
+    "eventx/tasks/collect_v7_source_time_readiness_20261026.py": "57f199aa9eb2f1dcfb98f388954d59fab445a3e27dbb14005194f2695882b7ad",
+    "eventx/tasks/freeze_v7_source_time_study_20261026.py": "fe5e3ea4475c88e6caa60c75ab681f66e98eff4885f2b65f05b6b0ac10622b22",
+    "eventx/tasks/run_v7_source_time_study_20261026.py": "5738bef7e79e4abf1574763e0ea696364327bb9db34fe43bb6e639d32a800967",
+    "eventx/v7/live_quote_inputs_20261026.py": "5fd23fa583f1270720d992a33198551df7e44e7b11ae934920bc9227b951be67",
+    "eventx/v7/quote_experiment_20261024.py": "e967e5c33f7712c3a9fce7bdaa9b7519effd913632778dffe577791a9ff315ee",
+    "eventx/v7/source_request_scheduler_v02.py": "1a941743d134e2661cd93dd686979edc3ff294c5730fae1040956897b90d6b6b",
+    "eventx/v7/source_time_quote_inputs_20261026.py": "4202800fca0f3e50dd2de19ac680fe82039c2e90f69cdfb4479c56e63d2a62b7",
+    "eventx/v7/source_time_study_20261026.py": "977d812c89af0b48e3300a891271f0009c46c14af6fb9fa464e28f11f71c5b85"
+  }
+}

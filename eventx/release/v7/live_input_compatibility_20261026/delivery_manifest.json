@@ -1,0 +1,10 @@
+{
+  "files": {
+    "EVENTX_LIVE_INPUT_COMPATIBILITY_20261026.md": "00ca446a60476642ccc04331ff97b9fd2476a01fd0105a66106a1097d130ed24",
+    "data/v7/family_training_20261025_v02/development/frozen_models.joblib": "790c7340af7a6bd5424d3df6ec54eaf6ed866438c4f2eec9b72447e74b099de0",
+    "data/v7/live_input_compatibility_20261026/manifest.json": "1a761eb3eca0981dc48a8b5449c4ad55adb560e3821465a9d488f5b460fc5452",
+    "data/v7/live_input_compatibility_20261026/source_time_v2/manifest.json": "4f800a59512cafa6a6e4b132da19bd4c50b07b042ecb562fd346af38b445e9c1",
+    "eventx/release/v7/live_input_compatibility_20261026/delivery_qa.json": "a45d5a6b27e6c99a2054ed70cacfdd7181c4dbdc84edf15ef152d50d5a647ed4",
+    "eventx/release/v7/live_input_compatibility_20261026/source_time_v2_input_contract.json": "691c1e1a5cffaad29937601224ffd3e8fec2e5cc0959ffbfe5bcbff78b16f4b1"
+  }
+}

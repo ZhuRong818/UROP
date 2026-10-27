@@ -1,0 +1,41 @@
+{
+  "activity_screen_plan": "For a separately enrolled cohort, freeze IDs before collecting a24h pre-event activity window. Retain all members and all failures; issue only on valid decision grids. Do not rank by subsequent returns.",
+  "automatic_predictive_admission": false,
+  "end_after": "2026-10-23T05:24:27.866769+00:00",
+  "end_before": "2027-03-01T00:00:00Z",
+  "frozen_at": "2026-10-23T05:24:27.866769+00:00",
+  "maximum_rows": 1000,
+  "ordering": "condition_id ascending; cap reached means incomplete universe, no automatic enrollment",
+  "prohibited": [
+    "prices",
+    "outcome prices",
+    "results",
+    "labels",
+    "trade histories",
+    "volume/liquidity ranking"
+  ],
+  "projection": [
+    "condition_id",
+    "question",
+    "outcomes",
+    "clob_token_ids",
+    "active",
+    "closed",
+    "archived",
+    "start_date",
+    "end_date",
+    "ingest_ts",
+    "source",
+    "source_run_id",
+    "description",
+    "resolution_source"
+  ],
+  "protected_ids_path": "eventx/release/v7/market_capture_20261018/protected_ids.json",
+  "protected_ids_sha256": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b",
+  "quarantine_pattern": "(federal reserve|fomc|fed rate|fed cut|fed hike|interest rate)",
+  "question_pattern": "(consumer price|inflation|unemployment|payroll|gross domestic|GDP|personal consumption|PCE|recession|job openings|retail sales|personal income|consumer spending)",
+  "release_links": "Reuse reserved episodes only for metadata feasibility; later releases require calendar verification and new reservation",
+  "selection": "retain all metadata records and exclusions; separate existing14 from new US official-statistic rule candidates; ambiguous rules require adjudication",
+  "survival": "end_date > release+90min is necessary screening only; early resolution requires separate rule/status review",
+  "venue": "polymarket"
+}

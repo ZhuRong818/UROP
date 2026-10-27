@@ -1,0 +1,24 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "✅ Created 1 slide successfully!\n\nSlide 20: \"What we have achieved so far\"\n\n🔑 IMPORTANT - Save this Presentation ID:\npres_c5b119b57ca8f9a86972347f16d9f348\n\nFor any additional slides in THIS conversation, you MUST include:\n\"presentation_id\": \"pres_c5b119b57ca8f9a86972347f16d9f348\"\nin the tool parameters."
+    }
+  ],
+  "structuredContent": {
+    "presentation_id": "pres_c5b119b57ca8f9a86972347f16d9f348",
+    "deck_id": "feec53a53350",
+    "theme_id": "zurich-light",
+    "slides": [
+      {
+        "title": "What we have achieved so far",
+        "subtitle": "Measured development gains and the remaining evidence requirements",
+        "slidenum": 20,
+        "layout": "image_left_text_right",
+        "image_url": "https://slidesgpt.com/media/6fd31ba28b62.png",
+        "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+      }
+    ]
+  },
+  "isError": false
+}

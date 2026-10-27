@@ -1,0 +1,11 @@
+# V6 narrowed Lumid source clarification — prepared, not sent
+
+Date: 27 September 2026. Attachment: `data/v6/context_development_review_20260927/provider_scope.json` (nine opened-development articles, 15 contracts). This supersedes the broad questions in `SOURCE_EVIDENCE_REQUEST_20260927.md` for any future message, while preserving that original draft. No credentials, price paths, outcomes or V4 protected records are requested.
+
+We understand from the researcher that headline/summary bytes were unchanged from publication; contract question, YES/NO side and resolution terms are stable; and a completed zero-article result means no articles. We need only the following operational clarifications for a Lumid-fed historical V6 analysis:
+
+1. **Delivery clock:** Does `news.articles.available_at` record the first time Lumid delivered the exact row to clients? If a live delivery was earlier than this field, identify the field or receipt. One scoped article, `102500031`, has `published_at=2026-05-23T11:00:00Z` but `available_at=2026-05-23T15:19:29.435984Z`; we would use the latter for Lumid-fed decisions unless earlier delivery is evidenced.
+2. **Market activation:** Do Kalshi `open_time` and Polymarket `start_date` in the scoped market rows mean first tradable time? Were there suspensions or early trading closures in the applicable intervals? We will compare the article's usable delivery clock to start and end, keeping nominal resolution/end dates separate from actual trading status. Please identify any exceptions to the stated stability of the question, YES/NO mapping or rules.
+3. **Failed-run and zero-window reconciliation:** Five of the nine article runs in the attachment are marked failed locally. Which retries or successor runs completed their requested windows, and what committed page/row receipt establishes that a zero export is a completed zero for this declared feed? If some windows remain incomplete, identify them; we will leave those windows unknown.
+
+The scope is opened development `[2026-05-17,2026-07-22)` UTC. A positive answer supports a new source-eligibility audit; it does not itself certify semantic article–contract links, event independence, forecasting power or untouched confirmation. If these operational records are unavailable, we will use source-available prospective capture rather than backdate the current rows.

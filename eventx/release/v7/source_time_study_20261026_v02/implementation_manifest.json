@@ -1,0 +1,12 @@
+{
+  "files": {
+    "data/v7/source_time_study_20261026/day_boundary_diagnostic.json": "05504923fa5b206e31620c86eebee70bfc99e2b5962c8fe278a8b071aa69d6f4",
+    "data/v7/source_time_study_20261026/development/manifest.json": "bd8e9b341147950790810b88d246fc4489044905851e383a5092f0f4eb4b788c",
+    "eventx/release/v7/source_time_study_20261026/implementation_manifest.json": "19b045ff66a38aa8eaabdde4c7e55094fbe43aaa8e30241d771b1e6b24f38c56",
+    "eventx/release/v7/source_time_study_20261026_v02/live_cohort.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/source_time_study_20261026_v02/protocol.json": "fd5a573a6245d8c6990ff2a61dad4c101778df15eb7f5a528c90086857bd64c5",
+    "eventx/release/v7/source_time_study_20261026_v02/readiness_spec.json": "824cd83ec09d0d4eac8a5adb047149752ef0d1dfbecd03c7d96d549644132a7a",
+    "eventx/tasks/freeze_v7_source_time_study_20261026_v02.py": "a7293d163bd39ffc6bfcd7f44704acf4088f67d215ea3a1dbe7f6466010c10f7",
+    "eventx/tasks/run_v7_source_time_study_20261026_v02.py": "78b4adcfe2623224f4fa5e6dd8ce9ab1c6cf46df745ad3e9104de65586dbad35"
+  }
+}

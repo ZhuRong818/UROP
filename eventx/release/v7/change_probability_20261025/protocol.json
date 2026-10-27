@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-25T06:56:13.610200+00:00",
+  "scope": "New observational change-probability research cycle;not original movement classifier or live-depth model",
+  "target": "1 iff absolute archived YES-midpoint change over30m>1e-12;no magnitude/direction/resolution/profitability claim",
+  "cohort": "Same20frozen market IDs;do not drop expired/illiquid/losing markets or replace them. Current metadata start/end remain original cohort bias,not model features.",
+  "development_dates": [
+    "2026-04-21",
+    "2026-04-22",
+    "2026-04-23",
+    "2026-04-24"
+  ],
+  "do_not_reuse_for_tuning": [
+    "2026-04-25",
+    "2026-04-26",
+    "2026-04-27"
+  ],
+  "test_dates": [
+    "2026-04-28",
+    "2026-04-29",
+    "2026-04-30"
+  ],
+  "test_status": "New historical time-block evaluation;same markets,not prospective or independent-market confirmation",
+  "data_reads": "Existing training/selection dates only for development;freeze model bundle before retrieving new72hour testfiles.16MiB/file upper bound1207959552bytes,two workers. All protected periods excluded;1231cohort IDs remain filtered.",
+  "primary_eligibility": "Fresh valid unique direct topquote at t and t+30min;source/receive<=120s,0<bid<=ask<1,spread<=.05. Whole-path continuity not required for endpoint target. Missing target excluded with coverage reported,not zero change.",
+  "decision_grid": "00:30\u201323:25 UTC every5m;276permarket/day. No cross-midnight windows.",
+  "history_features": "Current midpoint/logit/spread/source+receive age/time sincos;log count valid states and valid-state fraction in observed trailing30m;5/15/30min delta and absolute delta when prior quote fresh,otherwise zero plus explicit missing flag. Past-only observed-feed activity,not certified venue activity.",
+  "secondary_population": "Original continuous history+forward eligibility with same selected model,descriptive secondary only. No tuning from secondary results.",
+  "target_measurement": "Conservative current/endpoint pair uniqueness preserved;recorded quotes only. Source gaps/tradability unknown;never claim news or economic execution gains.",
+  "baselines": [
+    "Beta(1,1)smoothed global training prevalence",
+    "Market training prevalence shrunk to global with20pseudo-observations;unseen market=>global",
+    "StandardScaler+activity LogisticRegression(C=.1);features current price,spread,log valid-state count,absolute lag changes/missingness"
+  ],
+  "challengers": [
+    "Full StandardScaler+LogisticRegression C=.01,.1,1",
+    "HistGradientBoostingClassifier max_leaf_nodes3 or7,100iterations,lr.05,minleaf100,L2=10,early_stoppingFalse,seed20261025"
+  ],
+  "probability_policy": "Unweighted training,no class balancing/oversampling;clip1e-6..1-1e-6 for all models. Single-class training falls back to smoothed global prior.",
+  "selection": "Fit21\u201323,select lowest log loss on24 across all8prespecified models;ties1e-12 prefer listed simpler baselines. Data gate500training/30positive and100selection/10positive. No iterative search.",
+  "refit": "Refit selected model and three named baselines on21\u201324;freezebundle before test retrieval. Evaluate those frozen models once on28\u201330.",
+  "metrics": [
+    "Log loss primary against each named baseline",
+    "Brier,average precision,ROC AUC",
+    "Fixed probability-bin calibration",
+    "Per-day/per-market scores",
+    "Strict secondary subset",
+    "Nonoverlap sensitivity t%1800==0;still dependent by market/calendar"
+  ],
+  "success_interpretation": "A gain against constant prevalence alone is insufficient to establish superiority over activity and market-history baselines. Report all contrasts with no selective omissions. No automatic promotion or statistical-significance claim from3dates.",
+  "missingness": "All scheduled rows and endpoint failures reported. Task conditional on observed valid endpoints;cannot generalize errors to missing outcomes.",
+  "integrity": "Old frozen results untouched;no V4/consumed holdout access,news features or live service changes."
+}

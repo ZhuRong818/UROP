@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-24T08:44:21.503777+00:00",
+  "candidate_promotion": false,
+  "cohort": "eventx/release/v7/quote_experiment_20261024/forward_cohort.jsonl",
+  "model": "data/v7/quote_experiment_20261024/development/ridge_model.json",
+  "network_requests": false,
+  "quote_policy": "eventx/release/v7/quote_experiment_20261024/policy.json",
+  "reference": "persistence",
+  "reporting": "All three frozen forecasts on identical keys; no retuning or claim of independent validation",
+  "scope": "New user-authorized V7 quote experiment; old trade model gated and unchanged",
+  "source_live": "data/v7/expansion_source_pilot_20261024/live"
+}

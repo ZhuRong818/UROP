@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://portend.local/schema/dataset-manifest-1.0.0.json",
+  "title": "PORTEND published Parquet dataset manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dataset_name",
+    "dataset_version",
+    "schema_version",
+    "status",
+    "row_count",
+    "min_timestamp",
+    "max_timestamp",
+    "code_commit",
+    "config_hash",
+    "created_at",
+    "published_at",
+    "qa_status",
+    "source_run_ids",
+    "files",
+    "upstream_manifests"
+  ],
+  "properties": {
+    "dataset_name": {
+      "type": "string",
+      "pattern": "^(core|market_data|semantics|benchmark|simulation|qa)\\.[a-z][a-z0-9_]*$"
+    },
+    "dataset_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "const": "published"
+    },
+    "row_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "min_timestamp": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "max_timestamp": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "code_commit": {
+      "type": "string",
+      "minLength": 7
+    },
+    "config_hash": {
+      "type": "string",
+      "minLength": 16
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "qa_status": {
+      "const": "pass"
+    },
+    "source_run_ids": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "relative_path",
+          "file_sha256",
+          "byte_count",
+          "row_count",
+          "row_group_count",
+          "min_timestamp",
+          "max_timestamp",
+          "partition_values"
+        ],
+        "properties": {
+          "relative_path": {"type": "string", "minLength": 1},
+          "file_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "byte_count": {"type": "integer", "minimum": 1},
+          "row_count": {"type": "integer", "minimum": 0},
+          "row_group_count": {"type": "integer", "minimum": 0},
+          "min_timestamp": {"type": ["string", "null"], "format": "date-time"},
+          "max_timestamp": {"type": ["string", "null"], "format": "date-time"},
+          "partition_values": {"type": "object"}
+        }
+      }
+    },
+    "upstream_manifests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["dataset_name", "dataset_version", "manifest_sha256"],
+        "properties": {
+          "dataset_name": {"type": "string"},
+          "dataset_version": {"type": "string"},
+          "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    }
+  }
+}

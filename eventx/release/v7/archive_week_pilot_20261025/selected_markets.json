@@ -1,0 +1,526 @@
+{
+  "at": "2026-10-25T01:16:26.391425+00:00",
+  "markets": [
+    {
+      "acceptingOrders": true,
+      "active": true,
+      "closed": false,
+      "description": "This market will resolve according to the winner of The Bachelorette Season 22. \n\nThe winner is defined as the contestant who receives the final rose from the Bachelorette. Any changes in relationship status after the final rose ceremony including the \"After the Final Rose\" segment will not be considered. \n\nIf no rose is given, or the finale ends without a final rose ceremony, this market will resolve to \"Other\". \n\nIf the final episode of the bachelorette is not publicly available by November 30, 2026, 11:59 PM ET, this market will resolve to \"Other\". \n\nThe official resolution source will be the finale episode of The Bachelorette Season 22.",
+      "endDate": "2026-11-30T00:00:00Z",
+      "events": [
+        {
+          "id": "228429",
+          "slug": "bachelorette-season-22-winner",
+          "title": "Bachelorette Season 22 Winner"
+        }
+      ],
+      "market_id": "0x02def3545714ba14f74a8ec4d73c1f5dc05485d469a8bbcc3098403958d83eb5",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Johnnie LaRossa win The Bachelorette Season 22?",
+      "slug": "will-johnnie-larossa-win-the-bachelorette-season-22",
+      "startDate": "2026-02-24T23:53:06.454338Z",
+      "token_ids": [
+        "4468795200049810246640654372972548289154607235038759453730746710029722798300",
+        "6871236026073909510143762321245897081545462418467815663086104439676282441751"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "This market will resolve according to the winner of the Republican Primary for United States Senator from South Dakota.\n\nIf no 2026 South Dakota Republican Senate Primary takes place, this market will resolve to \"Other\".\n\nThe resolution source for this market will be the first announcement of the results from the South Dakota Republican party, however an overwhelming consensus of credible reporting may suffice.",
+      "endDate": "2026-06-28T00:00:00Z",
+      "events": [
+        {
+          "id": "227922",
+          "slug": "south-dakota-republican-senate-primary-winner",
+          "title": "South Dakota Republican Senate Primary Winner"
+        }
+      ],
+      "market_id": "0x01408db0d90e6ba11f7cb6347905b8d5b69dc881de8420e4629bdc8be6aade2e",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Justin McNeal be the Republican nominee for Senate in South Dakota?",
+      "slug": "will-justin-mcneal-be-the-republican-nominee-for-senate-in-south-dakota",
+      "startDate": "2026-02-25T23:23:46.853366Z",
+      "token_ids": [
+        "6353093976917225092703808246266084449150938949457904808276955261688650820672",
+        "62428689237212893866819600130514660871577692006353149103397567605701673511745"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "The 2026 U.S. Open tennis tournament is scheduled for August 23 - September 13, 2026.\n\nThis market will resolve to the player that wins the 2026 U.S. Open Women\u2019s Singles Tournament.\n\nIf at any point it becomes impossible for a listed player to win the 2026 U.S. Open Women\u2019s Singles Tournament per the rules of the tournament, the corresponding market will resolve to \u201cNo\u201d.\n\nIf the 2026 U.S. Open Women\u2019s Singles Tournament is cancelled, postponed after October 31, 2026, or there is otherwise no winner declared within that timeframe, this market will resolve to \u201cOther\u201d.\n\nThe primary resolution source will be official information from the U.S. Open (https://www.usopen.org/index.html); however, a consensus of credible reporting may also be used.",
+      "endDate": "2026-09-13T00:00:00Z",
+      "events": [
+        {
+          "id": "139255",
+          "slug": "2026-womens-us-open-winner-tennis",
+          "title": "2026 Women\u2019s US Open Winner (Tennis)"
+        }
+      ],
+      "market_id": "0x00b871a93b455337c88a929622446b708d00115366c16e8ea25cdcd96ebdb247",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Elina Svitolina win the 2026 Women\u2019s US Open?",
+      "slug": "will-elina-svitolina-win-the-2026-womens-us-open",
+      "startDate": "2026-01-02T20:35:57.878601Z",
+      "token_ids": [
+        "63256786371676407474119895561562173552867950489873602010411946119014493317857",
+        "24786886069253796477781991199897936923828339473031376749332908354293054441238"
+      ]
+    },
+    {
+      "acceptingOrders": true,
+      "active": true,
+      "closed": false,
+      "description": "This market will resolve to \"Yes\" if the Fully Diluted Valuation of Ventual's token is greater than the value specified in the title 1 day after launch. Otherwise, the market will resolve to \"No.\"\n\nThe token must be actively, publicly transferable and tradable to be considered a launch.\n\nThe FDV will be determined using the total token supply multiplied by the token price.\n\n\"1 day after launch\" is defined as 4:00 PM ET on the calendar day following launch. The resolution source for this market is the most liquid price source available. If Ventuals (https://x.com/ventuals) doesn't launch a token by December 31, 2026, 11:59 PM ET, this market will resolve to \"No\".",
+      "endDate": "2027-01-01T05:00:00Z",
+      "events": [
+        {
+          "id": "90395",
+          "slug": "ventuals-fdv-above-one-day-after-launch",
+          "title": "Ventuals FDV above ___ one day after launch?"
+        }
+      ],
+      "market_id": "0x0042924c2b33e9e7a2ac2969ad7e1be3c790ef80be526350d7fe2b936e18d1de",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Ventuals FDV above $2B one day after launch?",
+      "slug": "ventuals-fdv-above-2b-one-day-after-launch-314",
+      "startDate": "2025-11-25T21:17:21.519Z",
+      "token_ids": [
+        "610942236017040935222007822771797451001639492666306524853299036853260268547",
+        "86161844083825841300290270169406709206956013571351462091239773918992604210605"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "The FED interest rates are defined in this market by the upper bound of the target federal funds range. The decisions on the target federal funds range are made by the Federal Open Market Committee (FOMC) meetings.\n\nThis market will resolve according to the decisions made by the next three Federal Open Market Committee (FOMC) meetings: January 27\u201328, 2026; March 17-18, 2026; and April 28-29.\n\nA qualifying cut occurs when the new upper bound of the target federal funds rate is lower compared to the level it was prior to the respective meeting.\n\nA qualifying hike occurs when the new upper bound of the target federal funds rate is higher compared to the level it was prior to the respective meeting.\n\nA qualifying pause occurs when the new upper bound of the target federal funds rate is equal to the level it was prior to the respective meeting.\n\nIf the Fed publishes a different combination than any listed, this market will resolve to \"Other\". Any rate hike will be encompassed by \"Other\".\n\nEmergency rate cuts outside the regularly scheduled meetings will not be considered.\n\nThe resolution source for this market is the FOMC\u2019s statement after its meetings:\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\n\nThe level and change of the target federal funds rate is also published at the official website of the Federal Reserve:\nhttps://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "endDate": "2026-04-29T00:00:00Z",
+      "events": [
+        {
+          "id": "106928",
+          "slug": "fed-decisions-jan-apr",
+          "title": "Fed decisions (Jan-Apr)"
+        }
+      ],
+      "market_id": "0x0248586d93eca782dc023e24a8948575ac27db8ba249b28cf0a101e3c4263aa9",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will the Fed Pause\u2013Pause\u2013Pause in the next three decisions (Jan\u2013Mar\u2013Apr)?",
+      "slug": "will-the-fed-pausepausepause-in-the-next-three-decisions-janmarapr",
+      "startDate": "2025-12-16T19:36:55.92745Z",
+      "token_ids": [
+        "16042859044780012804816840450444593720854461689005086575762527090810418991767",
+        "16399827552191481469151970984792450070205457988356233888658988992558054518537"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "This is a polymarket to predict which clubs are relegated from Serie A after the 2025\u201326 season.\n\nIf the listed club is officially relegated by Serie A following the 2025\u201326 season, this market will resolve to \"Yes\". Otherwise, it will resolve to \"No\".\n\nIf the 2025\u201326 Serie A season is canceled or not completed by October 1, 2026, this market will resolve to \"No\".\n\nThe primary resolution source will be official information from Serie A. A consensus of credible reporting may also be used.",
+      "endDate": "2026-05-28T00:00:00Z",
+      "events": [
+        {
+          "id": "38515",
+          "slug": "serie-a-which-clubs-get-relegated",
+          "title": "Serie A - Which Clubs Get Relegated?"
+        }
+      ],
+      "market_id": "0x027559a14e432690257e412f18d237574155f4aebeee941382423d01c65ba37c",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Torino be relegated from Serie A after the 2025-26 season?",
+      "slug": "will-torino-be-relegated-from-serie-a-after-the-2025-26-season",
+      "startDate": "2025-08-20T21:29:41.585037Z",
+      "token_ids": [
+        "75546450841602375940945638943612150673916039892841739175120880870878769936289",
+        "29656649254811448219539439958370239248598869163495679625271035829447755371901"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "In the upcoming game, scheduled for May 17, 2026\nIf the game ends in a draw, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve to \"Yes\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, a consensus of credible reporting may be used instead.",
+      "endDate": "2026-05-17T06:30:00Z",
+      "events": [
+        {
+          "id": "397005",
+          "slug": "j2100-rei-gir-2026-05-17",
+          "title": "Reilac Shiga vs. Giravanz Kitaky\u016bsh\u016b"
+        }
+      ],
+      "market_id": "0x02a7b5ac8534390a9105d5ba5626539db0f31a7de97ce678c102e6128d98c30b",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Reilac Shiga vs. Giravanz Kitaky\u016bsh\u016b end in a draw?",
+      "slug": "j2100-rei-gir-2026-05-17-draw",
+      "startDate": "2026-04-19T21:50:36.064973Z",
+      "token_ids": [
+        "96113212586745329186209930594811754350601276335632370513125088689999882397076",
+        "34288053521440063128002025460512397075134603854921184815725990787071354957597"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "In the upcoming La Liga 2 game between CD Castell\u00f3n and C\u00f3rdoba CF, scheduled for May 2 at 12:30 PM ET:\n\nThis market will resolve to \"Yes\" if both CD Castell\u00f3n and C\u00f3rdoba CF each score at least one goal during the game.\n\nThis market will resolve to \"No\" if either team fails to score (i.e., if one or both teams finish with zero goals).\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50\u201350.\n\nIf the game is started but not completed, this market will resolve according to the official final score published on laliga.com. This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, a consensus of credible reporting may be used instead.",
+      "endDate": "2026-05-02T16:30:00Z",
+      "events": [
+        {
+          "id": "396575",
+          "slug": "es2-cas-cor-2026-05-02-more-markets",
+          "title": "CD Castell\u00f3n vs. C\u00f3rdoba CF - More Markets"
+        }
+      ],
+      "market_id": "0x00321ff88e1db3b2fb21fd10c8a4c4bf2402b7c80d4968ba3af0b2d61896f690",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "CD Castell\u00f3n vs. C\u00f3rdoba CF: Both Teams to Score",
+      "slug": "es2-cas-cor-2026-05-02-btts",
+      "startDate": "2026-04-19T19:02:41.624682Z",
+      "token_ids": [
+        "73469197159210793840647536551197253934628720235918570395026634589410116571316",
+        "33461557998960855954878942515139498583890593321583344591144405451356801738357"
+      ]
+    },
+    {
+      "acceptingOrders": true,
+      "active": true,
+      "closed": false,
+      "description": "This market will resolve to \u201cYes\u201d if the Investing.com low price (\u201cL\u201d) for any USD/KRW hourly candle for an hour on or before the listed end date (ET) is equal to or below the listed price. Otherwise, this market will resolve to \u201cNo\u201d.\n\nData for a given candle will be considered finalized once the next candle appears on the specified graph. The last trading day of a given week will be considered finalized once the market closes on that day, typically at 5 PM ET on Friday.\n\nThis market will resolve as soon as any finalized USD/KRW hourly candle low price is equal to or below the listed price, or once the final hourly candle in the specified period is finalized. A candle starting at 11:00 PM ET on a given date will be considered to be on that date.\n\nThis market\u2019s resolution will be based solely on information from the \u201cL\u201d figure located at the top of the USD/KRW Streaming Chart on Investing.com for the specified currency pair (https://www.investing.com/currencies/usd-krw-chart).",
+      "endDate": "2026-12-31T00:00:00Z",
+      "events": [
+        {
+          "id": "199727",
+          "slug": "will-usdkrw-hit-in-2026",
+          "title": "Will USD/KRW hit __ in 2026?"
+        }
+      ],
+      "market_id": "0x00db2b7ce1e0da8b5de9022ccda18c672fbce05ac21933a0f3cd6fc034c7cc38",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will USD/KRW hit 1100 (Low) in 2026?",
+      "slug": "will-usdkrw-hit-1100-low-in-2026",
+      "startDate": "2026-02-06T21:53:03.27679Z",
+      "token_ids": [
+        "28841370241075743679930788094080546117465705742809816858949599305114383041721",
+        "3162485277342731520803603088810838649929344918505641415009554382993121355413"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "In the upcoming Serie A game between Cagliari Calcio and Atalanta BC, scheduled for April 27, 2026 at 12:30 PM ET: This market will resolve to \"Yes\" if Leonardo Pavoletti is credited with a goal in the official box score within the first 90 minutes of regular play plus stoppage time. Otherwise, this market will resolve to \"No\". Own goals do not count. If the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve \"50-50\". If the player is listed as inactive or otherwise does not play, the market will resolve \"No\". The primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 24 hours after the event's conclusion, a consensus of credible reporting may be used instead.",
+      "endDate": "2026-04-27T16:30:00Z",
+      "events": [
+        {
+          "id": "400244",
+          "slug": "sea-cag-ata-2026-04-27-player-props",
+          "title": "Cagliari Calcio vs. Atalanta BC - Player Props"
+        }
+      ],
+      "market_id": "0x015fb910d3cfc2282acded00d19935e91b881c1a128df65b389f43eb5fe67332",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Leonardo Pavoletti: Anytime Goalscorer",
+      "slug": "sea-cag-ata-2026-04-27-ags-leonardo-pavoletti",
+      "startDate": "2026-04-20T18:34:16.547376Z",
+      "token_ids": [
+        "17102049199600383547221933798943970467209931449237706735924724565037917347675",
+        "5949171592185687912952379234495179750037785308692282083774137839435503732724"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "This market will resolve to \"Yes\" if on any day between market creation and April 30, 2026, the average US regular gas price is equal to or above the listed price. Otherwise, the market will resolve to \"No\".\n\nOnly the first two decimal digits of the reported price will be considered (e.g., if the price is reported as $3.257, this market will use $3.25 as the price).\n\nThe resolution source for this market will be information from the American Automobile Association (AAA), presently found here: https://gasprices.aaa.com/. Specifically, the cell under \"Regular\" and for the row \"Current Avg\".",
+      "endDate": "2026-04-30T00:00:00Z",
+      "events": [
+        {
+          "id": "326092",
+          "slug": "will-gas-hit-by-end-of-april",
+          "title": "Will gas hit __ by end of April?"
+        }
+      ],
+      "market_id": "0x01aaece056f8163129041a6a8e0fcfca7ca331df1ca652f8084ce60b46e6d870",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will gas hit (High) $4.25 by April 30?",
+      "slug": "will-gas-hit-high-4pt25-by-april-30",
+      "startDate": "2026-03-31T15:07:08.80172Z",
+      "token_ids": [
+        "4040824502039786160094049660378525339974003956118981436815816870422022167479",
+        "115252724366863876929744914672618392528004912283044727950927327437638289160773"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "This market will resolve to \"Yes\" if the official CME settlement price for the Active Month of Crude Oil futures on the final trading day of June 2026 is higher than the listed price. Otherwise, the market will resolve to \"No\".\n\nFor CME Crude Oil (CL) futures contracts, the active month is the nearest of the contract months listed. The active month becomes a non-active month effective two business days prior to the spot month expiration. For example; if the spot month expires on a Friday the next listed contract will be considered the Active Month on the Wednesday prior to the spot month expiration.\n\nOnly the Active Month's official settlement price published by CME Group will be considered. Intraday trades, highs, lows, bids, offers, midpoint values, or indicative prices do not count.\n\nNote that the settlement price may differ from the last traded price. CME's methodology to determine the settlement price can vary by commodity and contract.\n\nOnly days during June on which CME publishes an official settlement price for the Active Month will be included. Days without settlement prices (weekends, holidays, or market closures) are ignored.\n\nThis market will resolve based on the settlement price as it appears on the CME settlement page at the time it is first published for that trading day, regardless of any later corrections or updates.\n\nThe resolution source for this market is the CME Group website \u2014 specifically, the daily \"Settlement\" price for the Active Month of Crude Oil (CL) futures.",
+      "endDate": "2026-06-30T18:30:00Z",
+      "events": [
+        {
+          "id": "125878",
+          "slug": "cl-over-under-jun-2026",
+          "title": "Crude Oil (CL) above ___ end of June?"
+        }
+      ],
+      "market_id": "0x004923fb8d79c027af9f61d7b426644e4e0e4e95984d0de0b1668ae573583c75",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Crude Oil (CL) settle over $56 on the final trading day of June 2026?",
+      "slug": "cl-above-56-jun-2026",
+      "startDate": "2025-12-26T23:38:49.632531Z",
+      "token_ids": [
+        "94449406111676613169934632788971166622214151599300719369925962514886619337492",
+        "2964597924974929442787261873126473179537498295305084110466088020117666181918"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "The 2026 Conservative Party of British Columbia leadership election is currently scheduled to be held on May 30, 2026.\n\nThis market will resolve according to the candidate who becomes the next leader of the Conservative Party of British Columbia as a result of this election.\n\nTemporary, interim, or placeholder leaders appointed before the election will not be considered.\n\nIf the result of this election isn't known by April 30, 2027, 11:59 PM ET, the market will resolve to \"Other\".\n\nThe primary resolution source for this market will be a consensus of credible reporting; however, if there is any ambiguity in the results, this market will resolve according to official information from the Conservative Party of British Columbia.",
+      "endDate": "2026-05-30T06:00:00Z",
+      "events": [
+        {
+          "id": "343919",
+          "slug": "bc-conservative-party-leadership-election-winner",
+          "title": "B.C. Conservative Party Leadership Election Winner"
+        }
+      ],
+      "market_id": "0x030766ce5d9ea9317962c2e8524011d6b5b27c1baa98d37029e09617b7bc200c",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Harman Bhangu win the 2026 Conservative Party of British Columbia leadership election?",
+      "slug": "will-harman-bhangu-win-the-2026-conservative-party-of-british-columbia-leadership-election",
+      "startDate": "2026-04-06T23:45:10.878058Z",
+      "token_ids": [
+        "37674965655667740073758564936952602628657044907575887900467326749281135965323",
+        "112150832187113462861145407713349482655446270903004230242596808937293707811421"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "This market will resolve to \"Yes\" if the Fully Diluted Valuation of Pharos's token is greater than the value specified in the title 1 day after launch. Otherwise, the market will resolve to \"No.\"\n\nOnly an official token launched by Pharos will qualify. Stablecoins, memecoins, LSTs and synthetic tokens will not count.\n\nThe token must be actively and publicly tradable to be considered a launch.\n\nThe FDV will be determined using the total token supply multiplied by the token price.\n\n\"1 day after launch\" is defined as 4:00 PM ET on the calendar day following launch. The resolution source for this market is the most liquid price source available. If Pharos (https://x.com/pharos_network) doesn't launch a token by December 31, 2027, 11:59 PM ET, this market will resolve to \"No\".",
+      "endDate": "2028-01-01T05:00:00Z",
+      "events": [
+        {
+          "id": "336761",
+          "slug": "pharos-network-fdv-above-one-day-after-launch",
+          "title": "Pharos Network FDV above ___ one day after launch?"
+        }
+      ],
+      "market_id": "0x014777bfe1d4c9b21d1b83a0fd1432353d2100fdd78bf0d13aaf554e0f29f9ef",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Pharos FDV above $500M one day after launch?",
+      "slug": "pharos-fdv-above-500m-one-day-after-launch",
+      "startDate": "2026-04-02T17:57:16.365808Z",
+      "token_ids": [
+        "71062025768602133864788694980996223895976646791080257469131511680594421108148",
+        "66851640360072163399723820055060441531464025638257782772712226540673129591869"
+      ]
+    },
+    {
+      "acceptingOrders": true,
+      "active": true,
+      "closed": false,
+      "description": "This market will resolve to \"Yes\" if the Fully Diluted Valuation of Extended's token is greater than the value specified in the title 1 day after launch. Otherwise, the market will resolve to \"No.\"\n\nThe token must be actively, publicly transferable and tradable to be considered a launch.\n\nThe FDV will be determined using the total token supply multiplied by the token price.\n\n\"1 day after launch\" is defined as 4:00 PM ET on the calendar day following launch. The resolution source for this market is the most liquid price source available. If Extended (https://x.com/extendedapp) doesn't launch a token by December 31, 2026, 11:59 PM ET, this market will resolve to \"No\".",
+      "endDate": "2027-01-01T05:00:00Z",
+      "events": [
+        {
+          "id": "91926",
+          "slug": "extended-fdv-above-one-day-after-launch",
+          "title": "Extended FDV above ___ one day after launch?"
+        }
+      ],
+      "market_id": "0x004230fb1f54a139d50ba2041e062a01461c931a6725ce482e3a9ab61b2925bb",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Extended FDV above $800M one day after launch?",
+      "slug": "extended-fdv-above-800m-one-day-after-launch-299-255-178",
+      "startDate": "2025-11-27T17:27:41.266Z",
+      "token_ids": [
+        "69422147515888934539342749343952767069189843320299332157580167457035825622340",
+        "110140034559013996398860253157541589571780375034092711496574418799581677182004"
+      ]
+    },
+    {
+      "acceptingOrders": true,
+      "active": true,
+      "closed": false,
+      "description": "This market will resolve to the player who wins the 2026 National League Most Valuable Player Award.\n\nIn the event of a tie, this market will resolve according to the official winner as determined by MLB rules. If multiple winners are announced then this market will resolve to the player whose listed last name comes first alphabetically.\n\nIf the 2026 MLB season is cancelled, postponed after December 31, 2026, 11:59 PM ET, or there is otherwise no winner declared within that timeframe, this market will resolve to \u201cOther\u201d.\n\nThe resolution source for this market will be official information from Major League Baseball; however, a consensus of credible reporting may also be used.",
+      "endDate": "2027-01-01T04:59:00Z",
+      "events": [
+        {
+          "id": "215604",
+          "slug": "mlb-2026-nl-mvp",
+          "title": "MLB: 2026 NL MVP"
+        }
+      ],
+      "market_id": "0x02ef91cb7f3a78f5cc1d7e6ac619aff0ab82b88ef13f7e26ff1e80abde66f29f",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Elly De La Cruz win the 2026 National League MVP Award?",
+      "slug": "will-elly-de-la-cruz-win-the-2026-national-league-mvp-award",
+      "startDate": "2026-02-19T03:15:22.440693Z",
+      "token_ids": [
+        "105415803526884859447753767008050860026959785013720983099770053068129982426528",
+        "61135309926119706233323056386261686632096731025929814708708512757856999122162"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "In the upcoming game, scheduled for May 2, 2026\nIf Falkirk FC wins, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve \"No\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, a consensus of credible reporting may be used instead.",
+      "endDate": "2026-05-02T14:00:00Z",
+      "events": [
+        {
+          "id": "395079",
+          "slug": "scop-fal-mot-2026-05-02",
+          "title": "Falkirk FC vs. Motherwell FC"
+        }
+      ],
+      "market_id": "0x02e902e250c1d564846da59a752e5f6781c4ae8c7879c853a50c4e0fd8c19f02",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Falkirk FC win on 2026-05-02?",
+      "slug": "scop-fal-mot-2026-05-02-fal",
+      "startDate": "2026-04-19T09:04:16.126359Z",
+      "token_ids": [
+        "19779835225578359925606242046850187922739428146670658614492674604726248709336",
+        "92272552882295050611958859703764990371285031301424686344296834895430955696129"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "In the upcoming game, scheduled for May 16, 2026\nIf Fluminense FC wins, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve \"No\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, a consensus of credible reporting may be used instead.",
+      "endDate": "2026-05-16T23:30:00Z",
+      "events": [
+        {
+          "id": "396570",
+          "slug": "bra-flu-sao-2026-05-16",
+          "title": "Fluminense FC vs. S\u00e3o Paulo FC"
+        }
+      ],
+      "market_id": "0x007029b2f8ff26b42b7245d0b613c932cfce6b37952f298c4dbed56c6655a7b7",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Fluminense FC win on 2026-05-16?",
+      "slug": "bra-flu-sao-2026-05-16-flu",
+      "startDate": "2026-04-19T19:10:20.003532Z",
+      "token_ids": [
+        "64244176043478739759657044152428668001613108194416801650263099317848420437441",
+        "62228237821645842593141993400583589761380907022206507840515619611120876272509"
+      ]
+    },
+    {
+      "acceptingOrders": false,
+      "active": true,
+      "closed": true,
+      "description": "The 2026 Crunchyroll Anime Awards are scheduled to occur in Japan on May 23, 2026.\n\nThis market will resolve according to the listed individual who wins the award for Best Anime Voice Artist Performance (Latin Spanish) at the 2026 Crunchyroll Anime Awards.\n\nIf, for any reason, no winner is declared by June 30, 2026, 11:59 PM ET, or in case of a tie for the winner, this market will resolve in favor of the listed individual whose name comes first in alphabetical order.\n\nThe resolution source will be the broadcast of the 2026 Crunchyroll Anime Awards and the official Crunchyroll website (https://www.crunchyroll.com/); however, a consensus of credible reporting may also be used.",
+      "endDate": "2026-05-23T00:00:00Z",
+      "events": [
+        {
+          "id": "337421",
+          "slug": "anime-awards-best-anime-voice-artist-performance-latin-spanish-winner",
+          "title": "Anime Awards: Best Anime Voice Artist Performance (Latin Spanish) Winner"
+        }
+      ],
+      "market_id": "0x0047b79bde0b22d1fcb8940dab56a03b05f723d72d0e9e32192913b213344656",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Desire\u00e9 Gonz\u00e1lez as Maomao (The Apothecary Diaries Season 2) win Best Anime Voice Artist Performance (Latin Spanish) at the 2026 Crunchyroll Anime Awards?",
+      "slug": "will-desire-gonzlez-as-maomao-the-apothecary-diaries-season-2-win-best-anime-voice-artist-performance-latin-spanish-at-the-2026-crunchyroll-anime-awards",
+      "startDate": "2026-04-03T01:50:02.038224Z",
+      "token_ids": [
+        "53913388927796290796197910774941724705074442339442900771110310871340087512566",
+        "77844260739288410498049292594164065130748184070006578206519393832256983006493"
+      ]
+    },
+    {
+      "acceptingOrders": true,
+      "active": true,
+      "closed": false,
+      "description": "This market will resolve to \"Yes\" if the listed club is determined as the champion of the Brazil S\u00e9rie A. Otherwise, it will resolve to \"No\".\n\nIf at any point it becomes impossible for a listed participant to be named as the champion of Brazil S\u00e9rie A per the rules of Brazil S\u00e9rie A (e.g., participant is eliminated), the corresponding market will resolve to \"No\".\n\nIf multiple teams are declared winners, this market will resolve in favor of the team whose listed name comes first alphabetically.\n\nIf this event is cancelled, postponed after December 16, 2026, 11:59 PM ET, or a champion has not been declared within this timeframe, this market will resolve to \"Other\".\n\nThe resolution source will be official information from the Brazil S\u00e9rie A; however a consensus of credible reporting may also be used.",
+      "endDate": "2026-12-16T03:59:00Z",
+      "events": [
+        {
+          "id": "336255",
+          "slug": "2026-soccer-brazil-srie-a-winner",
+          "title": "Brazil S\u00e9rie A: Winner"
+        }
+      ],
+      "market_id": "0x005a7b286f2b785a3a1f0e1fe0e88b93ce26f2e3297e83fd95ceff82a9170c78",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "question": "Will Flamengo win Brazil S\u00e9rie A?",
+      "slug": "2026-soccer-brazil-srie-a-winner-flamengo",
+      "startDate": "2026-04-02T15:22:18.869042Z",
+      "token_ids": [
+        "92459309209650005803931432755458358468120231454447067246744074352569535829901",
+        "34650342404246225259197482500512252103146824879549152692171275706431984113996"
+      ]
+    }
+  ],
+  "selected_before_new_economic_reads": true
+}

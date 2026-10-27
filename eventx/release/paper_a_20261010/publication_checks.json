@@ -1,0 +1,82 @@
+{
+  "scope": "publication transcription and artifact reference check only",
+  "numeric_rows_checked": [
+    {
+      "section": "### 5.4",
+      "row": "L2 logistic",
+      "matches": true
+    },
+    {
+      "section": "### 5.4",
+      "row": "Shallow boosted tree",
+      "matches": true
+    },
+    {
+      "section": "### 5.5",
+      "row": "Original market tree",
+      "matches": true
+    },
+    {
+      "section": "### 5.5",
+      "row": "Exposure-gated context",
+      "matches": true
+    },
+    {
+      "section": "### 5.5",
+      "row": "Context plus timing",
+      "matches": true
+    },
+    {
+      "section": "### 5.5",
+      "row": "Timing plus relevance\u2013novelty",
+      "matches": true
+    },
+    {
+      "section": "### 5.5",
+      "row": "Original market tree",
+      "matches": true
+    },
+    {
+      "section": "### 5.5",
+      "row": "Selected stronger market booster",
+      "matches": true
+    },
+    {
+      "section": "### 5.5",
+      "row": "Selected context correction",
+      "matches": true
+    },
+    {
+      "section": "### 5.5",
+      "row": "Selected news timing correction",
+      "matches": true
+    },
+    {
+      "section": "5.1",
+      "row": "Average precision",
+      "matches": true
+    },
+    {
+      "section": "5.1",
+      "row": "Brier score",
+      "matches": true
+    },
+    {
+      "section": "5.1",
+      "row": "ROC AUC",
+      "matches": true
+    },
+    {
+      "section": "5.1",
+      "row": "Equal-frequency ECE (10 bins)",
+      "matches": true
+    }
+  ],
+  "local_links_checked": 22,
+  "missing_links": [],
+  "export_artifact_hashes_matching": 5,
+  "original_manuscript_sha256": "7b56b09c701ad9c1700c5c7c3fc1825e81912888ecb1da9929b7c31bf84cb572",
+  "original_manuscript_matches_recorded_hash": true,
+  "independent_scientific_review": false,
+  "new_forecast_evaluation": false
+}

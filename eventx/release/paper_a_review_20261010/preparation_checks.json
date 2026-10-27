@@ -1,0 +1,16 @@
+{
+  "scope": "artifact hashes, local references, unchanged manuscript tables and limited credential-pattern check; no software tests or predictive evaluation",
+  "hash_checks": 86,
+  "hash_mismatches": [],
+  "local_links_checked": 61,
+  "missing_links": [],
+  "manuscript_numeric_tables_unchanged": true,
+  "manuscript_table_lines_preserved": 22,
+  "credential_pattern_scan_files": 13,
+  "credential_pattern_flagged_files": [],
+  "independent_scientific_review_completed": false,
+  "human_annotation_responses_received": 0,
+  "visual_review": "both v2 PNG plots inspected; labels and footnotes readable",
+  "intake_implementation_tested": false,
+  "new_forecast_evaluation": false
+}

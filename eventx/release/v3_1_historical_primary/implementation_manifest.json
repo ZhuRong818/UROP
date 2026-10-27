@@ -1,0 +1,63 @@
+{
+  "artifacts": [
+    {
+      "path": "eventx/release/v3_1_historical_primary/protocol.json",
+      "sha256": "61cef4cb3c307509657b41f0156a73fe06ab245797729e27db5b1cfc1ff3861c"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/preregistration_manifest.json",
+      "sha256": "46239ee778e3a6982a9527be70f4f4dbf1d7cae4e9c2faf44c0dd148c259e84f"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/IMPLEMENTATION_SPEC.md",
+      "sha256": "a87f95e5e34f3e1eb3a35ef4e798f9ce2830223cb9e312e1bd805b313b0f389e"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/runtime_requirements.txt",
+      "sha256": "86a338cc36b60f278648874ce4783f627c5f53657e47b42e9bef3e6f68e45e68"
+    },
+    {
+      "path": "data/v3_1_historical/primary/development/data_gate/manifest.json",
+      "sha256": "0e3bf4c4a0bcc22fb8a1abeee8805a7b9f0d678c3c6cb3a1eb7a163e279ca89d"
+    },
+    {
+      "path": "data/v3_1_historical/primary/development/prepared/manifest.json",
+      "sha256": "2ceb5af49824d24e04b72e1754cc2ed1c579dc1b5165c1ef89d68768eda141d8"
+    },
+    {
+      "path": "eventx/tasks/build_v3_1_historical_development_examples.py",
+      "sha256": "0b35da762babff094b23291e01b3f50d65725ad4a58b934e7612afde58ddd928"
+    },
+    {
+      "path": "eventx/tasks/run_v3_1_historical_development_models.py",
+      "sha256": "d73434ee6af5d0da7883b815c71ca7cb5f82e537c43f649097423028a09f432e"
+    },
+    {
+      "path": "eventx/tasks/test_v3_1_historical_development_examples.py",
+      "sha256": "59c1c52f1ef7ea85362d327799fc7450a04837afb98960d0db906e60f52c6fc9"
+    },
+    {
+      "path": "eventx/tasks/test_v3_1_historical_development_models.py",
+      "sha256": "8b1bc33b2c8f5142bd6f9a986338ef2e11ba09f9d21c0b459b570ff002aca49e"
+    },
+    {
+      "path": "eventx/tasks/freeze_v3_1_historical_implementation.py",
+      "sha256": "538e42c06ccc055c3bfe03100949fe272a194016c0badf20012e3a4012593670"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/synthetic_test_receipt.json",
+      "sha256": "aca0419736eecc65a6835d16a411789c690922fd942febe238564228568862e4"
+    }
+  ],
+  "historical_holdout_read": false,
+  "labels_or_outcomes_read": false,
+  "manifest_id": "eventx-v3.1-historical-implementation-20260902",
+  "protocol_id": "eventx-v3.1-historical-primary-20260902",
+  "runtime": {
+    "numpy": "2.0.2",
+    "python": "3.12.13",
+    "scikit_learn": "1.7.2",
+    "scipy": "1.18.1"
+  },
+  "status": "frozen_before_development_labels"
+}

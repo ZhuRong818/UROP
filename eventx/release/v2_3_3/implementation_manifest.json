@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "availability_merge_program": {
+      "bytes": 11353,
+      "path": "eventx/tasks/merge_v2_3_news_availability.py",
+      "sha256": "0d12a33551d85b8fe46a55e9b51aff1b5a43429eedd5bd539605224c91aed5b1"
+    },
+    "feature_readiness_program": {
+      "bytes": 31629,
+      "path": "eventx/tasks/audit_v2_3_feature_readiness.py",
+      "sha256": "e8507e2832d910acd3c2ae6fbc94f170fb6cb8ff094783aa164cd8bbd6a50302"
+    },
+    "implementation_amendment": {
+      "bytes": 1615,
+      "path": "eventx/release/v2_3_3/IMPLEMENTATION_AMENDMENT.md",
+      "sha256": "25e3fadf2c811ab7184ce697d624916f1b01cd4016934e7d483efde1e84f76ab"
+    },
+    "predecessor_implementation_manifest": {
+      "bytes": 1909,
+      "path": "eventx/release/v2_3_2/implementation_manifest.json",
+      "sha256": "d5cf5f9255c65d2813b0f1cb4e1df0799bd3a06bdb600c05a26563362ccd56e8"
+    },
+    "synthetic_verification_program": {
+      "bytes": 6125,
+      "path": "eventx/tasks/verify_v2_3_news_availability_merge.py",
+      "sha256": "4cc7c4d1b9a7af7e2a48c30d9ed4d6fdc4840932b33b27f415c474aaae99c1d9"
+    },
+    "v2_3_preregistration_manifest": {
+      "bytes": 5701,
+      "path": "eventx/release/v2_3/preregistration_manifest.json",
+      "sha256": "03b2ecb8493882c0c4a6b3dc6caad8f96ce155beda9a774527c75e0340b4ec35"
+    }
+  },
+  "frozen_at": "2026-09-02T01:42:00Z",
+  "implementation_id": "eventx-v2.3-news-availability-ledger-v1-20260902",
+  "label_blind": true,
+  "labels_or_outcomes_read": false,
+  "protocol_id": "eventx-v2.3-news-availability-clarifications-20260817",
+  "scientific_decisions_changed": false,
+  "status": "frozen_before_labels"
+}

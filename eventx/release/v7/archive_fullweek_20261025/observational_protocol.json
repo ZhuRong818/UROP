@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-25T01:28:24.490997+00:00",
+  "status": "frozen_observational_development_protocol_before_full_day_prices",
+  "task": "Predict the archived received YES topquote midpoint at t+30min from information available by t;no tradability,profitability,market-outcome or news-value claim",
+  "population": "All20fixed markets,all day grids,including unchanged endpoints. Complete-case errors conditional on observed valid history/forward;report missingness over all38640grids. No domain/segment dropping from primary analysis.",
+  "status_resolution": "Historical active/tradable status remains unknown. This separate observational target does not admit rows to original live/depth/trade studies. Current metadata used only for stable identity mapping and original cohort description,not model features.",
+  "features": [
+    "current midpoint",
+    "spread",
+    "5m midpoint change",
+    "15m midpoint change",
+    "30m midpoint change",
+    "std of past5m increments over30m",
+    "min and max midpoint over30m",
+    "source age",
+    "receive age",
+    "unique quote-group count in past30m",
+    "UTC hour sin/cos"
+  ],
+  "baselines": [
+    "persistence=current midpoint",
+    "fixed drift:current + .1*30m change",
+    "fixed drift:current + .25*30m change"
+  ],
+  "learned_candidates": [
+    {
+      "kind": "StandardScaler+Ridge",
+      "alpha": 1.0,
+      "target": "30m midpoint change"
+    },
+    {
+      "kind": "StandardScaler+Ridge",
+      "alpha": 100.0,
+      "target": "30m midpoint change"
+    },
+    {
+      "kind": "HistGradientBoostingRegressor",
+      "loss": "absolute_error",
+      "max_iter": 100,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 50,
+      "l2_regularization": 10,
+      "early_stopping": false,
+      "random_state": 20261025,
+      "target": "30m midpoint change"
+    }
+  ],
+  "prediction_bounds": [
+    0,
+    1
+  ],
+  "train_dates": [
+    "2026-04-21",
+    "2026-04-22",
+    "2026-04-23"
+  ],
+  "selection_date": "2026-04-24",
+  "evaluation_dates": [
+    "2026-04-25",
+    "2026-04-26",
+    "2026-04-27"
+  ],
+  "purge": "Train feature/target intervals may not overlap selection or evaluation;no cross-midnight windows. Preprocessing fit only training;after selection refit selected candidate on21\u201324 for final25\u201327 prediction.",
+  "selection": "Lowest selection-date MAE including persistence;ties choose persistence then listed order. Require>=100training rows,>=30selection rows from>=3markets else retain persistence.",
+  "metrics": [
+    "MAE primary",
+    "RMSE",
+    "matched paired MAE difference vs persistence",
+    "per-market and per-day counts/errors",
+    "unchanged/changed target diagnostic reported,never used to select evaluation subsets"
+  ],
+  "evaluation_status": "Chronological development evaluation,not independent prospective confirmation;prior2h source coverage exposed on all dates. No retuning or segment retention based on evaluation wins.",
+  "inference": "Seven days and dependent targets do not support strong significance claims;report descriptive effects,not naive row-level confidence intervals.",
+  "future_confirmation": "Separate untouched block and source/target protocol required before confirmatory claim;not fetched by this task",
+  "execution_gate": "Capture hashes and coverage QA must pass;minimum rows enforced before fitting;no automatic model promotion"
+}

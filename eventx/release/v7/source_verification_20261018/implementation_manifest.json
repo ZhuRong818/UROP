@@ -1,0 +1,10 @@
+{
+  "locked_files": {
+    "eventx/release/v7/market_capture_20261018/implementation_manifest.json": "7f1c3e52f04eeb4f006575d360c7bdb1534d830500091f5da8361d4899cec9c4",
+    "eventx/release/v7/original_source_capture_20261018_v02/implementation_manifest.json": "a73a587a3afa45f3403945462bfe2ed6c69317aec0b68de22590cdba68d582b6",
+    "eventx/release/v7/source_verification_20261018/plan.json": "73cfd3507fd8edc9a808a1fe8ecfc4c2dba9c1fdad86ce6f5398cc3b1bfc5446",
+    "eventx/release/v7/source_verification_20261018/sample.jsonl": "013112c6dd129253e45e83b37136201ed686206cb0a8c0528dc0c8fae33c7ca8",
+    "eventx/tasks/prepare_v7_source_verification_20261018.py": "80aa380af02e584a7e19468cd33f4dd3fcc7d49b10c0a8b547eb4c1f95fe156d",
+    "eventx/tasks/run_v7_source_verification_20261018.py": "f2a7a966a9eb6e9904134cdcd1c9f4f18b757adb78a247729c450a00be0adab6"
+  }
+}

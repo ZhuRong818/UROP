@@ -1,0 +1,29 @@
+{
+  "created_at_utc": "2026-09-28T14:02:45.415999+00:00",
+  "query_sha256": "2833f7343f72eae6e6a6423d7f4e6aaa095aadf433aa7a888c6701ed3ecf3dfe",
+  "scope": "five catalog schema GETs plus one bounded information_schema columns query; no table rows, labels or protected data",
+  "script_sha256": "a7155034acda6d631bd969a17c36117e24a4c3cab9244f5a429a42382fa4b9f8",
+  "tables": [
+    [
+      "prediction_markets",
+      "kalshi_markets"
+    ],
+    [
+      "prediction_markets",
+      "polymarket_markets"
+    ],
+    [
+      "prediction_markets",
+      "activity_events"
+    ],
+    [
+      "provenance",
+      "scrape_cursor"
+    ],
+    [
+      "provenance",
+      "runs"
+    ]
+  ],
+  "written_before_requests": true
+}

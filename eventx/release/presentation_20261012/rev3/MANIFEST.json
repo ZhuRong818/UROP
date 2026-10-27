@@ -1,0 +1,135 @@
+{
+  "prepared_at": "2026-10-12",
+  "revision": 3,
+  "results_through": "2026-10-10",
+  "deck_url": null,
+  "presentation_id": null,
+  "main_slides": 9,
+  "backup_slides": 3,
+  "planned_seconds": 600,
+  "spoken_words": 1218,
+  "sources": [
+    {
+      "path": "data/v5/no_terminal_baseline_diagnostic_20261009/report.json",
+      "sha256": "2eb4eba544204dc972b5d40895b32d59d28f415ba48bcbabcee17b933b4f329c"
+    },
+    {
+      "path": "data/v5/market_learner_screen_20261009/report.json",
+      "sha256": "8f2c372b445ec9429b6cdb70612f9d63db9c018f78eb369f530bbab9577e3f05"
+    },
+    {
+      "path": "eventx/release/v5/OPENED_METHOD_SURVEY_20261009.md",
+      "sha256": "f3eee1e654574d2d58712b0b3832c6fd39654eb1dad2817e69c9fc5fb77c13a0"
+    },
+    {
+      "path": "data/v5/opened_news_offset_trial_20261009/report.json",
+      "sha256": "37c9832136b939168436c40747b0ce4b797b6a02ea5ff2dddf66abaae7ac69cd"
+    },
+    {
+      "path": "data/v5/method_screen_observed_row_join_20261009/report.json",
+      "sha256": "7300dd2a38aea559c9d1c9c18072de5ff039ccc8e84ca0fdadad334ada463b88"
+    },
+    {
+      "path": "data/v7/signed_evidence_exploration_20261010/report.json",
+      "sha256": "c7a36598483315a0f985896519ac35863f6448ca9c1b2e617a6de584a1281cca"
+    },
+    {
+      "path": "eventx/release/v7/pilot_20261010/PREPARATION_RESULTS_REV2.md",
+      "sha256": "4678f385cfef3a71a363981e0adcbb842c470bac7ac844ff9804ffd682207062"
+    },
+    {
+      "path": "eventx/release/v5/PROTOCOL_V1_1.md",
+      "sha256": "00ae01910e6b2918febe32bdae3ae1c660f49503b064e6c9bc6c012e13a841cb"
+    },
+    {
+      "path": "eventx/release/v4/protocol.json",
+      "sha256": "0747a3e41be5d21a853cedfc824482fcf1c047115aaddec1ca2c4fff3feaee8c"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/TABLES.md",
+      "sha256": "e5ad2c0ea0a9252bff4cfa7b2cbd335e3db555d2a727c57ba362ec1503ee191e"
+    },
+    {
+      "path": "MARKET_NEWS_PAPER_A_DRAFT_20261010_REV2.md",
+      "sha256": "1c28284c4002618a3faba1954c563cba61956aaab93247ca1d5f71436da292dc"
+    },
+    {
+      "path": "eventx/features/v5_market.py",
+      "sha256": "d43e07900a33f79fcc3a1d935f323cc4dce622bdb29b739680dfad168b1ed618"
+    },
+    {
+      "path": "eventx/release/literature_baselines_20261010/evidence.json",
+      "sha256": "7531ccfe27f6f69d759050c006a3a3e3a7aa7bcbf05031b5409f89efc49099ff"
+    }
+  ],
+  "comparison_log_loss_percent_reductions": {
+    "linear_vs_tree": 9.683467129366953,
+    "earlier_tree_vs_selected_hgb": 1.165999371726069
+  },
+  "research_evaluation_performed": false,
+  "protected_outcome_payloads_accessed": false,
+  "review": "Changed slide preview inspected. Exact sentence coverage verified in visible text, notes and script. Eleven other slide images and notes identical to revision 2.",
+  "runtime": "Connected SlidesGPT rendered the edit but appended it. Offline HTML replaces slide 8.",
+  "offline_copy": {
+    "embedded_slides": 12,
+    "network_dependencies": 0,
+    "format": "HTML embedding rendered images and submitted notes",
+    "directly_editable_slide_objects": false
+  },
+  "local_pptx_export": false,
+  "powerpoint_application_validation": false,
+  "outputs": [
+    {
+      "path": "eventx/release/presentation_20261012/rev3/EVENTX_PROGRESS_PRESENTATION.html",
+      "sha256": "4b99c109aa356d9e033ab46a5386f2ffc83dc1604962c5cd83445b207b0a7cff"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev3/SPEAKER_SCRIPT.md",
+      "sha256": "b2050bc01e8a021ca29cd00f85e1201a4e0df5cd9c1b690c803f19a13afbe9c2"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev3/DETAILED_EXPLANATION.md",
+      "sha256": "564e8aa62e25f4421b447761ee3c80dc9f12740b810da8c56e1d636045e8772e"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev3/SLIDE_CONTENT.json",
+      "sha256": "86e8a75d53322790b046da026ed318b68ee503a091dafd52062c4c9b4601f72c"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev3/README.md",
+      "sha256": "dfbe1ae7c2af36d5e96b69d69b891e3b1dcb64784b97038634fcc24e2f22d43b"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev3/EDIT_RECEIPT.json",
+      "sha256": "59d8be5e1d385f79aff5ac050560ef14480b0aff840ec352707814db84d22a3c"
+    },
+    {
+      "path": "eventx/release/presentation_20261012/rev3/UPDATE_REQUEST.json",
+      "sha256": "79804fc4744786af93e2390b0eb9c911aedca74c92064fa54ae8bda80a7bc8a6"
+    }
+  ],
+  "approved_statement": "Our nonlinear market model reduced development log loss by 9.68% relative to a logistic baseline. A further selected booster improved on an earlier tree by 1.17% in a separate comparison. Independent confirmation and incremental news gains remain outstanding.",
+  "predecessor": "eventx/release/presentation_20261012/rev2/",
+  "changed_slides": [
+    8
+  ],
+  "retained_identical_slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12
+  ],
+  "online_edit": {
+    "presentation_id": "pres_c5b119b57ca8f9a86972347f16d9f348",
+    "returned_slide_number": 20,
+    "requested_slide_number": 8,
+    "clean_online_revision": false
+  }
+}

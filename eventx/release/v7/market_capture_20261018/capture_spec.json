@@ -1,0 +1,29 @@
+{
+  "availability_clock": "local durable response observation; execution/source timestamps retained separately",
+  "cohort_counts": {
+    "US_CPI_2026_10": 21,
+    "US_EMPLOYMENT_2026_10": 9,
+    "US_GDP_2026_Q3_ADVANCE": 7
+  },
+  "cohort_file": "eventx/release/v7/market_capture_20261018/cohort.jsonl",
+  "confirmation": "No confirmatory admission. A later unseen study requires separate protocol/inference/power/consumption freeze.",
+  "coverage": "bounded windows only; caps, stalled cursors, failures and schema errors remain unknown, never zero activity",
+  "created_at": "2026-10-18T08:39:54.441837+00:00",
+  "max_pages": 10,
+  "model_path": "data/v5/market_condition_tuning_20261012/selected_model.joblib",
+  "model_sha256": "d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c",
+  "overlap_minutes": 30,
+  "page_limit": 1000,
+  "poll_seconds": 120,
+  "post_resolution": "Declared end_date upper bound only, not proof of actual tradability. No resolution endpoint is requested.",
+  "protected_ids_file": "eventx/release/v7/market_capture_20261018/protected_ids.json",
+  "request_min_seconds": 1.0,
+  "rules": "Capture all37 regardless of observed liquidity. No outcome/price-based cohort changes. Endpoints exact allowlist only.",
+  "scope": "V7 source/market feasibility capture only; no scoring, fits or labels",
+  "source": "Lumid documented Polymarket trades and YES-asset orderbook endpoints",
+  "source_metadata_sha256": "062078dbe08b687b4de7911fcfec16bff0460fe560dfe2abd81a12e7f56cfdf0",
+  "stop_at": "2026-11-12T00:00:00Z",
+  "target_reference": "unchanged: 30min absolute YES logodds move >=4 times trailing240min population SD of1min increments; future labels disabled",
+  "v4_cohort_sha256": "30a7a861a566c28365f871cfb4594272adc85c058b9f13ed70a77a9be1e80d05",
+  "warmup_hours": 6
+}

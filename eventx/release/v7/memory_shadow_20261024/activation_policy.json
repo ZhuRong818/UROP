@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-24T14:06:03.250051+00:00",
+  "candidate_promotion": false,
+  "cohort": "eventx/release/v7/memory_quote_20261024/forward_cohort.jsonl",
+  "models": "data/v7/memory_quote_20261024/development/models.json",
+  "network_requests": false,
+  "quote_policy": "eventx/release/v7/memory_quote_20261024/policy.json",
+  "reference": "persistence",
+  "retuning": false,
+  "scope": "Separate receipt-clock quote prediction; original trade classifier and protected studies unchanged",
+  "source_live": "data/v7/quote_source_20261024_v02/live",
+  "trading": false
+}

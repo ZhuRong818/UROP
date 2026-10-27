@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-25T09:29:37.079421+00:00",
+  "qa": [
+    "normalizedpositiveweights",
+    "weightsindependentofclasslabels",
+    "familymacroequivalence"
+  ],
+  "files": {
+    "eventx/release/v7/family_training_20261025/protocol.json": "a76b070e0a842f4fa2d5ec58e2a55446ace6dc7c560805d13b94afd68f16e2e3",
+    "eventx/tasks/run_v7_family_training_20261025.py": "da2c31b91e7471058db26a4f42926b8862026076a27e8e8df083c9713d545cfb",
+    "eventx/v7/calibration_transport_20261025.py": "a6ba3426ef125b52cb88b239cba7e894a35cc8499b42491104d8d76820a45385",
+    "eventx/tasks/research_v7_change_probability_20261025.py": "e32d11a1e45091242fdcd2739f26355fcb62e72fe812b8018f56535244d608b5",
+    "eventx/tasks/run_v7_archive_week_pilot_20261025.py": "cebece37f3e5546350b5ab596453663c90c0a8de7db5d7272f1a0018fc8da3e1",
+    "eventx/v7/archive_ranges_20261024.py": "6f077026581b6e7ec556f46a9c52b75ec9daa67733d645873495c6df6a27689d",
+    "data/v7/calibration_transport_20261025/cohort/manifest.json": "e472955c4425467af0bb79e41c68a188dcc37c8cf43bf370abb33f1620d94290",
+    "data/v7/change_probability_20261025/development/frozen_models.joblib": "a6ad0f424c0d5acdc69865f4072dcfbe3c1151652e6998dc61f2cc30c1185762"
+  }
+}

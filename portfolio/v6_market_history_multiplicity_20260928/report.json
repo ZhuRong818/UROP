@@ -1,0 +1,170 @@
+{
+  "base_url": "https://lum.id/findata",
+  "historical_coverage_certified": false,
+  "predictive_admissions": 0,
+  "queried_at_utc": "2026-09-29T02:10:16.725739+00:00",
+  "results": {
+    "kalshi": {
+      "materialized_status": 200,
+      "retrieve_status": 200,
+      "rows": [
+        {
+          "first_ingest": "2026-07-06T16:02:59.894847Z",
+          "last_ingest": "2026-07-06T16:02:59.894847Z",
+          "outcome_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1,
+          "ticker": "KXWC3RDPLACE-26-MEX",
+          "title_versions": 1
+        }
+      ]
+    },
+    "polymarket": {
+      "materialized_status": 200,
+      "retrieve_status": 200,
+      "rows": [
+        {
+          "condition_id": "0x0c4cd2055d6ea89354ffddc55d6dbcef9355748112ea952fc925f3db6a5c457f",
+          "first_ingest": "2026-05-22T08:06:20.099224Z",
+          "last_ingest": "2026-05-22T08:06:20.099224Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0x38903ef70b7d9ee41ea22ef2aec6287e4e6c77ec8702ca741e37d5c5df090a4d",
+          "first_ingest": "2026-07-01T16:45:14.926074Z",
+          "last_ingest": "2026-07-01T16:45:14.926074Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0x3910cb53f972d00c049ad674c1b183b375bd56786eb4c085ea217f84defdd1ca",
+          "first_ingest": "2026-06-02T15:00:21.779468Z",
+          "last_ingest": "2026-06-02T15:00:21.779468Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0x58078283e2356f9b9537b42e7479d7785b83bcd6f18002de8a2526c499eda837",
+          "first_ingest": "2026-05-22T08:06:21.710273Z",
+          "last_ingest": "2026-05-22T08:06:21.710273Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0x5ccfe1b69a582d2985db08a8481a0d74c314b1fce9b4711ae2efb2c6467fe6aa",
+          "first_ingest": "2026-05-22T08:06:20.099224Z",
+          "last_ingest": "2026-05-22T08:06:20.099224Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0x75a50ed92507226816900d6da63984b4db752ad3a3f73e691514416cc5ccd980",
+          "first_ingest": "2026-06-04T15:15:21.399648Z",
+          "last_ingest": "2026-06-04T15:15:21.399648Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0x84edef36bded182da6a395ac6c785dba8f3e09b6c5ad041385b2042536cbef25",
+          "first_ingest": "2026-05-22T08:06:20.099224Z",
+          "last_ingest": "2026-05-22T08:06:20.099224Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0xa0f4c4924ea1a8b410b4ce821c2a9955fad21a1b19bdcfde90816732278b3dd5",
+          "first_ingest": "2026-05-22T08:06:20.831403Z",
+          "last_ingest": "2026-05-22T08:06:20.831403Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0xbb57ccf5853a85487bc3d83d04d669310d28c6c810758953b9d9b91d1aee89d2",
+          "first_ingest": "2026-05-22T08:06:21.298187Z",
+          "last_ingest": "2026-05-22T08:06:21.298187Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0xbe20fcfd54937c2a48a7b8521ca349e6a2c4373566328ebb950a8c35ab1be3d9",
+          "first_ingest": "2026-07-01T16:45:14.926074Z",
+          "last_ingest": "2026-07-01T16:45:14.926074Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0xc9c9790c8f26dd9c8cabae9dd76be37aa86a6ded7de660e1da9d19324cf618d4",
+          "first_ingest": "2026-07-01T16:45:14.926074Z",
+          "last_ingest": "2026-07-01T16:45:14.926074Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0xce6f2c7437b15b808a6be3ea61fc125077e35ce7cc55b66fdbf15f7ce22493ea",
+          "first_ingest": "2026-06-02T16:45:15.711020Z",
+          "last_ingest": "2026-06-02T16:45:15.711020Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0xdaa4866bae18be58c5a79d2aeeffd035ec78f1bb49dbd88f72993997778a990f",
+          "first_ingest": "2026-05-22T08:06:22.104914Z",
+          "last_ingest": "2026-05-22T08:06:22.104914Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        },
+        {
+          "condition_id": "0xe284a52d608552290b056def0a62e1914b3ebe316407504f56f6361fafc68358",
+          "first_ingest": "2026-07-01T16:45:14.926074Z",
+          "last_ingest": "2026-07-01T16:45:14.926074Z",
+          "outcome_versions": 1,
+          "question_versions": 1,
+          "row_count": 1,
+          "run_count": 1,
+          "status_states": 1
+        }
+      ]
+    }
+  }
+}

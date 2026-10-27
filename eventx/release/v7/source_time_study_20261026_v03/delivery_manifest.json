@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-10-26T11:15:48.065381+00:00",
+  "files": {
+    "EVENTX_CLOCK_ALIGNMENT_AND_READINESS_20261026.md": "993a4d923b91805b4a5459829526ba9ebb1b3766738b8326c7b20915b1cfc2b5",
+    "data/v7/clock_alignment_20261026/manifest.json": "21472bcd6bdb49ee4356ddc5b3032f3bc40b583a7e26ef1a31980ba8ca25208c",
+    "data/v7/source_time_study_20261026_v03/clock_readiness.pdf": "4436264f697a401716ea8b5d0d9685edcf2a06c52b5929e7685d5260c475f274",
+    "data/v7/source_time_study_20261026_v03/clock_readiness.png": "aad5d4a3a9753fc3351ab9bb66038a6bc38057166a3075e20de396355cc6a62e",
+    "data/v7/source_time_study_20261026_v03/clock_repeat_diagnosis.json": "6ac8c3cdacc2849d02c0cecb5e33104d6c1a953c1991d8aa856916b2207e304f",
+    "data/v7/source_time_study_20261026_v03/clock_runtime_receipt.json": "734097216c6209c9a6d7fb6b56bee12d5eed0a0062cb76949b9427e5953dc08a",
+    "data/v7/source_time_study_20261026_v03/clock_semantics_qa.json": "1d83f2199797a061bb862256abd635529c0f3915a35069080f8cf29ed66a2c67",
+    "data/v7/source_time_study_20261026_v03/development/manifest.json": "c0039ae8a1384abe8ce36450e08ae1a896f85a61aa1c035da942b41cd5e5aa77",
+    "data/v7/source_time_study_20261026_v03/development_qa.json": "ad85d7b0aeefae99624ccdc227457a774b72340f0a515fa0beeb9cf9168e4b8a",
+    "data/v7/source_time_study_20261026_v03/final_qa.json": "7753e2d9d4491eeba992988a98e904ffbbdca5fff3526b3859a8fc41d392dc14",
+    "data/v7/source_time_study_20261026_v03/native_clock_packet_audit.json": "2da853d357bf52ee711480a03475c1659a8de17b6850396ad92a420323b717d9",
+    "data/v7/source_time_study_20261026_v03/readiness_audit/manifest.json": "adb24055d7557903299a6b227d6a6ad2acbd2e92b0ded72494fa2d331c29d48f",
+    "data/v7/source_time_study_20261026_v03/state.json": "d821a5540e48513c0c7eae7656fe898336a0540ee9e664bf0818a25f142bf073",
+    "eventx/release/v7/source_time_study_20261026_v03/implementation_manifest.json": "c0f3cf390d432ff4563ca606266d7f90f089166669c87eb16171adeae2aaefd4",
+    "eventx/release/v7/source_time_study_20261026_v03/readiness_auditor_manifest.json": "5aecc4a57fcd12496d575e7ae21f712935e82d4974dc467386f484bfa81bb158",
+    "eventx/release/v7/source_time_study_20261026_v03/verify_clock_development_20261026.py": "b9afb01434e74cc88ff943745f3481ac1116e23fb5b5be43f0db6159b90216f6",
+    "eventx/release/v7/source_time_study_20261026_v03/verify_clock_repeat_final_20261026.py": "a9ecb2fdad885b6ccf976fe3879c2dbefc15b41be7da843d41a6e4716c264f42",
+    "eventx/release/v7/source_time_study_20261026_v03/verify_clock_semantics_20261026.py": "70596ce1cc72d391f2432c92c182643db996aff072a52cff5c2736daaabc5d73",
+    "eventx/tasks/diagnose_v7_clock_repeat_20261026.py": "ecad744a2023a4ef8001d45a8abbf8357bb1b691cda88a5fd96aafb89d048b31",
+    "eventx/tasks/plot_v7_clock_readiness_20261026.py": "28430363867c78ef94a9f91e6187d8c3f6b13078303d378bef1721beba410132",
+    "eventx/v7/native_clock_receipt_20261026.py": "ce40e145869aac003f2b10b99bc367946295b3eec1d73f113e041a8e0b4a9968"
+  }
+}

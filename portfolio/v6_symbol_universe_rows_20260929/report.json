@@ -1,0 +1,32 @@
+{
+  "base_url": "https://lum.id/findata",
+  "materialized_status": 200,
+  "queried_at_utc": "2026-09-29T15:02:32.186835+00:00",
+  "retrieve_status": 200,
+  "rows": [
+    {
+      "ingest_ts": "2026-05-19T04:36:19.677695Z",
+      "is_actively_trading": true,
+      "is_etf": false,
+      "is_fund": false,
+      "source": "fmp",
+      "source_endpoint": "symbol_universe_seed",
+      "source_run_id": "75524825-959d-4776-9edd-c370fa6d43ed",
+      "symbol": "MSTR",
+      "valid_from": "1998-06-11T00:00:00Z",
+      "valid_to": null
+    },
+    {
+      "ingest_ts": "2026-05-19T04:36:19.677695Z",
+      "is_actively_trading": true,
+      "is_etf": false,
+      "is_fund": false,
+      "source": "fmp",
+      "source_endpoint": "symbol_universe_seed",
+      "source_run_id": "75524825-959d-4776-9edd-c370fa6d43ed",
+      "symbol": "NVDA",
+      "valid_from": "1999-01-22T00:00:00Z",
+      "valid_to": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-25T09:15:32.603048+00:00",
+  "correction": "Only NumPy bool->builtin bool serialization;separate calibration_v02 output,failed v01 preserved. Protocol/candidates/data unchanged,test unopened.",
+  "files": {
+    "eventx/release/v7/calibration_transport_20261025_v02/protocol.json": "2eee717f1a4f9521c07c9cd0ed4acfea2bfc18efbbe6e07fda982dc10fdefcf7",
+    "eventx/tasks/run_v7_calibration_transport_20261025_v02.py": "5d65ed34c1cc6ee74254c13c2d21cfabad3d48a4f8d20960cc6d4e1931878a22",
+    "eventx/release/v7/calibration_transport_20261025/implementation_manifest.json": "f77c805365c8e5e20e4a13e79d2e08cf236d1f870150c7564c0c1efb89d3c955",
+    "data/v7/calibration_transport_20261025/calibration/manifest.json": "63d468abafbb7511903c92eab78014dfba75c99a061c618f8baf67719e6b438e",
+    "data/v7/calibration_transport_20261025/source_cal/capture_manifest.json": "a504d422eee513fd86d27dda5209cde01699a47c04bcedf33aa4100fb64014c1",
+    "data/v7/calibration_transport_20261025/cohort/manifest.json": "e472955c4425467af0bb79e41c68a188dcc37c8cf43bf370abb33f1620d94290"
+  }
+}

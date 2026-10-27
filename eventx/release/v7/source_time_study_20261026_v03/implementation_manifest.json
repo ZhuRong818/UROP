@@ -1,0 +1,16 @@
+{
+  "files": {
+    "data/v7/clock_alignment_20261026/manifest.json": "21472bcd6bdb49ee4356ddc5b3032f3bc40b583a7e26ef1a31980ba8ca25208c",
+    "eventx/release/v7/source_time_study_20261026_v02/delivery_manifest.json": "dd3603f75e4688ece7a101a06c40475861abbcca15ac9d2ccedc2fb3442a73f8",
+    "eventx/release/v7/source_time_study_20261026_v03/live_cohort.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/source_time_study_20261026_v03/protocol.json": "4b10056283fb9d13f4bfb599e8193a5651a399aa4751d8742929774f24cac818",
+    "eventx/release/v7/source_time_study_20261026_v03/readiness_spec.json": "10d4c415560e3a4bdb1f5b18973cb48464cbc9f19da391b6e32c52286872ff03",
+    "eventx/tasks/check_v7_clock_bounded_inputs_20261026.py": "18f03b7b743decdfb651dab7421a67f13bc2306f05192c7990d55d70f01a047f",
+    "eventx/tasks/collect_v7_clock_readiness_20261026.py": "8a1873041d65a68829a3aa9ce750b7badda19d8f8caeea5732a916244b4a7140",
+    "eventx/tasks/collect_v7_source_time_readiness_20261026.py": "57f199aa9eb2f1dcfb98f388954d59fab445a3e27dbb14005194f2695882b7ad",
+    "eventx/tasks/freeze_v7_clock_correction_20261026.py": "86debe283dd2cb8bc0ab81d0a4972f3c900cfd2e9c4cf18e483049a74992db0f",
+    "eventx/tasks/run_v7_source_time_study_20261026_v03.py": "2118bac5f4da01db8d7890c76ce05630216c9f740f8e38c68ebb400588fc1c32",
+    "eventx/v7/clock_bounded_quote_inputs_20261026.py": "e91d5c7a08b10e1d1f0e1fdd1ab6fea146bf286b050953d45ad0128c1cec3ab5",
+    "eventx/v7/source_time_study_20261026_v03.py": "181f8c1080b0d35fee4dc985f67a2c7ed71e2391bb767f735a173045564ee224"
+  }
+}

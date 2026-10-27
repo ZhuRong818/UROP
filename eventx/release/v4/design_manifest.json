@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-09-02T10:38:08Z",
+  "design_id": "eventx-v4-confirmatory-20260902",
+  "future_cohort_and_window_frozen": false,
+  "hashes": {
+    "eventx/features/v4_news.py": "ed8a969bb7c6f346bf7c5120fd2439ec8c51a5cd2a06f15167abccbc27efd3e1",
+    "eventx/release/v4/DESIGN.md": "caae644286f3997555a14b5214aa1781e5a5168ed99cfde9b5026e42d91f569f",
+    "eventx/release/v4/design.json": "ac45c0839aab2dbe9d0b647219a0a13717a1971f5c5116c9b70dac171cd7f06a",
+    "eventx/tasks/build_v4_discovery_examples.py": "e81452755be60c321f90d6f9fae13bf381eecf0df38405dc48131aed51d2a103",
+    "eventx/tasks/prepare_v4_discovery_news_quality.py": "57dcf4acf2fcce450247ed4824e478f27ddb3d68d5363e1aa7a6bce53004e3c5",
+    "eventx/tasks/run_v4_discovery_models.py": "006fbdc9d162bfc0ee56da165fa394dac81fb490f53ce00c8744d7e81ae10fc1",
+    "eventx/tasks/test_v4_news_features.py": "a4fa4e2d6de63e882aea5a6b32aa95185902496bdf9ffd0b377cf57bb6d6b9c8"
+  },
+  "status": "analysis_and_feature_design_frozen_before_v4_model_results_pending_label_blind_future_cohort_gate",
+  "v3_1_outcomes_known": true,
+  "v4_future_outcomes_or_predictions_inspected": false
+}

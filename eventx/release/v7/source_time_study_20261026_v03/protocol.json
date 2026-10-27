@@ -1,0 +1,114 @@
+{
+  "calibration_bins": [
+    0,
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1
+  ],
+  "clock_monitor": "At each decision use latestcompletedprobe<=decision andage<=360s;>=2independent hosts withreporteduncertainty<=100ms,atleastone<=20ms;offsetintervalintersection nonempty andcontained[-100ms,+100ms]. Wall-versus-monotonic step>20ms resets30minwarmup.",
+  "comparison": "Predict for all current-valid rows before filtering endpoints. Score all models on identical known-label keys; unknown endpoints retained.",
+  "correction": "Bound apparent source-minus-durable lead to250ms instead of demanding zero lead. Still require BOTH source<=decision and durable availability<=decision. Preserve all raw times; no timestamp shifts or system clock writes.",
+  "correction_evidence": "Three Google offsets58.124\u201361ms with7.302\u20139.534ms reporteduncertainty;Cloudflare compatible;Apple broad uncertainty uninformative. Earlier84/92WSsource times led localdurability by<=91ms. Contemporary offsets do not prove historical host or venue offsets.",
+  "development_model_gate": "hgb7 has lower log loss and no higher Brier than both full_logit and global_rate on May9; failure blocks prospective activation without a new research version",
+  "development_validation_date": "2026-05-09",
+  "features": [
+    "midpoint",
+    "logit_midpoint",
+    "spread",
+    "hour_sin",
+    "hour_cos",
+    "delta5",
+    "abs_delta5",
+    "missing5",
+    "delta15",
+    "abs_delta15",
+    "missing15",
+    "delta30",
+    "abs_delta30",
+    "missing30"
+  ],
+  "fit_dates": [
+    "2026-05-07",
+    "2026-05-08"
+  ],
+  "frozen_at": "2026-10-26T07:31:12.918853+00:00",
+  "future_test": {
+    "activation": "Separate immutable activation receipt only after frozen model, model gate, implementation QA and label-blind live readiness pass. Receipt binds model hashes, cohort, first/last grid and evaluator implementation hash before first forecast.",
+    "adjudication": "At endpoint+120s, use only evidence available by endpoint; later data cannot repair endpoint. Null endpoints remain null.",
+    "cohort": "Both fixed identities in live_cohort.jsonl; no replacement or dropping based on observed prices/results",
+    "current_live_gate": "Frozen feature validity plus connected stream,pong<=35s,30m since known interruption; current exact identity/rules,active acceptingOrders and not closed,posed and undisputed; metadata/resolution age<=360s; expiry>t+1800; V03 bounded ordering and independent as-of clock-health monitor required",
+    "endpoint_live_gate": "Same source-time quote validity at t+1800; stream transport ready there; metadata and resolution cover t..t+1800 without invalid observation or gap>360s. No continuous quote path required for primary target.; same V03 ordering and as-of clock-health gate atendpoint; clocksteps resettransporthistory",
+    "forecast_timing": "Inputs available<=grid; durable prediction emitted<=grid+30s; late/missed decisions abstain, no backfill",
+    "minimum_reporting": "Report coverage regardless. Fewer than100 known outcomes or20 positives or20 negatives makes predictive comparison insufficient; do not extend to reach counts.",
+    "opening": "No prediction performance/labels read before last endpoint+120s. Audit source/emission/model hashes, write one-time consumption receipt, then score exactly once.",
+    "protected_data": "No OOT,V3.1,V4 or prior opened quote test is used to tune this study.",
+    "status": "NOT_STARTED",
+    "success": "Descriptive improvement requires hgb7 lower log loss and no higher Brier than full_logit and global_rate. Report other baselines, nonoverlap and missing-outcome bounds even if unfavorable. No automatic deployment.",
+    "window": "First full UTC day after activation receipt, seven consecutive UTC dates, first00:30 and last23:25; no optional stopping or extension for results"
+  },
+  "grid": "Every five minutes 00:30 through 23:25 UTC; endpoint no later than23:55; all scheduled grids retained",
+  "historical_inputs": "Only existing May7\u20139 development50 source; no previous test blocks or reserved unseen10 used",
+  "historical_limit": "Outcome-open development; historical active status not proven. Does not independently validate redesign or live transport.",
+  "inference": "Descriptive matched comparisons only; no IID confidence intervals, significance or independent-event claims from two contracts/seven dates. Missing-label bounds are deterministic, not CIs.",
+  "input_contract": "source_time_quote14_clock_bound250ms_v3_requires_new_fit",
+  "live_readiness": "Same40min/same2IDs/samegrid/30minwarmup;no projectionscopeerrors,normalcompletion,>=2fully-ready decisions>=1market,now also independentclockhealth. ReportstrictV02 andcorrectedV03 on identicalcapture. No forecast test.",
+  "measurement": "SourceTimeQuoteTape V03:onlyprice_changeBBO;source<=decision,availability<=decision,source-availability<=.250s;sourceage<=120s;invalidlatestclocklead fails;otherquote/tie/lagrules unchanged.",
+  "models": {
+    "full_logit": {
+      "C": 0.1,
+      "features": "all14",
+      "max_iter": 2000,
+      "random_state": 20261026,
+      "standardization": "train-only mean/std"
+    },
+    "global_rate": "(sum(y)+1)/(n+2)",
+    "hgb7": {
+      "early_stopping": false,
+      "l2_regularization": 10,
+      "learning_rate": 0.05,
+      "max_iter": 100,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 100,
+      "random_state": 20261026
+    },
+    "market_rate": "(market positives+20*global rate)/(market n+20); new identity falls back to global"
+  },
+  "outcome_independence": "May9 already outcome-open inV01/V02. V03 is a clock-measurement repair;allfixedmodels retrained,allresults retained regardlessscore. No sweepoverclocktolerances.",
+  "primary_baseline": "full_logit",
+  "primary_classifier": "hgb7",
+  "primary_metric": "Row-weighted log loss; positive contrast means baseline minus classifier",
+  "probability_clip": [
+    1e-06,
+    0.999999
+  ],
+  "prospective_test_started": false,
+  "refit_dates": [
+    "2026-05-07",
+    "2026-05-08",
+    "2026-05-09"
+  ],
+  "sample_gate": "Fit>=1000 known rows,>=50 positives and50 negatives,>=8 markets; validation>=200 known rows,>=20 positives and20 negatives",
+  "secondary": [
+    "Brier",
+    "average precision",
+    "ROC AUC",
+    "per-contract metrics",
+    "equal-contract log loss",
+    "fixed nonoverlap30min grid",
+    "fixed calibration bins",
+    "coverage",
+    "unknown-label worst/best gain bounds"
+  ],
+  "selection": "No hyperparameter search, threshold tuning, calibration or segment search. Retain every fixed model and every result; refit all on May7\u20139.",
+  "source_readiness": "Fresh40mincapture on same twoIDs;strictV02 andcorrectedV03 compared side-by-side on identicalrawmessages. No models scored or live labels built.",
+  "target": "1 iff abs(source-time YES midpoint(t+1800)-source-time YES midpoint(t))>1e-12; otherwise 0; missing/invalid endpoint is unknown",
+  "target_interpretation": "Observed 30-minute endpoint quote change, not direction, magnitude, latent exchange movement, resolution, profit or news contribution",
+  "target_rebuild": "Rebuild labels from raw development quotes using new definition; never reuse old target arrays",
+  "tolerance_justification": "250ms is a predeclared engineering cap with margin over measured host offset and observed91ms lead; NOT a confidence interval or venue accuracy guarantee. Causality is enforced separately by durable availability<=decision;source<=decision also retained.",
+  "trading_enabled": false,
+  "version": "source_time_study_20261026_v03"
+}

@@ -1,0 +1,36 @@
+{
+  "archive_byte_cap": 536870912,
+  "at": "2026-10-25T01:15:54.548594+00:00",
+  "dates": [
+    "2026-04-21",
+    "2026-04-22",
+    "2026-04-23",
+    "2026-04-24",
+    "2026-04-25",
+    "2026-04-26",
+    "2026-04-27"
+  ],
+  "excluded_id_count": 1231,
+  "full_week_capture": false,
+  "fully_admitted_forecasts": 0,
+  "grid": "12:30 through13:25 inclusive every5m each day;30m history and forward coverage inside two-hour daily slice.",
+  "historical_status_verified": false,
+  "hours_sampled": 14,
+  "hours_utc": [
+    12,
+    13
+  ],
+  "max_groups_per_file": 4,
+  "max_markets": 20,
+  "max_metadata_candidates": 128,
+  "metadata": "Current identity/rules only; current status never proves historical status. Event identity projected without prices/outcomes.",
+  "missing": "Failed/absent files or markets remain missing; no market replacements. Per-file failures retained; no automatic retries in this version.",
+  "model_scoring": false,
+  "protected_periods_read": false,
+  "quality": "Unique same-receipt top pair; 0<bid<=ask<1;spread<=.05;source and receipt age<=120s. Any unknown/ambiguous state resets until unambiguous quote. No depth imputation.",
+  "scheduled_files": 14,
+  "scope": "April-only mixed chunks; excluded cohort rows physically decoded then filtered before retained economic analysis.",
+  "seed": "EventX-week-pilot-v1:",
+  "selection": "Seeded SHA256 ordering of nonexcluded IDs with >=2book events in each cached April21 identity chunk; first20 exact Yes/No mappings with start before sample and scheduled end beyond final sample. No price/performance selection.",
+  "selection_population_bias": "First sorted-market row group of two April21 hours; availability-conditioned convenience sample, not market-universe representative. Five prior markets have exposed source diagnostics."
+}

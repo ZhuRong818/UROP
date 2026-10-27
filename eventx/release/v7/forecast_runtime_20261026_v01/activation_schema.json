@@ -1,0 +1,18 @@
+{
+  "description": "Required fields only, NOT an activation receipt",
+  "fields": [
+    "activated_epoch",
+    "first_grid",
+    "last_grid",
+    "open_after",
+    "input_contract",
+    "implementation_sha256",
+    "model_sha256",
+    "cohort_sha256",
+    "protocol_sha256",
+    "readiness_sha256",
+    "source_path"
+  ],
+  "source_path": "data/v7/forecast_runtime_20261026_v01/prospective/source",
+  "window_rule": "First full UTC date after activation; seven dates; daily00:30..23:25 grids; final endpoint+120s"
+}

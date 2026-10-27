@@ -1,0 +1,81 @@
+{
+  "artifacts": [
+    {
+      "path": "eventx/release/paper_a_20261010/TABLES.md",
+      "sha256": "e5ad2c0ea0a9252bff4cfa7b2cbd335e3db555d2a727c57ba362ec1503ee191e"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/evidence.json",
+      "sha256": "c4b11d7daf37faed627a0a382e3d9bce57d9bd3138e574e9ea3b144c3a7c0291"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/matched_comparisons.pdf",
+      "sha256": "a1b813495220589aa5812ecdf65bcd3533ccdb08a071460bae5ffce234396d83"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/matched_comparisons.png",
+      "sha256": "7834d6509c9b755dee3602c6936fe441775e3c721402757b5d95ce70a3d6d70d"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/matched_comparisons.svg",
+      "sha256": "af7d8e4ed3bdd268ce4d2033aca4751900affea762156746c3ca4ba3ca3ebcf0"
+    }
+  ],
+  "exporter": {
+    "path": "eventx/tasks/export_paper_a_evidence_20261010.py",
+    "sha256": "8d230f5011f2944168ed707a21014f9a318891b5d75ae64f22256a8989810638"
+  },
+  "role": "paper evidence export; not research freeze",
+  "sources": [
+    {
+      "key": "receipt",
+      "path": "data/v3_1_historical/primary/holdout/holdout_consumption_receipt.json",
+      "sha256": "c02824bcf378d553cf3dfe01d0f8f51c2ed017022b0d9a32057b0ed9eb0f548b"
+    },
+    {
+      "key": "v3",
+      "path": "data/v3_1_historical/primary/development/selection_result.json",
+      "sha256": "1f9148fa7988164f674b357444f13cc75cc82198bda194a0140783e9b55fab00"
+    },
+    {
+      "key": "holdout",
+      "path": "data/v3_1_historical/primary/holdout/evaluation_result.json",
+      "sha256": "79db4fa8db11b06780620523e0b5c3c2674c6b95b2548a022a958defc71798de"
+    },
+    {
+      "key": "v4",
+      "path": "data/v4/discovery/models/result.json",
+      "sha256": "067ceebb0c491c38c590e69fdf8a2e88d8feaaf0a91c9467f72d8f4e1f5b0fc4"
+    },
+    {
+      "key": "v4_protocol",
+      "path": "eventx/release/v4/protocol.json",
+      "sha256": "0747a3e41be5d21a853cedfc824482fcf1c047115aaddec1ca2c4fff3feaee8c"
+    },
+    {
+      "key": "baseline",
+      "path": "data/v5/no_terminal_baseline_diagnostic_20261009/report.json",
+      "sha256": "2eb4eba544204dc972b5d40895b32d59d28f415ba48bcbabcee17b933b4f329c"
+    },
+    {
+      "key": "offset",
+      "path": "data/v5/opened_news_offset_trial_20261009/report.json",
+      "sha256": "37c9832136b939168436c40747b0ce4b797b6a02ea5ff2dddf66abaae7ac69cd"
+    },
+    {
+      "key": "market_screen",
+      "path": "data/v5/market_learner_screen_20261009/report.json",
+      "sha256": "8f2c372b445ec9429b6cdb70612f9d63db9c018f78eb369f530bbab9577e3f05"
+    },
+    {
+      "key": "market_contract",
+      "path": "data/v5/market_learner_screen_20261009/contract.json",
+      "sha256": "fe5523ef6d021d01cc6914c4084027c7bdd06c8e39eb615b22c72e8f50ad73d4"
+    },
+    {
+      "key": "joined",
+      "path": "data/v5/method_screen_observed_row_join_20261009/report.json",
+      "sha256": "7300dd2a38aea559c9d1c9c18072de5ff039ccc8e84ca0fdadad334ada463b88"
+    }
+  ]
+}

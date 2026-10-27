@@ -1,0 +1,8 @@
+{
+  "catalog_path": "/catalog/tables/reference/symbol_universe/schema.json",
+  "created_at_utc": "2026-09-29T14:41:51.508009+00:00",
+  "query_sha256": "282122c27cbc532affeabd4c2f651137a2e3f503327c8690af431a1b39110b4d",
+  "scope": "read-only reference.symbol_universe schema metadata; no rows, outcomes or protected data",
+  "script_sha256": "82da4f25bba0c1a78d040145eee877cc39dcdc6c3bf3be0f3d5ee6f89abc3b7f",
+  "written_before_requests": true
+}

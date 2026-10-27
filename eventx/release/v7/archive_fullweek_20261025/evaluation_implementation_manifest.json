@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-25T01:35:27.784497+00:00",
+  "qa": [
+    "prior coverage parity24/23/18/10",
+    "future quote changes cannot change present features",
+    "failed hour gates complete window",
+    "conflicting tie resets continuous eligibility"
+  ],
+  "files": {
+    "eventx/release/v7/archive_fullweek_20261025/implementation_manifest.json": "9c75618bc834b1bb2f4c71a2612749f8910840793d1a6d4060e9f0369888a14c",
+    "eventx/release/v7/archive_fullweek_20261025/observational_protocol.json": "dadb47dc6abb21cde77b85e51dd69b55740d3b791912ee01a4fd1600a9c41ae7",
+    "eventx/tasks/evaluate_v7_observational_quotes_20261025.py": "eca5f4f40a3738d78306e3ee3e142c34ed6d40268ab6ca7a00d683005d6ed217",
+    "eventx/tasks/run_v7_archive_fullweek_20261025.py": "04f2e751f574142fb6ee0d337ff11490c201f7d378c7826f017d28bde1c191c4",
+    "eventx/tasks/run_v7_archive_week_pilot_20261025.py": "cebece37f3e5546350b5ab596453663c90c0a8de7db5d7272f1a0018fc8da3e1"
+  }
+}

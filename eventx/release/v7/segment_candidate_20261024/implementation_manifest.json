@@ -1,0 +1,15 @@
+{
+  "locked_files": {
+    "data/v7/memory_quote_20261024/development/manifest.json": "471fa4dc986ef07706d74b888c3d3273095d6b9c9a734e0b9e25e79f3957d59f",
+    "data/v7/segment_research_20261024/manifest.json": "fa37ac6ddb98127f3530a8798d975e195ffb89aa024f542e30f8474e8e299c25",
+    "eventx/release/v7/memory_shadow_20261024/implementation_manifest.json": "2a2e0c94f41532e4c10cd2b24ce053fce1779ebb4d4ea8af7d2ba0ef52ad0158",
+    "eventx/release/v7/segment_candidate_20261024/com.eventx.segment-candidate.20261024.plist": "8ac279edf995699c21f3efa3819b06aa866da1106c9dedb0f659c06cff8ae51c",
+    "eventx/release/v7/segment_candidate_20261024/model.json": "fb09e402543699d0db5ec50a29ded8a71f3d9acff33b948dbbca795b8db6c0bd",
+    "eventx/release/v7/segment_candidate_20261024/policy.json": "3e41b670e84f65c411d2eb9f889200f290aa0b4eff64ba34f946342c7678b734",
+    "eventx/tasks/launch_v7_segment_candidate_20261024.py": "c1875bdfc4ea2d179700fee4fee58b4142221c71f95117f98dce0c7229e9c7db",
+    "eventx/tasks/prepare_v7_segment_candidate_20261024.py": "1df16137b4d65e9462e75184008bfc4071bee11e203071ac27c82e2fd6e0aa56",
+    "eventx/tasks/run_v7_quote_experiment_20261024.py": "fa4dc03ab8eb5f847a6bb49cb41004d73bb34a7c2e65d4a64d31000e7b1e5a77",
+    "eventx/tasks/run_v7_segment_candidate_20261024.py": "df74607730e39dddb40df05349f25f583e6259610a6104857aa0fb4fcd07e9a2",
+    "eventx/v7/segment_candidate_20261024.py": "ee6e13e304d3a544a0eed3dea404ceca0c6cb7007dcdcbac788bb267b889feee"
+  }
+}

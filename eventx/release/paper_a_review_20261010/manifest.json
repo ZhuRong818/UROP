@@ -1,0 +1,34 @@
+{
+  "role": "prepared independent review package; no reviewer response or publication permission",
+  "artifacts": [
+    {
+      "path": "MARKET_NEWS_PAPER_A_DRAFT_20261010_REV2.md",
+      "sha256": "1c28284c4002618a3faba1954c563cba61956aaab93247ca1d5f71436da292dc"
+    },
+    {
+      "path": "eventx/release/paper_a_review_20261010/LITERATURE_METHOD_COMPARISON.md",
+      "sha256": "03aa25e1f2fc7dacc6a13512466c36e0b6b2fb91d3635d7964b4aff6b30b44b9"
+    },
+    {
+      "path": "eventx/release/paper_a_review_20261010/RELEASE_POLICY.md",
+      "sha256": "a76ae51b1b7dc2f2c6bf59abd81cd0c9e4f32a6cf5a45097abcbf8bbf23040c8"
+    },
+    {
+      "path": "eventx/release/paper_a_review_20261010/REVIEW_REQUEST.md",
+      "sha256": "8baa7c6d559276b66373aa784ba3b56df3616b7a2757709852d38c8def808bd3"
+    },
+    {
+      "path": "eventx/release/paper_a_review_20261010/preparation_checks.json",
+      "sha256": "33e3c8583f46f066e5772393eabb07d741d5b67297ee5297097898387c1ba486"
+    },
+    {
+      "path": "eventx/release/paper_a_review_20261010/review_response_blank.json",
+      "sha256": "957e1489c3547ba6fba7eb57cc2c602ac5c612fb5c2c7cd6c8e5939702127dd6"
+    }
+  ],
+  "source_publication_manifest": {
+    "path": "eventx/release/paper_a_20261010/publication_manifest.json",
+    "sha256": "a7f2a3a014d595805bc6c2516519e2b1eb2d8b10fc85d6371c7789ad1fe401e8"
+  },
+  "new_forecast_evaluation": false
+}

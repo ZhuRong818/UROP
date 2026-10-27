@@ -1,0 +1,26 @@
+{
+  "decision_price": null,
+  "episode_id": null,
+  "evidence_ready_at": null,
+  "first_grid_anchor": null,
+  "forward_price": null,
+  "gate_results": {
+    "activity_screen": "pending",
+    "actual_terminal_status": "pending",
+    "asof_240m_history": "pending",
+    "contract_mapping_rules": "pending",
+    "decision_trade_freshness": "pending",
+    "evidence_relevance": "pending",
+    "feature_semantics_compatibility": "pending",
+    "novelty": "pending",
+    "prespecified_forward_availability": "pending",
+    "source_coverage": "pending"
+  },
+  "input_receipt_hashes": [],
+  "market_id": null,
+  "model_scored": false,
+  "predictive_admitted": false,
+  "release_body_sha256": null,
+  "release_durable_available_at": null,
+  "status": "template_only; no observation yet"
+}

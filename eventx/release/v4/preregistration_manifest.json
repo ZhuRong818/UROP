@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-02T10:43:37Z",
+  "future_holdout": "[2026-09-06T00:00:00Z, 2026-10-30T00:00:00Z)",
+  "future_outcomes_or_predictions_inspected": false,
+  "hashes": {
+    "data/v4/confirmatory/cohort_gate/cohort.jsonl": "30a7a861a566c28365f871cfb4594272adc85c058b9f13ed70a77a9be1e80d05",
+    "data/v4/confirmatory/cohort_gate/manifest.json": "32067cf408f01399e7394a35cc8de829e7b37b07f6ae510710447666389d575a",
+    "eventx/release/v4/COHORT_AND_WINDOW_FREEZE.md": "27fe9f043bb77cc2401afa063e132cd2f0b8adad711278d900c81ac323950ce2",
+    "eventx/release/v4/design_manifest.json": "0d4f395ab9892100aa84e31404b1f175ad4c6db6dc1bec6b92832d3a917836b1",
+    "eventx/release/v4/protocol.json": "0747a3e41be5d21a853cedfc824482fcf1c047115aaddec1ca2c4fff3feaee8c"
+  },
+  "markets": 470,
+  "protocol_id": "eventx-v4-confirmatory-polymarket-20260902",
+  "status": "frozen_before_future_holdout"
+}

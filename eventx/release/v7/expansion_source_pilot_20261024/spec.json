@@ -1,0 +1,53 @@
+{
+  "activity_units": "Historical model notional inputs are summed token size. Report token size and price-times-size separately. Old cash diagnostic remains historical; no predictive eligibility from either.",
+  "api_migration_notice": "Official documentation checked22Oct states legacy Data API retirement24Oct2026; replacement does not imply project v2 research cycle.",
+  "api_trade_version": "v2",
+  "backoff": "Endpoint bucket through response; 429 honors numeric/HTTP-date Retry-After with 60s floor. 401/403 blocks all REST buckets for >=3600s. No alternate route for blocked request.",
+  "candidate_family_counts": {
+    "US_GDP_NEGATIVE_FULL_YEAR_2026": 1,
+    "US_RECESSION_DUAL_RULE_2026": 1
+  },
+  "cold_start": "Six-hour historical overlap is late-acquired data; future as-of warmup must accumulate prospectively",
+  "control_rule": "No controls enrolled in this two-market expansion run; earlier controls remain diagnostic only",
+  "created_at": "2026-10-24T07:26:26.859353+00:00",
+  "dedup_rule": "preserve raw prints; compare multiset normalized asset/second/price/size/side; never treat identical prints as proven unique transactions",
+  "dependencies": "Freshness and endpoint policy frozen for new branch; source convention, exact rule binding, continuity and release evidence remain gated",
+  "documentation": [
+    "https://docs.polymarket.com/migrate/data-api-v1-to-v2",
+    "https://docs.polymarket.com/api-reference/feeds/list-trades",
+    "https://docs.polymarket.com/api-reference/markets/get-resolution-state"
+  ],
+  "endpoint_intervals_seconds": {
+    "lumid_rest": 2.0,
+    "venue_books": 0.5,
+    "venue_metadata": 1.0,
+    "venue_trades": 2.0
+  },
+  "event_activation_enabled": false,
+  "gap_rule": "journal/reconnect gaps unknown; REST backfill receives current availability and cannot restore timely capture",
+  "live_duration_seconds": 21600,
+  "max_pages": 10,
+  "metadata_every_cycle": true,
+  "model_path": "data/v5/market_condition_tuning_20261012/selected_model.joblib",
+  "model_sha256": "d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c",
+  "observation_policy": "eventx/release/v7/forecast_path_20261023/policy.json",
+  "poll_seconds": 60,
+  "process_gap_log_seconds": 120,
+  "protected_ids_sha256": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b",
+  "receipt_clocks": "queued_at before scheduler; requested_at at actual dispatch; response_received_at; durable available_at; finished_at",
+  "rehearsal_criteria": "finish elapsed24h with reconciled source windows, documented all reconnect/cap/errors and per-market gaps; no automatic eligibility or cohort promotion",
+  "rehearsal_stop_at": "2026-10-24T14:26:26.859353+00:00",
+  "restart_rule": "flock single process, validate append journal chain, same absolute deadline; a restart is a continuity gap",
+  "sample_counts": {
+    "prospective_macro_candidate": 2
+  },
+  "scope": "Two new metadata-selected candidates; six-hour source/activity feasibility only; not event activation or scoring",
+  "scope_rule": "exact market/token allowlists; reject unexpected response scopes before raw storage; no broad market streams",
+  "selection": "Negative annual US GDP and dual-rule US recession; exact questions and rule spans, no prices or liquidity ranking",
+  "shutdown": "Hard bounded run cancels queued requests and streams; cancellation is recorded separately from network failure",
+  "taker_only": false,
+  "trade_windows": "Venue v2 ignores market-window bounds: cursor through descending timestamps until below start or exhausted, then client-filter inclusive common window; cap/ordering failures unresolved. Provider window unchanged.",
+  "v4_overlap": 0,
+  "version": "expansion_source_20261024",
+  "websocket_url": "wss://ws-subscriptions-clob.polymarket.com/ws/market"
+}

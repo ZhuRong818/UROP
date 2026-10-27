@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-18T08:42:53.372851+00:00",
+  "locked_files": {
+    "eventx/release/v7/market_capture_20261018/capture_spec.json": "0f54a97fa604dba3d724c6a691ccd2fe8a12678743b7588955f61c75b7d0c707",
+    "eventx/release/v7/market_capture_20261018/cohort.jsonl": "f496ae5b61cefb234fdf632981a30a8761b6d3b7049f79bbde6869f83f60b8f4",
+    "eventx/release/v7/market_capture_20261018/com.eventx.market-capture.20261018.plist": "aac65b69df2bcd1cdd01af83ad6c0a9c435e36e96564f2b4f8e9d55eb978acf7",
+    "eventx/release/v7/market_capture_20261018/excluded.jsonl": "cc050752351ffb6280839f21e5e029f3c1531267cc732d1d6d4163d3dd712b83",
+    "eventx/release/v7/market_capture_20261018/protected_ids.json": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b",
+    "eventx/release/v7/market_capture_20261018/v4_metadata_separation.json": "dc713a91bed7c38780f93f4da4e5e5b443550101621d42ff081ad823eee53b0f",
+    "eventx/tasks/collect_v7_market_capture_20261018.py": "de35d7afa402af33be6001aee2f458ee62d45f04e3fe28a42856452375ab9521",
+    "eventx/tasks/launch_v7_market_capture_20261018.py": "2b486da058e8217c8a8e8e4bdcca48aeef11f518f4c756dee24d202494a3856f",
+    "eventx/tasks/lock_v7_market_capture_20261018.py": "88b6765aae858d550d3491b12eda5286a3b6ba5ba1a2e4045a6b978ac8b097f0",
+    "eventx/tasks/prepare_v7_market_capture_20261018.py": "e5d89720b12152993806f270474090c5e1782ad71b7272c0a79c96e121a44f31"
+  },
+  "scope": "collection feasibility, not model selection or confirmatory evaluation"
+}

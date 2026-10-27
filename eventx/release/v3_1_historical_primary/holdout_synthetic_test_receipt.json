@@ -1,0 +1,11 @@
+{
+  "completed_at": "2026-09-02T08:54:51.684805Z",
+  "historical_holdout_read": false,
+  "protocol_id": "eventx-v3.1-historical-primary-20260902",
+  "status": "synthetic_holdout_contract_passed_before_holdout_retrieval",
+  "tests": [
+    "left_context_and_future_append_invariance",
+    "b0_only_feature_contract",
+    "manual_frozen_ensemble_prediction"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "presentation_id": "pres_c5b119b57ca8f9a86972347f16d9f348",
+  "deck_id": "feec53a53350",
+  "theme_id": "zurich-light",
+  "slides": [
+    {
+      "title": "How our selected market model works",
+      "subtitle": "Histogram gradient boosting predicts a large movement within 30 minutes",
+      "slidenum": 17,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/de9af00414b1.png",
+      "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+    },
+    {
+      "title": "Measured market and news performance",
+      "subtitle": "5,388 identical fold-5 rows. Lower loss and Brier are better. Higher AP is better.",
+      "slidenum": 18,
+      "layout": "data_table",
+      "image_url": "https://slidesgpt.com/media/d914919f8312.png",
+      "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+    },
+    {
+      "title": "Bottlenecks and the next research step",
+      "subtitle": "Stronger market forecasts and broader context coverage guide the next experiment",
+      "slidenum": 19,
+      "layout": "title_and_body",
+      "image_url": "https://slidesgpt.com/media/62211d05c139.png",
+      "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+    }
+  ]
+}

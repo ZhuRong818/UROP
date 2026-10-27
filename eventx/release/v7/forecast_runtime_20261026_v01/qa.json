@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-26T11:25:42.890425+00:00",
+  "combined_checks": 51,
+  "live_targets_read": false,
+  "output": "...................................................\n----------------------------------------------------------------------\nRan 51 tests in 0.484s\n\nOK\n",
+  "passed": true,
+  "synthetic_runtime_checks": 25,
+  "tests": [
+    "eventx.tasks.check_v7_source_time_quote_inputs_20261026",
+    "eventx.tasks.check_v7_source_time_study_20261026",
+    "eventx.tasks.check_v7_clock_bounded_inputs_20261026",
+    "eventx.tasks.check_v7_forecast_runtime_20261026"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "created_at_utc": "2026-09-29T15:05:10.821530+00:00",
+  "query_sha256": "e3781572363bf2575e2e0ced8589884005c40345be6ba3d2c881c5c1e8dc2be0",
+  "scope": "Finnhub endpoint run n_symbols transitions in opened V6 dates; no news rows, markets, outcomes or protected data",
+  "script_sha256": "4a21966060e85df7142e16b8d557049abb065a737c9cfdc56c790e5bc69b99b6",
+  "written_before_requests": true
+}

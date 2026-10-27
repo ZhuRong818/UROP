@@ -1,0 +1,412 @@
+{
+  "base_url": "https://lum.id/findata",
+  "catalog": {
+    "prediction_market_tables": {
+      "items": {
+        "tables": [
+          {
+            "comment": null,
+            "est_rows": 828290,
+            "is_hypertable": true,
+            "size_bytes": 1628192768,
+            "table": "activity_events"
+          },
+          {
+            "comment": null,
+            "est_rows": 1089582722,
+            "is_hypertable": true,
+            "size_bytes": 141615816704,
+            "table": "candles"
+          },
+          {
+            "comment": null,
+            "est_rows": 0,
+            "is_hypertable": false,
+            "size_bytes": 24576,
+            "table": "canonical_markets"
+          },
+          {
+            "comment": null,
+            "est_rows": 102687624,
+            "is_hypertable": false,
+            "size_bytes": 323589136384,
+            "table": "kalshi_markets"
+          },
+          {
+            "comment": null,
+            "est_rows": 150644746,
+            "is_hypertable": true,
+            "size_bytes": 69492318208,
+            "table": "kalshi_orderbook_snapshots"
+          },
+          {
+            "comment": null,
+            "est_rows": 1342671812,
+            "is_hypertable": true,
+            "size_bytes": 459388600320,
+            "table": "kalshi_trades"
+          },
+          {
+            "comment": null,
+            "est_rows": 3109626,
+            "is_hypertable": false,
+            "size_bytes": 3945340928,
+            "table": "lqt_monitored_universe"
+          },
+          {
+            "comment": null,
+            "est_rows": 26397,
+            "is_hypertable": false,
+            "size_bytes": 107134976,
+            "table": "matched_pairs"
+          },
+          {
+            "comment": null,
+            "est_rows": 3380595,
+            "is_hypertable": true,
+            "size_bytes": 585474048,
+            "table": "open_interest_history"
+          },
+          {
+            "comment": null,
+            "est_rows": 10612,
+            "is_hypertable": false,
+            "size_bytes": 15196160,
+            "table": "pm_us_markets"
+          },
+          {
+            "comment": null,
+            "est_rows": 603864,
+            "is_hypertable": false,
+            "size_bytes": 2348761088,
+            "table": "polymarket_events"
+          },
+          {
+            "comment": null,
+            "est_rows": 2573246,
+            "is_hypertable": false,
+            "size_bytes": 16551256064,
+            "table": "polymarket_markets"
+          },
+          {
+            "comment": null,
+            "est_rows": 185467109,
+            "is_hypertable": true,
+            "size_bytes": 52953849856,
+            "table": "polymarket_orderbook_snapshots"
+          },
+          {
+            "comment": null,
+            "est_rows": 25371378,
+            "is_hypertable": true,
+            "size_bytes": 41392177152,
+            "table": "polymarket_trades"
+          },
+          {
+            "comment": null,
+            "est_rows": 25981496,
+            "is_hypertable": true,
+            "size_bytes": 34452365312,
+            "table": "top_holders"
+          },
+          {
+            "comment": null,
+            "est_rows": 97022784,
+            "is_hypertable": false,
+            "size_bytes": 146296864768,
+            "table": "wallet_leaderboard"
+          },
+          {
+            "comment": null,
+            "est_rows": 213510,
+            "is_hypertable": true,
+            "size_bytes": 42139648,
+            "table": "wallet_pnl_history"
+          },
+          {
+            "comment": null,
+            "est_rows": 425107,
+            "is_hypertable": true,
+            "size_bytes": 677806080,
+            "table": "wallet_positions"
+          },
+          {
+            "comment": null,
+            "est_rows": 640,
+            "is_hypertable": false,
+            "size_bytes": 1892352,
+            "table": "wallet_profiles"
+          }
+        ]
+      },
+      "keys": [
+        "schema",
+        "tables"
+      ],
+      "response_sha256": "68c6e0d1e002e7aae8b1864d62e82e2b2dff6a70077f7a2c0d02165e16b2d609",
+      "status": 200,
+      "top_level_type": "dict"
+    },
+    "provenance_tables": {
+      "items": {
+        "tables": [
+          {
+            "comment": null,
+            "est_rows": 5,
+            "is_hypertable": false,
+            "size_bytes": 65536,
+            "table": "api_credentials"
+          },
+          {
+            "comment": null,
+            "est_rows": 15,
+            "is_hypertable": false,
+            "size_bytes": 65536,
+            "table": "api_sources"
+          },
+          {
+            "comment": null,
+            "est_rows": 401,
+            "is_hypertable": false,
+            "size_bytes": 294912,
+            "table": "endpoints"
+          },
+          {
+            "comment": null,
+            "est_rows": 18,
+            "is_hypertable": false,
+            "size_bytes": 65536,
+            "table": "ingress_acl"
+          },
+          {
+            "comment": null,
+            "est_rows": 9,
+            "is_hypertable": false,
+            "size_bytes": 147456,
+            "table": "ingress_proposals"
+          },
+          {
+            "comment": null,
+            "est_rows": 355842,
+            "is_hypertable": false,
+            "size_bytes": 191029248,
+            "table": "runs"
+          },
+          {
+            "comment": null,
+            "est_rows": 423273,
+            "is_hypertable": false,
+            "size_bytes": 125247488,
+            "table": "scrape_cursor"
+          },
+          {
+            "comment": null,
+            "est_rows": 5,
+            "is_hypertable": false,
+            "size_bytes": 65536,
+            "table": "table_backend"
+          },
+          {
+            "comment": null,
+            "est_rows": 0,
+            "is_hypertable": false,
+            "size_bytes": 81920,
+            "table": "webhooks"
+          }
+        ]
+      },
+      "keys": [
+        "schema",
+        "tables"
+      ],
+      "response_sha256": "6e5b6d1ed39626c872c45489b8c51cbd9d1257f14f2239fc1d0755911c8dfe61",
+      "status": 200,
+      "top_level_type": "dict"
+    }
+  },
+  "historical_coverage_certified": false,
+  "information_schema": {
+    "materialized_status": 200,
+    "retrieve_status": 200,
+    "rows": [
+      {
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "candles",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "canonical_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_candles_15m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_candles_1d",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_candles_1h",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_candles_1m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_candles_5m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_candles_ob_1m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_candles_ob_5m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_orderbook_snapshots",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_trades",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "kalshi_vol_1h",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "lqt_monitored_universe",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "matched_pairs",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "open_interest_history",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "pm_us_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_candles_15m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_candles_1d",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_candles_1h",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_candles_1m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_candles_5m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_candles_ob_1m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_candles_ob_5m",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_orderbook_snapshots",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "polymarket_trades",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "top_holders",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "wallet_leaderboard",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "wallet_pnl_history",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "wallet_positions",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "wallet_profiles",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "table_name": "api_credentials",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "api_sources",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "endpoint_freshness",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "endpoints",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "ingress_acl",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "ingress_proposals",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "scrape_cursor",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "table_backend",
+        "table_schema": "provenance"
+      },
+      {
+        "table_name": "webhooks",
+        "table_schema": "provenance"
+      }
+    ]
+  },
+  "predictive_admissions": 0,
+  "queried_at_utc": "2026-09-28T14:00:58.204730+00:00"
+}

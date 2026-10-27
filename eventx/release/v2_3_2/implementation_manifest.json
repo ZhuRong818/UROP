@@ -1,0 +1,47 @@
+{
+  "artifacts": {
+    "implementation_amendment": {
+      "bytes": 2167,
+      "path": "eventx/release/v2_3_2/IMPLEMENTATION_AMENDMENT.md",
+      "sha256": "5e2e66a9b4c91cec9d69e9cdb784e6d95da417dc46503ba7a150b309979aefc7"
+    },
+    "launch_program": {
+      "bytes": 3251,
+      "path": "eventx/tasks/launch_v2_3_news_v3.py",
+      "sha256": "497c999404c88efb89f9a85d7162cb636bd041f188bedc26f6c4d0ba21f291da"
+    },
+    "news_collection_contract": {
+      "bytes": 3547,
+      "path": "eventx/release/v2_3_2/news_collection_contract.json",
+      "sha256": "24617d5a0be56387d2cc0f9c0941bba5d94898e47eec82b216e072ba3c06649a"
+    },
+    "news_collector_program": {
+      "bytes": 12128,
+      "path": "eventx/tasks/collect_v2_3_news_v3.py",
+      "sha256": "077ac124dc73e1109c0eaef3832f88cf65ee9d3d2837b054f89c8bab41bf9f68"
+    },
+    "predecessor_implementation_manifest": {
+      "bytes": 1603,
+      "path": "eventx/release/v2_3_1/implementation_manifest.json",
+      "sha256": "6e1ff55ad533ee72f313450a0e6869498503647c2a5255c09c73b3e6f397f248"
+    },
+    "synthetic_verification_program": {
+      "bytes": 5380,
+      "path": "eventx/tasks/verify_v2_3_news_v3_contract.py",
+      "sha256": "05e9bd0e0508b1e39eecc0e8da564ff9e273b2b5c065f8d922234e5f83369304"
+    },
+    "v2_3_preregistration_manifest": {
+      "bytes": 5701,
+      "path": "eventx/release/v2_3/preregistration_manifest.json",
+      "sha256": "03b2ecb8493882c0c4a6b3dc6caad8f96ce155beda9a774527c75e0340b4ec35"
+    }
+  },
+  "created_at": "2026-09-01T14:00:00Z",
+  "implementation_id": "eventx-v2.3-news-implementation-v3-20260901",
+  "label_blind": true,
+  "labels_inspected": false,
+  "predecessor_implementation_id": "eventx-v2.3-news-implementation-v2-20260827",
+  "protocol_id": "eventx-v2.3-news-availability-clarifications-20260817",
+  "scientific_decisions_changed": false,
+  "status": "frozen_before_development_and_holdout_labels"
+}

@@ -1,0 +1,77 @@
+{
+  "artifacts": [
+    {
+      "path": "eventx/release/v3_1_historical_primary/protocol.json",
+      "sha256": "61cef4cb3c307509657b41f0156a73fe06ab245797729e27db5b1cfc1ff3861c"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/PREREGISTRATION.md",
+      "sha256": "35f276836ba7124a476fe61c6c86393985c425579214c08dea5c4ac1bd28e174"
+    },
+    {
+      "path": "data/v3_1_historical/primary/label_blind_inputs/cohort.jsonl",
+      "sha256": "72a355f6afdf16935752a7c26bc237e2bbad5a6fbb0770d27bb80b5aa586a32b"
+    },
+    {
+      "path": "data/v3_1_historical/primary/label_blind_inputs/removed_markets.jsonl",
+      "sha256": "5f77c87de13c349b1548a73eb106da9627f4f15cbcd51a666024ce0daaa5ac5c"
+    },
+    {
+      "path": "data/v3_1_historical/primary/label_blind_inputs/development_association_counts.jsonl",
+      "sha256": "3a9f3fd2b28f43d9e891dad4684bdf4bbe8fa5a07981d37f6b12bc9c99efd9b4"
+    },
+    {
+      "path": "data/v3_1_historical/primary/label_blind_inputs/report.json",
+      "sha256": "813ecdc7a445e148101e131b71d57273152bc846735f8d386c7d593f30a9b985"
+    },
+    {
+      "path": "eventx/release/v3_historical_primary/protocol.json",
+      "sha256": "13dfb4bd4c4f7a2240aea89ecac85f2a08376f406339628269bd60a2783c8e65"
+    },
+    {
+      "path": "data/v3_historical/primary/development/data_gate/manifest.json",
+      "sha256": "a33b68f3707059b85629da13e40c5a241e53043f8528f4c0d6a9291414f0bdba"
+    },
+    {
+      "path": "data/v3_historical/primary/development/data_gate/report.json",
+      "sha256": "9e4f2554f777d46eaebf8fc6c3bf7f1934e47da5e93ccbcddf329d24deef7095"
+    },
+    {
+      "path": "eventx/release/v3_historical_primary/IMPLEMENTATION_AMENDMENT_1.md",
+      "sha256": "c70547da5e22b2d4cad44d544e13ea79ff0b0b3469970174977aa0e84fe53fc3"
+    },
+    {
+      "path": "eventx/release/v3_historical_primary/IMPLEMENTATION_AMENDMENT_2.md",
+      "sha256": "bbae9e4ef7a69097284c2aa87b75ee470b4ca1914e49c8e5340632b3751c9512"
+    },
+    {
+      "path": "eventx/release/v3_historical_primary/IMPLEMENTATION_AMENDMENT_3.md",
+      "sha256": "b20b4e99fa7bf01ddc9cf91770cc7f643194782f9eb75be199456a23522a71ff"
+    },
+    {
+      "path": "data/v3_historical/provenance_audit_v2/report.json",
+      "sha256": "9f0363a2ab5c3026d84d1ebeaa42a89937efec36b921b0308ac350e7f689c037"
+    },
+    {
+      "path": "eventx/features/v2_1_association.py",
+      "sha256": "51cf717f126241fcce2370056dea0b459ac1d4edb22ad301010fa23bd81a61d1"
+    },
+    {
+      "path": "eventx/tasks/build_v2_1_taxonomy.py",
+      "sha256": "8d40c53f9413081b82c0769a85fb66b70e92683972e08585af4c76144056c173"
+    },
+    {
+      "path": "eventx/release/v2_3/protocol.json",
+      "sha256": "1f9bda7b2433cf2b95ee530f4fd28630a9a6e032671c0350eb975285d963b2e1"
+    },
+    {
+      "path": "eventx/tasks/freeze_v3_1_historical_primary.py",
+      "sha256": "9ee5c7ba8aff8f3cb3722d70a4fe2e3e56a96883e8efd88a94fafb70d7a32329"
+    }
+  ],
+  "historical_holdout_covariates_used": false,
+  "labels_or_outcomes_inspected": false,
+  "manifest_id": "eventx-v3.1-historical-primary-preregistration-20260902",
+  "protocol_id": "eventx-v3.1-historical-primary-20260902",
+  "trade_price_values_used_for_revision": false
+}

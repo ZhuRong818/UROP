@@ -1,0 +1,53 @@
+# Methodology and proposed research contribution
+
+## The contribution to present
+
+“Our contribution is a controlled, contract-specific evaluation of incremental news information, with traceable evidence and an explicit diagnosis of usable forecast coverage.”
+
+This is a methodological and empirical contribution. Gradient boosting, logistic regression, forward validation and volatility features are established tools. We have not demonstrated a new learning algorithm or established first-ever priority relative to the full literature.
+
+## What the methodology does
+
+1. **Defines a short-horizon target.** At each five-minute decision, predict a large absolute change in canonical YES log odds over the next 30 minutes. The inherited threshold is four times trailing one-minute standard deviation; it is not four standard deviations of a 30-minute Gaussian return. This differs from predicting eventual contract resolution.
+2. **Builds a demanding market reference.** Trailing price, momentum, volatility, trading intensity and trade age enter logistic and nonlinear learners. The latest selected histogram booster adds nine deterministic condition features and uses 120,000 earlier training rows. Feature interactions are a plausible explanation for gains, not an established causal mechanism.
+3. **Separates comparison questions.** Market → exposure/context → timing → added semantic content. Compare identical market-time keys within each experiment. Existing exposure selection uses semantic routing, so this estimates added content features conditional on that population. Fully content-neutral exposure selection is a future design requirement.
+4. **Enforces a conservative decision clock.** Use the stored system availability clock, incorporating publication and ingestion/run timing. Publication time alone cannot establish model access. This does not certify first public disclosure, article revisions, feed completeness or historical contract status.
+5. **Binds evidence to the exact contract.** The repaired extractor checks agency, action, rate object, threshold/operator and explicit period, records exact spans and preserves uncertainty through abstention. Distinguish conditional forecasts from observations, hypotheticals and attributed commentary. Signed support is not a calibrated probability surprise: prior expectations remain unmeasured.
+6. **Measures usable yield.** Raw article and association counts are reduced to evidence-bearing articles, episode hypotheses and eligible observable forecast decisions. An article can be relevant but arrive late or concern a market without fresh executions. This funnel distinguishes failure mechanisms before running another forecast.
+7. **Reports forward development performance with scope.** Earlier training, later scoring, 30-minute purge and held-market groups limit certain leakage paths. They do not establish independence across common events. Previously opened folds and adaptive search make the current gains exploratory.
+
+## What is achieved, and what remains proposed
+
+| Component | Current evidence | Scope |
+|---|---|---|
+| Nonlinear market reference | 9.68% lower development log loss than logistic on 364,903 matched rows | Opened historical comparison |
+| Earlier selected booster | 1.17% lower loss than earlier tree on 112,616 fold-5 rows | Separate comparison |
+| Latest condition model | LL 0.3429489298145635; Brier 0.10905976503729453; AP 0.3462485264100695 | 0.5415604842619057% below previous booster; 1.7012452641439602% below earlier tree |
+| Exposure/content control | Exposure arm beats tested timing and semantic extensions on 9,965 matched rows | Conditional on existing article-exposed population |
+| Predicate repair | 11 signed associations, two articles, ten markets; six known fitting errors now abstain | Development repair, not independent precision or recall |
+| Coverage diagnosis | Eleven signed landmarks / three candidate forecast episodes yield zero eligible observations | No new signed-news forecast fit or improvement |
+| Independent confirmation | Original frozen V4 study remains separate | It does not confirm the latest selected market model |
+
+The latest model has not yet been compared with news on the old 5,388-row matched sample. Its tuning combines sample-size and feature changes; attribution requires ablations. May–July results do not demonstrate October performance. Do not add percentages from different comparison panels.
+
+## Questions to prepare for
+
+**What is novel if boosting is standard?** Our proposed contribution is the combination of a strong market reference, staged information controls, exact contract evidence and decision-level coverage diagnosis applied to short-horizon prediction-market repricing. Its scientific value is distinguishing apparent news gains from calibration and data-pipeline effects. First-ever priority has not been established.
+
+**Why exact predicates?** “The Fed may reduce rates” does not bind July, a 50+ bp threshold or an annual cut count. Actor/action/topic overlap can create convincing-looking false links. Exact spans and abstention expose that ambiguity.
+
+**Does no gain prove efficiency?** No. Noisy links, delayed feed arrival, insufficient usable events and dependence can explain the result. The current conclusion concerns tested representations and this forecast target.
+
+**Is the current model better?** It beats the named internal baselines on identical historical rows, with improved log loss, Brier and average precision. Independent current-period superiority remains unmeasured. Related published studies use different horizons and labels; no directly matched external performance ranking is supported.
+
+## Canonical evidence
+
+- `data/v5/no_terminal_baseline_diagnostic_20261009/report.json`
+- `data/v5/market_learner_screen_20261009/report.json`
+- `data/v5/market_condition_tuning_20261012/report.json`
+- `data/v5/market_condition_tuning_20261012/selection_receipt.json`
+- `data/v5/opened_news_offset_trial_20261009/report.json`
+- `data/v5/method_screen_observed_row_join_20261009/report.json`
+- `eventx/release/v7/pilot_20261010/SIGNED_EVIDENCE_V03_REPAIR_20261012.md`
+- `eventx/release/v7/pilot_20261010/EVENT_COVERAGE_AND_MISSED_EVIDENCE_20261012.md`
+- `eventx/release/v4/protocol.json`

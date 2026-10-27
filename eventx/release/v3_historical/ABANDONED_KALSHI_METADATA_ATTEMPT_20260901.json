@@ -1,0 +1,30 @@
+{
+  "abandoned_at": "2026-09-01T14:00:00Z",
+  "attempt_path": "data/v3_historical/feasibility/raw/kalshi_markets",
+  "completed_batches": 31676,
+  "deletion_scope": "incomplete_unfiltered_metadata_attempt_only",
+  "integrity_manifest_created": false,
+  "labels_or_outcomes_read": false,
+  "original_activity_key_count": 16802432,
+  "page_and_query_file_count": 63354,
+  "reason": "metadata was requested before applying the unchanged frozen activity eligibility gates",
+  "regeneration": "regenerable label-blind from the retained passing kalshi_activity manifest and Lumid retrieve endpoint",
+  "replacement_eligible_key_count": 9422,
+  "stopped_process_ids": [52874, 52885, 52886, 70797],
+  "stopped_processes_verified_absent": true,
+  "total_kibibytes": 2465900,
+  "transient_artifacts": {
+    "checkpoint.json": {
+      "bytes": 198239842,
+      "sha256": "6fc7bd090842607627ced2e0d7d138930cc276b33cf3836ac1d8184978f45217"
+    },
+    "kalshi_markets.jsonl.part": {
+      "bytes": 996551287,
+      "sha256": "f418b68cdd71809fe70622997c41b5bf3faef7708e605d03c5c782018d9bbe10"
+    },
+    "retry_ledger.json": {
+      "bytes": 9906584,
+      "sha256": "7061cd0ab2b88e597660f2a15cc8c88c1ea7322287d4f1138b305e65ed7cf6e9"
+    }
+  }
+}

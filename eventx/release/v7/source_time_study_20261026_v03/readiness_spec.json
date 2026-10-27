@@ -1,0 +1,14 @@
+{
+  "clock_probe_interval_seconds": 300,
+  "clock_rule": "At each decision use latestcompletedprobe<=decision andage<=360s;>=2independent hosts withreporteduncertainty<=100ms,atleastone<=20ms;offsetintervalintersection nonempty andcontained[-100ms,+100ms]. Wall-versus-monotonic step>20ms resets30minwarmup.",
+  "duration_seconds": 2400,
+  "metadata_max_age_seconds": 360,
+  "model_inference": false,
+  "network_failure": "Preserve failures; stop on scope mismatch. 401/403/429 backoff inherited from frozen transport.",
+  "poll_seconds": 60,
+  "prospective_test_started": false,
+  "scope": "Exact two-market public WebSocket + metadata/resolution; no trades or provider requests",
+  "target_construction": false,
+  "version": "clock_readiness_20261026_v03",
+  "websocket_url": "wss://ws-subscriptions-clob.polymarket.com/ws/market"
+}

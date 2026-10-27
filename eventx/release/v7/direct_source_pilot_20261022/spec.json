@@ -1,0 +1,38 @@
+{
+  "candidate_family_counts": {
+    "US_CPI_ANY_MONTH_2026": 5,
+    "US_GDP_FULL_YEAR_2026": 6,
+    "US_UNEMPLOYMENT_ANY_MONTH_2026": 3
+  },
+  "control_rule": "first pre-ranked candidate with fresh two-sided uncrossed book and >=3 YES prints60m; only a dated activity check",
+  "created_at": "2026-10-22T05:52:50.137706+00:00",
+  "dedup_rule": "preserve raw prints; compare multiset normalized asset/second/price/size/side; never treat identical prints as proven unique transactions",
+  "dependencies": "original release collector unchanged; no newly captured release currently documented; forward-latency and terminal gate still need validation",
+  "documentation": [
+    "https://docs.polymarket.com/api-reference/core/get-trades-for-a-user-or-markets",
+    "https://docs.polymarket.com/market-data/realtime-data",
+    "https://docs.polymarket.com/api-reference/markets/get-markets"
+  ],
+  "gap_rule": "journal/reconnect gaps unknown; REST backfill receives current availability and cannot restore timely capture",
+  "live_duration_seconds": 86400,
+  "max_pages": 10,
+  "model_path": "data/v5/market_condition_tuning_20261012/selected_model.joblib",
+  "model_sha256": "d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c",
+  "poll_seconds": 60,
+  "protected_ids_sha256": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b",
+  "receipt_clocks": "requested_at, response_received_at, durable available_at, finished_at; source timestamps preserved in raw bodies",
+  "rehearsal_criteria": "finish elapsed24h with reconciled source windows, documented all reconnect/cap/errors and per-market gaps; no automatic eligibility or cohort promotion",
+  "rehearsal_stop_at": "2026-10-23T06:52:50.137706+00:00",
+  "restart_rule": "flock single process, validate append journal chain, same absolute deadline; a restart is a continuity gap",
+  "sample_counts": {
+    "activity_control_candidate": 5,
+    "legacy_macro_source_comparison_only": 3,
+    "prospective_macro_candidate": 14
+  },
+  "scope": "Phase A source rehearsal only; no forecast scores, targets or predictive admissions",
+  "scope_rule": "exact market/token allowlists; reject unexpected response scopes before raw storage; no broad market streams",
+  "selection": "All exact longer-lived US annual GDP / any-month CPI / any-month U3 metadata predicates; three prior macro diagnostics; first five BTC controls by pre-price metadata liquidity.",
+  "trade_windows": "first/every fifth cycle matched six-hour source window; other venue cycles thirty-minute overlap; endpoint coverage is not exchange completeness",
+  "v4_overlap": 0,
+  "websocket_url": "wss://ws-subscriptions-clob.polymarket.com/ws/market"
+}

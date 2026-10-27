@@ -1,0 +1,13 @@
+{
+  "locked_files": {
+    "data/v7/direct_source_pilot_20261022_v03/audits/20261024T060327Z_808a25/manifest.json": "3373e485b2aaab3a830c187de70721c2cff9300c5bed7e53f4d03e7b0099e2af",
+    "eventx/release/v7/memory_quote_20261024/development_cohort.jsonl": "7a2429f008e507cb6d4e7e19c44519b493edb7d30d2433b92e0e8f3c6e3e3c30",
+    "eventx/release/v7/memory_quote_20261024/forward_cohort.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/memory_quote_20261024/policy.json": "00d169bb5af933ea076e7198c46b4d43b0c47242af3899cac6b016769fe8eeec",
+    "eventx/release/v7/quote_experiment_20261024/implementation_manifest.json": "f068b35aa3eb8e9543630c3af52555528cf192e1a09c43658477950fc557e47a",
+    "eventx/tasks/freeze_v7_memory_quote_20261024.py": "027f8c38495c36a50b7abda6bc7a4e79f4804c6d56f0ea71f5244847107afb29",
+    "eventx/tasks/run_v7_memory_quote_20261024.py": "73abe12c291158bc2c1fc5599f267921d569faeb77f47b0776fbb0be8020a309",
+    "eventx/v7/memory_quote_20261024.py": "98c7ce29de46ec7557fab033b75de1a603773cd1a0a7ff19c22d5de6285f9ed8",
+    "eventx/v7/quote_experiment_20261024.py": "e967e5c33f7712c3a9fce7bdaa9b7519effd913632778dffe577791a9ff315ee"
+  }
+}

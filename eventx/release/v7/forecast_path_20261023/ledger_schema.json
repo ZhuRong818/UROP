@@ -1,0 +1,51 @@
+{
+  "append_only": true,
+  "comparators": "Frozen logistic and training-prevalence artifacts still need preparation; no historical scores reused as current forecasts",
+  "decision_required": [
+    "study_version",
+    "cohort_version",
+    "episode_id",
+    "market_id",
+    "grid_at",
+    "recorded_at",
+    "source_convention_sha256",
+    "model_sha256",
+    "input_receipt_hashes",
+    "feature_vector_sha256",
+    "decision_gates",
+    "status",
+    "probability_or_null",
+    "abstention_reasons"
+  ],
+  "decision_statuses": [
+    "feasibility_only",
+    "abstained",
+    "issued_shadow",
+    "missed_emission_deadline"
+  ],
+  "no_current_forecast_rows_created": true,
+  "outcome_required": [
+    "decision_record_sha256",
+    "target_at",
+    "adjudicated_at",
+    "endpoint_receipt_hashes",
+    "endpoint_gates",
+    "outcome_status",
+    "label_or_null",
+    "missing_reasons"
+  ],
+  "outcome_statuses": [
+    "pending",
+    "observed",
+    "unavailable"
+  ],
+  "primary_reporting": [
+    "scheduled_grids",
+    "issued_forecasts",
+    "abstentions_by_reason",
+    "outcomes_observed",
+    "outcomes_unavailable",
+    "distinct_release_episodes",
+    "matched_baseline_metrics_when_frozen"
+  ]
+}

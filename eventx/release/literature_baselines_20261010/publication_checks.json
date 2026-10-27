@@ -1,0 +1,9 @@
+{
+  "checked_local_links": 7,
+  "missing_local_links": [],
+  "numeric_checks": {
+    "market_loss_percent_reduction_matches": true,
+    "matched_news_loss_gap_matches": true
+  },
+  "checks_are": "aggregate transcription and document links, not software tests or new evaluation"
+}

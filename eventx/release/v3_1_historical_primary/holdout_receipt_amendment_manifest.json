@@ -1,0 +1,48 @@
+{
+  "amended_evaluator_sha256": "96c28eb1227fe910152a8519d89154a95ad61d0886296d2a085c4928205e4f21",
+  "artifacts": [
+    {
+      "path": "eventx/release/v3_1_historical_primary/holdout_implementation_manifest.json",
+      "sha256": "20eb901467b3968543a064cef43441798afc3f68d544a361011256be2924ace7"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/candidate.json",
+      "sha256": "1bf0e8b8d6ec068ad8ae5935f21789815055a51ddb911030f52cb881032ceed4"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/candidate_manifest.json",
+      "sha256": "566b17262edf09ec7dd08250c7e1b97068ef795506ce8b82d810218337d8f659"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/HOLDOUT_PROTOCOL_DEVIATION.md",
+      "sha256": "3d71568161144c613f17f499d8cc768430b7d5517eee85b0eb217556fc6c9d0a"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/holdout_evaluation_config.json",
+      "sha256": "e82ce342ee193a9585c9adb2f873e4655d849cdffbfade364e794b02d9d1fc47"
+    },
+    {
+      "path": "data/v3_1_historical/primary/holdout/examples_manifest.json",
+      "sha256": "e98e731048e1eac225f419df6f5a3fd05ac4d3c56bf7078155d76e10b0ada230"
+    },
+    {
+      "path": "eventx/tasks/evaluate_v3_1_historical_holdout.py",
+      "sha256": "96c28eb1227fe910152a8519d89154a95ad61d0886296d2a085c4928205e4f21"
+    },
+    {
+      "path": "eventx/tasks/test_v3_1_historical_holdout.py",
+      "sha256": "edb34102339ea07be0bc5aa1848ef56b5f51f98e7f233ef346d2b8d86fcb9234"
+    },
+    {
+      "path": "eventx/tasks/freeze_v3_1_historical_holdout_receipt_amendment.py",
+      "sha256": "e43110bbd275eec07c5044d9eb043620eb2c9c29703ad29282c3521df1921aa0"
+    }
+  ],
+  "candidate_changed": false,
+  "frozen_at": "2026-09-02T09:03:39.660274Z",
+  "holdout_predictions_or_performance_metrics_read": false,
+  "original_evaluator_sha256": "e3bbde92a596e4874e425fa19ccca3ebc974b12f48f1e6677d7c8601908ff14c",
+  "protocol_id": "eventx-v3.1-historical-primary-20260902",
+  "statistical_calculation_changed": false,
+  "status": "truthfulness_only_receipt_amendment_before_performance_scoring"
+}

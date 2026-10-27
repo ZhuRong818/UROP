@@ -1,0 +1,61 @@
+{
+  "activation_remains_gated": true,
+  "authorization": "User: follow your plan continue the research to produce usable forecasting",
+  "controls_are_not_news_cohort": true,
+  "decision": {
+    "gap_limit_caveat": "Necessary operational bound, not proof of completeness; require uncapped, scope-valid reconciliation and documented counting semantics",
+    "input_available_by": "t, using durable local receipt time; no post-t information",
+    "issued_by": "t+30 seconds; log late computation as missed, never backdate",
+    "latest_yes_trade_max_age_seconds": 300,
+    "min_yes_count240": 3,
+    "min_yes_count60": 3,
+    "min_yes_quantity240": 100,
+    "news_readiness": "original release and defensible evidence link durably available by t; record unknown novelty/direction instead of inventing them",
+    "quantity_unit": "YES token quantity, not cash",
+    "receipt_gap_limit_seconds": 120,
+    "same_timestamp": "abstain if prices differ at a sampled minute and source-consistent execution order is unresolved",
+    "status": "authenticated current mapping/rules and accepting-orders status received by t, at most120s old; scheduled end alone is insufficient",
+    "trailing_window": "(t-window,t]",
+    "warmup": "241 seeded minute prices ending at t; no unresolved receipt gaps in the four-hour input interval"
+  },
+  "endpoint": {
+    "late_backfill": "diagnostic only; never repair the primary endpoint after its deadline",
+    "latest_trade_not_after_target": true,
+    "latest_yes_trade_max_age_seconds": 300,
+    "missing": "retain issued forecast, mark outcome unavailable with reason; never silently remove from coverage denominator",
+    "no_future_nearest_trade": true,
+    "receipt_deadline_seconds_after_target": 120,
+    "selection": "latest unambiguous canonical YES execution at or before target among receipts durable by target+120s",
+    "status": "resolution/status evidence covers decision through target, with no unresolved gap >120s; conflicting or incomplete evidence makes outcome unavailable",
+    "target_time": "t+1800 seconds"
+  },
+  "first_reserved_episode": "2026-10-29T12:30:00+00:00",
+  "frozen_at": "2026-10-23T05:24:27.866769+00:00",
+  "measurement_choices": "300s freshness inherited;120s receipt/status bounds and30s emission budget are new operational design choices, not optimized or empirically validated thresholds",
+  "model_scoring_enabled": false,
+  "model_sha256": "d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c",
+  "no_outcome_based_retuning": true,
+  "predictive_admissions": 0,
+  "scope": "Prospective feasibility and staged shadow forecasting; not confirmation, trading, or a replacement of earlier studies",
+  "source_convention": "unselected; provider/direct compatibility review must precede activation",
+  "stages": [
+    "Record source-feasibility dossiers; model scoring stays disabled.",
+    "One full prospective episode observation passes all decision and endpoint gates, plus feature/source compatibility.",
+    "Freeze an activation receipt for later five-minute grids; do not score the first observation retrospectively as a live forecast.",
+    "Issue fixed-model shadow probabilities and abstentions before outcomes; append outcomes separately.",
+    "Freeze comparator artifacts, unseen evaluation window and dependence-aware analysis before a confirmatory comparison."
+  ],
+  "target": {
+    "definition": "abs(logit(pYES(t+30m))-logit(pYES(t))) >= 4*sigma240(t)",
+    "grid_seconds": 300,
+    "horizon_seconds": 1800,
+    "positive_sigma_required": true,
+    "price_clip": [
+      0.0001,
+      0.9999
+    ],
+    "sigma_ddof": 0,
+    "sigma_window_one_minute_increments": 240
+  },
+  "version": "v7_prospective_feasibility_20261023"
+}

@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-26T01:41:04.829197+00:00",
+  "development_grids": 41400,
+  "development_vectors": 11084,
+  "forecasts_issued": 0,
+  "frozen_model_hash_unchanged": true,
+  "labels_read": false,
+  "live_grids": 562,
+  "live_mechanically_ready": 211,
+  "live_vectors": 286,
+  "passed": true,
+  "prospective_test_started": false,
+  "unit_test_command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -m unittest eventx.tasks.check_v7_live_quote_inputs_20261026 eventx.tasks.check_v7_source_time_quote_inputs_20261026",
+  "unit_test_result": "21 tests passed; exit 0",
+  "unit_tests": 21,
+  "verified_hash_entries": 5617
+}

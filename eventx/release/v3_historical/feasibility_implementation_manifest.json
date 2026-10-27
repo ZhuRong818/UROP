@@ -1,0 +1,60 @@
+{
+  "artifacts": {
+    "abandoned_attempt_receipt": {
+      "bytes": 1231,
+      "path": "eventx/release/v3_historical/ABANDONED_KALSHI_METADATA_ATTEMPT_20260901.json",
+      "sha256": "130b6815aee8f824c82b3c5c030e810335995775ac1a7c814ec92ab389218623"
+    },
+    "audit_program": {
+      "bytes": 19334,
+      "path": "eventx/tasks/audit_v3_historical_feasibility.py",
+      "sha256": "783c4e89e527c26bfc74e51896c4aaa6c65fb1f9bc79714cd133a234abdefa46"
+    },
+    "export_program": {
+      "bytes": 37277,
+      "path": "eventx/tasks/export_v3_historical_feasibility.py",
+      "sha256": "7d5c2c87fc9217805796925c3d650f2968ff5ec2a32c09e4e53a6820a59803fd"
+    },
+    "feasibility_protocol": {
+      "bytes": 3769,
+      "path": "eventx/release/v3_historical/feasibility_protocol.json",
+      "sha256": "97f6a5be64575323ceca84280e36dbe7168b9f0932d292750bec9b895d15d68e"
+    },
+    "implementation_amendment": {
+      "bytes": 2466,
+      "path": "eventx/release/v3_historical/FEASIBILITY_IMPLEMENTATION_AMENDMENT_2.md",
+      "sha256": "05bff096650602fa3d2619c1963782eb6e63fa92a96eeab1755bd04a9c50c25e"
+    },
+    "launch_program": {
+      "bytes": 3432,
+      "path": "eventx/tasks/launch_v3_historical_feasibility.py",
+      "sha256": "3cbe77e145752866d54e5372f2eaa816c71c29dbcb032a77184edf85b2855a8e"
+    },
+    "run_script": {
+      "bytes": 188,
+      "path": "scripts/run_v3_historical_feasibility.sh",
+      "sha256": "fd4e54a9502e03a0a07f718a67605996bc0d74c8564a1f6fb3bb17adb83c769d"
+    },
+    "runner_program": {
+      "bytes": 5758,
+      "path": "eventx/tasks/run_v3_historical_feasibility.py",
+      "sha256": "da5eff7cc5e1d72569e540f3ec0adeef61a5da8acfc947c7e2e269ab1f196556"
+    },
+    "start_script": {
+      "bytes": 207,
+      "path": "scripts/start_v3_historical_feasibility.sh",
+      "sha256": "1af6c27df5c1b9afb4d9465021499fbf083f4a5f9ddf7b1cf6b751ea70734ff9"
+    },
+    "verification_program": {
+      "bytes": 11226,
+      "path": "eventx/tasks/verify_v3_historical_feasibility_contract.py",
+      "sha256": "8f2ba8b341f2de8aee768fe04e14d142a042822736fca1a6ad790637eaa6f1c0"
+    }
+  },
+  "created_at": "2026-09-01T14:09:00Z",
+  "implementation_id": "eventx-v3-historical-feasibility-implementation-v2-20260901",
+  "labels_or_outcomes_read": false,
+  "protocol_id": "eventx-v3-historical-feasibility-20260830",
+  "scientific_decisions_changed": false,
+  "status": "frozen_label_blind_before_feasibility_completion"
+}

@@ -1,0 +1,10 @@
+{
+  "files": {
+    "data/v7/archive_sample_20261025_v03/attempt_20261025T011030Z_66d836/manifest.json": "c5536a321021e84fac3944f83c10a78e7921b6f1ac404df04b1114b084e41d61",
+    "eventx/release/v7/archive_compatibility_20261024/excluded_market_ids.json": "fd544493b8eabcb16fb49dedddb6cebdef9d130b1ecc7783f4096094a4d5505a",
+    "eventx/release/v7/archive_week_pilot_20261025/candidates_before_metadata.json": "1c4443664f86f9ae6db13e6f3b652897bf05739ada63423b51bf745e42532c6d",
+    "eventx/release/v7/archive_week_pilot_20261025/policy.json": "249a94f62ccd9aefabd8b3176b692a69045b18856d7dd9468c74209ccd4fab7c",
+    "eventx/tasks/run_v7_archive_week_pilot_20261025.py": "cebece37f3e5546350b5ab596453663c90c0a8de7db5d7272f1a0018fc8da3e1",
+    "eventx/v7/archive_ranges_20261024.py": "6f077026581b6e7ec556f46a9c52b75ec9daa67733d645873495c6df6a27689d"
+  }
+}

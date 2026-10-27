@@ -1,0 +1,64 @@
+{
+  "analysis_status": "frozen_before_v4_results",
+  "confirmatory_decision": {
+    "all_required": true,
+    "b3_vs_b0_brier_improvement_floor": -0.0005,
+    "b3_vs_b0_log_loss_improvement_minimum_nats_per_row": 0.001,
+    "bootstrap_95_lower_bound_above_zero": true,
+    "eligible_venue_point_estimate_nonnegative": true,
+    "undefined_required_input": "positive_decision_not_supported"
+  },
+  "data_source": {
+    "provider": "Lumid FinData",
+    "roster_endpoint": "/api/v1/lqt/markets",
+    "warehouse_endpoint": "/retrieve",
+    "warehouse_tables": [
+      "news.articles",
+      "provenance.runs",
+      "prediction_markets.kalshi_markets",
+      "prediction_markets.kalshi_trades",
+      "prediction_markets.polymarket_markets",
+      "prediction_markets.polymarket_trades"
+    ]
+  },
+  "design_id": "eventx-v4-confirmatory-20260902",
+  "discovery_window": "[2026-05-17T00:00:00Z, 2026-07-22T00:00:00Z)",
+  "future_holdout": {
+    "cohort": "pending_label_blind_source_feasibility_gate",
+    "consumption_receipt_before_label_summary": true,
+    "end": "pending_label_blind_source_feasibility_gate",
+    "evaluation_count": 1,
+    "start": "pending_label_blind_source_feasibility_gate"
+  },
+  "models": {
+    "b0_width": 12,
+    "b1_width": 16,
+    "b2_width": 22,
+    "b3_width": 28,
+    "epochs": 5,
+    "l2": 0.0001,
+    "learning_rate": 0.02,
+    "seeds": [11, 23, 47],
+    "type": "standardized_logistic_sgd_seed_ensemble"
+  },
+  "outcome": {
+    "grid_minutes": 5,
+    "horizon_minutes": 30,
+    "price_age_primary_max_minutes": 30,
+    "target": "absolute_forward_canonical_yes_logodds_jump",
+    "threshold": "4 * trailing_sigma_1m_240"
+  },
+  "primary_contrast": "B3_vs_B0",
+  "primary_metric": "mean_per_row_log_loss_improvement_nats",
+  "prior_study": {
+    "role": "discovery_only",
+    "status": "v3.1_completed_and_consumed"
+  },
+  "research_question": "Does point-in-time news relevance, market-relative novelty, and cross-publisher diffusion add predictive information about 30-minute absolute prediction-market repricing beyond executed-market history?",
+  "unsupported_claims": [
+    "causality",
+    "KOL_incremental_information",
+    "social_virality",
+    "universal_prediction_market_generalization"
+  ]
+}

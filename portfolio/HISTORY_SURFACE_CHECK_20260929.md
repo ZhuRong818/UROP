@@ -1,0 +1,17 @@
+# V6 Lumid history-surface check
+
+Date: 29 September 2026 (Singapore). Scope: the nine opened-development articles and 15 contracts in `data/v6/context_development_review_20260927/provider_scope.json`. All calls used EventX's configured `https://lum.id/findata` read role. They queried catalog metadata, `information_schema`, and aggregate counts for the exact 15 contracts. No holdout, resolution, price series, model fit or fresh link audit was touched.
+
+## Direct results
+
+- The 28 September catalog inventory returned HTTP 200 for the `provenance` and `prediction_markets` table lists. A bounded `information_schema.tables` query also returned HTTP 200. Neither visible list includes a dedicated cursor-transition, market-status-history or market-version table. The catalog and SQL lists are role-visible inventories, not a guarantee that provider-side logs do not exist.
+- Five 29 September catalog schema GETs and a bounded `information_schema.columns` query returned HTTP 200. `provenance.scrape_cursor` exposes only the current `last_run_id`, `last_data_date` and `last_run_at`; there is no transition/validity column. The market tables expose `ingest_ts` and source run IDs. `kalshi_markets` has `status`, `open_time` and `close_time`; `polymarket_markets` has `active`, `closed`, `archived` and `enable_order_book`. Neither table has a validity interval or version identifier in the visible schema.
+- A prereceipted aggregate query on **only the 15 scoped IDs** returned HTTP 200 and exactly one stored row per ID: 14 Polymarket conditions and one Kalshi ticker. Each has one `source_run_id` and one `ingest_ts`. The row count alone means `COUNT(DISTINCT question/status)` of one is tautological; it does **not** establish that terms or status never changed. The stored rows' first and last `ingest_ts` are identical for each ID. This can reflect a single retained snapshot or upsert semantics; it cannot provide intermediate active/suspended/closed intervals or question/YES-NO revision history.
+
+## Decision
+
+This read role cannot reconstruct the 15 contracts' full historical market status or term versions from these market tables. Keep nominal start/end screens and current flags separate from certified tradability at each article clock. A trade/order-book observation may be useful positive evidence at its observed instant, but silence does not certify inactivity or continuous status, and the aggregate probe did not test such observations.
+
+The feed side also remains unresolved: the current endpoint-wide cursor and later successor runs do not certify completed `finnhub:company-news` windows **by the five failed article clocks**, nor the four `ok` article windows or 268 zero-export contract-days. The 28 September [source request](V6_LUMID_EVIDENCE_REQUEST_20260928.md) remains ready but unsent pending a Lumid destination. Ask the provider for append-only cursor/page/window receipts and market status/term history; where history was not retained, explicitly record `unknown` and do not backfill from current rows.
+
+Evidence: `data/v6/history_surface_inventory_20260928/`, `data/v6/history_schema_probe_20260928/`, `data/v6/market_history_multiplicity_20260928/`. Each contains the prerequest receipt, exact SQL where applicable, returned report and SHA-256 manifest. The two later probes were run on 29 September UTC despite their staged filenames. Certified predictive support remains **0/8,844 contract-days**; there was no source admission, Jev run or holdout access.

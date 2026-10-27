@@ -1,0 +1,23 @@
+{
+  "reviewer_id": null,
+  "reviewer_role": null,
+  "independent_of_method_development_and_selection": null,
+  "project_relationship": null,
+  "prior_exposure": null,
+  "conflicts": null,
+  "manuscript_reviewed": "MARKET_NEWS_PAPER_A_DRAFT_20261010_REV2.md",
+  "review_date": null,
+  "overall_assessment": null,
+  "fatal_validity_concerns": [],
+  "required_revisions": [],
+  "optional_extensions": [],
+  "claim_scope_assessment": null,
+  "cohort_and_clock_assessment": null,
+  "chronology_and_selection_assessment": null,
+  "statistical_assumptions_assessment": null,
+  "novelty_and_related_work_assessment": null,
+  "implementation_reviewed": [],
+  "source_rights_assessment": null,
+  "suggested_venue": null,
+  "ready_for_submission": null
+}

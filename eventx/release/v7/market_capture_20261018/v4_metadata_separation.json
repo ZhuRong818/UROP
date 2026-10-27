@@ -1,0 +1,88 @@
+{
+  "protected_count": 470,
+  "protected_macro_questions": [
+    {
+      "market_id": "0x35597e4e103ac82e2fa2e545c1d3166d3ab46d330b6ebb848cbf5da37dea23dd",
+      "question": "No change in Bank of Japan\u2019s interest rates after the October 2026 meeting?"
+    },
+    {
+      "market_id": "0x4ec6fcb43fe1a32163c7da09d54a99ab9bf6abdc6fd49939d7ad67d696a3248b",
+      "question": "Will 9 Fed rate cuts happen in 2026?"
+    },
+    {
+      "market_id": "0x5e082f0b57f47a29044aa35b4c5658393122e659d5feae521c06b57cdd7f905c",
+      "question": "Will 1 Fed rate cut happen in 2026?"
+    },
+    {
+      "market_id": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
+      "question": "Will there be no change in Fed interest rates after the December 2026 meeting?"
+    },
+    {
+      "market_id": "0x73d8a8208d23a74937d114a713d6a56cd4161a1068056c52ac74c8419c99da7c",
+      "question": "Fed Rate Hike by September 2026 Meeting?"
+    },
+    {
+      "market_id": "0x757c144993b3cb831e04c42bfcff8c18864c7da4f4688a5939d2f62e031cbc87",
+      "question": "Will 10 Fed rate cuts happen in 2026?"
+    },
+    {
+      "market_id": "0x80b3af88cb991980e8da1ce86b9794a0957f96ec98c29319dd7ba65e9744d82b",
+      "question": "Fed rate hike in 2026?"
+    },
+    {
+      "market_id": "0x80dd2c6c6b4d5edeb34097da5b8332a56dd593b7c4d110abe68cecd0f18d24d3",
+      "question": "Bank of England decreases interest rates by 25 bps after November 2026 meeting?"
+    },
+    {
+      "market_id": "0x9fee56ff658a4063a05c0d372c2854c4c5594ccfd899fc3922a78e61c05a72e4",
+      "question": "Bank of England increases interest rates by 25 bps after November 2026 meeting?"
+    },
+    {
+      "market_id": "0xa6558a226e216765a4dc195ca8fbf8e1f74526fe0d0e3e77efb36a733f9ff42e",
+      "question": "Bank of England decreases interest rates by 50+ bps after November 2026 meeting?"
+    },
+    {
+      "market_id": "0xaece8d6062d3e3eb9845b32441a4ab06eb2ef332c0228bc6a36add450647c7c4",
+      "question": "Will 4 Fed rate cuts happen in 2026?"
+    },
+    {
+      "market_id": "0xd4e77ba6f29fc093509d24f508631abd445ecf506bbdc9c4c80e60256a318527",
+      "question": "Will no Fed rate cuts happen in 2026?"
+    },
+    {
+      "market_id": "0xe0d9f508a249e0070db06eb7d1e1fb17eb23c963f6fb722c4c3f81e23240c1cd",
+      "question": "Will 2 Fed rate cuts happen in 2026?"
+    },
+    {
+      "market_id": "0xe5f6842a69376f17c0b6b2b8181717cb266b3414bb6ddc070af1c1f7b40c8cb0",
+      "question": "No change in Bank of England\u2019s interest rates after November 2026 meeting?"
+    },
+    {
+      "market_id": "0xe7bac65e95d998e489309619a6093d82082a33f766acd5eb55fd3179e43d2145",
+      "question": "Bank of Japan increases interest rates by 50+ bps after the October 2026 meeting?"
+    },
+    {
+      "market_id": "0xf175a9b333cab7cf916af8055abd33a264fddda2d3942ec909bca6810b591d70",
+      "question": "Will Brazil\u2019s Annual Inflation in 2026 be between 4.00% and 4.49%?"
+    },
+    {
+      "market_id": "0xf17ad24eb4ad57926495b114149c765b9b95bc286eadc91cbbfa901ceb10d0b8",
+      "question": "Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?"
+    },
+    {
+      "market_id": "0xfbc4707e4c25e46f4390703aa726a7c77f2a9c3deee463d6e982fa612a3f86e8",
+      "question": "Bank of Japan increases interest rates by 25 bps after the October 2026 meeting?"
+    },
+    {
+      "market_id": "0xff5c8b2413a9ceef8a03ad3558423bf6bd459c1afaa05578643289d53d3bbca0",
+      "question": "Bank of England increases interest rates by 50+ bps after November 2026 meeting?"
+    },
+    {
+      "market_id": "0xffa0accb74987c0dc33a70eb3780c1da160206bcfb3ef5d16c1667bc5c459c78",
+      "question": "Will 12 or more Fed rate cuts happen in 2026?"
+    }
+  ],
+  "protected_payloads_read": false,
+  "remaining_dependency": "Different predicates still share macro/calendar shocks. This pilot is not a statistically independent confirmation.",
+  "scope": "all470 exact IDs excluded; all Fed decision contracts quarantined; only three direct US measurement predicates admitted"
+}

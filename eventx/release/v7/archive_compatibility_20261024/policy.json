@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-24T14:43:15.642565+00:00",
+  "date_rule": "April sample precedes v1 development and all protected evaluation periods",
+  "excluded_market_count": 1231,
+  "exclusion": "Conservative entire-market union of v1,v3.1 cohort and470V4contracts",
+  "hours": [
+    "2026-04-21T12",
+    "2026-04-21T13"
+  ],
+  "intended_phase_two_markets": 5,
+  "limitations": "Metadata/status at historical decision time unknown; file presence not completeness; timestamps may tie",
+  "max_bytes_per_attempt": 100663296,
+  "metadata_columns": [
+    "market",
+    "asset_id",
+    "event_type",
+    "timestamp_received",
+    "timestamp"
+  ],
+  "models_scored": false,
+  "phase_one": "Footer and identity/event-type columns only; no price/size/book columns",
+  "phase_two": "Only row groups whose actual identity column contains zero excluded markets, then freeze allowed market IDs before economic columns",
+  "pyarrow_version": "26.0.0",
+  "scan_limit_groups_per_hour": 40,
+  "scope": "Bounded external archive compatibility audit; no model fitting or protected evaluation",
+  "select_limit_groups_per_hour": 2,
+  "selection": "First row groups in sorted file order without excluded IDs; structural compatibility sample, not representative or selected by prediction outcomes",
+  "source": "https://r2v2.pmxt.dev/",
+  "target_labels_built": false
+}

@@ -1,0 +1,39 @@
+{
+  "presentation_id": "pres_c5b119b57ca8f9a86972347f16d9f348",
+  "deck_id": "feec53a53350",
+  "theme_id": "zurich-light",
+  "slides": [
+    {
+      "title": "Methodology: a controlled forecast comparison",
+      "subtitle": "Predict 30-minute repricing from information available at each decision",
+      "slidenum": 13,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/e4821dd11a6e.png",
+      "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+    },
+    {
+      "title": "Where our methodological contribution lies",
+      "subtitle": "Contract-specific information evaluation and a traceable evidence-to-forecast funnel",
+      "slidenum": 14,
+      "layout": "quadrant_grid",
+      "image_url": "https://slidesgpt.com/media/a6e245880e5f.png",
+      "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+    },
+    {
+      "title": "Latest market tuning: another 0.54% lower loss",
+      "subtitle": "112,616 matched fold-5 rows; chosen using fold 4. Opened development.",
+      "slidenum": 15,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/f7c3a8e24de0.png",
+      "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+    },
+    {
+      "title": "Bottlenecks and the next research step",
+      "subtitle": "Development gains established; current-period confirmation and usable news remain open",
+      "slidenum": 16,
+      "layout": "title_and_body",
+      "image_url": "https://slidesgpt.com/media/9f8765ddb95a.png",
+      "presentation_view_url": "https://slidesgpt.com/view/feec53a53350"
+    }
+  ]
+}

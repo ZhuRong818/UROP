@@ -1,0 +1,18 @@
+{
+  "activation": "NOT_CREATED. Separate receipt must bind readiness/model/cohort/protocol/code and exact first full UTC day plus seven-day schedule. Fresh source warmup mandatory.",
+  "adjudication": "Capture endpoint-source prefix at endpoint+120s; scheduling tolerance30s, no new endpoint information after endpoint is admissible. Late/missing receipt yields unknown endpoint. No online labels.",
+  "cohort_changed": false,
+  "emission": "At grid use data available by grid; decision fsync must complete by grid+30s. Commit binds the durable decision and source prefix. Late/uncommitted records abstain; no probability backfill.",
+  "frozen_at": "2026-10-26T11:25:42.936678+00:00",
+  "input_contract": "source_time_quote14_clock_bound250ms_v3_requires_new_fit",
+  "models_refitted": false,
+  "online_clock_validation": "Reject invalid native selected SNTP packets before applying unchanged V03 interval rule; raw packets retained",
+  "opening": "Only after last endpoint+120s+30s operational grace, verify stopped source/emitter, code/model/source chains and replay predictions. Write exclusive consumption receipt before endpoint construction/scoring. Any post-receipt failure remains consumed.",
+  "parent_protocol": "eventx/release/v7/source_time_study_20261026_v03/protocol.json",
+  "prospective_test_started": false,
+  "rehearsal": "Same40min/twoIDs/30minwarmup; no model calls or labels. >=2 ready decisions across >=1 market; schema/scope errors or abnormal completion fail.",
+  "restart": "Emitter resumes chain without reissuing keys; missed decisions stay missed. Source intentionally refuses implicit restart; source failure requires explicit versioned recovery review.",
+  "target_changed": false,
+  "trading": false,
+  "version": "forecast_runtime_20261026_v01"
+}

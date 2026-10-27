@@ -1,0 +1,116 @@
+{
+  "presentation_id": "pres_c5b119b57ca8f9a86972347f16d9f348",
+  "theme_id": "zurich-light",
+  "slides": [
+    {
+      "title": "Methodology: a controlled forecast comparison",
+      "subtitle": "Predict 30-minute repricing from information available at each decision",
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "body": [
+        {
+          "point": "Market forecast",
+          "description": "Price, momentum, volatility and trade activity enter logistic and nonlinear models.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Incremental news",
+          "description": "Compare market → exposure → timing → content on identical market-time rows.",
+          "icon": "fa-newspaper",
+          "value": 0
+        },
+        {
+          "point": "Forward evaluation",
+          "description": "Earlier training, later scoring; 30-minute purge. Log loss, Brier and average precision.",
+          "icon": "fa-clock",
+          "value": 0
+        }
+      ],
+      "image_caption": "Research team examining probability forecasts and chronological evidence"
+    },
+    {
+      "title": "Where our methodological contribution lies",
+      "subtitle": "Contract-specific information evaluation and a traceable evidence-to-forecast funnel",
+      "layout": "quadrant_grid",
+      "body": [
+        {
+          "point": "Strong control",
+          "description": "News must add value beyond nonlinear market history and exposure controls.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Exact predicate",
+          "description": "Bind actor, action, threshold and period; quote evidence and abstain.",
+          "icon": "fa-link",
+          "value": 0
+        },
+        {
+          "point": "Decision clock",
+          "description": "Use conservative system availability, rather than publication time alone.",
+          "icon": "fa-clock",
+          "value": 0
+        },
+        {
+          "point": "Coverage funnel",
+          "description": "Track articles → signed evidence → episodes → usable forecast decisions.",
+          "icon": "fa-filter",
+          "value": 0
+        }
+      ],
+      "image_caption": "Researchers tracing documented evidence through transparent evaluation process"
+    },
+    {
+      "title": "Latest market tuning: another 0.54% lower loss",
+      "subtitle": "112,616 matched fold-5 rows; chosen using fold 4. Opened development.",
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "body": [
+        {
+          "point": "Earlier tree",
+          "description": "Log loss 0.348884. Brier 0.110880. Average precision 0.327323.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Previous booster",
+          "description": "Log loss 0.344816. Brier 0.109677. Average precision 0.337805.",
+          "icon": "fa-layer-group",
+          "value": 0
+        },
+        {
+          "point": "Condition-aware booster",
+          "description": "Log loss 0.342949. Brier 0.109060. Average precision 0.346249. 1.70% below earlier tree.",
+          "icon": "fa-check",
+          "value": 0
+        }
+      ],
+      "image_caption": "Analyst comparing three market forecasting models on monitor"
+    },
+    {
+      "title": "Bottlenecks and the next research step",
+      "subtitle": "Development gains established; current-period confirmation and usable news remain open",
+      "layout": "title_and_body",
+      "body": [
+        {
+          "point": "Market generalization",
+          "description": "Latest tuning uses May–July data. October performance remains unmeasured; freeze the selected model before a new evaluation.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Evidence coverage",
+          "description": "Repaired extractor retains 11 links from two articles; zero eligible forecast observations. Conservative binding alone cannot produce a news test.",
+          "icon": "fa-filter",
+          "value": 0
+        },
+        {
+          "point": "Next steps",
+          "description": "Prioritize current-period market validation and feature ablations. Repair timely evidence coverage; retain the original V4 protocol.",
+          "icon": "fa-forward",
+          "value": 0
+        }
+      ],
+      "image_caption": "Research team planning next evaluation and evidence collection"
+    }
+  ]
+}

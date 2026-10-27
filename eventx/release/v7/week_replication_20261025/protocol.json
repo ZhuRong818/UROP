@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-25T13:04:42.275641+00:00",
+  "objective": "Fixed-model temporal replication with outcome-coverage diagnosis. No new fit or model selection.",
+  "dates": [
+    "2026-05-13",
+    "2026-05-14",
+    "2026-05-15",
+    "2026-05-16",
+    "2026-05-17",
+    "2026-05-18",
+    "2026-05-19"
+  ],
+  "cohort": "All existing development50 and training-excluded10 IDs, including expired and zero-coverage contracts. No new identities; excluded10 has already been evaluated on May10\u201312, so this is later-time replication, not a new-family discovery claim.",
+  "target": "Endpoint midpoint differs after30minutes by>1e-12;unchanged18features and fresh endpoint gates. Not direction, magnitude, resolution, material movement or news value.",
+  "models": [
+    "global_rate",
+    "market_rate",
+    "activity_logit",
+    "row_hgb7",
+    "legacy_hgb7"
+  ],
+  "selected": "row_hgb7",
+  "model_freeze": "Reuse all parameters from May7\u20139 refit plus original April21\u201324 legacy. No calibration, refitting, selection, family-weight blend, threshold or eligibility adjustment.",
+  "source": "168hour files;60fixedIDs;2workers;32MiB and8rowgroups per attempt. One retry only for enumerated transport errors in separate attempt directory. Every failed receipt retained. Final failures missing;no retries after capture freeze.",
+  "retry_errors": [
+    "ReadTimeout",
+    "ConnectTimeout",
+    "ReadError",
+    "RemoteProtocolError",
+    "ConnectError"
+  ],
+  "planned_max_completed_range_bytes": 11274289152,
+  "primary": "Row-weighted log loss of selected vs activity_logit and legacy_hgb7, separately development50/training_excluded10. Global/market rates additionalcontrols. All forecasts matched within each observed population;no testwinnerselection.",
+  "secondary": "Brier,AP,AUC,equal-family LL;perday/percontract;strict continuous path;fixed nonoverlap30m grid;fixed calibration bins. Report all,not whichever wins.",
+  "coverage": "Save every current-valid forecast before outcome filtering. Null outcomes remain null. All115920scheduled grids retained. Current-invalid decisions abstain. Conditional scores exclude unknown endpoints.",
+  "missing_bounds": "For each issued forecast missing a label, take min/max of baseline-minus-selected log loss over y=0,1, sum with observed contributions, divide by all issued rows. Deterministic bounds conditional on source/target validity,not confidence intervals,not assumptions about missing-at-random.",
+  "interpretation": "Seven historical dates,dependent observations,convenience cohort,current metadata,unverified historical status/tradability. No significance,causalbreadth effect,prospective forecast,independentnewfamily orautomaticpromotionclaim.",
+  "integrity": "No older quote evaluation reused for tuning;consumed OOT/V3.1 and V4 protected. Excluded1231IDs filtered before retainedanalysis;pre-holdout mixed chunks may be decoded. Evaluation exactly once aftersource freeze."
+}

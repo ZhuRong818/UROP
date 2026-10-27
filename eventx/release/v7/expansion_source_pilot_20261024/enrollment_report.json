@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-24T07:26:26.859353+00:00",
+  "decision_counts": {
+    "existing14_candidate_family_retained_in_original_cohort": 14,
+    "new_source_candidate_with_early_terminal_risk": 1,
+    "new_source_candidate_with_measure_definition_review_pending": 1,
+    "outside_prespecified_US_longer_lived_rule_candidates": 99,
+    "own_release_terminal; other_release_context_branch_not_enrolled": 89
+  },
+  "existing_cohort_changed": false,
+  "metadata_rows": 204,
+  "new_source_candidates": 2,
+  "pilot_hours": 6,
+  "predictive_admissions": 0,
+  "prices_or_outcomes_used_for_selection": false,
+  "v4_overlap": 0
+}

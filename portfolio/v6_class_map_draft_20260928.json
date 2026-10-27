@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "opened_development_draft_after_labels_seen_not_frozen",
+  "input": "data/v6/relaxed_adjudication_20260927/development_labels_102.jsonl",
+  "input_sha256": "0db756abf363918fd0cc7258f3e4e973f92ba5c880431ca9d30810f92d8b426b",
+  "primary_original_rubric_unchanged": true,
+  "default_bucket": "needs_review",
+  "rules": [
+    {
+      "relaxed_applicability": "material_predicate_evidence",
+      "relaxed_relation": "same_episode_or_series",
+      "bucket": "direct_hypothesis",
+      "expected_opened_pairs": 10
+    },
+    {
+      "relaxed_applicability": "material_predicate_evidence",
+      "relaxed_relation": "shared_mechanism_context",
+      "bucket": "material_context_boundary",
+      "expected_opened_pairs": 16
+    },
+    {
+      "relaxed_applicability": "shared_context_only",
+      "relaxed_relation": "shared_mechanism_context",
+      "bucket": "context_hypothesis",
+      "expected_opened_pairs": 20
+    },
+    {
+      "relaxed_applicability": "shared_context_only",
+      "relaxed_relation": "same_episode_or_series",
+      "bucket": "episode_context_boundary",
+      "expected_opened_pairs": 1
+    },
+    {
+      "relaxed_applicability": "not_applicable",
+      "relaxed_relation": "generic_topic_only",
+      "bucket": "excluded_hypothesis",
+      "expected_opened_pairs": 12
+    },
+    {
+      "relaxed_applicability": "not_applicable",
+      "relaxed_relation": "incompatible",
+      "bucket": "excluded_hypothesis",
+      "expected_opened_pairs": 43
+    }
+  ],
+  "never_use_as_source_or_resolution_proof": [
+    "directional_evidence",
+    "retrospective_development_use"
+  ],
+  "predictive_admissions": 0
+}

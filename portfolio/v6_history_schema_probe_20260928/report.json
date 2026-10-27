@@ -1,0 +1,1078 @@
+{
+  "base_url": "https://lum.id/findata",
+  "catalog": {
+    "prediction_markets.activity_events": {
+      "response_sha256": "7b70eeb866157e8e8036e4a6929ffa97ab71430352624109b42c70ff1e98ce9a",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "description": "Every queryable column of prediction_markets.activity_events \u2014 what a SELECT returns, including server-stamped provenance columns and generated columns. Not an ingest/write model.",
+        "properties": {
+          "amount": {
+            "nullable": true,
+            "type": "number"
+          },
+          "block_number": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "condition_id": {
+            "nullable": true,
+            "type": "string"
+          },
+          "event_type": {
+            "type": "string"
+          },
+          "index_set": {
+            "nullable": true,
+            "type": "string"
+          },
+          "ingest_ts": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "neg_risk_market_id": {
+            "nullable": true,
+            "type": "string"
+          },
+          "raw": {
+            "nullable": true,
+            "type": [
+              "object",
+              "array",
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "source": {
+            "type": "string"
+          },
+          "source_endpoint": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "ts": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "tx_hash": {
+            "nullable": true,
+            "type": "string"
+          },
+          "venue": {
+            "type": "string"
+          },
+          "wallet": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "venue",
+          "wallet",
+          "event_type",
+          "ts",
+          "source",
+          "source_endpoint",
+          "source_run_id",
+          "ingest_ts"
+        ],
+        "title": "prediction_markets_activity_events",
+        "type": "object"
+      },
+      "status": 200
+    },
+    "prediction_markets.kalshi_markets": {
+      "response_sha256": "1d781f4e5779d406e3ea398ddf1c50ad358f0fb6b70c19065b374c960f851e24",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "description": "Every queryable column of prediction_markets.kalshi_markets \u2014 what a SELECT returns, including server-stamped provenance columns and generated columns. Not an ingest/write model.",
+        "properties": {
+          "close_time": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "created_time": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "event_ticker": {
+            "nullable": true,
+            "type": "string"
+          },
+          "expiration_time": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "ingest_ts": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "last_price": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "market_type": {
+            "nullable": true,
+            "type": "string"
+          },
+          "no_ask": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "no_bid": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "no_sub_title": {
+            "nullable": true,
+            "type": "string"
+          },
+          "open_interest": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "open_time": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "raw": {
+            "nullable": true,
+            "type": [
+              "object",
+              "array",
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "result": {
+            "nullable": true,
+            "type": "string"
+          },
+          "settlement_ts": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "source_endpoint": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "status": {
+            "nullable": true,
+            "type": "string"
+          },
+          "ticker": {
+            "type": "string"
+          },
+          "title": {
+            "nullable": true,
+            "type": "string"
+          },
+          "volume": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "volume_24h": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "yes_ask": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "yes_bid": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "yes_sub_title": {
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "ticker",
+          "source",
+          "source_endpoint",
+          "source_run_id",
+          "ingest_ts"
+        ],
+        "title": "prediction_markets_kalshi_markets",
+        "type": "object"
+      },
+      "status": 200
+    },
+    "prediction_markets.polymarket_markets": {
+      "response_sha256": "0a29f6036875c9fed3fbb94a0c546db69470a6a0494690972f72a44624a7f2e5",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "description": "Every queryable column of prediction_markets.polymarket_markets \u2014 what a SELECT returns, including server-stamped provenance columns and generated columns. Not an ingest/write model.",
+        "properties": {
+          "active": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "archived": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "clob_token_ids": {
+            "nullable": true,
+            "type": [
+              "object",
+              "array",
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "closed": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "closed_time": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "condition_id": {
+            "nullable": true,
+            "type": "string"
+          },
+          "enable_order_book": {
+            "nullable": true,
+            "type": "boolean"
+          },
+          "end_date": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "ingest_ts": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "liquidity_num": {
+            "nullable": true,
+            "type": "number"
+          },
+          "market_maker_address": {
+            "nullable": true,
+            "type": "string"
+          },
+          "outcome_prices": {
+            "nullable": true,
+            "type": [
+              "object",
+              "array",
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "outcomes": {
+            "nullable": true,
+            "type": [
+              "object",
+              "array",
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "question": {
+            "nullable": true,
+            "type": "string"
+          },
+          "raw": {
+            "nullable": true,
+            "type": [
+              "object",
+              "array",
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "slug": {
+            "nullable": true,
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "source_endpoint": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "start_date": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "volume_num": {
+            "nullable": true,
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "source_endpoint",
+          "source_run_id",
+          "ingest_ts"
+        ],
+        "title": "prediction_markets_polymarket_markets",
+        "type": "object"
+      },
+      "status": 200
+    },
+    "provenance.runs": {
+      "response_sha256": "cddcb2afd577145d3001c6ea5acd3d78e60238282640d71d036673f384a1dd1f",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "description": "Every queryable column of provenance.runs \u2014 what a SELECT returns, including server-stamped provenance columns and generated columns. Not an ingest/write model.",
+        "properties": {
+          "args": {
+            "nullable": true,
+            "type": [
+              "object",
+              "array",
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "credential_label": {
+            "nullable": true,
+            "type": "string"
+          },
+          "ended_at": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "endpoint_id": {
+            "type": "string"
+          },
+          "error_text": {
+            "nullable": true,
+            "type": "string"
+          },
+          "notes": {
+            "nullable": true,
+            "type": "string"
+          },
+          "response_schema_hash": {
+            "nullable": true,
+            "type": "string"
+          },
+          "rows_failed": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "rows_inserted": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "rows_updated": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "started_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "submitted_by": {
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "run_id",
+          "endpoint_id",
+          "started_at",
+          "status"
+        ],
+        "title": "provenance_runs",
+        "type": "object"
+      },
+      "status": 200
+    },
+    "provenance.scrape_cursor": {
+      "response_sha256": "1b9c7ca61a5489f2e7a63230c29d9f0eed3ae33d5e94b07bf3c6fa1ddea99361",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "description": "Every queryable column of provenance.scrape_cursor \u2014 what a SELECT returns, including server-stamped provenance columns and generated columns. Not an ingest/write model.",
+        "properties": {
+          "endpoint_id": {
+            "type": "string"
+          },
+          "last_data_date": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "last_run_at": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "last_run_id": {
+            "nullable": true,
+            "type": "string"
+          },
+          "next_action": {
+            "nullable": true,
+            "type": "string"
+          },
+          "retry_count": {
+            "nullable": true,
+            "type": "integer"
+          },
+          "scope_key": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "endpoint_id",
+          "scope_key"
+        ],
+        "title": "provenance_scrape_cursor",
+        "type": "object"
+      },
+      "status": 200
+    }
+  },
+  "historical_coverage_certified": false,
+  "information_schema": {
+    "materialized_status": 200,
+    "retrieve_status": 200,
+    "rows": [
+      {
+        "column_name": "venue",
+        "data_type": "text",
+        "ordinal_position": 1,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "wallet",
+        "data_type": "text",
+        "ordinal_position": 2,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "event_type",
+        "data_type": "text",
+        "ordinal_position": 3,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "condition_id",
+        "data_type": "text",
+        "ordinal_position": 4,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "neg_risk_market_id",
+        "data_type": "text",
+        "ordinal_position": 5,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "index_set",
+        "data_type": "text",
+        "ordinal_position": 6,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "amount",
+        "data_type": "double precision",
+        "ordinal_position": 7,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "tx_hash",
+        "data_type": "text",
+        "ordinal_position": 8,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "block_number",
+        "data_type": "bigint",
+        "ordinal_position": 9,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "ts",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 10,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source",
+        "data_type": "text",
+        "ordinal_position": 11,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source_endpoint",
+        "data_type": "text",
+        "ordinal_position": 12,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source_run_id",
+        "data_type": "uuid",
+        "ordinal_position": 13,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "ingest_ts",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 14,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "raw",
+        "data_type": "jsonb",
+        "ordinal_position": 15,
+        "table_name": "activity_events",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "ticker",
+        "data_type": "text",
+        "ordinal_position": 1,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "event_ticker",
+        "data_type": "text",
+        "ordinal_position": 2,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "market_type",
+        "data_type": "text",
+        "ordinal_position": 3,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "title",
+        "data_type": "text",
+        "ordinal_position": 4,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "status",
+        "data_type": "text",
+        "ordinal_position": 5,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "result",
+        "data_type": "text",
+        "ordinal_position": 6,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "yes_sub_title",
+        "data_type": "text",
+        "ordinal_position": 7,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "no_sub_title",
+        "data_type": "text",
+        "ordinal_position": 8,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "yes_bid",
+        "data_type": "integer",
+        "ordinal_position": 9,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "yes_ask",
+        "data_type": "integer",
+        "ordinal_position": 10,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "no_bid",
+        "data_type": "integer",
+        "ordinal_position": 11,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "no_ask",
+        "data_type": "integer",
+        "ordinal_position": 12,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "last_price",
+        "data_type": "integer",
+        "ordinal_position": 13,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "volume",
+        "data_type": "bigint",
+        "ordinal_position": 14,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "volume_24h",
+        "data_type": "bigint",
+        "ordinal_position": 15,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "open_interest",
+        "data_type": "bigint",
+        "ordinal_position": 16,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "open_time",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 17,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "close_time",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 18,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "created_time",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 19,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "expiration_time",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 20,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "settlement_ts",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 21,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source",
+        "data_type": "text",
+        "ordinal_position": 22,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source_endpoint",
+        "data_type": "text",
+        "ordinal_position": 23,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source_run_id",
+        "data_type": "uuid",
+        "ordinal_position": 24,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "ingest_ts",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 25,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "raw",
+        "data_type": "jsonb",
+        "ordinal_position": 26,
+        "table_name": "kalshi_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "id",
+        "data_type": "text",
+        "ordinal_position": 1,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "condition_id",
+        "data_type": "text",
+        "ordinal_position": 2,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "question",
+        "data_type": "text",
+        "ordinal_position": 3,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "slug",
+        "data_type": "text",
+        "ordinal_position": 4,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "outcomes",
+        "data_type": "jsonb",
+        "ordinal_position": 5,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "outcome_prices",
+        "data_type": "jsonb",
+        "ordinal_position": 6,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "clob_token_ids",
+        "data_type": "jsonb",
+        "ordinal_position": 7,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "volume_num",
+        "data_type": "double precision",
+        "ordinal_position": 8,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "liquidity_num",
+        "data_type": "double precision",
+        "ordinal_position": 9,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "start_date",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 10,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "end_date",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 11,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "closed_time",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 12,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "active",
+        "data_type": "boolean",
+        "ordinal_position": 13,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "closed",
+        "data_type": "boolean",
+        "ordinal_position": 14,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "archived",
+        "data_type": "boolean",
+        "ordinal_position": 15,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "enable_order_book",
+        "data_type": "boolean",
+        "ordinal_position": 16,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "market_maker_address",
+        "data_type": "text",
+        "ordinal_position": 17,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source",
+        "data_type": "text",
+        "ordinal_position": 18,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source_endpoint",
+        "data_type": "text",
+        "ordinal_position": 19,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "source_run_id",
+        "data_type": "uuid",
+        "ordinal_position": 20,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "ingest_ts",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 21,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "raw",
+        "data_type": "jsonb",
+        "ordinal_position": 22,
+        "table_name": "polymarket_markets",
+        "table_schema": "prediction_markets"
+      },
+      {
+        "column_name": "run_id",
+        "data_type": "uuid",
+        "ordinal_position": 1,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "endpoint_id",
+        "data_type": "text",
+        "ordinal_position": 2,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "credential_label",
+        "data_type": "text",
+        "ordinal_position": 3,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "started_at",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 4,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "ended_at",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 5,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "status",
+        "data_type": "text",
+        "ordinal_position": 6,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "args",
+        "data_type": "jsonb",
+        "ordinal_position": 7,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "rows_inserted",
+        "data_type": "bigint",
+        "ordinal_position": 8,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "rows_updated",
+        "data_type": "bigint",
+        "ordinal_position": 9,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "rows_failed",
+        "data_type": "bigint",
+        "ordinal_position": 10,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "response_schema_hash",
+        "data_type": "text",
+        "ordinal_position": 11,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "error_text",
+        "data_type": "text",
+        "ordinal_position": 12,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "notes",
+        "data_type": "text",
+        "ordinal_position": 13,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "submitted_by",
+        "data_type": "text",
+        "ordinal_position": 14,
+        "table_name": "runs",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "endpoint_id",
+        "data_type": "text",
+        "ordinal_position": 1,
+        "table_name": "scrape_cursor",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "scope_key",
+        "data_type": "text",
+        "ordinal_position": 2,
+        "table_name": "scrape_cursor",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "last_data_date",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 3,
+        "table_name": "scrape_cursor",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "last_run_id",
+        "data_type": "uuid",
+        "ordinal_position": 4,
+        "table_name": "scrape_cursor",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "last_run_at",
+        "data_type": "timestamp with time zone",
+        "ordinal_position": 5,
+        "table_name": "scrape_cursor",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "next_action",
+        "data_type": "text",
+        "ordinal_position": 6,
+        "table_name": "scrape_cursor",
+        "table_schema": "provenance"
+      },
+      {
+        "column_name": "retry_count",
+        "data_type": "integer",
+        "ordinal_position": 7,
+        "table_name": "scrape_cursor",
+        "table_schema": "provenance"
+      }
+    ]
+  },
+  "predictive_admissions": 0,
+  "queried_at_utc": "2026-09-29T02:08:22.224045+00:00"
+}

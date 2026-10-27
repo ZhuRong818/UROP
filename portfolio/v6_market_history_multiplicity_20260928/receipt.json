@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-09-29T02:09:47.889984+00:00",
+  "provider_scope_sha256": "a7f29e06ce2199ad7c75b33f4f5a1812fb42970994f2ea6beddf0c82b40b5a13",
+  "queries_sha256": {
+    "kalshi": "744ffdcc9ed938244a3e002f82d68604da5a41083f5a3a4c0faa6355df021be3",
+    "polymarket": "a1dcfb9f7423d42c76785d7052458bf6e4922640150b80336495b8547f106d2a"
+  },
+  "scope": "aggregate only, exact 15 opened-development contracts; no article, price, resolution, protected data or model fitting",
+  "script_sha256": "4929cb24e8cd187a121559f616245b134305a2a8aeba8d976f8f5b7ab62783d0",
+  "written_before_requests": true
+}

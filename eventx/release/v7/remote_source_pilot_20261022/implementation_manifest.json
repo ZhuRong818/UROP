@@ -1,0 +1,19 @@
+{
+  "locked_files": {
+    "eventx/release/v7/remote_source_pilot_20261022/spec.json": "2a1002b9af387c29056a4841873585af0c97372baf9266b44bf7e9cbd905452b",
+    "eventx/release/v7/remote_source_pilot_20261022/evidence_link_plan.jsonl": "d53b8f899049e8c55115b93448abc06c316d5b5f9efd7ff48776a3cb7b40ad50",
+    "eventx/release/v7/remote_source_pilot_20261022/sample.jsonl": "eaaa4892a96ba6600ab96eecf3171251e2fff225c4770e984e62973b33373173",
+    "eventx/release/v7/remote_source_pilot_20261022/episode_reservation.json": "0f63f6ca9531624c724a9bebc0ac82eedbd7f90e4f39c73e0915a7d8a674116e",
+    "eventx/release/v7/remote_source_pilot_20261022/prospective_candidates.jsonl": "7a2429f008e507cb6d4e7e19c44519b493edb7d30d2433b92e0e8f3c6e3e3c30",
+    "eventx/settings.py": "44b931742f83afe6ee4c60021d4a6285d8b6e62d6de7fe8bb8ab20afbd5a5d12",
+    "eventx/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eventx/tasks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eventx/v7/source_request_scheduler_v02.py": "1a941743d134e2661cd93dd686979edc3ff294c5730fae1040956897b90d6b6b",
+    "eventx/v7/remote_source_support_20261022.py": "117fb6b83ec6264d1da628348d801bcf576b666dcbaa9e2fdb4190cc36d60e75",
+    "eventx/tasks/collect_v7_remote_source_pilot_20261022.py": "b859c5145ed778fd828745692564ff7dcecd9abfba1b964e6080f275e2881360",
+    "eventx/tasks/audit_v7_remote_source_pilot_20261022.py": "619f57bc19df8216c3c32f76fe155455a8686c374cac9389cc22f74515e22ccf",
+    "eventx/release/v7/market_capture_20261018/protected_ids.json": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b",
+    "data/v5/market_condition_tuning_20261012/selected_model.joblib": "d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c"
+  },
+  "purpose": "Portable source rehearsal; distinct runtime freeze; original files unchanged"
+}

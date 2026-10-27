@@ -1,0 +1,84 @@
+{
+  "presentation_id": "pres_c5b119b57ca8f9a86972347f16d9f348",
+  "theme_id": "zurich-light",
+  "slides": [
+    {
+      "title": "How our selected market model works",
+      "subtitle": "Histogram gradient boosting predicts a large movement within 30 minutes",
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "body": [
+        {
+          "point": "Trailing inputs",
+          "description": "13 market features plus nine condition features. Price, momentum, volatility, activity and trade age.",
+          "icon": "fa-history",
+          "value": 0
+        },
+        {
+          "point": "Boosting mechanism",
+          "description": "600 iterations add small trees to reduce log loss. At most seven leaves per tree capture nonlinear interactions.",
+          "icon": "fa-tree",
+          "value": 0
+        },
+        {
+          "point": "Training and output",
+          "description": "120,000 earlier observations. Fold 4 selects the configuration. Output: movement probability at each five-minute decision.",
+          "icon": "fa-chart-line",
+          "value": 0
+        }
+      ],
+      "image_caption": "Researcher examining market model features and probability forecasts"
+    },
+    {
+      "title": "Measured market and news performance",
+      "subtitle": "5,388 identical fold-5 rows. Lower loss and Brier are better. Higher AP is better.",
+      "layout": "data_table",
+      "body": [
+        {
+          "point": "Market-only booster",
+          "description": "Log loss: 0.243727; Brier: 0.078230; Average precision: 0.355478",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Market + news timing",
+          "description": "Log loss: 0.244576; Brier: 0.078265; Average precision: 0.350656",
+          "icon": "fa-newspaper",
+          "value": 0
+        },
+        {
+          "point": "News minus market",
+          "description": "Log loss: +0.000849; Brier: +0.000035; Average precision: −0.004821",
+          "icon": "fa-balance-scale",
+          "value": 0
+        }
+      ],
+      "image_caption": "Analyst reviewing matched forecasting metric comparison on screen"
+    },
+    {
+      "title": "Bottlenecks and the next research step",
+      "subtitle": "Stronger market forecasts and broader context coverage guide the next experiment",
+      "layout": "title_and_body",
+      "body": [
+        {
+          "point": "Market generalization",
+          "description": "Historical development gains remain unconfirmed under October conditions. Next: calibration, feature ablations and a separate frozen evaluation.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Broader news coverage",
+          "description": "Relaxed unsigned policy context reaches 144 articles and 1,056 existing rows. Latest fold: six articles and 17 rows. No new predictive result.",
+          "icon": "fa-newspaper",
+          "value": 0
+        },
+        {
+          "point": "Evidence and evaluation",
+          "description": "Review the 100-article context packet and identify repeated episodes. Compare content with strong market and exposure/timing controls. Keep V4 frozen.",
+          "icon": "fa-forward",
+          "value": 0
+        }
+      ],
+      "image_caption": "Research team planning evidence review and next model evaluation"
+    }
+  ]
+}

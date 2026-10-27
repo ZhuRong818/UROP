@@ -3,19 +3,43 @@
 **Program:** EventX — incremental social-media information in prediction-market price discovery  
 **Planning status:** consolidated umbrella plan; not itself a frozen protocol  
 **Created:** 2026-08-10  
-**Last revised:** 2026-08-17 (v2.3 news availability and decision contract)  
-**Active controlling experiment:** `eventx-v2.3-news-availability-clarifications-20260817`  
+**Last revised:** 2026-09-10 (V5 v1.1 routing and protocol revision)
+**Completed primary experiment:** `eventx-v3.1-historical-primary-20260902`
+**Active confirmatory experiment:** `eventx-v4-confirmatory-polymarket-20260902`
+**Secondary prospective experiment:** `eventx-v2.3-news-availability-clarifications-20260817`
 **Internal deadline for the active cycle:** 2026-10-31  
+
+**Current V5 execution design:**
+[`PROTOCOL_V1_1.md`](eventx/release/v5/PROTOCOL_V1_1.md). This is the self-contained
+revised target/source/model/control/development/confirmation contract, **not yet an
+executable research freeze**. The v1 daily-block inference screen failed; multi-day
+candidates require validation, source certification and final family approval remain
+open. No new V5 labels may be opened. V5 baseline replication is now a separate
+finding, while failed news gates still stop the sole news candidate.
+
+**Historical routing:** the v2.3-specific sections below, including the 14-market
+cohort, AP/Brier hierarchy, September 28 cutoff and October 1 freeze, describe that
+separate legacy/secondary branch. They are **not V5 instructions**. Earlier V5
+proposal paragraphs are design lineage where superseded by v1.1. V4 remains governed
+only by its unchanged frozen manifests. The October 31 V4 deadline is not an invented
+V5 completion date.
 
 This document consolidates the research goals, required data, methods, experiments,
 execution sequence, statistical tests, integrity controls, deliverables, and longer-term
 benchmark path. It is a planning and coordination document. It does **not** modify or
-supersede the sealed v1 artifacts or the consumed v1 holdout. The frozen v2.3
-preregistration now controls the active experiment; v2.2 and v2.1 remain immutable
-lineage.
+supersede the sealed v1 artifacts or the consumed v1 holdout. The frozen v3.1 protocol
+controls the completed historical result. The frozen v4 design, cohort/window and
+model manifests control the active future confirmation. The frozen v2.3
+preregistration continues to control its separate prospective replication; v2.2 and
+v2.1 remain immutable lineage.
 
 The controlling sources for an actual run remain:
 
+- [`eventx/release/v4/protocol.json`](eventx/release/v4/protocol.json);
+- [`eventx/release/v4/design_manifest.json`](eventx/release/v4/design_manifest.json);
+- [`eventx/release/v4/preregistration_manifest.json`](eventx/release/v4/preregistration_manifest.json);
+- [`eventx/release/v4/model_freeze_manifest.json`](eventx/release/v4/model_freeze_manifest.json);
+- [`eventx/release/v4/holdout_implementation_manifest.json`](eventx/release/v4/holdout_implementation_manifest.json);
 - [`eventx/release/v2_3/protocol.json`](eventx/release/v2_3/protocol.json);
 - [`eventx/release/v2_3/PREREGISTRATION_AMENDMENT.md`](eventx/release/v2_3/PREREGISTRATION_AMENDMENT.md);
 - [`eventx/release/v2_3/preregistration_manifest.json`](eventx/release/v2_3/preregistration_manifest.json);
@@ -44,28 +68,86 @@ The primary estimand is predictive, not causal:
 > How much out-of-sample improvement, if any, does a frozen KOL feature family add to
 > a frozen market-plus-news model for future absolute log-odds price jumps?
 
-The program has two deliberately separated deliverables:
+The program has four deliberately separated deliverables:
 
-1. **Active prospective pilot (v2.3):** a leakage-safe, preregistered experiment on the
-   frozen 14-market Polymarket/Kalshi cohort, completed by October 31, 2026.
-2. **Full EventX benchmark:** a later, broader, multi-category and longer-window
+1. **Completed historical primary (v3.1):** a point-in-time, source-bounded B1-versus-
+   B0 experiment over 4,651 markets. B1 failed all promotion gates; B0 was frozen and
+   evaluated once on the historical holdout.
+2. **Secondary prospective pilot (v2.3):** a leakage-safe, preregistered experiment on
+   the frozen 14-market Polymarket/Kalshi cohort, continuing toward October 31, 2026.
+3. **Active v4 confirmation:** a 470-market/470-cluster Polymarket future test of
+   market history versus news volume, semantic relevance, market-relative novelty and
+   cross-publisher diffusion over `[2026-09-06, 2026-10-30)`. All four models are
+   frozen and its future outcome remains untouched.
+4. **Full EventX benchmark:** a later, broader, multi-category and longer-window
    benchmark with redundant Lumid acquisition paths, greater market-level sample size,
    stronger microstructure coverage, a reusable Feature Track, and an extensible
    Rehydration Track.
+5. **V5 design cycle:** a separate, not-yet-frozen residual-news architecture
+   motivated by opened historical diagnostics. It cannot alter v4 and will require a
+   new untouched confirmation sample.
 
-The v2.3 pilot may validate the protocol and provide a reference finding. It must not
-be described as the completed deep-historical benchmark.
+The v3.1 result is the completed historical pilot, not the full EventX/KOL benchmark.
+The v2.3 pilot may still provide a prospective replication finding.
 
-The October paper/report is positioned as **“A prospective protocol-validation study
-of incremental news information in prediction-market repricing.”** Its abstract and
-primary conclusion concern B1 versus B0. The broader KOL objective remains the EventX
-program direction and is explicitly deferred because KOL-v2 failed its association
-validation threshold.
+The October paper/report is positioned as **“A prospective test of whether news
+quality and diffusion predict short-horizon prediction-market repricing.”** Its
+primary v4 conclusion concerns B3 versus B0; v3.1 supplies the count-only negative
+discovery result and absolute B0 benchmark. The broader KOL objective remains the
+EventX program direction and is explicitly deferred because KOL-v2 failed its
+association validation threshold.
+
+### Active v4 plan
+
+V4 preserves the audited association membership and inherited 30-minute jump target,
+but uses an interpretable nested ladder:
+
+- B0: 12 executed-market history features;
+- B1: B0 plus rolling news volume;
+- B2: B1 plus frozen semantic relevance and seven-day market-relative novelty; and
+- B3: B2 plus publisher diversity and exact-headline cross-publisher diffusion.
+
+The discovery run is complete and negative: on 745,443 OOF rows, log loss was
+0.459158 for B0 and 0.465617 for B3, giving -0.006459 nats/row improvement. The paired
+discovery interval was `[-0.007411, -0.005545]`. B1 and B2 also underperformed B0.
+This result cannot modify the already-frozen future test.
+
+A post-freeze exploratory decomposition on the same historical OOF rows further
+separates the additions. B2 versus B1 produced -0.000287 nats/row log-loss
+improvement with paired interval `[-0.000807, 0.000235]`, while B3 versus B2 produced
+-0.003671 with interval `[-0.005767, -0.001892]`. The former is compatible with no
+effect; the latter is historically worse. Small AP gains do not override the proper-
+score result. These diagnostics cannot alter the frozen confirmation and must not be
+described as true social-virality analysis.
+
+The v4 primary cohort contains 470 active, positive-volume Polymarket binary-YES
+conditions ending on or after 30 October. Its sole holdout is
+`[2026-09-06, 2026-10-30)`. A positive primary result requires B3-vs-B0 log-loss
+improvement of at least 0.001 nats/row, a paired event/time bootstrap lower bound
+above zero, Brier improvement no worse than -0.0005 and no negative eligible-venue
+estimate. All B0-B3 models must be evaluated on identical rows after a consumption
+receipt. The 29-check pre-holdout verifier passes.
+
+The complete holdout implementation is also frozen before 6 September. Its enforced
+order is sealed collection → source-completeness gate → irreversible consumption
+receipt → point-in-time preparation → sealed feature/label matrix → one-shot
+evaluation. Synthetic checks cover label and trade-arrival construction, future-
+append invariance, frozen-model scoring, the event-cluster/360-calendar-minute
+bootstrap and warehouse receipt validation. Missing or hash-invalid partitions stop
+the branch rather than becoming zero-news observations.
+
+V4 measures cross-publisher diffusion, not social virality: validated Lumid data has
+no engagement, view, repost, share or comment fields. Kalshi is excluded from the v4
+primary confirmation because current roster/detail/warehouse metadata could not be
+reconciled source-safely; it is deferred to a source-repaired external replication.
 
 ### Current research direction and minimal-change rule
 
 The long-run scientific direction remains incremental KOL information beyond market
-history and news. The active v2.3 confirmatory experiment is
+history and news. The completed v3.1 historical primary tested B1 versus B0 under the
+same core target and feature logic. B1 worsened aggregate AP and Brier score, improved
+both in zero of five folds and failed all H1-H5 conditions; B0 was therefore frozen
+and evaluated once. The separate active v2.3 prospective experiment is
 **B1 market-plus-news versus B0 market-only**, because the fresh KOL-v2 audit
 failed its fixed association gates. B3, the KOL null tests, and T5 are currently
 ineligible; they may reopen only under a genuinely new, label-blind KOL-v3 rule and a
@@ -78,6 +160,84 @@ power-simulation order, required threshold language and October-study positionin
 exact Lumid trade and news coverage cannot be recovered and frozen, the
 correct outcome is `incomplete_due_to_source_coverage`, not a substituted datasource or
 a weakened experiment.
+
+### Proposed v5 residual-news direction
+
+Historical diagnostics show that v4's damage is concentrated where news is present,
+not across the no-news majority. On the exact 745,443 OOF rows, B3-versus-B0
+log-loss improvement was -0.000029 on 498,214 no-news rows but -0.034353 when the
+latest news was 0–30 minutes old. Within that recent band, relevance/novelty alone
+improved B2 over B1 by +0.001321. Extreme negative B3 logit corrections below -1
+were particularly harmful (-0.250544 per row). In addition, 13/16 news coefficients
+changed sign across fold fits and constant-rate SGD oscillated materially across
+epochs. A factorized trade-arrival/conditional-repricing feasibility run did not
+rescue the current B3 representation.
+
+The residual architecture was then implemented on 364,903 sequential OOF rows from
+folds 3–5. Time to terminal improved a matched B0 by +0.002965 log loss. A converged
+nonlinear gated residual initially improved the linear B0-v5 by +0.009614, but its
+context-only negative control improved by +0.010485. Adding volume/age, quality/age,
+lifecycle/age or the full news set supplied no gain over context-only; full news was
+worse by -0.000871 with interval `[-0.001457, -0.000208]`.
+
+A global nonlinear market-only control was stronger still: +0.018157 versus B0-v5,
+interval `[0.014238, 0.021705]`, and +0.008543 over the full gated-news model. This
+shows that the apparent residual gain was predominantly nonlinear market calibration,
+not evidence for news novelty or lifecycle.
+
+A versioned direct-versus-stacked market-only comparison then selected direct
+nonlinear B0-v5N. Direct B0-v5N achieved log loss 0.428513, Brier 0.135783 and AP
+0.278015 on the same 364,903 rows. It improved log loss over stacked B0-v5N by
++0.003611, paired interval `[0.001359, 0.005694]`, and over linear B0-v5 by +0.021768.
+The only non-converged original fit was preserved and repaired in a new artifact; it
+converged in 512/2,000 iterations with maximum prediction change 0.00004109.
+
+The current market baseline candidate is therefore:
+
+```text
+p0 = direct B0-v5N(low-complexity nonlinear market history,
+                    time to scheduled terminal)
+```
+
+Four-knot degree-two quantile splines are fit on training partitions only for price,
+momentum, volatility, staleness and time-to-terminal variables. Count/notional inputs
+remain log-linear. Inner-fold log loss selects `C in {0.001, 0.01, 0.1}` for a
+deterministic converged L2 logistic solver.
+
+The next proposed news model is V5-R, not the failed broad family:
+
+```text
+E30 = any valid associated article conservatively available in (t-30m, t]
+p   = sigmoid(logit(p0) + E30 * kappa * residual(recent relevance-novelty,
+                                                 age, capped count,
+                                                 one terminal-time interaction))
+```
+
+Publisher diffusion and lifecycle are excluded from the primary V5-R family. The
+residual learner receives cross-fitted `p0`, trains only on exposed rows and is
+constrained to equal B0-v5N exactly when `E30=0`. An identically gated context-only
+model is mandatory. V5-R must beat both B0-v5N and that negative control; otherwise
+conditional market recalibration cannot be called news information. The opened
+May–July data cannot be used again to choose variables or thresholds. V5 requires a
+new source-valid development interval and a separate untouched confirmation interval
+disjoint from protected v4. See
+[`eventx/release/v5/DESIGN_CANDIDATE.md`](eventx/release/v5/DESIGN_CANDIDATE.md) and
+[`eventx/release/v5/REDUCED_NEWS_CANDIDATE.md`](eventx/release/v5/REDUCED_NEWS_CANDIDATE.md).
+
+The complete linear-B0/B0-v5N/C5-R/V5-R evaluator is frozen before new development
+labels. B0-v5N replication is reported first, followed by V5-R versus B0-v5N and
+V5-R versus C5-R. This ordering does not permit intermediate model changes. Failure
+of either news comparison closes the v5 news branch; no window extension, feature or
+interaction search, relevance redefinition, semantic replacement or
+diffusion/lifecycle rescue is allowed within v5.
+
+A label-blind source probe rules out manufacturing that interval from older Lumid
+records. The earliest news ingestion is `2026-05-17T06:42:40.084691Z`, and zero news
+rows were ingested before 17 May. Although 20,307,169 articles carry older publisher
+dates, they were backfilled later; assigning them to those old dates would leak
+retrospective availability. Therefore pre-17-May history is ineligible for an
+incremental-news experiment. The source decision is recorded in
+[`data/v5/label_blind/OLDER_HISTORY_DECISION.md`](data/v5/label_blind/OLDER_HISTORY_DECISION.md).
 
 ---
 
@@ -106,6 +266,10 @@ Compare a fixed ladder on identical rows and splits:
 The historical EventX comparison is B3 versus B1. Because B3 is ineligible after the
 KOL-v2 audit, the active v2.3 confirmatory comparison is directly preregistered as B1
 versus B0 at the 30-minute horizon on identical rows and splits.
+
+The separate v4 ladder reuses the B0/B1 interpretation but defines B2 as
+relevance/novelty and B3 as relevance/novelty plus publisher diffusion. These v4 names
+do not reactivate KOL and are controlled only by the v4 protocol.
 
 ### G4 — Localize any KOL signal (T5, conditional)
 
@@ -238,19 +402,23 @@ protocol and new untouched holdout.
 The sole external observational datasource for this plan is Lumid Findata at
 `https://lum.id/findata`. An endpoint is valid only when its exact path and method are
 present in the live [`openapi.json`](https://lum.id/findata/openapi.json) contract.
-The contract was rechecked on 2026-08-17 and contained 169 paths and 171 operations.
-Its retrieved document SHA-256 was
-`ef50330e2725b2c725e2049a93d248e09da98d4ccf0aaa70375f077e6680be22`.
-Every endpoint named below was present. Read-only live probes on that date returned
+The contract was rechecked on 2026-09-01 and contained 170 paths and 172 operations.
+Every public REST endpoint named below was present. Read-only live probes returned
 HTTP 200 for all required REST route families and for the representative optional REST
 routes described below; some optional market/window queries returned empty arrays.
+Lumid Studio's separate read-only `POST /retrieve` warehouse-materialisation route is
+now listed in OpenAPI and independently returned HTTP 200 with the project FinData
+credential. It is used only as the already-authorised Lumid warehouse reconciliation
+path, never as a new datasource or feature. The OpenAPI response/error contracts remain
+incomplete: all 172 operations document only HTTP 200 and no typed response body.
 
 Contract presence and HTTP 200 are necessary but not sufficient. A source becomes
 experiment-usable only after its response contains the required fields, its event-time
 coverage reaches the exact cutoff, duplicates and malformed/future-dated rows are
 handled, and the frozen completeness report passes. This distinction matters because
-Lumid returned service-wide HTTP 500s from August 10 until the current recovery, and
-the running collector still has gaps and a stale KOL cache.
+Lumid had documented retrieval outages during August, including August 30–31, but the
+September 1 re-audit confirms recovery. The running collector still requires explicit
+gap reconciliation, and the KOL cache remains stale.
 
 No direct venue API, scraped page, or unrelated data vendor may supply an official
 v2.3 observation under this coordination plan. A Lumid-provided warehouse or bulk
@@ -279,6 +447,7 @@ protocol ID, and pagination/cursor state.
 | Targeted association news | `GET /news/search?q={frozen_market_query}&since={RFC3339}&category={optional}&limit={n}` | same news fields as above | Complete the accepted news-v1 market-document mappings and recover broad-feed misses | Required for B1 using frozen query specifications |
 | Symbol news | `GET /news/{symbol}?since={RFC3339}&limit={n}` | publication time, content fields, symbol and source | Only for a frozen market spec with an unambiguous symbol | Conditional supplement; never silently substitutes for search |
 | News coverage statistics | `GET /news/stats` | source/category row counts and latest timestamps | Independent coverage/freshness audit | Operationally required; not a model feature |
+| Warehouse news reconciliation | `POST /retrieve` with read-only `SELECT ... FROM news.articles WHERE published_at >= :start AND published_at < :end ORDER BY id`, `output_format=jsonl` | endpoint-equivalent article fields plus `id`, `ingest_ts`, `source`, `source_endpoint`, `source_run_id`, `raw`, row count and materialised URI | Recover and hash intervals that `/news/latest` cannot page; reconcile to endpoint URLs/fields and EventX first-seen receipts | Verified for `[2026-08-08, 2026-08-28)`; must be repeated through each final cutoff |
 | Source health | `GET /freshness`, `GET /health`, `GET /usage/me` | endpoint freshness classes, service liveness, request/error telemetry | Completeness evidence and incident detection | Required operational evidence; `/health` alone never passes the gate |
 | Schema/source provenance | `GET /catalog/schemas`, `GET /catalog/sources`, `GET /catalog/tables/{schema}/{table}`, `GET /catalog/tables/{schema}/{table}/schema.json`, `GET /catalog/lineage/row?schema={s}&table={t}`, `GET /catalog/lineage/runs`, `GET /catalog/lineage/run/{run_id}` | schema/table/source IDs, field metadata, run/row lineage | Verify a Lumid bulk/warehouse export and document source lineage | Required if an export is used; otherwise supporting provenance |
 
@@ -380,6 +549,29 @@ feasible only if the capped broad-feed history is reconciled through valid Lumid
 endpoint partitions or a Lumid-provided endpoint-equivalent export with lineage.
 The exact evidence and admissible recovery paths are recorded in the
 [August 17 news-truncation diagnosis](data/v2_2/planning/NEWS_TRUNCATION_DIAGNOSIS_20260817.md).
+
+The admissible warehouse route was exercised label-blind on August 28. Lumid
+`POST /retrieve` materialised 28,307 `news.articles` rows for
+`[2026-08-08, 2026-08-28)`, with matching receipt/local row counts, zero malformed or
+out-of-window rows, exact SQL, catalog/source evidence and file hashes. Cross-path
+reconciliation matched all 1,903 EventX-observed URLs, assigned export-completion
+first-seen time to warehouse-only rows, and quarantined 698 rows across 348 URL
+timestamp conflicts. The continuity audit reconciled all 12 observed operational
+gaps and the original pre-launch interval. This passes the closed snapshot only; the
+same procedure must still cover the final September 28 cutoff before labels.
+
+A same-window bounded frozen-cohort pull retained 17,823 canonical-YES trades (16,331
+Kalshi and 1,492 Polymarket), passed all 14 detail mappings and all 14 trade-integrity
+checks, and had no zero-record market. Its combined rehearsal status remained
+`incomplete` solely because the redundant `/news/latest` branch capped; the separate
+verified warehouse reconciliation is the controlling news evidence.
+
+The September 2 elapsed-window repeat extended this evidence through
+`2026-09-02T01:25Z`: all 14 detail/trade checks passed with 19,359 canonical-YES
+trades (17,571 Kalshi and 1,788 Polymarket), no zero-record market, truncation,
+saturated boundary, invalid price or invalid timestamp. A frozen multi-snapshot
+availability ledger now preserves the earliest verified EventX receipt for overlapping
+warehouse IDs and quarantines publication-time conflicts across snapshots.
 
 The controlling v2.3 news contract adds these rules for development and holdout:
 
@@ -830,11 +1022,14 @@ contract, and untouched holdout.
 5. Produce per-endpoint, per-market and per-day coverage, lag, duplicate, malformed,
    future-time, zero-record and error reports.
 6. Verify canonical YES token/price mappings and publication/event-time semantics.
-7. Run all ten Section 6.6 checks, then freeze reconciled inputs, query specs, OpenAPI
-   contract, code/config and hashes. Stop if the gate fails.
-8. After the data gate passes, run the synthetic 14-market cluster power/precision
+7. Run all ten Section 6.6 checks and repeat the label-blind frozen-rule association
+   density, availability-lag/backfill and trade-staleness diagnostics; preserve sparse
+   or constant features unchanged.
+8. Freeze reconciled inputs, query specs, OpenAPI contract, code/config and hashes.
+   Stop if the gate fails.
+9. After the data gate passes, run the synthetic 14-market cluster power/precision
    simulation without empirical labels, prevalence or outcome paths.
-9. Freeze the simulation configuration, seed and output. Its findings may disclose
+10. Freeze the simulation configuration, seed and output. Its findings may disclose
    limited power but may not change the protocol.
 
 ### Phase 4 — Build labels and features
@@ -895,6 +1090,9 @@ contract, and untouched holdout.
 |---|---|---|
 | Completed before this revision | KOL-v2 independent blind review | Failed and frozen; B3 currently ineligible |
 | Aug 17 checkpoint | v2.2 drill followed by v2.3 clarification freeze | v2.3 verifies; explicit news censoring/availability, hypotheses, undefined metrics and execution order are frozen; the earlier `/news/latest` cap remains incomplete |
+| Aug 27–28 checkpoint | Corrected collector, warehouse/news continuity and frozen-cohort trade snapshot | Implementation-v2 live; news reconciled; 14/14 trade checks and 17,823 rows passed without labels; final window still open |
+| Aug 29 checkpoint | Frozen-rule feature-readiness and trade-staleness audit | 43 news associations across 2/14 markets; B1 support is sparse/concentrated; contracts passed without labels |
+| Sep 2 checkpoint | Cumulative warehouse closure, availability ledger, repeated trade/readiness audit | 23/23 gaps recovered through cutoff; 14/14 trade checks and 19,359 rows passed; later slice has only three news associations |
 | Aug 8–Sep 27 | Lumid development collection | Continue append-only capture; quantify the August outage and stale/empty-source behavior |
 | Sep 28–30 | Exact-window reconciliation, labels, development evaluation and freeze | Reconcile `[Aug 8, Sep 28)`, pass Section 6.6, run frozen B0/B1 once, and freeze one candidate before Oct 1 |
 | Oct 1–21 | Holdout collection | No model selection or outcome inspection |
@@ -904,36 +1102,124 @@ contract, and untouched holdout.
 If an upstream gate cannot be completed without violating the schedule or integrity
 contract, report v2.3 incomplete. Do not move dates after inspecting affected labels.
 
-### 15.1 Feasibility assessment as of 2026-08-17
+### 15.1 Feasibility assessment as of 2026-09-02
 
 - **B1 versus B0 is scientifically realistic:** cohort, taxonomy and accepted news
   association logic are already frozen; the learner and evaluation contract are fixed;
   development/holdout labels remain unopened.
 - **Lumid trade mechanics passed the elapsed-window drill:** the required market-detail
   and venue-trade routes exist, all 14 canonical mappings and trade integrity checks
-  passed, and 5,817 canonical-YES trades were recovered. Several sparse Polymarket
+  passed through the latest elapsed cutoff, and 19,359 canonical-YES trades were
+  recovered. Several sparse Polymarket
   markets have long intertrade gaps, which makes the price-age robustness essential.
-- **News completeness is currently blocked:** `/news/latest` silently capped the broad
-  request at 200 rows and exposes neither a cursor nor an upper-time parameter. Lumid
-  `/news/stats` reports 10,861 `company` rows in the last seven days, so category-only
-  partitioning cannot by itself establish completeness. The two outside-window rows
-  were quarantined, and the 21 frozen search queries did not cap.
-- **The censoring behavior is now executable and auditable:** v2.3 freezes 60-second
+- **Historical news recovery is reproducible:** the verified warehouse export and
+  cross-path reconciliation close the original pre-launch interval. An interim
+  August 31–September 2 cumulative export passed with 3,468 unique IDs and reconciled
+  all 23 operational gap windows through its cutoff. It closed 610 additional capped
+  intervals, bringing the database total to 630 reconciled; eight active-tail intervals
+  remained because they ended after the export cutoff. The remaining formal blocker is
+  final exact-window closure after September 28; `/news/latest` remains insufficient
+  alone.
+- **Repeated exports preserve availability correctly:** the frozen ledger merged
+  32,646 receipt rows into 31,775 warehouse IDs, retained the earlier verified receipt
+  for 629 overlaps and quarantined 713 rows across 355 conflict URLs. Its 26-check
+  verifier passes; a later export cannot erase earlier safe point-in-time evidence.
+- **Actual B1 support is a major scientific risk:** applying the frozen matcher to the
+  complete closed snapshot yielded 43 associations in only 2/14 markets, with 42 in
+  the Clarity Act market; the 60-minute count is non-zero on only 0.089% of current
+  grid rows and `news_symbol_mapped` is constant zero. Retrieval completeness therefore
+  does not imply adequate feature variation. This must be repeated and reported at
+  final close, not repaired by changing frozen definitions.
+  The later Aug 31–Sep 2 slice produced only three associations across two markets,
+  with only one endpoint-observed association usable inside the slice.
+- **Studio usability improved:** the September 1 re-audit completed 178/178 profiles
+  and schemas, matched all 22 `news.articles` columns, documented `/retrieve`, and
+  verified JSONL/CSV plus bounded SQL. Current defects are the silent 200-row news cap,
+  future-dated news, broken Kalshi candles, skeletal OpenAPI responses and an empty
+  lineage-run listing. Exports must retain SQL, receipts, timestamp checks and hashes.
+- **The censoring behavior is executable and auditable:** v2.3 freezes 60-second
   polling, a 200-row cap alarm, a 300-second maximum successful-request gap, no
   checkpoint advance on capped/failed responses, identical holdout behavior, and
-  `available_at = max(published_at, first_seen_at)`. Offline fixtures verify the cap,
-  gap and availability behavior. The running legacy daemon has not been restarted and
-  is explicitly not represented as compliant.
+  `available_at = max(published_at, first_seen_at)`. Implementation v3 is live under
+  `caffeinate`; it fixes the negative-sleep race, rejects early future-dated
+  observations, and binds every restart to frozen hashes. Of 68 affected identities,
+  two predecessor-contaminated identities remain quarantined and 66 were admitted only
+  after a timely re-observation with availability no earlier than publication. The
+  September 2 source audit finds zero unsafe identities. All six known-source guards
+  pass, but B1 remains unauthorized while any capped interval is unresolved. The
+  legacy daemon remains preserved but is not v2.3-compliant.
 - **The timing contradiction is resolved:** development now ends September 28, leaving
   a fixed 72-hour reconciliation, evaluation, and candidate-freeze buffer before the
   October holdout. The schedule remains tight but is logically executable.
 - **B3/KOL is not realistic on the current critical path:** the rule failed and recent
   KOL feed behavior is stale/empty. A new KOL-v3 audit would add material schedule and
   data risk without changing the already valid B1/B0 fallback.
-- **Overall verdict:** the October pilot is conditionally feasible as B1 versus B0 (or
-  B0 if news coverage fails), but not yet guaranteed. Failure of exact Lumid coverage
-  or timing gates produces a valid incomplete result; it does not justify a new source,
-  a date change after labels, or an early holdout opening.
+- **Overall verdict:** the protocol remains executable as B1 versus B0 (or B0 if news
+  coverage fails), but the scientific informativeness of B1 is now red/amber because
+  the source supplies almost no cross-market variation. Coverage/timing failure gives
+  an incomplete result; sparse support limits interpretation and does not justify a
+  new source, post-hoc redesign, date change or early holdout opening.
+
+### 15.2 Historical feasibility and completed v3.1 primary
+
+Historical expansion does not amend v2.3. The label-blind protocol
+`eventx-v3-historical-feasibility-20260830` tests whether a broader retrospective
+study can be preregistered over `[2026-05-17, 2026-08-08)` using only Lumid data.
+Its primary news export uses `max(published_at, ingest_ts)` and retains only records
+ingested no earlier than publication and no more than 24 hours later. Older backfills
+remain sensitivity/descriptive evidence and cannot be backdated.
+
+The historical branch requires at least 30 eligible markets, five per venue, 20
+markets with at least five timely associations, 200 associations overall, no market
+above 50% of associations and 56 usable calendar days. Lumid must also confirm that
+`ingest_ts` is a genuine first-seen field. Only a complete label-blind pass authorizes
+a new hash-locked protocol with a chronological 80/20 split and the unchanged v2.3
+B0/B1 target, features and evaluation. Failure produces a descriptive coverage study;
+it cannot modify the prospective cohort, matcher or dates.
+
+As of September 1, the bounded news export passed with 218,392 unique timely rows and
+zero integrity failures. Trade/activity extraction counts distinct valid-price trade
+IDs in one-day UTC, 1,000-key keyset pages with completed-chunk checkpoints; market
+metadata uses 100-key batches and each market's earliest pre-cutoff snapshot. Raw
+vendor payloads and
+resolution fields are excluded. News support is URL-deduplicated, timestamp-conflict
+identities are excluded, and associations must fall inside observed market life. The
+37-check label/outcome-seal, activity-prefilter, checkpoint-compatibility and disk
+safety contract passes.
+
+After Lumid recovered, the checkpointed runner completed 18,635,674 Kalshi and 901,028
+Polymarket retrieved activity rows with passing integrity manifests. Kalshi aggregation
+retained 16,802,432 unique ticker keys, of which 9,422 can satisfy the already-frozen
+100-trade and 10-active-day gates; 1,576 Polymarket condition IDs can do so
+conservatively before canonical-YES mapping. The first unfiltered metadata run was
+stopped and permanently receipted, then only its incomplete 2.35-GiB directory was
+removed. The corrected exporter completed 95 Kalshi and 16 Polymarket batches with
+5,068 and 1,574 passing earliest-snapshot rows. Checkpoints bind the eligible-key hash
+and filter, receipts are compact, downloads enforce a 5-GiB free-space floor, and the
+audit uses a streaming join. The outage remains in the retry ledger; no failed request
+was interpreted as empty data.
+
+The feasibility audit completed label-blind with 5,999 eligible markets (5,068 Kalshi
+and 931 Polymarket), 216,697 deduplicated timely news documents over 81 days and
+341,845 associations. The subsequent provenance audit required source-run joins and
+used the conservative maximum of publication, ingestion, run-start and available
+run-end timestamps; 214,944 of 218,392 candidate rows passed and 3,448 late rows were
+excluded.
+
+The authorized historical primary was frozen as v3. The v3 development trade gate
+then failed before labels because 204,069 zero-count Kalshi rows caused 19 markets to
+miss the frozen activity minimum. That failure remains preserved. A separately
+versioned pre-outcome v3.1 correction removed exactly those 19 markets, leaving 4,651
+markets, and changed no label, feature, learner, fold, metric or promotion rule.
+
+Version v3.1 is now complete. Its 7,706,324 development examples produced 1,460,454
+OOF comparison rows. B1 had AP 0.191378 versus B0 0.193294 and Brier 0.119494 versus
+0.119209. Both metrics improved in zero of five folds, the bootstrap Brier-improvement
+interval was `[-0.000341, -0.000230]`, and all H1-H5 gates failed. B0 was selected and
+evaluated once on 211,718 historical-holdout rows, achieving AP 0.171628, ROC AUC
+0.628037 and Brier 0.107107. The holdout is consumed. A pre-receipt prevalence
+exposure is preserved as a procedural deviation; it occurred after the candidate and
+formulas were frozen but before any prediction/performance scoring.
 
 ---
 
@@ -1046,6 +1332,16 @@ small number of markets do not substitute for independent market-level breadth.
 
 ## 19. Completion criteria
 
+### Historical v3.1 scientific completion — achieved 2 September 2026
+
+- The corrected source/provenance/data gates, power analysis, example construction,
+  development comparison and one-candidate freeze are complete and hash-locked.
+- B1 failed all H1-H5 conditions; B0 is the immutable selected candidate.
+- The historical holdout was evaluated once and is consumed. Its pre-receipt
+  prevalence exposure is explicitly documented as a procedural deviation, and no
+  candidate prediction or performance metric preceded the corrected receipt.
+- Development selection and holdout evaluation must never be rerun.
+
 ### v2.3 scientific completion
 
 The active cycle is scientifically complete when:
@@ -1063,6 +1359,22 @@ The active cycle is scientifically complete when:
 7. a consumption receipt prohibits reruns; and
 8. the final report fully discloses coverage, missingness, limitations, and deviations.
 
+### v4 scientific completion
+
+The active v4 confirmation is complete only when:
+
+1. all daily Lumid news and canonical-YES trade partitions through 30 October pass
+   the frozen source, clock, provenance, membership, row-count and hash gate;
+2. the irreversible holdout receipt is written before any label summary;
+3. the discovery-fitted semantic transform is applied without refitting and all
+   B0-B3 examples use identical rows;
+4. the evaluator writes its attempt receipt before reading label values and executes
+   exactly once;
+5. the preregistered 0.001-nat effect, bootstrap lower-bound, Brier and venue
+   guardrails are applied without modification; and
+6. positive, null, negative or source-incomplete results are reported with the frozen
+   Polymarket-only and non-virality claim boundaries.
+
 ### Internal artifact completion
 
 The internal package is complete when the report, datasheet, manifests, code,
@@ -1079,32 +1391,36 @@ NO-GO even if the scientific experiment is complete.
 
 ## 20. Immediate next actions
 
-1. Keep the recovered legacy collector and health ledger under observation without
-   calling its news cursor v2.3-compliant or inspecting protected labels.
-2. Decide and record an explicit migration/restart or parallel-launch time for the
-   frozen v2.3 news collector. Its start receipt must preserve all earlier unresolved
-   intervals; no launch may silently reset the completeness state.
-3. Preserve KOL-v2 as failed and use the accepted-news B1-versus-B0 branch; do not
-   spend the current schedule on KOL-v3 unless that choice is separately authorized
-   before labels.
-4. Resolve the recorded `/news/latest` 200-row cap without changing datasource: seek a
-   valid Lumid cursor/time-partition or a Lumid-provided endpoint-equivalent export with
-   catalog/lineage evidence. Category partitioning alone is insufficient at the
-   observed volume. Preserve the incomplete rehearsal as evidence.
-5. Continue Lumid trade/news capture and focused bounded recovery for the 14 frozen
-   markets and accepted news query specifications.
-6. At development close, reconcile `[2026-08-08, 2026-09-28)` from the exact endpoints
-   in Section 6 and produce the per-market/per-day completeness report.
-7. Run and freeze the label-blind data sufficiency gate, then run and freeze the
-   synthetic 14-market cluster power simulation. Only afterward create development
-   labels, the uniform last-trade B0/B1 features and frozen folds.
-8. Run B0 and B1 once on identical keys, apply H1_v2.3–H5_v2.3 and the conservative
-   undefined-metric rules, and freeze
-   B1 if it promotes, otherwise B0.
-9. Keep the October holdout sealed from selection; after it closes, reconcile Lumid
-   inputs and run the frozen evaluator exactly once.
-10. If required Lumid inputs or timing gates fail, report the affected branch or cycle
-   incomplete rather than introducing another datasource or weakening a threshold.
+1. Preserve v3.1 as complete: never rerun development selection, rebuild its holdout,
+   evaluate B1 on that holdout or change the frozen B0 candidate.
+2. Keep the v4 sealed collector healthy through 30 October without reading future
+   prices, labels, predictions, prevalence or metrics.
+3. At v4 close, execute only: `audit_v4_confirmatory_collection` →
+   `consume_v4_confirmatory_holdout` → `prepare_v4_confirmatory_inputs` →
+   `build_v4_confirmatory_examples` → `evaluate_v4_confirmatory`. Stop if any gate
+   fails and never rerun the one-shot evaluator.
+4. Generate final tables and figures from the hash-locked selection and holdout JSON
+   only; lead with the negative incremental-news result.
+5. Disclose the original v3 data-gate failure, exact v3.1 correction, holdout cohort
+   attrition and receipt-order deviation in the paper.
+6. Complete a claim audit, reproduction check, secret scan, artifact inventory and
+   vendor-data rights review before release.
+7. Keep KOL-v1/v2 failed. Treat true virality and KOL-v3 as new research directions
+   requiring a fresh label-blind protocol and untouched holdout; v4 novelty and
+   semantic features are already frozen and must not be changed.
+8. If the prospective v2.3 replication continues, keep its collectors and source
+   gates unchanged through September 28. Do not tune it using v3.1 outcomes.
+9. At v2.3 close, report incomplete if exact source recovery fails; otherwise execute
+   its already-frozen order without importing any v3.1 post-outcome change.
+10. Carry the convergence-checked direct nonlinear B0-v5N specification into the
+    new-cycle label-blind gates. It is development-selected but not frozen or confirmed.
+11. If v5 continues, test only the prespecified reduced V5-R family and require
+    improvement over B0-v5N plus the gated context-only negative control in a new
+    development interval.
+12. Run a label-blind v5 source/cohort/power audit, specify a new untouched holdout,
+    then freeze at most one candidate and its evaluator before accessing that holdout.
 
-This sequence is the shortest path to a valid October result. Skipping an upstream
-freeze may make the experiment faster to run, but it would make the result unusable.
+The shortest valid confirmatory path remains frozen v4 collection plus reporting and
+reproducibility. V5 implementation may proceed in parallel on opened discovery data,
+but additional modeling on the consumed v3.1 holdout cannot confirm or rescue either
+study.

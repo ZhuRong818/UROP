@@ -1,0 +1,402 @@
+{
+  "presentation_id": "",
+  "theme_id": "zurich-light",
+  "slides": [
+    {
+      "title": "EventX: market-news research progress",
+      "subtitle": "Rationale, aims, achieved results and baseline improvements\n12 October 2026",
+      "layout": "title_and_subtitle",
+      "slidenum": 1,
+      "body": [],
+      "image_caption": "University researcher reviewing prediction market research at a desk",
+      "image_id": "",
+      "talktrack": "0:00\u20130:20 (20 seconds)\n\nEventX asks whether external news improves short-horizon prediction-market forecasting. I will explain the rationale, our methodology and its contribution, then show the measured baseline improvements. I will finish with the remaining bottlenecks and the next research step.\n\nSources (not spoken):\neventx/release/paper_a_20261010/TABLES.md"
+    },
+    {
+      "title": "Why study news beyond prediction-market prices?",
+      "subtitle": "The rationale is to measure information that market history may miss",
+      "layout": "title_and_two_columns",
+      "slidenum": 2,
+      "body": [
+        {
+          "point": "Prices provide the reference",
+          "description": "Market prices and recent trading summarize information already reflected in the market.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "News may add new evidence",
+          "description": "A timely article may change a specific contract\u2019s prospects before prices finish adjusting. This is our hypothesis.",
+          "icon": "fa-newspaper",
+          "value": 0
+        },
+        {
+          "point": "The comparison must be demanding",
+          "description": "A stronger market model and exposure controls help distinguish useful news from an easy baseline.",
+          "icon": "fa-balance-scale",
+          "value": 0
+        }
+      ],
+      "image_caption": "Researcher examining market prices and news on computer screens",
+      "image_id": "",
+      "talktrack": "0:20\u20131:05 (45 seconds)\n\nMarket prices express information through trading, but the chance of a large movement also depends on recent volatility and activity. News may help when it provides new evidence before adjustment is complete. A report about a specific Federal Reserve meeting could matter; a generic Fed mention might not. That is our hypothesis. To test it convincingly, we first need a strong market model. Otherwise, news could appear useful simply because the baseline fails to represent information already visible in trading.\n\nSources (not spoken):\neventx/release/v5/PROTOCOL_V1_1.md"
+    },
+    {
+      "title": "Research aims and the forecast target",
+      "subtitle": "A large absolute movement in YES log odds over the next 30 minutes",
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "slidenum": 3,
+      "body": [
+        {
+          "point": "Aim 1: Better forecasting",
+          "description": "Improve probability forecasts using the market information available at each five-minute decision point.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Aim 2: Incremental news value",
+          "description": "Test whether article information improves beyond a strong market model and exposure/timing controls.",
+          "icon": "fa-newspaper",
+          "value": 0
+        },
+        {
+          "point": "Aim 3: Explain conditions",
+          "description": "Identify which event types and market conditions could leave room for delayed adjustment.",
+          "icon": "fa-search",
+          "value": 0
+        },
+        {
+          "point": "Intended paper result",
+          "description": "A controlled empirical account of when news helps, and why tested features may fail.",
+          "icon": "fa-book",
+          "value": 0
+        }
+      ],
+      "image_caption": "Research notebook with forecasting objectives beside an open laptop",
+      "image_id": "",
+      "talktrack": "1:05\u20131:50 (45 seconds)\n\nWe forecast large absolute changes in canonical YES log odds over the next thirty minutes, at five-minute decision intervals. The inherited movement threshold uses trailing volatility. Our practical aim is better probability forecasts. Our scientific aim is to measure incremental information: does news add something beyond market history, article exposure and timing? Our intended paper contribution is a controlled empirical account of that question. A reliable negative result would also be informative, provided the evidence and evaluation are sufficiently strong.\n\nSources (not spoken):\neventx/release/v5/PROTOCOL_V1_1.md"
+    },
+    {
+      "title": "Methodology: a controlled forecast comparison",
+      "subtitle": "Predict 30-minute repricing from information available at each decision",
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "body": [
+        {
+          "point": "Market forecast",
+          "description": "Price, momentum, volatility and trade activity enter logistic and nonlinear models.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Incremental news",
+          "description": "Compare market \u2192 exposure \u2192 timing \u2192 content on identical market-time rows.",
+          "icon": "fa-newspaper",
+          "value": 0
+        },
+        {
+          "point": "Forward evaluation",
+          "description": "Earlier training, later scoring; 30-minute purge. Log loss, Brier and average precision.",
+          "icon": "fa-clock",
+          "value": 0
+        }
+      ],
+      "image_caption": "Research team examining probability forecasts and chronological evidence",
+      "talktrack": "1:50\u20133:20 (90 seconds)\n\nThe method has three parts. First, construct market features from trailing prices and executions: momentum, volatility, trade activity, notional and trade age. Compare transparent logistic regression with nonlinear trees and boosting. Boosting sequentially adds small trees that correct prediction errors and capture interactions between these conditions.\n\nSecond, introduce news in stages. Start with a market forecast, add exposure-context correction, then article timing, then relevance and content features. Compare predictions on identical market and decision-time keys. This helps distinguish improved calibration for news-exposed observations from added information in the text. The existing exposure gate uses semantic routing, so the content contrast is conditional on that selected population.\n\nThird, train on earlier periods and score later periods with a thirty-minute purge and held-market separation. Evaluate log loss and Brier, where lower is better, and average precision, where higher is better. These development folds were previously opened, so this is research evidence rather than independent confirmation.\n\nSources (not spoken):\neventx/release/v5/PROTOCOL_V1_1.md\ndata/v5/opened_news_offset_trial_20261009/report.json\ndata/v5/market_condition_tuning_20261012/MODEL_CARD.md",
+      "slidenum": 4
+    },
+    {
+      "title": "Where our methodological contribution lies",
+      "subtitle": "Contract-specific information evaluation and a traceable evidence-to-forecast funnel",
+      "layout": "quadrant_grid",
+      "body": [
+        {
+          "point": "Strong control",
+          "description": "News must add value beyond nonlinear market history and exposure controls.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Exact predicate",
+          "description": "Bind actor, action, threshold and period; quote evidence and abstain.",
+          "icon": "fa-link",
+          "value": 0
+        },
+        {
+          "point": "Decision clock",
+          "description": "Use conservative system availability, rather than publication time alone.",
+          "icon": "fa-clock",
+          "value": 0
+        },
+        {
+          "point": "Coverage funnel",
+          "description": "Track articles \u2192 signed evidence \u2192 episodes \u2192 usable forecast decisions.",
+          "icon": "fa-filter",
+          "value": 0
+        }
+      ],
+      "image_caption": "Researchers tracing documented evidence through transparent evaluation process",
+      "talktrack": "3:20\u20134:35 (75 seconds)\n\nOur contribution lies in the evaluation design and the treatment of contract-specific evidence. The learner itself uses established algorithms.\n\nThe first contribution is making news compete against strong market and exposure controls. This directly tests whether an apparent gain survives a more demanding comparison. Second, we move beyond topical similarity. For a contract asking about a July rate cut of fifty basis points or more, an article must bind the relevant agency, action, quantity and period. The extractor records quoted evidence, distinguishes claim roles and abstains when binding is uncertain. This is currently a development prototype.\n\nThird, we use conservative system availability rather than treating publication time as immediate access. Fourth, we trace articles through signed evidence, episodes and eligible forecast decisions. That funnel explains whether a failed news experiment reflects poor linking, late delivery or absent observable markets. Together these form our proposed methodological contribution; we do not claim the first framework of its kind.\n\nSources (not spoken):\neventx/release/v7/pilot_20261010/SIGNED_EVIDENCE_V03_REPAIR_20261012.md\neventx/release/v7/pilot_20261010/EVENT_COVERAGE_AND_MISSED_EVIDENCE_20261012.md\ndata/v5/opened_news_offset_trial_20261009/report.json",
+      "slidenum": 5
+    },
+    {
+      "title": "Market model: 9.68% lower log loss than logistic",
+      "subtitle": "364,903 matched rows across 1,135 markets. Three forward folds. Exploratory.",
+      "layout": "data_table",
+      "slidenum": 6,
+      "body": [
+        {
+          "point": "Linear logistic baseline",
+          "description": "Log loss: 0.451070; Brier: 0.140952; Average precision: 0.226649",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Nonlinear tree model",
+          "description": "Log loss: 0.407391; Brier: 0.131106; Average precision: 0.334964",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Improvement versus baseline",
+          "description": "Log loss: 9.68% lower; Brier: 6.98% lower; Average precision: +0.108315 absolute",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Consistency across folds",
+          "description": "Fold 3 gain: 0.041469; Fold 4 gain: 0.035980; Fold 5 gain: 0.053605 nats per row",
+          "icon": "fa-chart-line",
+          "value": 0
+        }
+      ],
+      "image_caption": "Research team examining a quantitative model performance comparison",
+      "image_id": "",
+      "talktrack": "4:35\u20135:50 (75 seconds)\n\nOur clearest completed result is the stronger market reference. On three hundred and sixty-four thousand nine hundred and three matched development rows, logistic regression has log loss of zero point four five one zero seven zero. The nonlinear tree scores zero point four zero seven three nine one. That is a nine point six eight percent reduction in probability-forecast loss. Brier also improves, and average precision rises from about zero point two two seven to zero point three three five.\n\nThe log-loss gain appears in all three forward folds. A plausible explanation is better representation of interactions among volatility, momentum and trading activity, although we have not isolated which feature causes the gain. The main implication for our research is that news now has a substantially stronger benchmark to beat. These are development results, not trading returns or classification accuracy.\n\nSources (not spoken):\ndata/v5/no_terminal_baseline_diagnostic_20261009/report.json"
+    },
+    {
+      "title": "Latest market tuning: another 0.54% lower loss",
+      "subtitle": "112,616 matched fold-5 rows; chosen using fold 4. Opened development.",
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "body": [
+        {
+          "point": "Earlier tree",
+          "description": "Log loss 0.348884. Brier 0.110880. Average precision 0.327323.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Previous booster",
+          "description": "Log loss 0.344816. Brier 0.109677. Average precision 0.337805.",
+          "icon": "fa-layer-group",
+          "value": 0
+        },
+        {
+          "point": "Condition-aware booster",
+          "description": "Log loss 0.342949. Brier 0.109060. Average precision 0.346249. 1.70% below earlier tree.",
+          "icon": "fa-check",
+          "value": 0
+        }
+      ],
+      "image_caption": "Analyst comparing three market forecasting models on monitor",
+      "talktrack": "5:50\u20136:55 (65 seconds)\n\nThe latest tuning improves the already selected booster. We added nine deterministic trailing condition features, including volatility ratios, scaled momentum, trading-intensity ratios and an age-volatility interaction, and expanded the training sample to one hundred and twenty thousand rows. Nine configurations were examined. Selection used fold four and was recorded before the new fold-five fits.\n\nOn the same one hundred and twelve thousand six hundred and sixteen fold-five observations, loss falls from zero point three four four eight one six to zero point three four two nine four nine: another zero point five four percent reduction. Brier and average precision improve too. The latest model is one point seven zero percent below the earlier tree; the previous booster had been one point one seven percent below it. These percentages are separate from the previous slide and should not be added. October performance remains unmeasured.\n\nSources (not spoken):\ndata/v5/market_condition_tuning_20261012/report.json\ndata/v5/market_condition_tuning_20261012/selection_receipt.json\ndata/v5/market_learner_screen_20261009/report.json",
+      "slidenum": 7
+    },
+    {
+      "title": "Exposure correction gives the best score in this news trial",
+      "subtitle": "9,965 matched news-exposed rows. Folds 4\u20135. Log loss lower is better.",
+      "layout": "data_table",
+      "slidenum": 8,
+      "body": [
+        {
+          "point": "Market reference",
+          "description": "Log loss: 0.330591; Difference from reference: 0",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Exposure context",
+          "description": "Log loss: 0.327533; Improvement from reference: 0.003058 nats per row",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Added article timing",
+          "description": "Log loss: 0.327942; Improvement from reference: 0.002649 nats per row",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Timing plus semantic features",
+          "description": "Log loss: 0.328787; Improvement from reference: 0.001804 nats per row",
+          "icon": "fa-chart-line",
+          "value": 0
+        }
+      ],
+      "image_caption": "Researcher comparing news exposure and content forecasting experiments",
+      "image_id": "",
+      "talktrack": "6:55\u20138:10 (75 seconds)\n\nThe news comparison demonstrates why our controls matter. On nine thousand nine hundred and sixty-five matched article-exposed rows, the market reference has log loss of zero point three three zero five nine one. Exposure-context correction lowers it to zero point three two seven five three three. Timing and semantic features improve over the original reference, but neither beats that exposure control. Semantic features are about zero point zero zero one two five four nats worse.\n\nComparing only against the original reference could therefore overstate the contribution of content. In another matched comparison on five thousand three hundred and eighty-eight rows, the previous selected market booster also beats the news timing model. The new condition model has not yet been compared with news on those rows. Our finding is narrow: the tested news representations have not demonstrated incremental gains against the stronger controls.\n\nSources (not spoken):\ndata/v5/opened_news_offset_trial_20261009/report.json\ndata/v5/method_screen_observed_row_join_20261009/report.json"
+    },
+    {
+      "title": "What we have achieved so far",
+      "subtitle": "Measured development gains and the remaining evidence requirements",
+      "layout": "image_left_text_right",
+      "slidenum": 9,
+      "body": [
+        {
+          "point": "Nonlinear market model",
+          "description": "Our nonlinear market model reduced development log loss by 9.68% relative to a logistic baseline.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Selected booster",
+          "description": "A further selected booster improved on an earlier tree by 1.17% in a separate comparison.",
+          "icon": "fa-chart-bar",
+          "value": 0
+        },
+        {
+          "point": "Evidence still needed",
+          "description": "Independent confirmation and incremental news gains remain outstanding.",
+          "icon": "fa-balance-scale",
+          "value": 0
+        }
+      ],
+      "image_caption": "University research team discussing completed forecasting experiments around table",
+      "image_id": "",
+      "talktrack": "8:10\u20139:00 (50 seconds)\n\nOur nonlinear market model reduced development log loss by 9.68% relative to a logistic baseline. A further selected booster improved on an earlier tree by 1.17% in a separate comparison. Independent confirmation and incremental news gains remain outstanding.\n\nThe latest market tuning adds a further zero point five four percent improvement against that booster. Beyond performance, we have established matched comparison machinery, exposure controls and a traceable contract-evidence pipeline. We have also consolidated the empirical results into a manuscript draft. The value of this progress is a stronger forecasting benchmark and a clearer diagnosis of what external news must contribute.\n\nSources (not spoken):\ndata/v5/no_terminal_baseline_diagnostic_20261009/report.json\ndata/v5/market_learner_screen_20261009/report.json\ndata/v5/market_condition_tuning_20261012/report.json"
+    },
+    {
+      "title": "Bottlenecks and the next research step",
+      "subtitle": "Development gains established; current-period confirmation and usable news remain open",
+      "layout": "title_and_body",
+      "body": [
+        {
+          "point": "Market generalization",
+          "description": "Latest tuning uses May\u2013July data. October performance remains unmeasured; freeze the selected model before a new evaluation.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Evidence coverage",
+          "description": "Repaired extractor retains 11 links from two articles; zero eligible forecast observations. Conservative binding alone cannot produce a news test.",
+          "icon": "fa-filter",
+          "value": 0
+        },
+        {
+          "point": "Next steps",
+          "description": "Prioritize current-period market validation and feature ablations. Repair timely evidence coverage; retain the original V4 protocol.",
+          "icon": "fa-forward",
+          "value": 0
+        }
+      ],
+      "image_caption": "Research team planning next evaluation and evidence collection",
+      "talktrack": "9:00\u201310:00 (60 seconds)\n\nThe largest market-model bottleneck is generalization. The tuning result comes from opened May-to-July data; it does not establish performance under October conditions. Next we should examine calibration, feature ablations and robustness across market states, then freeze the selected model before a separately defined confirmation.\n\nFor news, the repaired extractor retains eleven signed links from two articles, but none yields an eligible forecast observation. Better binding has removed known errors, yet usable evidence coverage remains insufficient. We need timely distinct events overlapping observable trading, followed by independent evidence review and dependence-aware inference. The existing V4 study retains its original protocol and does not confirm this newly selected model. Our progress is measured market improvement and a more informative method for testing news.\n\nSources (not spoken):\ndata/v5/market_condition_tuning_20261012/report.json\neventx/release/v7/pilot_20261010/EVENT_COVERAGE_AND_MISSED_EVIDENCE_20261012.md\neventx/release/v4/protocol.json",
+      "slidenum": 10
+    },
+    {
+      "title": "Backup: methods, features and target definition",
+      "subtitle": "For questions after the timed presentation",
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "slidenum": 11,
+      "body": [
+        {
+          "point": "Market models",
+          "description": "L2 logistic, spline logistic, histogram boosting, bagged trees, MLP and CatBoost.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "News representations",
+          "description": "Counts, relevance, novelty, publisher diversity, diffusion, timing and deterministic signed evidence.",
+          "icon": "fa-newspaper",
+          "value": 0
+        },
+        {
+          "point": "Inherited target",
+          "description": "Absolute 30-minute log-odds movement \u2265 4 \u00d7 trailing one-minute volatility; zero volatility gives a negative label.",
+          "icon": "fa-bullseye",
+          "value": 0
+        },
+        {
+          "point": "Validation discipline",
+          "description": "Forward periods and matched observations. Opened exploratory comparisons are separate from untouched confirmation.",
+          "icon": "fa-lock",
+          "value": 0
+        }
+      ],
+      "image_caption": "Research notebook showing equations beside a computer and coffee",
+      "image_id": "",
+      "talktrack": "Backup \u2022 outside the 10-minute talk\n\nIf asked about the algorithmic contribution: the current contribution is empirical evaluation and evidence diagnosis, rather than inventing gradient boosting. If asked about the label: the inherited threshold is four times a trailing one-minute standard deviation, not four thirty-minute Gaussian standard deviations. Eligibility differs by research version; the 9.68% panel deliberately uses the no-terminal development diagnostic, and should not be described as a certified active-contract population. Learned semantic representations fitted across a full discovery period are an exploratory limitation; a future study should fit them inside each forward training window.\n\nSources (not spoken):\n/Users/zhurong/UROP/eventx/release/v5/PROTOCOL_V1_1.md\n/Users/zhurong/UROP/data/v5/no_terminal_baseline_diagnostic_20261009/report.json\n/Users/zhurong/UROP/eventx/release/paper_a_20261010/TABLES.md\nAdditional method-screen source:\n/Users/zhurong/UROP/eventx/release/v5/OPENED_METHOD_SURVEY_20261009.md\nLightGBM and XGBoost did not fit because the local libomp runtime was absent; report them as dependency failures, not evaluated methods."
+    },
+    {
+      "title": "Backup: published performance is task-specific",
+      "subtitle": "Primary-source versions from the 10 October literature review",
+      "layout": "data_table",
+      "slidenum": 12,
+      "body": [
+        {
+          "point": "Halawi et al., 2024",
+          "description": "Task: Eventual outcome forecasts; Brier, Table 3: Crowd 0.149, blend 0.146, system 0.179",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Prophet Arena, 2025",
+          "description": "Task: Eventual event outcomes; Brier: GPT-5 High 0.184 \u00b1 0.006, market 0.187 \u00b1 0.006",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Hindcast, 2026",
+          "description": "Task: Historical resolved outcomes; Qwen-32B Brier: 0.234 \u2192 0.179 with retrieval; Scope: Selected 216-market sample",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "EventX, current development",
+          "description": "Task: Large 30-minute movements; Matched log loss: Market 0.243727, news timing 0.244576; Ranking: Cross-paper scores not comparable",
+          "icon": "fa-chart-line",
+          "value": 0
+        }
+      ],
+      "image_caption": "Several academic forecasting papers spread across a university desk",
+      "image_id": "",
+      "talktrack": "Backup \u2022 outside the 10-minute talk\n\nThese values are from the primary-source versions recorded in our literature review. They use different event selection, aggregation, horizons and targets. The Prophet Arena intervals do not by themselves establish paired significance. Hindcast's retrieval improvement is against its zero-shot model, not a demonstrated advantage over contemporaneous market prices, and its outcome-based selection needs qualification. Halawi Table Three is used consistently because other table captions in that version differ. No external study in our reviewed set provides a directly matched replication of EventX's thirty-minute movement task.\n\nSources (not spoken):\n/Users/zhurong/UROP/eventx/release/literature_baselines_20261010/evidence.json\nhttps://arxiv.org/html/2402.18563v1\nhttps://arxiv.org/html/2510.17638v1\nhttps://arxiv.org/html/2607.14051v1"
+    },
+    {
+      "title": "Backup: evidence status and confirmation",
+      "subtitle": "What the current results support",
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "slidenum": 13,
+      "body": [
+        {
+          "point": "Market improvement",
+          "description": "Market gains of 9.68% and 1.17% describe different comparisons on opened development.",
+          "icon": "fa-chart-line",
+          "value": 0
+        },
+        {
+          "point": "Historical holdout",
+          "description": "V3.1 evaluated B0 only, with a disclosed receipt-order deviation. It is not a held-out news comparison.",
+          "icon": "fa-history",
+          "value": 0
+        },
+        {
+          "point": "V4 confirmation",
+          "description": "Frozen B3 vs B0; 6 Sep\u201330 Oct 2026. Evaluate once after required audits.",
+          "icon": "fa-lock",
+          "value": 0
+        },
+        {
+          "point": "V7 signed evidence",
+          "description": "Zero evaluation coverage. Tiny score change reflects refitted controls, not a news effect.",
+          "icon": "fa-filter",
+          "value": 0
+        }
+      ],
+      "image_caption": "Researcher checking study protocols and audit records at desk",
+      "image_id": "",
+      "talktrack": "Backup \u2014 outside main talk. The tiny score difference in the original signed-evidence trial arose with zero evaluation evidence coverage and reflects refitted controls. The repaired v0.3.3 extractor has 11 links, two articles and zero eligible observations; no new news forecast was fit. V4 remains the original frozen B3-versus-B0 study, separate from the current condition_120k market model. No confirmation or news gain is established."
+    }
+  ]
+}

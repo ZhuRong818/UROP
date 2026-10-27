@@ -1,0 +1,40 @@
+{
+  "collectors": "preserve both existing services, frozen code, configuration and live journals unchanged by diagnostic",
+  "comparison": "same absolute trade window per REST round; direct takerOnly=false. Store caps and per-request clocks. Do not assume matching rows/semantics.",
+  "created_at": "2026-10-18T15:05:13.367691+00:00",
+  "documentation": [
+    "https://docs.polymarket.com/market-data/prices-order-books",
+    "https://docs.polymarket.com/api-reference/core/get-trades-for-a-user-or-markets",
+    "https://docs.polymarket.com/api-reference/markets/get-prices-history",
+    "https://docs.polymarket.com/market-data/realtime-data",
+    "data/v7/market_cohort_capture_20261018/probes/c116b6a48bf64e7fb98a6eecdbc91f37/openapi.json"
+  ],
+  "failure_rule": "HTTP errors, inaccessible endpoints, incomplete streams and empty lists do not prove inactivity. No silent source substitution.",
+  "history_hours": 6,
+  "liquid_control_rule": "first metadata-ranked candidate with fresh two-sided direct book AND >=3 canonical YES fills in preceding60m; otherwise no liquid control established",
+  "lumid_min_request_seconds": 2,
+  "model_development": "blocked until at least one complete prospectively captured observation passes source,240m history,freshness,30m forward,terminal and relevance gates",
+  "model_path": "data/v5/market_condition_tuning_20261012/selected_model.joblib",
+  "model_sha256": "d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c",
+  "price_history_limitation": "Lumid candles mix trade prints and quote mids; direct YES history is not assumed equivalent or evidence of executed-trade freshness.",
+  "protected_protocol": "check exact allowlist before requests; subscribe only sample YES/NO assets; no custom lifecycle/new-market stream; abort unexpected market IDs",
+  "public_min_request_seconds": 0.5,
+  "purpose": "Step1 source verification only; no predictive admission or research-cohort expansion",
+  "rest_rounds": 2,
+  "selection": "three fixed macro predicates plus all five pre-price liquidity-ranked control candidates; current liquidity must be verified independently",
+  "source_metadata_hashes": {
+    "data/v7/source_verification_20261018/control_discovery/b4c7dbd8a97943ac850ae7f38b609063/candidates.jsonl": "c96da3c18531ad72a180ab0a3730fd0f97e602dca22eebba6a9cf5275e46bec8",
+    "eventx/release/v7/market_capture_20261018/cohort.jsonl": "f496ae5b61cefb234fdf632981a30a8761b6d3b7049f79bbde6869f83f60b8f4",
+    "eventx/release/v7/market_capture_20261018/protected_ids.json": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b"
+  },
+  "sources": {
+    "lumid": "https://lum.id/findata",
+    "polymarket_clob": "https://clob.polymarket.com",
+    "polymarket_trades": "https://data-api.polymarket.com",
+    "polymarket_websocket": "wss://ws-subscriptions-clob.polymarket.com/ws/market"
+  },
+  "stream_interpretation": "finite diagnostic intervals only; lack of updates is not proof of long-run inactivity or source completeness",
+  "stream_max_frames": 50000,
+  "stream_seconds": 180,
+  "v4_exact_id_intersection": 0
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>Label</key>
+	<string>com.eventx.original-releases.20261018</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/caffeinate</string>
+		<string>-i</string>
+		<string>/Users/zhurong/UROP/.venv/bin/python</string>
+		<string>-m</string>
+		<string>eventx.tasks.collect_v7_original_releases_20261018</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/zhurong/UROP/data/v7/official_source_capture_20261018/service.stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/zhurong/UROP/data/v7/official_source_capture_20261018/service.stdout.log</string>
+	<key>ThrottleInterval</key>
+	<integer>60</integer>
+	<key>WorkingDirectory</key>
+	<string>/Users/zhurong/UROP</string>
+</dict>
+</plist>

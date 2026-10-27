@@ -1,0 +1,103 @@
+{
+  "presentation_id": "pres_fe4c1b53f21bb8036a83438a524ca186",
+  "deck_id": "267708b9f2fa",
+  "theme_id": "zurich-light",
+  "slides": [
+    {
+      "title": "EventX: market-news research progress",
+      "subtitle": "Stronger forecasting, controlled news comparisons, and the next research cycle\n12 October 2026 \u2022 Results through 10 October",
+      "slidenum": 1,
+      "layout": "title_and_subtitle",
+      "image_url": "https://slidesgpt.com/media/2e9318465da6.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Predicting large price movements over the next 30 minutes",
+      "subtitle": "A short-horizon movement forecast, evaluated every five minutes",
+      "slidenum": 2,
+      "layout": "title_and_two_columns",
+      "image_url": "https://slidesgpt.com/media/8d63ed61acb9.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "A sequence of controlled model comparisons",
+      "subtitle": "Each result panel uses matched rows; panels cover different samples",
+      "slidenum": 3,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/9fef65009f0c.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Nonlinear market modeling reduces log loss by 9.68%",
+      "subtitle": "364,903 matched observations \u2022 1,135 markets \u2022 Three forward folds \u2022 Exploratory",
+      "slidenum": 4,
+      "layout": "data_table",
+      "image_url": "https://slidesgpt.com/media/fda2d5d370a7.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Exposure correction outperforms added news features",
+      "subtitle": "9,965 matched news-exposed observations \u2022 Forward folds 4\u20135 \u2022 Log loss \u2193",
+      "slidenum": 5,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/0ebf9833052d.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Selected news timing trails the stronger market model",
+      "subtitle": "5,388 identical fold-5 observations \u2022 99 markets \u2022 Opened, adaptive development comparison",
+      "slidenum": 6,
+      "layout": "data_table",
+      "image_url": "https://slidesgpt.com/media/4d2fdb26acc2.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "The contribution is a controlled test of incremental information",
+      "subtitle": "Related studies motivate the benchmark; their performance scores use different tasks",
+      "slidenum": 7,
+      "layout": "image_left_text_right",
+      "image_url": "https://slidesgpt.com/media/0307717bb39c.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "The next cycle targets informative events and delayed adjustment",
+      "subtitle": "Proposed V7 development \u2022 Existing V4 confirmation stays frozen",
+      "slidenum": 8,
+      "layout": "phase_roadmap",
+      "image_url": "https://slidesgpt.com/media/1cf87ef930aa.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "The bottleneck is usable information at decision time",
+      "subtitle": "What must improve before a stronger news-performance claim",
+      "slidenum": 9,
+      "layout": "title_and_body",
+      "image_url": "https://slidesgpt.com/media/9fb4bfdb053c.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Backup: methods, features and target definition",
+      "subtitle": "For questions after the timed presentation",
+      "slidenum": 10,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/3c63ca63f3d7.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Backup: published performance is task-specific",
+      "subtitle": "Primary-source versions from the 10 October literature review",
+      "slidenum": 11,
+      "layout": "data_table",
+      "image_url": "https://slidesgpt.com/media/397f36cadd9d.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    },
+    {
+      "title": "Backup: evidence status and confirmation",
+      "subtitle": "What the current results support",
+      "slidenum": 12,
+      "layout": "title_and_two_to_four_columns_with_icons",
+      "image_url": "https://slidesgpt.com/media/153823dff629.png",
+      "presentation_view_url": "https://slidesgpt.com/view/267708b9f2fa"
+    }
+  ]
+}

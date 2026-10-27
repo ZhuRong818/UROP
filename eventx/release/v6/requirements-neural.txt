@@ -1,0 +1,8 @@
+# Local retrospective association tooling; not V4 forecast dependencies.
+torch==2.8.0
+transformers==4.57.1
+sentence-transformers==5.1.1
+huggingface-hub==0.36.2
+tokenizers==0.22.2
+safetensors==0.8.0
+numpy==2.0.2

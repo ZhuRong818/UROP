@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-26T11:44:58.137065+00:00",
+  "bounds_verified_by_exhaustive_binary_label_assignments": true,
+  "labels_and_eligibility_do_not_change_predictions": true,
+  "max_prediction_errors": {
+    "activity_logit": 0.0,
+    "global_rate": 0.0,
+    "legacy_hgb7": 0.0,
+    "market_rate": 0.0,
+    "row_hgb7": 0.0
+  },
+  "model_fit": false,
+  "old_evaluation_rerun": false,
+  "parity_rows": 11459,
+  "passed": true
+}

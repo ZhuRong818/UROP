@@ -1,0 +1,84 @@
+{
+  "activation_deadline_first_episode": "2026-10-29T06:30:00+00:00",
+  "administrative_end": "2026-12-05T00:00:00+00:00",
+  "episodes": [
+    {
+      "calendar_source": "https://www.bea.gov/news/schedule",
+      "components": [
+        "GDP advance Q3",
+        "PCE September"
+      ],
+      "episode_id": "US_RELEASE_2026-10-29",
+      "independence_certified": false,
+      "predictive_admissions": 0,
+      "scheduled_at": "2026-10-29T12:30:00+00:00",
+      "status": "reserved_future_feasibility_episode; collection_activation_pending_source_readiness",
+      "verified_on": "2026-10-22"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "components": [
+        "Employment October"
+      ],
+      "episode_id": "US_RELEASE_2026-11-06",
+      "independence_certified": false,
+      "predictive_admissions": 0,
+      "scheduled_at": "2026-11-06T13:30:00+00:00",
+      "status": "reserved_future_feasibility_episode; collection_activation_pending_source_readiness",
+      "verified_on": "2026-10-22"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "components": [
+        "CPI October",
+        "Real Earnings October"
+      ],
+      "episode_id": "US_RELEASE_2026-11-10",
+      "independence_certified": false,
+      "predictive_admissions": 0,
+      "scheduled_at": "2026-11-10T13:30:00+00:00",
+      "status": "reserved_future_feasibility_episode; collection_activation_pending_source_readiness",
+      "verified_on": "2026-10-22"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "components": [
+        "PPI October"
+      ],
+      "episode_id": "US_RELEASE_2026-11-13",
+      "independence_certified": false,
+      "predictive_admissions": 0,
+      "scheduled_at": "2026-11-13T13:30:00+00:00",
+      "status": "reserved_future_feasibility_episode; collection_activation_pending_source_readiness",
+      "verified_on": "2026-10-22"
+    },
+    {
+      "calendar_source": "https://www.bea.gov/news/schedule",
+      "components": [
+        "GDP second Q3 and corporate profits",
+        "PCE October"
+      ],
+      "episode_id": "US_RELEASE_2026-11-25",
+      "independence_certified": false,
+      "predictive_admissions": 0,
+      "scheduled_at": "2026-11-25T13:30:00+00:00",
+      "status": "reserved_future_feasibility_episode; collection_activation_pending_source_readiness",
+      "verified_on": "2026-10-22"
+    },
+    {
+      "calendar_source": "https://www.bls.gov/schedule/2026/12_sched.htm",
+      "components": [
+        "Employment November"
+      ],
+      "episode_id": "US_RELEASE_2026-12-04",
+      "independence_certified": false,
+      "predictive_admissions": 0,
+      "scheduled_at": "2026-12-04T13:30:00+00:00",
+      "status": "reserved_future_feasibility_episode; collection_activation_pending_source_readiness",
+      "verified_on": "2026-10-22"
+    }
+  ],
+  "no_replacement_rule": "Failed capture, quiet markets, premature resolution or absent relevant evidence remain zero-yield episodes. Reschedules retained with original identity and receipts; do not replace based on returns.",
+  "six_episode_budget_is_not_power": true,
+  "status": "fixed feasibility reservation; not confirmation or asserted source readiness"
+}

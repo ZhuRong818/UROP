@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-25T06:56:13.610531+00:00",
+  "files": {
+    "eventx/release/v7/change_probability_20261025/protocol.json": "922dabf297747a94dc254fc9820b9c4fc204ca9e8c88d20e6b6fac926a5fce9b",
+    "eventx/tasks/research_v7_change_probability_20261025.py": "e32d11a1e45091242fdcd2739f26355fcb62e72fe812b8018f56535244d608b5",
+    "eventx/tasks/collect_v7_change_test_20261025.py": "3153f6146671a6f8933ec0c4be7513a94617ce0ed673da25401fa4fe2f4d1294",
+    "eventx/tasks/evaluate_v7_observational_quotes_20261025.py": "eca5f4f40a3738d78306e3ee3e142c34ed6d40268ab6ca7a00d683005d6ed217",
+    "eventx/tasks/run_v7_archive_week_pilot_20261025.py": "cebece37f3e5546350b5ab596453663c90c0a8de7db5d7272f1a0018fc8da3e1",
+    "eventx/v7/archive_ranges_20261024.py": "6f077026581b6e7ec556f46a9c52b75ec9daa67733d645873495c6df6a27689d",
+    "data/v7/observational_quote_development_20261025/manifest.json": "d0d481971852ed0f8660ea8c1d2d93f3dada9d2b11fe90eddac7c50576e182a5",
+    "data/v7/archive_fullweek_20261025/capture_manifest.json": "17f213f878a950f585fed06314399d7f40768ad1d81bb17c8393c6ec0d6028af",
+    "eventx/release/v7/archive_week_pilot_20261025/selection_manifest.json": "35f7e479675377db0dee8f631ca74c3db94edc35f081cf35d625e4b38d918d34"
+  }
+}

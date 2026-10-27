@@ -1,0 +1,60 @@
+{
+  "cohort": {
+    "event_clusters": 470,
+    "markets": 470,
+    "path": "data/v4/confirmatory/cohort_gate/cohort.jsonl",
+    "selection_is_label_blind": true,
+    "selection_rule": "every Lumid active-roster Polymarket condition with positive roster 24-hour volume, pre-2026-09-02 warehouse metadata, a nonempty question, exactly one canonical YES asset, and end_date at or after 2026-10-30T00:00:00Z",
+    "sha256": "30a7a861a566c28365f871cfb4594272adc85c058b9f13ed70a77a9be1e80d05",
+    "venue": "polymarket"
+  },
+  "confirmatory_decision": {
+    "all_required": true,
+    "b3_vs_b0_brier_improvement_floor": -0.0005,
+    "b3_vs_b0_log_loss_improvement_minimum_nats_per_row": 0.001,
+    "bootstrap_95_lower_bound_above_zero": true,
+    "eligible_venue_point_estimate_nonnegative": true,
+    "undefined_required_input": "positive_decision_not_supported"
+  },
+  "data_policy": {
+    "authoritative_source": "Lumid bounded warehouse retrieval with joined provenance",
+    "live_news_collector": "diagnostic backup only because news/latest cap alarms are unresolved",
+    "news_clock": "max(published_at, ingest_ts, joined run.started_at, joined run.ended_at when present)",
+    "non_lumid_substitution": false,
+    "source_completeness_failure": "confirmatory B1-B3 incomplete; never encode missing news as zero"
+  },
+  "design_id": "eventx-v4-confirmatory-20260902",
+  "design_manifest": {
+    "path": "eventx/release/v4/design_manifest.json",
+    "sha256": "0d4f395ab9892100aa84e31404b1f175ad4c6db6dc1bec6b92832d3a917836b1"
+  },
+  "discovery": {
+    "outcomes_previously_opened": true,
+    "role": "model development only",
+    "window": "[2026-05-17T00:00:00Z, 2026-07-22T00:00:00Z)"
+  },
+  "holdout": {
+    "consumption_receipt_required_before_label_summary": true,
+    "evaluation_count": 1,
+    "future_outcomes_inspected_at_freeze": false,
+    "window": "[2026-09-06T00:00:00Z, 2026-10-30T00:00:00Z)"
+  },
+  "models": {
+    "all_evaluated_on_identical_holdout_rows": true,
+    "b0": "market history",
+    "b1": "B0 plus news volume",
+    "b2": "B1 plus relevance and market-relative novelty",
+    "b3": "B2 plus publisher diversity and exact-headline cross-publisher diffusion",
+    "primary_contrast": "B3_vs_B0"
+  },
+  "primary_metric": "mean_per_row_log_loss_improvement_nats",
+  "protocol_id": "eventx-v4-confirmatory-polymarket-20260902",
+  "status": "preregistered_before_future_holdout",
+  "unsupported_claims": [
+    "causality",
+    "KOL_incremental_information",
+    "social_virality",
+    "Kalshi_replication",
+    "universal_prediction_market_generalization"
+  ]
+}

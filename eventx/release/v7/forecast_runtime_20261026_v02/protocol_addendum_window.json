@@ -1,0 +1,8 @@
+{
+  "activated_before": false,
+  "at": "2026-10-26T16:12:57.138329+00:00",
+  "change": "Prospective window shortened from 7 to 3 consecutive full UTC dates (window() in forecast_runtime_20261026_v02.py) so the single evaluation completes before the 1 November 2026 report deadline. Decided before activation and before any prospective forecast; no outcomes seen.",
+  "implication": "Fewer days -> wider uncertainty; 30 contracts x 276 grids x 3 days = 24,840 scheduled decisions.",
+  "readiness_passed_on_implementation_sha256": "853daef6199333c0831d6d92169acff11d53712a82c645199af0094d55979b62",
+  "unchanged": "Collector, inputs, gates, model, emitter, evaluator logic, reporting floor and metrics. Collector file hash identical to the readiness run."
+}

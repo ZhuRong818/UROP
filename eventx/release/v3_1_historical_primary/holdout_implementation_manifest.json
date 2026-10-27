@@ -1,0 +1,62 @@
+{
+  "artifacts": [
+    {
+      "path": "eventx/release/v3_1_historical_primary/protocol.json",
+      "sha256": "61cef4cb3c307509657b41f0156a73fe06ab245797729e27db5b1cfc1ff3861c"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/candidate.json",
+      "sha256": "1bf0e8b8d6ec068ad8ae5935f21789815055a51ddb911030f52cb881032ceed4"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/candidate_manifest.json",
+      "sha256": "566b17262edf09ec7dd08250c7e1b97068ef795506ce8b82d810218337d8f659"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/HOLDOUT_IMPLEMENTATION_SPEC.md",
+      "sha256": "5fd9ec157633edd680da5fa74a530619a80d607364232fce66a0516e761b7a23"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/holdout_evaluation_config.json",
+      "sha256": "e82ce342ee193a9585c9adb2f873e4655d849cdffbfade364e794b02d9d1fc47"
+    },
+    {
+      "path": "data/v3_1_historical/primary/development/prepared/manifest.json",
+      "sha256": "2ceb5af49824d24e04b72e1754cc2ed1c579dc1b5165c1ef89d68768eda141d8"
+    },
+    {
+      "path": "eventx/tasks/fetch_v3_historical_development_trades.py",
+      "sha256": "4754aec4bc45ccb2eaf547f982f4dfa54df14c0b7a78562717e54465ddb05184"
+    },
+    {
+      "path": "eventx/tasks/fetch_v3_1_historical_holdout_trades.py",
+      "sha256": "5139c0c46d70df66a2c1e61bb81c6085a981d97b8ccddb97fc9673f6da21b374"
+    },
+    {
+      "path": "eventx/tasks/build_v3_1_historical_holdout_examples.py",
+      "sha256": "608d988518e305370ba0e1f4a2a37cf94bb7677babd1e2df2734d7b6b19ea224"
+    },
+    {
+      "path": "eventx/tasks/evaluate_v3_1_historical_holdout.py",
+      "sha256": "e3bbde92a596e4874e425fa19ccca3ebc974b12f48f1e6677d7c8601908ff14c"
+    },
+    {
+      "path": "eventx/tasks/test_v3_1_historical_holdout.py",
+      "sha256": "edb34102339ea07be0bc5aa1848ef56b5f51f98e7f233ef346d2b8d86fcb9234"
+    },
+    {
+      "path": "eventx/tasks/freeze_v3_1_historical_holdout_implementation.py",
+      "sha256": "55d5b96f10b1908ca1beece9389fe791782ea437c90d71d31dab0d3c537c0dce"
+    },
+    {
+      "path": "eventx/release/v3_1_historical_primary/holdout_synthetic_test_receipt.json",
+      "sha256": "677b518aee3777e42173b115e1f82b95e6b02eadffa1554c0bb825fee004338a"
+    }
+  ],
+  "candidate": "b0",
+  "candidate_count": 1,
+  "historical_holdout_read": false,
+  "manifest_id": "eventx-v3.1-historical-holdout-implementation-20260902",
+  "protocol_id": "eventx-v3.1-historical-primary-20260902",
+  "status": "frozen_after_candidate_before_historical_holdout_retrieval"
+}

@@ -1,0 +1,10 @@
+{
+  "locked_files": {
+    "data/v7/archive_compatibility_20261024/metadata_20261024T144333Z_f4cf4b/manifest.json": "d3de2fba61f80af2f919477a9238e6267af8064529db007cf0005d65a55d907f",
+    "data/v7/archive_mapping_diagnosis_20261025/manifest.json": "975ff697e5529d68f6c7d403698eb34418649f8fa09590803f6b4b9565c14409",
+    "eventx/release/v7/archive_sample_20261025_v03/excluded_market_ids.json": "fd544493b8eabcb16fb49dedddb6cebdef9d130b1ecc7783f4096094a4d5505a",
+    "eventx/release/v7/archive_sample_20261025_v03/policy.json": "9e0f9c455720f41884312d7938fd0f6552af7eb7e04d55970a1e33d4a726520f",
+    "eventx/tasks/audit_v7_archive_sample_20261025_v03.py": "66e4abc0f7460105bd5a2b72f1045753822a80c0e84c57a70107e29afb3ac6e0",
+    "eventx/v7/archive_ranges_20261024.py": "6f077026581b6e7ec556f46a9c52b75ec9daa67733d645873495c6df6a27689d"
+  }
+}

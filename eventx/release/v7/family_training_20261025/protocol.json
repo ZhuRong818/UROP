@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-25T09:29:37.078965+00:00",
+  "objective": "Broaden training families and compare row-trained/family-balanced boosters with fresh baselines on later dates and10untouchedfamilies",
+  "target": "Unchanged probability of any observed YES-midpoint change30m ahead;18price/history/missingness features;fresh endpoint eligibility;not news/tradability/price-level regression",
+  "cohort_design": "Retain prior30(all,includingfailures);select30additional contract/family-disjoint IDs via metadata only;first20eligible joindevelopment50,next10reservedunseen. No outcome/return/performance selection.",
+  "selection_rule": "CachedApr21identitycommon nonboundaryIDswith>=2books/hour,seededSHA256 family-training-v1:,max240metadata candidates. Exclude1231IDs/prior30/initial5andallpriorcurrenteventIDs. Require exactYesNo/rules/start<May7/end>May13;newcurrenteventIDsunique. Convenience sample,not representative/PITproof.",
+  "development_dates": [
+    "2026-05-07",
+    "2026-05-08",
+    "2026-05-09"
+  ],
+  "train_dates": [
+    "2026-05-07",
+    "2026-05-08"
+  ],
+  "selection_date": "2026-05-09",
+  "test_dates": [
+    "2026-05-10",
+    "2026-05-11",
+    "2026-05-12"
+  ],
+  "locked_older_evaluations": "Apr25\u201330andMay4\u20136notusedforretuning;V4/consumedholdoutsuntouched",
+  "source_scope": "72devfiles50IDs then72testfiles60IDs;16MiB/file/4groups/2workers;max2415919104bytes. Test retrieval only afternewmodelmanifest. Mixed pre-holdoutchunksfiltered beforeanalysis;newunseencontractsno traininglabels.",
+  "features_and_eligibility": "Exact frozen endpoint feature builder from preceding iteration;no relaxedgates,imputedtargets,domainselection or depth inference. Missing targets stayunknown;allselectedIDsretained.",
+  "models": [
+    "Fresh smoothedglobal rate",
+    "Fresh market rate shrunk20pseudoobservations toglobal",
+    "Fresh activityLogisticRegression C=.1",
+    "Fresh row-weightedHGB7",
+    "Fresh family-balancedHGB7",
+    "Fixed50:50probabilityblend ofrow/familyHGB7"
+  ],
+  "hgb_parameters": "100iterations,lr.05,7leaves,minleaf100,L2=10,early_stoppingFalse,seed20261025;identicalarchitecture acrossweightingablation",
+  "family_weights": "clip(sqrt(N/(F*n_family)),.25,4),normalize mean1;computed on trainingeligible rows only. Partial family balancing;no classweighting. Familykey currenteventIDset,not independent shock assumption.",
+  "selection": "May9lowest row-weightedlogloss among6models;ties1e-12 favorlisted simplerbaselines. Family-macroLLreportedsecondary,notnewtestselectioncriterion.",
+  "minimum_gate": "1000train/50positive/50negative/8families;200selection/20positive/20negative. Stop ifinsufficient;no outcomedrivenreplacement.",
+  "refit": "Refit onMay7\u20139development50;freeze beforeMay10\u201312. Storeallmodels forprespecifiedablation;chosenmodel fixed,do notselect testwinner.",
+  "test_controls": "All6prespecifiedmodels plus old frozenHGB7 aslegacyanchor. Primary row-LL separately ondevelopment50andunseen10;prior30/added20/combined descriptive. IncludeBrier/AP/AUC/family-macroLL,strict,nonoverlap,per-day/per-market,fixedcalibrationbins.",
+  "claims": "New historical time/family test,not prospective or independent-day significance. No automaticlivepromotion. Preserve losses and zero-coverage IDs. Weighting alone notnovelalgorithm;scientificquestion is portability."
+}

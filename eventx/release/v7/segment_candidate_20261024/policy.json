@@ -1,0 +1,21 @@
+{
+  "activation": "First future5minute grid after launch; base commitment and this commitment both<=grid+30s",
+  "at": "2026-10-24T14:25:57.733426+00:00",
+  "endpoint": "Use only the existing frozen base-service endpoint after a timely candidate commitment",
+  "fallback": "Persistence outside segment or without30mhistory",
+  "no_claims": [
+    "independent confirmation",
+    "news gain",
+    "profitability",
+    "algorithmic novelty"
+  ],
+  "no_existing_service_changes": true,
+  "no_refit": true,
+  "outcomes": "All eligible base forecasts retained; report segment AND population fallback errors and missingness",
+  "prediction": "Three-class regularized logistic probabilities times training-only conditional mean changes",
+  "segment": "past30-minute midpoint momentum times current imbalance >1e-12; requires valid short features",
+  "selection": "Post-hoc exploratory winner from420nominal model/segment comparisons; failed inner stability screen",
+  "source": "Already-running memory quote service; no new market selection or network requests",
+  "stop": "Base run stop+60seconds; bounded read-only consumer",
+  "version": "segment_candidate_20261024"
+}

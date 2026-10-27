@@ -1,0 +1,12 @@
+{
+  "duration_seconds": 2400,
+  "metadata_max_age_seconds": 360,
+  "model_inference": false,
+  "network_failure": "Preserve failures; stop on scope mismatch. 401/403/429 backoff inherited from frozen transport.",
+  "poll_seconds": 60,
+  "prospective_test_started": false,
+  "scope": "Exact two-market public WebSocket + metadata/resolution; no trades or provider requests",
+  "target_construction": false,
+  "version": "source_time_readiness_20261026",
+  "websocket_url": "wss://ws-subscriptions-clob.polymarket.com/ws/market"
+}

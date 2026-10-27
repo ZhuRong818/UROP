@@ -1,0 +1,16 @@
+{
+  "locked_files": {
+    "data/v7/quote_experiment_20261024/development/manifest.json": "6fcf6a80e223e3357f81f9a1b5dac984bdc44d221b0a5bf10fad52255f7ed26f",
+    "data/v7/quote_experiment_20261024/development/ridge_model.json": "23895be196c08404bfb60f310fc0d6ee817be67fcdb69a37c1e245cc9fd27af5",
+    "eventx/release/v7/expansion_source_pilot_20261024/implementation_manifest.json": "8b74c8248ffba52052c8e855bc7714911661538f92f5b14375371deffc39cd05",
+    "eventx/release/v7/quote_experiment_20261024/forward_cohort.jsonl": "8644b99a8e0da2ed5782b43b1d33938d079d9353c2b9341157e54907054b3261",
+    "eventx/release/v7/quote_experiment_20261024/implementation_manifest.json": "f068b35aa3eb8e9543630c3af52555528cf192e1a09c43658477950fc557e47a",
+    "eventx/release/v7/quote_experiment_20261024/policy.json": "9a1d1751733cab38be17c9b6061caeac6d6abc5756f14c1758a3e12d4ac87b40",
+    "eventx/release/v7/quote_shadow_20261024/activation_policy.json": "0c81f9a54603e52c7318e7ad8353a97b5e238d182aea0107dde59a59724e5458",
+    "eventx/release/v7/quote_shadow_20261024/com.eventx.quote-shadow.20261024.plist": "23febf67d024d723bc544b7857aaab5aba0197ea48e81ecbb5dfc235ec459a57",
+    "eventx/tasks/launch_v7_quote_shadow_20261024.py": "51788bc4c5a2c3c083c7d159e3638f992a68e476ebb65a95394021bc63453d50",
+    "eventx/tasks/prepare_v7_quote_shadow_20261024.py": "e10c7ed30c282f67d36c97cce9102b7fff1fc58e97149da737c0ecd96c27e82f",
+    "eventx/tasks/run_v7_quote_shadow_20261024.py": "1459b8a669c2fa58319175404916cf4e7a82d69f976f98b5e6e3ba5b88cbaf62",
+    "eventx/v7/quote_experiment_20261024.py": "e967e5c33f7712c3a9fce7bdaa9b7519effd913632778dffe577791a9ff315ee"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-24T14:22:28.019976+00:00",
+  "candidate_selection_min_rows": 50,
+  "deployment": "No mutation of live service; any selected candidate needs a separately frozen future evaluation",
+  "fallback_if_no_candidate": "persistence",
+  "fold_positive_rule": "At least10selected rows and positive baseline MAE and positive MAE gain",
+  "folds": [
+    {
+      "end": "2026-10-23T21:00:00Z",
+      "start": "2026-10-23T20:00:00Z",
+      "train_endpoint_before": "2026-10-23T19:30:00Z"
+    },
+    {
+      "end": "2026-10-23T22:00:00Z",
+      "start": "2026-10-23T21:00:00Z",
+      "train_endpoint_before": "2026-10-23T20:30:00Z"
+    },
+    {
+      "end": "2026-10-23T23:30:00Z",
+      "start": "2026-10-23T22:00:00Z",
+      "train_endpoint_before": "2026-10-23T21:30:00Z"
+    }
+  ],
+  "input_manifest_sha256": "471fa4dc986ef07706d74b888c3d3273095d6b9c9a734e0b9e25e79f3957d59f",
+  "min_coverage": 0.1,
+  "min_markets": 3,
+  "min_positive_inner_folds": 2,
+  "model_count_including_persistence": 16,
+  "not_confirmatory": true,
+  "objective": "30-minute midpoint MAE; RMSE secondary; retain all experiments and discovery-only winners",
+  "protected_or_live_outcomes_used": false,
+  "ranking": "Largest whole-population MAE gain with persistence outside segment; tie by segment/model name",
+  "scope": "User-authorized segment/model discovery; all underlying data already outcome-exposed",
+  "segment_count": 28,
+  "segment_definition": "Fixed code rules from current/pre-decision features only; no identities or future changes",
+  "selection": "Choose on inner forward predictions before computing outer descriptive scores",
+  "sklearn_version": "1.7.2",
+  "source": "https://scikit-learn.org/1.7/auto_examples/model_selection/plot_nested_cross_validation_iris.html"
+}

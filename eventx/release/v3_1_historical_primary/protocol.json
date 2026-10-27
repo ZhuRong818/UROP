@@ -1,0 +1,299 @@
+{
+  "authorization": {
+    "scope": "minimal pre-outcome correction after the v3 trade gate found zero-notional warehouse rows; all confirmatory analysis rules remain unchanged",
+    "source": "explicit_user_direction"
+  },
+  "cohort": {
+    "by_venue": {
+      "kalshi": 3832,
+      "polymarket": 819
+    },
+    "markets": 4651,
+    "path": "data/v3_1_historical/primary/label_blind_inputs/cohort.jsonl",
+    "predecessor_markets_removed_by_label_blind_data_gate": 19,
+    "reselection_after_labels": false,
+    "selection_is_label_blind": true,
+    "selection_period": "development only",
+    "selection_rule": "include every market with earliest Lumid metadata available before development close, a unique canonical YES outcome, at least 100 positive-notional canonical-YES development executions under the composite key, and at least 10 development active UTC days",
+    "sha256": "72a355f6afdf16935752a7c26bc237e2bbad5a6fbb0770d27bb80b5aa586a32b",
+    "taxonomy": "eventx-v2.1-taxonomy-v7"
+  },
+  "created_at": "2026-09-02T07:36:23.173141Z",
+  "development_validation": {
+    "folds": [
+      {
+        "fold": 1,
+        "held_out_group": 0,
+        "validation": "[2026-05-28T00:00:00Z, 2026-06-08T00:00:00Z)"
+      },
+      {
+        "fold": 2,
+        "held_out_group": 1,
+        "validation": "[2026-06-08T00:00:00Z, 2026-06-19T00:00:00Z)"
+      },
+      {
+        "fold": 3,
+        "held_out_group": 2,
+        "validation": "[2026-06-19T00:00:00Z, 2026-06-30T00:00:00Z)"
+      },
+      {
+        "fold": 4,
+        "held_out_group": 3,
+        "validation": "[2026-06-30T00:00:00Z, 2026-07-11T00:00:00Z)"
+      },
+      {
+        "fold": 5,
+        "held_out_group": 4,
+        "validation": "[2026-07-11T00:00:00Z, 2026-07-22T00:00:00Z)"
+      }
+    ],
+    "market_group": "integer value of sha256(venue + ':' + market_id) modulo 5",
+    "purge_minutes": 30,
+    "training_rows": "eligible rows strictly before validation_start minus 30 minutes from all market groups except the held-out group",
+    "type": "five purged expanding-time folds with disjoint held-out market groups",
+    "undefined_required_fold_metric": "fold_does_not_count_as_positive",
+    "validation_rows": "eligible rows in the fold interval from only the held-out group"
+  },
+  "eligibility": {
+    "forward_liquidity_filter": false,
+    "kalshi_payout_notional": "sum(count)",
+    "known_terminal_time_exclusion": true,
+    "minimum_payout_notional": 100.0,
+    "minimum_trades": 3,
+    "polymarket_payout_notional": "sum(size)",
+    "price_age_robustness_minutes": [
+      30,
+      60
+    ],
+    "price_freshness_primary_filter": null,
+    "trade_arrival_diagnostic": true,
+    "trailing_window_minutes": 240
+  },
+  "execution_order": [
+    "preserve failed v3 label-blind data gate and its immutable artifacts",
+    "freeze corrected positive-notional cohort before labels or outcomes",
+    "rerun and freeze synthetic market-cluster power sensitivity",
+    "pass and freeze corrected development data and feature gate",
+    "construct development labels and run B0 versus B1 exactly once",
+    "freeze at most one candidate and its hash",
+    "materialise or unseal historical holdout and write consumption receipt",
+    "evaluate the frozen candidate exactly once",
+    "retain prospective v2.3 as an unchanged secondary replication"
+  ],
+  "features": {
+    "all_other_transform": "identity",
+    "b0_market": [
+      "price_logodds",
+      "momentum_5m",
+      "momentum_30m",
+      "momentum_120m",
+      "realized_vol_30m",
+      "realized_vol_240m",
+      "trade_count_60m",
+      "trade_count_240m",
+      "notional_60m",
+      "notional_240m",
+      "minutes_since_trade",
+      "venue_indicator"
+    ],
+    "b1_added_news": [
+      "news_article_count_60m",
+      "news_article_count_360m",
+      "news_article_count_1440m",
+      "news_symbol_mapped"
+    ],
+    "count_and_notional_transform": "log1p",
+    "news_window": "(t-window, t] by conservative available_at"
+  },
+  "frozen_evidence": {
+    "inherited_v2_3_protocol": {
+      "path": "eventx/release/v2_3/protocol.json",
+      "sha256": "1f9bda7b2433cf2b95ee530f4fd28630a9a6e032671c0350eb975285d963b2e1"
+    },
+    "label_blind_input_report": {
+      "path": "data/v3_1_historical/primary/label_blind_inputs/report.json",
+      "sha256": "813ecdc7a445e148101e131b71d57273152bc846735f8d386c7d593f30a9b985"
+    },
+    "predecessor_failed_data_gate": {
+      "path": "data/v3_historical/primary/development/data_gate/report.json",
+      "sha256": "9e4f2554f777d46eaebf8fc6c3bf7f1934e47da5e93ccbcddf329d24deef7095"
+    },
+    "provenance_audit": {
+      "path": "data/v3_historical/provenance_audit_v2/report.json",
+      "sha256": "9f0363a2ab5c3026d84d1ebeaa42a89937efec36b921b0308ac350e7f689c037"
+    }
+  },
+  "integrity": {
+    "hash_locked_artifacts_must_not_be_modified": true,
+    "historical_holdout_covariates_used_for_selection": false,
+    "historical_holdout_labels_uninspected": true,
+    "labels_inspected_before_freeze": false,
+    "labels_inspected_before_revision": false,
+    "new_holdout_consumption_receipt_required": true,
+    "outcomes_inspected_before_freeze": false,
+    "outcomes_inspected_before_revision": false,
+    "predecessor_trade_prices_retrieved_before_freeze": false,
+    "prior_v1_oot_dataset_id": "eventx-oot-7c4fd487edb3928b9253",
+    "prior_v1_oot_status": "consumed_rerun_prohibited",
+    "revision_inputs": "development execution identity, positive notional and active UTC day only",
+    "trade_price_values_used_for_revision": false,
+    "trade_prices_retrieved_before_freeze": true,
+    "trade_prices_retrieved_before_revision": true
+  },
+  "labels": {
+    "future_price": "latest canonical-YES trade at or before t+30m",
+    "grid_cadence_minutes": 5,
+    "labels_outside_source_or_known_terminal_window": "undefined_and_excluded",
+    "minimum_volatility_observations": 30,
+    "primary_horizon_minutes": 30,
+    "target": "absolute_forward_canonical_yes_logodds_jump",
+    "threshold": "4 * trailing_sigma_1m_240 * sqrt(horizon_minutes / 30)",
+    "threshold_semantics": "inherited preregistered heuristic anchored in one-minute sigma units, not four horizon-standard deviations",
+    "trailing_volatility_window_minutes": 240
+  },
+  "learner": {
+    "class_reweighting": false,
+    "epochs": 8,
+    "hyperparameter_tuning": false,
+    "l2": 0.0001,
+    "learning_rate": 0.02,
+    "model": "standardized_logistic_sgd",
+    "prediction": "arithmetic mean probability across the three fixed seeds",
+    "seed_ensemble": [
+      11,
+      23,
+      47
+    ],
+    "standardization": "training rows only within each fold"
+  },
+  "metrics": {
+    "calibration": "brier_score",
+    "directional_pnl_permitted": false,
+    "primary": "average_precision",
+    "secondary": [
+      "roc_auc",
+      "ece_10_equal_frequency",
+      "calibration_slope",
+      "calibration_intercept",
+      "alert_rate",
+      "lead_time",
+      "development_frozen_decision_curve_net_benefit"
+    ]
+  },
+  "news_association": {
+    "development_associations": 218496,
+    "development_documents": 147377,
+    "development_markets_with_at_least_five": 1420,
+    "input_text": "headline plus summary",
+    "maximum_single_market_share": 0.012599772993555946,
+    "rule": "eventx-v2.1-news-v1-source-path",
+    "rule_changes_after_labels": false,
+    "symbol_mapping": "frozen association rule; news_symbol_mapped is one only where a frozen canonical financial-symbol mapping exists, otherwise zero"
+  },
+  "news_availability": {
+    "conflicting_publication_timestamps_for_same_url": "exclude_identity",
+    "duplicate_identity": "count_once_at_earliest_conservative_availability",
+    "future_append_invariance_required": true,
+    "ingest_must_not_precede_run_start": true,
+    "late_rows": "exclude_from_primary",
+    "maximum_publication_to_availability_lag_hours": 24,
+    "missing_run_end": "allowed because max includes ingest_ts after the verified run start",
+    "missing_run_start": "exclude",
+    "primary_time": "max(published_at, ingest_ts, joined provenance.runs.started_at, joined provenance.runs.ended_at when present)",
+    "publication_time_only": "oracle_sensitivity_only_cannot_rescue_primary",
+    "run_end_before_run_start": "exclude",
+    "source_run_join_required": true,
+    "stable_identity": "normalized_url_else_article_id"
+  },
+  "one_shot_holdout": {
+    "candidate_count_max": 1,
+    "claim_scope": "the frozen historical cohort and interval",
+    "consumption_receipt_required_before_metrics": true,
+    "final_model_training": "selected specification fitted once on all eligible development rows with fixed seeds",
+    "holdout_must_remain_sealed_until_candidate_hash_is_frozen": true,
+    "reruns_permitted": false,
+    "selection": "B1 only if all development H1-H5 pass, otherwise B0"
+  },
+  "price": {
+    "candles": "not permitted for primary labels or market features",
+    "canonical_yes_kalshi": "yes_price / 100",
+    "canonical_yes_polymarket": "price for the unique YES asset_id",
+    "carry_forward": true,
+    "clip_epsilon": 0.0001,
+    "midpoint": "separate robustness only",
+    "primary": "latest canonical-YES executed trade at or before each five-minute UTC grid time",
+    "record_price_age_minutes": true,
+    "source_switching": false
+  },
+  "promotion_gate": {
+    "all_required": true,
+    "fallback": "freeze B0 if any condition is unsatisfied",
+    "h1": "AP(B1)-AP(B0)>0 on aggregate out-of-fold rows",
+    "h2": "Brier(B0)-Brier(B1)>0 on aggregate out-of-fold rows",
+    "h3": "both improvements positive in at least four of five folds",
+    "h4": "paired bootstrap 95% lower bound for Brier(B0)-Brier(B1)>0",
+    "h5": "Brier(B0)-Brier(B1)>=0 separately for Kalshi and Polymarket",
+    "undefined_required_metric": "condition_unsatisfied"
+  },
+  "protocol_id": "eventx-v3.1-historical-primary-20260902",
+  "research_question": "Does conservatively point-in-time, market-relevant Lumid news improve prediction and calibration of 30-minute absolute canonical-YES prediction-market repricing beyond executed-market history?",
+  "revision": {
+    "change": "remove exactly 19 markets failing the original activity minimum after positive-notional normalization",
+    "observed_source_issue": "204069 Kalshi rows with count=0",
+    "predecessor_protocol_id": "eventx-v3-historical-primary-20260902",
+    "predecessor_result": "failed_label_blind_development_trade_gate",
+    "unchanged": [
+      "research_question",
+      "source_policy",
+      "windows",
+      "news_availability",
+      "news_association_rule",
+      "price",
+      "eligibility",
+      "labels",
+      "features",
+      "learner",
+      "development_validation",
+      "metrics",
+      "uncertainty",
+      "promotion_gate",
+      "one_shot_holdout"
+    ]
+  },
+  "source_policy": {
+    "base_url": "https://lum.id/findata",
+    "non_lumid_substitution_permitted": false,
+    "provider": "Lumid FinData only",
+    "source_claim": "complete bounded retrieval of rows present in the Lumid warehouse, not completeness of the global news universe",
+    "tables": [
+      "news.articles",
+      "provenance.runs",
+      "prediction_markets.kalshi_markets",
+      "prediction_markets.kalshi_trades",
+      "prediction_markets.polymarket_markets",
+      "prediction_markets.polymarket_trades"
+    ],
+    "warehouse_endpoint": "/retrieve"
+  },
+  "status": "re_preregistered_after_label_blind_trade_gate_before_labels_or_outcomes",
+  "study_positioning": {
+    "causal_claim_permitted": false,
+    "kol_incremental_claim_permitted": false,
+    "kol_status": "deferred_after_failed_frozen_association_audits",
+    "primary": "retrospective point-in-time historical B0-versus-B1 study",
+    "secondary": "unchanged prospective EventX v2.3 protocol-validation replication"
+  },
+  "uncertainty": {
+    "block_minutes": 360,
+    "estimand": "conditional on the frozen market cohort",
+    "method": "paired circular moving-block bootstrap within market over out-of-fold predictions",
+    "samples": 5000,
+    "seed": 61
+  },
+  "windows": {
+    "development": "[2026-05-17T00:00:00Z, 2026-07-22T00:00:00Z)",
+    "one_shot_holdout": "[2026-07-22T00:00:00Z, 2026-08-08T00:00:00Z)",
+    "overall": "[2026-05-17T00:00:00Z, 2026-08-08T00:00:00Z)",
+    "split_basis": "80/20 complete UTC days fixed by the label-blind feasibility protocol"
+  }
+}

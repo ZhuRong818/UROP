@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-18T03:37:22.494321+00:00",
+  "locked_files": {
+    ".venv/bin/python": "d67ff65d8cbe8e6f40d5e7bcf8d9978e935d571907316c5ce6670181951db324",
+    "data/v5/market_condition_tuning_20261012/manifest.json": "5e2adc4aafa21b34b21a35faebf15f44d31a5931226e314bea77f5afac9d17ba",
+    "data/v5/market_condition_tuning_20261012/selected_model.joblib": "d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c",
+    "data/v5/market_condition_tuning_20261012/selection_receipt.json": "445a401686f6d6c5dde1938010ba3a2449fac83a0f6787e81edc77f9760eeefd",
+    "eventx/release/v7/original_source_capture_20261018/capture_contract.json": "f957df87a0d4d4521fdcbdedc583366b3a319fd9c641acbd416fb4cbaa428bef",
+    "eventx/release/v7/original_source_capture_20261018/com.eventx.original-releases.20261018.plist": "a13a8272b90b180456074a80c32bdf4253f476504637596e5a93af9be25afa8d",
+    "eventx/release/v7/original_source_capture_20261018/schedule.json": "07eee158834b2932d03455caa2f09034b9d84f975898fd4bb66dad41eb2b4984",
+    "eventx/tasks/collect_v7_original_releases_20261018.py": "3a6a26868e4b7caa960e5f0e0863671257f092a07e31a53b7cc2eb47aebe9a14",
+    "eventx/tasks/launch_v7_original_capture_20261018.py": "65b5930a580073d7c7b82a08d015022090045d2740c533f202beda752abf17de",
+    "eventx/tasks/prepare_v7_original_capture_20261018.py": "dcc2b9de3dde82f74aa8c58e256bf9ec9ef6b1cbb48f7b883e712bd8ac44f8d5"
+  },
+  "scope": "capture implementation lock, not a forecasting preregistration"
+}

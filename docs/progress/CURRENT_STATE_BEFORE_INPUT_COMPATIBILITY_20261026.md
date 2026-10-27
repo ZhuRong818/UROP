@@ -1,0 +1,202 @@
+# EventX current state
+
+> Canonical startup handoff. Frozen artifacts govern conflicts. Detailed preceding state:
+> `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
+> Append history to `docs/progress/2026-10.md`,not legacy PROGRESS.md.
+
+Last updated: **2026-10-26 Asia/Singapore**; seven-day classifier report completed;live point-forecast run closed and audited.
+
+## Active objective and locked decisions
+
+User authorized autonomous LOCAL research and separately versioned quote forecasting;SSH unavailable.
+Produce timely forecasts and evaluate actual endpoints; do not equate operation with predictive superiority.
+Original raw condition_120k trade classifier stays frozen:zero current prospective admissions.
+Active quote study predicts probability of observed30m midpoint change;old point-regression result stays fixed.
+Existing cohorts remain fixed. User explicitly authorized separate development segment/model discovery.
+No protected early evaluation, external messages or trading; segment discovery is not confirmation.
+
+## Completed live point-forecast experiment (audited26October)
+
+- `EVENTX_LIVE_POINT_FORECAST_AUDIT_20261026.md`;`data/v7/live_memory_completion_20261026/`.
+- Source/base/segment stopped normally25Oct14:03–14:04UTC;PIDsabsent26Oct01:00UTC.
+  No active quote-forecast service;lastdisplayedpredictions expired. Original release jobs separate.
+- Base562decisions,269timely,293abstentions,0missed;257observed/12unavailable outcomes.
+  OnlyUSrecessioncontractcontributed;GDPcontractzero.12changedrows(twooverlapcomponents,notindependentevents).
+- Snapshot257:MAEpersistence0.0002334630350194548,ridge0.00030554478497860934(+30.87501623250457%).
+  Short240:MAEpersistence0.0002499999999999995,ridge0.00029924255872(+19.69702348800024%).
+- Segment265timely/253observed/12unavailable;6activeobserved,referenceMAE0,candidate0.0008025987158923308.
+  All253:referenceMAE0.00023715415019762802,candidate0.00025618811183934336(+8.025987158923309%).
+- Auditpassed269feature/prediction+269endpointreplays,1815payloadhashes,chains/deadlines/frozenmodels.
+  No primaryMAEwin or promotion;minor snapshotRMSEgain retained assecondary. No news/independentclaim.
+- Live gate limits RECEIPT age,not source-message age:163/269sourceages>120s,median143.01200008392334s.
+  Historical classifier hasdifferent18features/source-agegates;these aredifferenttasks,do notpoolclaims.
+- Previouszero-forecast shadow/development/history preserved in
+  `docs/progress/CURRENT_STATE_BEFORE_LIVE_COMPLETION_20261026.md`;oldmodels remainfrozen.
+
+## Prior quote experiments (25October)
+
+- Full-day point-regression:`EVENTX_FULL_DAY_FORECAST_STUDY_20261025.md`;persistence selected.
+  Apr25–27 evaluation1414rows/11markets,MAE0.00035183875530410234;no gain,no retuning.
+- Change probability:`EVENTX_CHANGE_PROBABILITY_ITERATION_20261025.md`;frozenhgb7.
+  Apr28–30:3729rows/903positives/11markets;LL0.4954911669183289 vs global0.5956253658332185,
+  activity0.6052349794047419;Brier0.15757754754470057,AP0.5233644517078284.
+  LLgain16.811607540389442%global/18.13243057999519%activity;strict-subset loss remains.
+- Target:endpoint midpoint differs30m later;fresh current+endpoint,no full-path primary gate.
+  Missing lag flags;no news/depth/tradability claim. Historical same-cohort test,no live promotion.
+- Apr25–30opened;no retuning. Source/QA/earlierfit detail archived in
+  `docs/progress/CURRENT_STATE_FAMILY_RESULT_DETAIL_20261025.md`;frozen artifacts govern.
+
+## Prior calibration and transport test (25October)
+
+- `EVENTX_CALIBRATION_AND_TRANSPORT_20261025.md`:May1–3selectedidentitycalibration;oldHGBunchanged.
+- May4–6:original3617rowsLL0.49652958373600004 vs updatedglobal0.5365791410562563;
+  new2006rows/4marketsLL0.8126213299352547 vs updatedglobal0.7340095964891371;transferFAILED.
+- Bothsourcephases72/72files;allsecondaryresults preserved. May4–6opened,no retuning.
+  Full detail:`docs/progress/CURRENT_STATE_BEFORE_WEEK_RESULT_20261025.md`;frozen artifacts govern.
+
+## Broader-family training iteration (25October)
+
+- COMPLETED:`EVENTX_BROADER_FAMILY_TRAINING_20261025.md`;artifacts`data/v7/family_training_20261025_v02/`.
+- V01metadata exhausted167candidates/18qualified;V02preserved18,extendedidentitygroups1/2,
+  11211222identitybytes+75newlookups =>30newfamilies.50development/10unseenIDs frozen beforeprices.
+- May7–8fit6143rows/19families;May9select3069;chosenrow_hgb7.
+  RefitMay7–9:9212rows/20families. Samefeatures/gates,weightingablationprespecified.
+- TestMay10–12:developmentcohort10314rows/29markets;LLselected0.36242358010716824,
+  activity0.468667061709134,legacy0.45296919182121015.
+- Unseen1145rows/5markets;LLselected0.46205740072128865,
+  activity0.5112204942953479,global0.566114599172508,legacy0.46041891573554555.
+- 72/72dev,71/72testfiles;allmodels/strict/nonoverlap/calibration/per-market results retained.
+  May12T09ReadTimeout:affected endpoints missing,notimputed;failure preserved.
+  Historical observational test,notprospective/independentshocks. No automaticpromotion or news/tradabilityclaim.
+- LLgainvsactivity22.66928706585807%development/9.616808035410294%unseen;unseen0.355868303787111%worselegacy.
+  WeightingdidnotimproveLL;fiveunseencontracts,208/274positivesfromonecontract. No broadtransferclaim.
+- May10–12nowopened;do not retune onit. Older failed attempts and tests preserved.
+
+## Seven-day fixed-model replication (25October)
+
+- COMPLETED:`EVENTX_SEVEN_DAY_REPLICATION_20261025.md`;`data/v7/week_replication_20261025/`.
+- May13–19,all60existingIDs;current/legacy boosters+3baselines unchanged,no fit/newidentities.
+- Developmentcohort:27924known/32477issued/96600grids,30contracts;
+  LLcurrent0.3583213732070323,logistic0.4524090254527762,legacy0.4283494185894651.
+- Training-excluded:2033known/2694issued/19320grids,6contracts;
+  LLcurrent0.255471891359488,logistic0.2646930812520174,legacy0.3348654193966712.
+- Sources168/168hours,3failedattempts/3recovered;5982429YES events.
+- Allcurrent-validforecasts retained;missing-label bounds(notCIs),strict/nonoverlap/date/contract metricsreported.
+  QA9579hashentries/45metricsets passed. Historical only,no news/livepromotion.
+- LLgainvslogistic20.797032541864066%development/3.4837290982115996%excluded;excludednonoverlapreverses.
+  Developmentmissing-labelboundspositive;excludedboundscrosszero. No unconditionaltransferclaim.
+- May13–19nowconsumed;no retuning. Same60conveniencecontracts;historicalstatus/expiry/independence unresolved.
+
+## Live-input compatibility (26October)
+
+- IN PROGRESS:`data/v7/live_input_compatibility_20261026/`;label-blind adapter/replay,no new test.
+- Trainingarchive1416544events:1415679price_change withquotes;810book/54trade/1tick allnullquotes.
+- Publishedcollector commitcb0f663 (31July,Maydeploymentunverified):database-insert receipt clock,
+  upstream dedup;raw WebSocket receipt groups are not automatically equivalent.
+- Build exact arithmetic parity and source projection;block frozen-model activation without clock/feed assurance.
+
+## Other source evidence retained
+
+- Detailed source/provider/release evidence:`docs/progress/CURRENT_STATE_CHANGE_PROB_DETAIL_20261025.md`.
+- Six release episodes29Oct–4Dec and12provisional links retained;exact evidence/terminal gates unresolved.
+- Provider52records map52fills/29transactions;47late-unrecovered records chainmatched. No general parity fix.
+- Quote/source redesign does not repair original trade-model eligibility,news timestamps or historical status.
+
+## Selected market model: retain raw condition_120k
+
+Canonical: `data/v5/market_condition_tuning_20261012/`, selected_model.joblib SHA256
+`d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c`.
+Histogram gradient booster,13base+9trailing features;600iterations,lr0.05,7leaves,
+depth3,minleaf100,L2=10,120k fit rows. Task: probability of large **absolute** YES
+log-odds movement over30m;not direction/exact magnitude/resolution. Every5m grid.
+
+- Opened fold5:112,616 matched rows, LL0.3429489298145635,
+  Brier0.10905976503729453, AP0.3462485264100695.
+- LL reduction0.5415604842619057% vs previous HGB;1.7012452641439602% vs earlier
+  tree. Older9.68% logistic comparison is a separate364,903-row panel.
+- Five condition-group ablations worsen both folds; retain full features.
+  Fold4-selected Platt calibration worsens fold5 LL to0.3434057612588951;
+  do not promote it or tune from these already-open results.
+- Evidence: `MARKET_MODEL_TUNING_20261012.md`, `MARKET_MODEL_NEXT_STEP_20261014.md`;
+  `data/v5/market_ablation_calibration_20261014/`. No independent/current-regime
+  confirmation. The current capture task leaves all these artifacts unchanged.
+
+## Latest news evidence and bottlenecks
+
+- Canonical ledger:`data/v7/verified_event_ledger_20261015_v02/`;report`EVENTX_VERIFIED_EVENT_LEDGER_AND_COVERAGE_20261015.md`.
+- Two assistant reviewers agreed32material-context links/12articles;78pairs64agreements/14disagreements.
+  Not independent human gold;zero exact-predicate links.95fresh rows,27movements,fourcontracts/fivedates;
+  allJulyFOMC,fold5zero. Source/rule/independent-episode problems remain. Full detail in archived handoff.
+- Release/article lags min80.868757/median180.344525minutes;zero<=60m. Hypothetical windows are not gains.
+- Earlier matched5388-row M/E/T/C fold5:LL M0.24272243956157083,E0.24232437076003854(best),
+  T0.24239546292985711,C0.24238825908649334;C-T gain0.000007203843363788398nats,belowE.
+- Signedextractorv0.3.3:11links/twoarticles,zeroOOFcoverage;relaxed144articles/1056rows,fold5six/17.
+  147377deduplicated documents/479179legacy associations processed. No demonstrated incremental news gain.
+  `MARKET_NEWS_CONTINUATION_20261014.md`;new change-probability study contains no news features.
+
+## Frozen evaluations and integrity
+
+- **Consumed OOT** `eventx-oot-7c4fd487edb3928b9253`: never rerun
+  `eventx.tasks.run_frozen_b0_oot_final`; never tune from it.
+- **Consumed V3.1 holdout** `[2026-07-22,2026-08-08)`: never rerun
+  `eventx.tasks.evaluate_v3_1_historical_holdout` or evaluate B1 there.
+  B0-only211,718rows/300markets,AP0.171628/Brier0.107107; documented prevalence
+  disclosure deviation. Historical holdout did not test news.
+- Original v1 test was exposed by a noncanonical B0; do not call it untouched.
+- **V4 frozen**:470 Polymarket contracts; confirmation `[2026-09-06,2026-10-30)`.
+  B3 versus B0 primary, minimum0.001nats paired-bootstrap/Brier/venue guards.
+  It does not independently confirm condition_120k. Frozen files unchanged.
+- Do not read V4 future prices/outcomes, create examples/labels/predictions or report
+  prevalence/metrics before close and consumption receipt. No early evaluation.
+- Last V4 label-blind operational check was **14 October08:01:46UTC**, not a current
+  process claim:425receiptsets,45news/38tradedays through13October,zero backlog,
+  all15 frozen hashes matched. `data/v4/health_checks/20261014T080146Z/report.json`.
+  This did not certify source completeness or sealed payload integrity.
+- After close, exactly once: audit_v4_confirmatory_collection →
+  consume_v4_confirmatory_holdout → prepare_v4_confirmatory_inputs →
+  build_v4_confirmatory_examples → evaluate_v4_confirmatory. Stop at failed gate.
+- Never modify hash-locked files in place; create a new version/manifest.
+  Preserve all failed experiments, original reviews and unrelated dirty changes.
+- Keep secrets in .env; never print credentials. Missing/failed feeds remain unknown,
+  not zero news. No silent non-Lumid substitution into existing studies.
+
+## Other research branches / remaining gates
+
+- V5/V7 historical development is outcome-open; cannot confirm redesigned models.
+  Learned representations need forward-training-only fitting in a new cycle.
+  Existing dependence/coverage simulations failed; no inference candidate adopted.
+- V5 PROTOCOL_V1_1 is a working design, not a completed research freeze.
+  Historical feed reconciliation, metadata/version/status and family boundaries
+  remain unresolved. Lumid has no PIT ingestion before17May; older rows are backfills.
+- V6 strict audit failed39/40 conservative relevance errors; cycle closed, no rerun/
+  resample. Relaxed reviewed positives reuse five articles; no certified predictive
+  admissions. Unsent nine-article/15-contract source request remains in
+  `portfolio/LUMID_EVENTX_V6_SINGLE_FILE_REQUEST_20261002.md`.
+- V2.3 unchanged14-market pilot; verify source/consumption receipts before evaluation.
+  No v2 collection/model selection without explicit cycle authorization; current work
+  authorizes V7 sources and a separate quote-forecast experiment.
+- KOL deferred after association failures. EventXBenchT2 validation/test labels sealed;
+  do not open/bulk-download silver data without a new gate.
+- PORTEND is separate portfolio work; not part of the market-news research task.
+- Paper A: `MARKET_NEWS_PAPER_A_DRAFT_20261010_REV2.md`; human scientific review,
+  author/venue details/release rights remain. Slides:`eventx/release/presentation_20261012/rev6/`,
+  through12October only; later research not automatically incorporated.
+
+## Next actions
+
+1. Preserve closed live point-forecast failure and historical classifier gains as separate evidence.
+2. Establish live/archive feature and clock compatibility before a new probability-forecast service;
+   use a new freeze,active metadata-defined contracts and future outcomes. No past-result retuning.
+3. Continue original release capture and reserved29Oct–4Dec episodes; exact evidence/terminal gates remain.
+4. Preserve seven-day replication;May13–19opened. Address missing outcomes and historical status
+   before claiming usable live accuracy. New model/eligibility choices require new evaluation blocks.
+5. Keep V4 operational checks separate; follow its frozen close/consumption sequence exactly once.
+
+## Authoritative references
+
+V4:`eventx/release/v4/{protocol.json,holdout_implementation_manifest.json,model_freeze_manifest.json}`.
+V3.1:`eventx/release/v3_1_historical_primary/`; consumed result
+`data/v3_1_historical/primary/holdout/evaluation_result.json`.
+V5:`eventx/release/v5/{PROTOCOL_V1_1.md,REVISION_IMPLEMENTATION_20260910.md}`.
+Detailed handoff:`docs/progress/CURRENT_STATE_ARCHIVE_20261023_ELIGIBILITY.md`;
+monthly evidence:`docs/progress/2026-10.md`;legacy PROGRESS.md ends21August.

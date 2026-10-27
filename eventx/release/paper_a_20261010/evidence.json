@@ -1,0 +1,443 @@
+{
+  "baseline_improvement": {
+    "average_precision_gain": 0.10831456470642334,
+    "brier": 0.009845383904736521,
+    "fold_log_loss_improvement": {
+      "3": 0.04146850572420198,
+      "4": 0.035979554879417876,
+      "5": 0.05360458841718282
+    },
+    "log_loss_nats_per_row": 0.04367923402641596,
+    "log_loss_percent_reduction": 9.683467129366953,
+    "market_balanced_log_loss_improvement": 0.043821825097598716,
+    "market_cluster_95_interval": [
+      0.039575207326786405,
+      0.04768247137844157
+    ]
+  },
+  "created_at": "2026-10-10T00:33:48.880894+00:00",
+  "joined_news_vs_market": {
+    "limitation": "opened-data, unadjusted for model search or shared calendar shocks",
+    "market_balanced_mean": 0.003494013812010707,
+    "market_cluster_95_interval": [
+      -0.0042213910428329565,
+      0.0029959244686553746
+    ],
+    "markets": 99,
+    "mean": -0.0008491177307750818,
+    "samples": 1000
+  },
+  "new_predictions_fits_bootstrap_or_evaluation": false,
+  "offset_comparisons": {
+    "context_vs_tree_no_terminal": {
+      "average_precision_gain": 0.0004670327119967732,
+      "brier_improvement": 0.0011852348687949599,
+      "fold_log_loss_improvement": {
+        "4": 0.004507097034992138,
+        "5": 0.0018275544263109355
+      },
+      "log_loss": {
+        "limitation": "opened-data, unadjusted for model search or shared calendar shocks",
+        "market_balanced_mean": 0.0014532417395407885,
+        "market_cluster_95_interval": [
+          0.0006621979776953948,
+          0.0055520841225221934
+        ],
+        "markets": 219,
+        "mean": 0.003058288648080515,
+        "samples": 1000
+      }
+    },
+    "semantic_vs_timing": {
+      "average_precision_gain": 0.0004426522765044183,
+      "brier_improvement": -0.00020073919586248434,
+      "fold_log_loss_improvement": {
+        "4": -0.0024162024047273503,
+        "5": 0.0004907158326553858
+      },
+      "log_loss": {
+        "limitation": "opened-data, unadjusted for model search or shared calendar shocks",
+        "market_balanced_mean": -0.0018425633480938133,
+        "market_cluster_95_interval": [
+          -0.0020797659137854205,
+          0.0001987392846863897
+        ],
+        "markets": 219,
+        "mean": -0.0008444537380923093,
+        "samples": 1000
+      }
+    },
+    "semantic_vs_tree_no_terminal": {
+      "average_precision_gain": -0.0005975769025727273,
+      "brier_improvement": 0.000863710485995442,
+      "fold_log_loss_improvement": {
+        "4": 0.0012350359767746143,
+        "5": 0.002287735681895956
+      },
+      "log_loss": {
+        "limitation": "opened-data, unadjusted for model search or shared calendar shocks",
+        "market_balanced_mean": -0.001124143023608867,
+        "market_cluster_95_interval": [
+          -0.001014434423434286,
+          0.0047202786977290166
+        ],
+        "markets": 219,
+        "mean": 0.0018042227315356568,
+        "samples": 1000
+      }
+    },
+    "timing_vs_context": {
+      "average_precision_gain": -0.0015072618910739188,
+      "brier_improvement": -0.00012078518693703355,
+      "fold_log_loss_improvement": {
+        "4": -0.0008558586534901732,
+        "5": -3.053457707036527e-05
+      },
+      "log_loss": {
+        "limitation": "opened-data, unadjusted for model search or shared calendar shocks",
+        "market_balanced_mean": -0.0007348214150558409,
+        "market_cluster_95_interval": [
+          -0.0008703001177841341,
+          2.415588374616772e-05
+        ],
+        "markets": 219,
+        "mean": -0.00040961217845254913,
+        "samples": 1000
+      }
+    }
+  },
+  "operation": "aggregate publication export only",
+  "panels": [
+    {
+      "metrics": {
+        "b0": {
+          "average_precision": 0.19329402262513384,
+          "brier": 0.1192094239104022,
+          "calibration": {
+            "intercept": -0.3160263431935994,
+            "slope": 0.8021907526915579
+          },
+          "ece_10_equal_frequency": 0.016941750041290865,
+          "jump_rate": 0.14126976953741782,
+          "mean_prediction": 0.13761994938442268,
+          "positives": 206318,
+          "roc_auc": 0.6263110357611754,
+          "rows": 1460454
+        },
+        "b1": {
+          "average_precision": 0.19137849868070644,
+          "brier": 0.11949389050641113,
+          "calibration": {
+            "intercept": -0.41019011530839355,
+            "slope": 0.7481233477673834
+          },
+          "ece_10_equal_frequency": 0.018229544987471924,
+          "jump_rate": 0.14126976953741782,
+          "mean_prediction": 0.13756788817789453,
+          "positives": 206318,
+          "roc_auc": 0.6228525186206362,
+          "rows": 1460454
+        }
+      },
+      "name": "V3.1 development",
+      "rows": 1460454,
+      "scope": "prespecified historical development selection"
+    },
+    {
+      "metrics": {
+        "b0": {
+          "average_precision": 0.17162752326141942,
+          "brier": 0.10710722694139478,
+          "calibration": {
+            "intercept": 0.2413205473690489,
+            "slope": 1.173221891983849
+          },
+          "ece_10_equal_frequency": 0.015316568328918671,
+          "jump_rate": 0.12460442664298738,
+          "mean_prediction": 0.13269870483994914,
+          "positives": 26381,
+          "roc_auc": 0.628036713213739,
+          "rows": 211718
+        }
+      },
+      "name": "V3.1 B0 holdout",
+      "rows": 211718,
+      "scope": "one-shot B0 only; disclosed receipt-order deviation"
+    },
+    {
+      "metrics": {
+        "b0": {
+          "average_precision": 0.20614705549898102,
+          "brier": 0.14311715635292577,
+          "log_loss": 0.45915831000998386,
+          "mean_prediction": 0.16663971218505874,
+          "positives": 130158,
+          "prevalence": 0.17460489936856338,
+          "roc_auc": 0.5786839625379527,
+          "rows": 745443
+        },
+        "b1": {
+          "average_precision": 0.20122109932573656,
+          "brier": 0.14381741661946137,
+          "log_loss": 0.4616587182125948,
+          "mean_prediction": 0.1692397420579826,
+          "positives": 130158,
+          "prevalence": 0.17460489936856338,
+          "roc_auc": 0.5664877346755366,
+          "rows": 745443
+        },
+        "b2": {
+          "average_precision": 0.2025459218515599,
+          "brier": 0.14381711317780982,
+          "log_loss": 0.46194600564592425,
+          "mean_prediction": 0.16850629011692977,
+          "positives": 130158,
+          "prevalence": 0.17460489936856338,
+          "roc_auc": 0.5674151266978293,
+          "rows": 745443
+        },
+        "b3": {
+          "average_precision": 0.20484156230497522,
+          "brier": 0.1439592595345058,
+          "log_loss": 0.4656172102608441,
+          "mean_prediction": 0.16685995683193117,
+          "positives": 130158,
+          "prevalence": 0.17460489936856338,
+          "roc_auc": 0.5694180415081223,
+          "rows": 745443
+        }
+      },
+      "name": "V4 historical discovery",
+      "rows": 745443,
+      "scope": "exploratory; full-discovery semantic fitting"
+    },
+    {
+      "metrics": {
+        "linear_no_terminal": {
+          "average_precision": 0.226649337226177,
+          "brier": 0.14095175902738072,
+          "log_loss": 0.451070194620173
+        },
+        "tree_no_terminal": {
+          "average_precision": 0.33496390193260034,
+          "brier": 0.1311063751226442,
+          "log_loss": 0.407390960593757
+        }
+      },
+      "name": "V5 no-terminal baseline",
+      "rows": 364903,
+      "scope": "opened development; descriptive post-selection diagnostic"
+    },
+    {
+      "metrics": {
+        "context": {
+          "average_precision": 0.3740936273607686,
+          "brier": 0.10586141471979633,
+          "log_loss": 0.32753288432485494,
+          "mean_prediction": 0.14337027898790078,
+          "positives": 1447,
+          "prevalence": 0.1452082288008028,
+          "roc_auc": 0.7979467603301305,
+          "rows": 9965
+        },
+        "semantic": {
+          "average_precision": 0.3730290177461991,
+          "brier": 0.10618293910259585,
+          "log_loss": 0.3287869502413998,
+          "mean_prediction": 0.1438929532995396,
+          "positives": 1447,
+          "prevalence": 0.1452082288008028,
+          "roc_auc": 0.7942551185967747,
+          "rows": 9965
+        },
+        "timing": {
+          "average_precision": 0.3725863654696947,
+          "brier": 0.10598219990673337,
+          "log_loss": 0.3279424965033075,
+          "mean_prediction": 0.14409295506152883,
+          "positives": 1447,
+          "prevalence": 0.1452082288008028,
+          "roc_auc": 0.7970752776388161,
+          "rows": 9965
+        },
+        "tree_no_terminal": {
+          "average_precision": 0.37362659464877185,
+          "brier": 0.1070466495885913,
+          "log_loss": 0.33059117297293544,
+          "mean_prediction": 0.12630297014863864,
+          "positives": 1447,
+          "prevalence": 0.1452082288008028,
+          "roc_auc": 0.798060264429665,
+          "rows": 9965
+        }
+      },
+      "name": "V5 fixed-offset corrections",
+      "rows": 9965,
+      "scope": "opened observed-news rows; context/timing/semantic"
+    },
+    {
+      "metrics": {
+        "original_tree": {
+          "average_precision": 0.3273230385507007,
+          "brier": 0.11087951884500655,
+          "log_loss": 0.34888430757451633,
+          "mean_prediction": 0.14403039710791757,
+          "positives": 16450,
+          "prevalence": 0.14607160616608653,
+          "roc_auc": 0.7669169411150564,
+          "rows": 112616
+        },
+        "selected_hgb": {
+          "average_precision": 0.33780509513419715,
+          "brier": 0.10967655521103363,
+          "log_loss": 0.3448163187401466,
+          "mean_prediction": 0.14278562949775503,
+          "positives": 16450,
+          "prevalence": 0.14607160616608653,
+          "roc_auc": 0.7747346745340994,
+          "rows": 112616
+        }
+      },
+      "name": "V5 selected market screen, fold 5",
+      "rows": 112616,
+      "scope": "already opened reporting fold; selection used fold 4"
+    },
+    {
+      "metrics": {
+        "frozen_tree": {
+          "average_precision": 0.35084320290169374,
+          "brier": 0.07877132063759773,
+          "log_loss": 0.24567322135596179,
+          "mean_prediction": 0.09358872602350535,
+          "positives": 568,
+          "prevalence": 0.10541945063103192,
+          "roc_auc": 0.8531580562211443,
+          "rows": 5388
+        },
+        "selected_context": {
+          "average_precision": 0.35084320290169374,
+          "brier": 0.07817417906292247,
+          "log_loss": 0.24398450261491797,
+          "mean_prediction": 0.10727473916369713,
+          "positives": 568,
+          "prevalence": 0.10541945063103192,
+          "roc_auc": 0.8531580562211443,
+          "rows": 5388
+        },
+        "selected_market_hgb": {
+          "average_precision": 0.3554778299200714,
+          "brier": 0.07822983532104466,
+          "log_loss": 0.2437265271225144,
+          "mean_prediction": 0.09290229037602335,
+          "positives": 568,
+          "prevalence": 0.10541945063103192,
+          "roc_auc": 0.8550475571269943,
+          "rows": 5388
+        },
+        "selected_news": {
+          "average_precision": 0.35065638221862316,
+          "brier": 0.07826503756015236,
+          "log_loss": 0.24457564485328948,
+          "mean_prediction": 0.10909489992759444,
+          "positives": 568,
+          "prevalence": 0.10541945063103192,
+          "roc_auc": 0.8533436093740868,
+          "rows": 5388
+        }
+      },
+      "name": "V5 matched observed-article subset, fold 5",
+      "rows": 5388,
+      "scope": "exact market/time join; opened and adaptive"
+    }
+  ],
+  "raw_labels_predictions_sealed_payloads_read": false,
+  "selected_source_manifest_checks": [
+    {
+      "manifest": "data/v5/market_learner_screen_20261009/manifest.json",
+      "matches": true,
+      "path": "data/v5/market_learner_screen_20261009/contract.json"
+    },
+    {
+      "manifest": "data/v5/market_learner_screen_20261009/manifest.json",
+      "matches": true,
+      "path": "data/v5/market_learner_screen_20261009/report.json"
+    },
+    {
+      "manifest": "data/v5/opened_news_offset_trial_20261009/manifest.json",
+      "matches": true,
+      "path": "data/v5/opened_news_offset_trial_20261009/report.json"
+    }
+  ],
+  "source_records": [
+    {
+      "key": "receipt",
+      "path": "data/v3_1_historical/primary/holdout/holdout_consumption_receipt.json",
+      "sha256": "c02824bcf378d553cf3dfe01d0f8f51c2ed017022b0d9a32057b0ed9eb0f548b"
+    },
+    {
+      "key": "v3",
+      "path": "data/v3_1_historical/primary/development/selection_result.json",
+      "sha256": "1f9148fa7988164f674b357444f13cc75cc82198bda194a0140783e9b55fab00"
+    },
+    {
+      "key": "holdout",
+      "path": "data/v3_1_historical/primary/holdout/evaluation_result.json",
+      "sha256": "79db4fa8db11b06780620523e0b5c3c2674c6b95b2548a022a958defc71798de"
+    },
+    {
+      "key": "v4",
+      "path": "data/v4/discovery/models/result.json",
+      "sha256": "067ceebb0c491c38c590e69fdf8a2e88d8feaaf0a91c9467f72d8f4e1f5b0fc4"
+    },
+    {
+      "key": "v4_protocol",
+      "path": "eventx/release/v4/protocol.json",
+      "sha256": "0747a3e41be5d21a853cedfc824482fcf1c047115aaddec1ca2c4fff3feaee8c"
+    },
+    {
+      "key": "baseline",
+      "path": "data/v5/no_terminal_baseline_diagnostic_20261009/report.json",
+      "sha256": "2eb4eba544204dc972b5d40895b32d59d28f415ba48bcbabcee17b933b4f329c"
+    },
+    {
+      "key": "offset",
+      "path": "data/v5/opened_news_offset_trial_20261009/report.json",
+      "sha256": "37c9832136b939168436c40747b0ce4b797b6a02ea5ff2dddf66abaae7ac69cd"
+    },
+    {
+      "key": "market_screen",
+      "path": "data/v5/market_learner_screen_20261009/report.json",
+      "sha256": "8f2c372b445ec9429b6cdb70612f9d63db9c018f78eb369f530bbab9577e3f05"
+    },
+    {
+      "key": "market_contract",
+      "path": "data/v5/market_learner_screen_20261009/contract.json",
+      "sha256": "fe5523ef6d021d01cc6914c4084027c7bdd06c8e39eb615b22c72e8f50ad73d4"
+    },
+    {
+      "key": "joined",
+      "path": "data/v5/method_screen_observed_row_join_20261009/report.json",
+      "sha256": "7300dd2a38aea559c9d1c9c18072de5ff039ccc8e84ca0fdadad334ada463b88"
+    }
+  ],
+  "v3_brier_interval": {
+    "block_rows": 72,
+    "ci_95_lower": -0.0003405215373834595,
+    "ci_95_upper": -0.00023023773491031617,
+    "mean": -0.0002847849006199912,
+    "median": -0.00028482741679181447,
+    "method": "paired circular moving-block bootstrap stratified by market",
+    "nominal_block_minutes": 360,
+    "probability_positive": 0.0,
+    "samples": 5000,
+    "seed": 61
+  },
+  "v3_promotion_gates": {
+    "h1_aggregate_delta_ap_positive": false,
+    "h2_aggregate_brier_improvement_positive": false,
+    "h3_both_positive_in_at_least_four_folds": false,
+    "h4_bootstrap_brier_lower_bound_positive": false,
+    "h5_brier_nonnegative_each_venue": false
+  },
+  "v4_status": "pending; no prospective results read or synthesized"
+}

@@ -1,0 +1,49 @@
+{
+  "role": "draft manuscript publication package; not forecasting freeze",
+  "artifacts": [
+    {
+      "path": "MARKET_NEWS_PAPER_A_DRAFT_20261010.md",
+      "sha256": "d7302399d9dc0a661828cf8575e991020d2753e43d3b91bd777b0715580181a2"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/CLAIM_REVIEW.md",
+      "sha256": "678cd153b2088327f38e02ac2cd78ffb85b67fc9e3928c8da3a552c26e8db7fa"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/TABLES.md",
+      "sha256": "e5ad2c0ea0a9252bff4cfa7b2cbd335e3db555d2a727c57ba362ec1503ee191e"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/evidence.json",
+      "sha256": "c4b11d7daf37faed627a0a382e3d9bce57d9bd3138e574e9ea3b144c3a7c0291"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/manifest.json",
+      "sha256": "20d2c6cb4a9e3e9dee6b749a1b1d0f496ee0c51588dec8c269df03fb7add7f03"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/matched_comparisons.pdf",
+      "sha256": "a1b813495220589aa5812ecdf65bcd3533ccdb08a071460bae5ffce234396d83"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/matched_comparisons.png",
+      "sha256": "7834d6509c9b755dee3602c6936fe441775e3c721402757b5d95ce70a3d6d70d"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/matched_comparisons.svg",
+      "sha256": "af7d8e4ed3bdd268ce4d2033aca4751900affea762156746c3ca4ba3ca3ebcf0"
+    },
+    {
+      "path": "eventx/release/paper_a_20261010/publication_checks.json",
+      "sha256": "871c744db3f234cf5f9c2ec27a0b4eb7ee1b19caed49f137007c6caa883a4791"
+    }
+  ],
+  "original_draft": {
+    "path": "portfolio/EVENTX_HISTORICAL_PAPER_DRAFT_20261004.md",
+    "sha256": "7b56b09c701ad9c1700c5c7c3fc1825e81912888ecb1da9929b7c31bf84cb572"
+  },
+  "roadmap": {
+    "path": "MARKET_NEWS_PAPER_AND_NEXT_STUDY_ROADMAP_20261009.md",
+    "sha256": "20af7dcca4765a43c0ce9b60b737dac525fd610d16af55a0e7bbbadc3e0af37f"
+  }
+}

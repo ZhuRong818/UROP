@@ -1,0 +1,7 @@
+{
+  "created_at_utc": "2026-09-29T15:03:30.434180+00:00",
+  "query_sha256": "e353269c717a903a2026b94f58ffd40688c55839fd3c000fd39fb7342c391bde",
+  "scope": "aggregate fields only from reference.symbol_universe; no row text, outcomes or protected data",
+  "script_sha256": "7e5b7bfc8014770fd93b0faf2fdd5a4c985df1c02a836e429664b5e36f8c9060",
+  "written_before_requests": true
+}

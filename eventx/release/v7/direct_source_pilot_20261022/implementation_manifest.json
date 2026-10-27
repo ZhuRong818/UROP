@@ -1,0 +1,20 @@
+{
+  "locked_files": {
+    "data/v7/direct_source_pilot_20261022/discovery/62630a35cf47405aa74f3544ac4e1fc3/manifest.json": "1a3cad4172f409de9818c56ae37b646a8c04c06cdd7d1b8ed2aefb4f94fba2ed",
+    "eventx/release/v7/direct_source_pilot_20261022/com.eventx.direct-source-pilot.20261022.plist": "521d0228e9a4b4c11199e0d5e236bf6608f4881d4e34fa3e246960095f46a593",
+    "eventx/release/v7/direct_source_pilot_20261022/episode_reservation.json": "0f63f6ca9531624c724a9bebc0ac82eedbd7f90e4f39c73e0915a7d8a674116e",
+    "eventx/release/v7/direct_source_pilot_20261022/evidence_link_plan.jsonl": "d53b8f899049e8c55115b93448abc06c316d5b5f9efd7ff48776a3cb7b40ad50",
+    "eventx/release/v7/direct_source_pilot_20261022/excluded_metadata.jsonl": "6b695d4885895c0179c1de50fb35adaee19cb7e7a8329c7ef84cc402976202a1",
+    "eventx/release/v7/direct_source_pilot_20261022/observation_dossier_template.json": "a416516cce4fc163b7ee508adec527c774bf2d1967f39674f49f54d8bf8b51d2",
+    "eventx/release/v7/direct_source_pilot_20261022/prospective_candidates.jsonl": "7a2429f008e507cb6d4e7e19c44519b493edb7d30d2433b92e0e8f3c6e3e3c30",
+    "eventx/release/v7/direct_source_pilot_20261022/sample.jsonl": "eaaa4892a96ba6600ab96eecf3171251e2fff225c4770e984e62973b33373173",
+    "eventx/release/v7/direct_source_pilot_20261022/spec.json": "bbdbf87a06ef0147013190dd01b7ccc648e1171c5adae759820e0dbf37ed39d2",
+    "eventx/release/v7/market_capture_20261018/protected_ids.json": "5621facc8dda87e167e7662a91ffa18ef31cffc1b1c72ebdddcb36429db5698b",
+    "eventx/tasks/audit_v7_direct_pilot_20261022.py": "115acb0376e9bfdd86dc169a57aac9450fd35609617de8ab9b3543370f290226",
+    "eventx/tasks/collect_v7_direct_pilot_20261022.py": "1f28615998252dd552b304721a1620a2b1daacde8d582cb91147af2888b77b46",
+    "eventx/tasks/discover_v7_direct_pilot_20261022.py": "90d4b40a3cff298677867587926f2329abeef8eecfbcd7460ad13d0995b88434",
+    "eventx/tasks/launch_v7_direct_pilot_20261022.py": "c441fbb358bce1b32ff28d8688173452bf2a7c767eefa7d287aacf07be496607",
+    "eventx/tasks/prepare_v7_direct_pilot_20261022.py": "c92b0e9de5cf736d095e18d9e980c1250ada4d833596bbf5dbd97ca7f72cd84f",
+    "eventx/tasks/test_v7_direct_pilot_20261022.py": "f8ebdf0aaf48544206f5096a7c441c2ad3bc443f7b6898305979ad420ecdc0cd"
+  }
+}
