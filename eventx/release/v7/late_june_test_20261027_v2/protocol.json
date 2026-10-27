@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-27T04:16:04.216532+00:00",
+  "capture": "Two permitted fetch attempts per hour (retryable transport errors only); failures stay missing. 2 workers at low CPU priority to protect the concurrent live test.",
+  "dates": [
+    "2026-06-15",
+    "2026-06-16",
+    "2026-06-17",
+    "2026-06-18",
+    "2026-06-19",
+    "2026-06-20",
+    "2026-06-21",
+    "2026-06-22",
+    "2026-06-23",
+    "2026-06-24",
+    "2026-06-25",
+    "2026-06-26",
+    "2026-06-27",
+    "2026-06-28"
+  ],
+  "integrity": "Each phase once; evaluate once; report regardless of outcome. June 15-28 becomes consumed.",
+  "interpretation": "Historical replay with current metadata; new identities, same venue/era. Not live, not news, not profit.",
+  "models": [
+    "global_rate",
+    "market_rate",
+    "activity_logit",
+    "row_hgb7",
+    "legacy_hgb7",
+    "V03: hgb7, full_logit, global, market"
+  ],
+  "objective": "Transfer of the unchanged frozen quote-change boosters (row_hgb7 primary; V03 hgb7 secondary, the live-runtime model) to never-used contracts on the unopened fortnight June 15-28.",
+  "primary": "Matched row-weighted log loss row_hgb7 vs activity_logit. PASS = lower LL than activity_logit and global_rate, no higher Brier, AND contract-clustered 95% bootstrap lower bound of gain vs activity_logit > 0.",
+  "reporting_floor": "<100 known, <20 positives or <20 negatives, or <5 contributing contracts = insufficient.",
+  "secondary": "V03 hgb7 vs full_logit with the same PASS rule (registered here, before capture). Also Brier, AUC, equal-contract LL, per-date/per-contract wins, strict, nonoverlap, date-clustered bootstrap, missing-label bounds, per-category descriptive breakdown.",
+  "selected": "row_hgb7",
+  "selection": "Identity/event-type/clock columns only from 2026-06-14T12,T13 (consumed block); market IDs in [0x18,0x28) (disjoint from development (<0x0a) and June 8-14 ([0x10,0x18)) cohorts); >=2 book events in both hours; not in 1231 protected IDs, earlier 60 or June 8-14 40; SHA256(\"late-june-v1:\"+id) order; Gamma metadata: binary Yes/No, 2 tokens, description, event IDs not in any earlier cohort, one contract per event, start<June15 and end>June22 (at least one week inside the window); first 60. No price/quote/outcome column before freeze. Shortfall reported, not replaced.",
+  "supersedes": {
+    "reason": "metadata-only selection shortfall 15/60 (18 ended before June 29, 3 non-Yes/No and ended early, 7 event overlap/other, 43 candidates); no capture, price, quote or outcome read for v1 or v2 before this freeze",
+    "v1_cohort_preserved": "data/v7/late_june_test_20261027/cohort/",
+    "version": "late_june_test_20261027"
+  },
+  "target": "Midpoint differs after 30 minutes by >1e-12; same features/gates/endpoint rules as the June 1-7 and June 8-14 tests."
+}

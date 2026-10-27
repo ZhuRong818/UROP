@@ -73,6 +73,9 @@ No protected early evaluation, external messages or trading; segment discovery i
   Health (label-free): `python -m eventx.tasks.status_v7_forecast_runtime_20261026_v02`. No restart of source into same dir.
 - 27Oct01:08Z live: 181/240 ready over 8 grids, 0 emitter restarts. Known defect: grid 00:30 all-abstained
   (primed-input handoff not refreshed -> pong >35s; fail-closed, 30/24840 decisions); later grids normal; not patched.
+- 27Oct03:24-04:41Z host swap stall (my concurrent QA job; swap 20.3/21.5GB): 4 grids missed + warmup abstentions.
+  NO heavy jobs on this host until 30Oct00:00Z. Late-June test v2 cohort frozen (21 contracts), capture deferred to after close:
+  `python -m eventx.tasks.run_v7_late_june_test_20261027_v2 capture` then `... evaluate` (each once). v1 (15/60 shortfall) superseded, never captured.
 - Readiness (fixed collector) PASS 156/180 ready/27 markets; V01 runtime stays frozen/failed. Report deadline 1 Nov.
 - New-identity June8–14 PASS: row_hgb7 -14.9% LL vs logistic, CI[0.033,0.119]; V03 -19.7%, CI[0.066,0.147].
   June8–14 consumed for both models; June15–28 still unopened.

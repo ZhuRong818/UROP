@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-27T04:14:28.853456+00:00",
+  "check": "chunked evaluate_v03 rerun on consumed June 8-14 recovered source reproduces stored evaluation_v03/result.json",
+  "contributing_contracts": 35,
+  "full_logit_log_loss": [
+    0.5316352492184844,
+    0.5316352492184844
+  ],
+  "hgb7_log_loss": [
+    0.4270300677878775,
+    0.42703006778787744
+  ],
+  "issued": 40017,
+  "observed": 35749,
+  "pass": true,
+  "scheduled": 77280
+}

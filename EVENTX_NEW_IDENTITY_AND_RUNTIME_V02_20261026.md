@@ -106,6 +106,13 @@ All of these changes were made **before any prospective decision**.
 - **Scope:** it costs 30 of 24,840 scheduled decisions (0.12%). Every grid from 00:35 onward refreshes normally.
 - **No patch:** the running emitter is frozen, so it was not changed. The evaluation will count these as abstentions.
 
+**Incident, 27 Oct 03:24–04:41 UTC: host memory stalls during a concurrent job.**
+- **What happened:** the host's swap was already nearly full (20.3/21.5 GB, mostly desktop apps). My concurrent historical-evaluation QA job (a June 8–14 rerun) pushed the Mac into heavy swapping. The source stopped receiving pongs from 03:31:27 to 03:47:22, and again from 04:10 to 04:11.
+- **Effect:** the emitter missed the emission deadlines for the 03:25, 03:35, 03:40 and 03:45 grids, which are recorded as `missed`. The transport warmup then restarted twice, and grids up to about 04:40 abstained with `transport_history_warming`.
+- **Integrity:** every effect is fail-closed, and nothing was backfilled.
+- **Response:** no heavy jobs run on this host until the window closes on 30 Oct 00:00 UTC. The June 15–28 capture is deferred until after the close.
+- **Normal venue drops:** separately, the venue WebSocket drops about once an hour or more (18:49, 19:54, 01:27). Each drop costs 30 minutes of warmup by rule.
+
 | Item | Value |
 |---|---|
 | Grids | 2026-10-27 00:30 → 2026-10-29 23:25 UTC, every 5 min, 30 contracts (24,840 scheduled) |
