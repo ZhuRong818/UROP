@@ -24,3 +24,8 @@ extracts/
 .DS_Store
 .idea/
 .vscode/
+
+# report build dependencies
+report/node_modules/
+report/package-lock.json
+report/render/
