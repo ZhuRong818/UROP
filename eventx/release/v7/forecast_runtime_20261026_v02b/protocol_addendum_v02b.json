@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-27T05:46:47.442438+00:00",
+  "authorized_by": "user, 2026-10-27 (instruction: start V02b now from a new folder with same frozen model and contracts)",
+  "changed": [
+    "run directory data/v7/forecast_runtime_20261026_v02b (V02 directory untouched)",
+    "window: first grid = first 5-min boundary >= activation+2700 s; last grid 2026-10-29T23:25Z and open_after identical to V02",
+    "readiness bound to the V02 readiness PASS (same implementation, model, cohort, host)"
+  ],
+  "operational": "Host on AC power with sleep disabled (pmset disablesleep) required; caffeinate guard; emitter supervisor restarts the resumable emitter; the source is never restarted into this run.",
+  "pre_outcome": "No V02 endpoint, label or score has been read; V02 evaluation not run. Only label-free status counts (725 ready/715 abstained/300 missed) were seen.",
+  "reason": "V02 source and emitter lost when host entered lid-closed battery sleep 2026-10-27T04:42Z and rebooted 05:16Z. V02 protocol forbids restarting the source into the same run.",
+  "reporting": "V02 (partial, 27 Oct 00:30 to outage) and V02b are separate runs, each evaluated exactly once after 2026-10-29T23:57:30Z and reported separately whatever the sign. Their grids overlap in no time period after V02b's first grid only if V02 had continued; V02 has no decisions after the outage. No pooling unless pre-registered here: the primary V02b analysis is V02b alone.",
+  "unchanged": "Every V02 frozen file (implementation_manifest.json), V03 model, 30-contract cohort, protocol gates, inputs, emitter, evaluator, metrics, reporting floor, primary contrast hgb7 vs full_logit.",
+  "v02_implementation_manifest_sha256": "f8e8cce6ebc91fb51f112786670a52058df3c02accd49f0d1dae64901f7175a4",
+  "version": "forecast_runtime_20261026_v02b"
+}

@@ -4,7 +4,7 @@
 > `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
 > Append history to `docs/progress/2026-10.md`,not legacy PROGRESS.md.
 
-Last updated: **2026-10-27 Asia/Singapore** (report draft `EVENTX_FINAL_REPORT_DRAFT_20261101.md`); V03 emitter/evaluator frozen; fresh inputgate FAIL; no prospective test.
+Last updated: **2026-10-28 Asia/Singapore** (report review `EVENTX_FINAL_REPORT_REVIEW_20261028.md`); V02b scheduled test window remains in progress (last process check below); V4 collector restart recorded below.
 
 ## Active objective and locked decisions
 
@@ -65,11 +65,28 @@ No protected early evaluation, external messages or trading; segment discovery i
   packets while host ~287ms fast; OS stepped wall clock -110ms at11:51:08 (warmup reset, stop117ms early);
   afterwards host ~+0.11s slow > 100ms budget. Fix needs disciplined host or new monotonic+validated-offset version.
 
-## ACTIVE: V02 three-day prospective test (activated 26Oct 17:53:53Z; activations 1-2 superseded, 0 forecasts) — do not disturb
+## ACTIVE (27Oct05:47Z): V02b live continuation — do not disturb. V02 died in 04:42Z sleep/05:16Z reboot; unevaluable
+## (no capture manifest). V02b = same frozen files/model/cohort, new dir `data/v7/forecast_runtime_20261026_v02b`, release
+## `eventx/release/v7/forecast_runtime_20261026_v02b/`; grids 27Oct06:35–29Oct23:25Z (22,650). Status:
+## `python -m eventx.tasks.status_v7_forecast_runtime_20261026_v02b`. Never restart its source.
+## V4 collector restarted 05:44Z from checkpoint (PID 12937, receipt 20261027T054414Z_12937), audit PASS.
+## 28Oct01:42Z check OK (6,540 decisions logged; sleep disabled). Report reviewed; docx rebuild after close-out.
+## 28Oct11:12Z label-free snapshot:7,109ready/timely,2,581abstained,270missed(9,960total;71.38%issued).
+## Source/emitter status fresh,WSconnected,clockvalid; external process check verified source14152/emitter14287,
+## V4collector12937/waiter52875. V4checkpoint59news/52tradedays,lastsuccess28Oct00:01:03Z,errornull.
+## Lid-close gap 07:40-08:26Z 27Oct: processes survived; 270 decisions missed (9 grids), scored as missed per frozen rules.
+## Close-out is AUTO: detached waiter (PID 52875) runs `zsh scripts/close_out_20261030.sh` once at 30Oct00:01Z
+## (log `data/close_out_20261030_waiter.log`). Run by hand only if `pgrep -f close_out_20261030` is empty. Host: AC + disablesleep.
+
+## 27Oct report enhancements (post hoc, no holdout/refit): news bound Brier upper -0.000196 (all prereg effects excluded);
+## booster drivers (booster-only inputs = 21% of gap; freshness ~0); reproducibility check PASS
+## `python -m eventx.tasks.verify_report_reproducibility_20261027`; deck https://claude.ai/artifact/GUwWkTTYXQkfBm9BsXPCJe. See 2026-10.md.
+
+## (was ACTIVE) V02 three-day prospective test (activated 26Oct 17:53:53Z; activations 1-2 superseded, 0 forecasts) — do not disturb
 
 - `EVENTX_NEW_IDENTITY_AND_RUNTIME_V02_20261026.md`; release `eventx/release/v7/forecast_runtime_20261026_v02/`.
 - Grids 27Oct00:30–29Oct23:25 UTC, 30 metadata-selected contracts, frozen V03 model; source+emitter running (caffeinate).
-- Evaluate EXACTLY ONCE after 29Oct23:57:30Z: `python -m eventx.tasks.evaluate_v7_forecast_runtime_20261026_v02`.
+- SUPERSEDED by V02b after the 27Oct outage: V02 is unevaluable (no capture manifest); do not run its evaluator.
   Health (label-free): `python -m eventx.tasks.status_v7_forecast_runtime_20261026_v02`. No restart of source into same dir.
 - 27Oct01:08Z live: 181/240 ready over 8 grids, 0 emitter restarts. Known defect: grid 00:30 all-abstained
   (primed-input handoff not refreshed -> pong >35s; fail-closed, 30/24840 decisions); later grids normal; not patched.
@@ -212,15 +229,30 @@ log-odds movement over30m;not direction/exact magnitude/resolution. Every5m grid
 
 ## Next actions
 
+Earlier report/gap reviews applied to draft + builder; detailed history in 2026-10.md.
+Latest review: `EVENTX_ONLINE_RATE_REVIEW_20261028.md` — all five corrections APPLIED 28 Oct to builder, draft and next-cycle spec (two-way CIs vs online rate in Table 8; claims 37/37; see 2026-10.md).
+Post hoc `data/v7/dependence_coverage_20261028/result.json`: contract×date gain intervals versus activity
+logistic remain positive, but June1–7 versus legacy crosses zero. Online rate LL0.4230527841302451 vs
+booster0.4207686547802655 on June8–14; contract CI[-0.028285100093127343,0.03294878629158783],
+two-way CI[-0.03960718276617395,0.04131171734541459]. No demonstrated equivalence or mechanism attribution.
+Correct cold-start wording: online rate forecasts immediately using global prior; only personalization waits.
+It has no additional offline fit, but uses a trained prior/fixed pseudocount. Coverage diagnostics do not
+eliminate selection bias. Ten stored frozen LL values and eight new claim entries checked; builder syntax PASS.
+No diagnostic rerun, protected outcome read, current process check or report rebuild in this latest review.
+Next-cycle spec remains unfrozen: `docs/EVENTX_NEXT_CYCLE_SPECIFICATION_DRAFT_20261028.md`;
+~660 contributing contracts is illustrative one-way planning, not established power for the two-way test.
+After close-out: `python report/fill_pending_20261030.py` → fill Tables4/9/11 and PENDING;
+rebuild/paginate stale DOCX/PDF, full checker, admin placeholders. No new research cycle started.
+
 1. Preserve closed live point-forecast failure and historical classifier gains as separate evidence.
-2. Resolve fresh runtimeinputfailure fromreadinessdiagnosis inaseparatelyfrozenversion.
-   Do notactivateusingtheearlierV03pass;freshgatefailed.No prospective teststarted.
+2. Preserve failed V01; V02 was superseded after outage and V02b was activated27Oct05:47:20Z.
+   Follow the V02b close-out instructions above; never restart its source or run an early evaluation.
 3. Continue original release capture and reserved29Oct–4Dec episodes; exact evidence/terminal gates remain.
 4. Preserve seven-day replication;May13–19opened. Address missing outcomes and historical status
    before claiming usable live accuracy. New model/eligibility choices require new evaluation blocks.
 5. Keep V4 operational checks separate; follow its frozen close/consumption sequence exactly once.
-6. June1–7 confirmed booster out-of-time. Next: metadata-selected larger live cohort and new-identity test on an
-   unopened later June week (June8–28 unopened); live service needs a disciplined clock first.
+6. June1–7 andJune8–14 are consumed; preserve their frozen results. June15–28 capture/evaluation
+   remains deferred until after the live close, using the already-frozen21-contractv2cohort.
 
 ## Authoritative references
 

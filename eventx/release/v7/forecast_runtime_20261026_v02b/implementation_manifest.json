@@ -1,0 +1,13 @@
+{
+  "files": {
+    "eventx/release/v7/forecast_runtime_20261026_v02/implementation_manifest.json": "f8e8cce6ebc91fb51f112786670a52058df3c02accd49f0d1dae64901f7175a4",
+    "eventx/release/v7/forecast_runtime_20261026_v02b/protocol_addendum_v02b.json": "264ba9f1b5d9afdec9058282d28805adf699922173be60ae0eb0732ee188749b",
+    "eventx/tasks/activate_v7_forecast_runtime_20261026_v02b.py": "afcb3454e3f7ae6c9b7c375dca11429e293b3576f3add19da2b7560db4a15e04",
+    "eventx/tasks/collect_v7_forecast_runtime_20261026_v02b.py": "82cbb11649750640ba2e227e257024cab81cc76ad9f5d45b9a047a4d3f090f70",
+    "eventx/tasks/evaluate_v7_forecast_runtime_20261026_v02b.py": "f22bec2951eeedd1ab78eb9cd0dff9e47b713e1a1f8a8c823862a79197fc77aa",
+    "eventx/tasks/run_v7_forecast_runtime_20261026_v02b.py": "166fae50befa21159036cbd8a9b8e672ee19942367a89683e725abbfb31eba68",
+    "eventx/tasks/status_v7_forecast_runtime_20261026_v02b.py": "6c3743c3484c740bae0ffcce844e09507de80f11485c0381c174577c5a4e0867",
+    "eventx/v7/forecast_runtime_20261026_v02b.py": "35a8e44abf427546caea077bed900a5944ee8d3f68035ddd81b376288c1f99f3",
+    "scripts/supervise_v7_emitter_20261026_v02b.sh": "95f1bdbf31a6009f33141793058cac439c0b17ffac5a1273063b2e945342db26"
+  }
+}

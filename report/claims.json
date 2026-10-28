@@ -1,0 +1,778 @@
+[
+ {
+  "id": "V3.1 dAP B1-B0",
+  "study": "V3.1 development",
+  "cohort": "4,651-market cohort, out-of-fold",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/primary/development/selection_result.json",
+  "keys": [
+   "aggregate_oof",
+   "incremental_b1_over_b0",
+   "delta_average_precision"
+  ],
+  "value": -0.001916,
+  "tolerance": 5e-07,
+  "printed": "−0.001916",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "V3.1 Brier B1-B0",
+  "study": "V3.1 development",
+  "cohort": "4,651-market cohort, out-of-fold",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/primary/development/selection_result.json",
+  "keys": [
+   "aggregate_oof",
+   "incremental_b1_over_b0",
+   "brier_improvement"
+  ],
+  "value": -0.000284,
+  "tolerance": 5e-07,
+  "printed": "−0.000284",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "V3.1 block-bootstrap Brier CI low",
+  "study": "V3.1 development",
+  "cohort": "paired block bootstrap",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/primary/development/selection_result.json",
+  "keys": [
+   "paired_brier_block_bootstrap",
+   "ci_95_lower"
+  ],
+  "value": -0.000341,
+  "tolerance": 5e-07,
+  "printed": "−0.000341",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "V3.1 block-bootstrap Brier CI high",
+  "study": "V3.1 development",
+  "cohort": "paired block bootstrap",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/primary/development/selection_result.json",
+  "keys": [
+   "paired_brier_block_bootstrap",
+   "ci_95_upper"
+  ],
+  "value": -0.00023,
+  "tolerance": 5e-07,
+  "printed": "−0.000230",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "V3.1 holdout AP",
+  "study": "V3.1 holdout",
+  "cohort": "300 markets",
+  "model": "B0",
+  "comparator": null,
+  "artifact": "data/v3_1_historical/primary/holdout/evaluation_result.json",
+  "keys": [
+   "primary_and_calibration_metrics",
+   "average_precision"
+  ],
+  "value": 0.171628,
+  "tolerance": 5e-07,
+  "printed": "0.171628",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "V3.1 holdout Brier",
+  "study": "V3.1 holdout",
+  "cohort": "300 markets",
+  "model": "B0",
+  "comparator": null,
+  "artifact": "data/v3_1_historical/primary/holdout/evaluation_result.json",
+  "keys": [
+   "primary_and_calibration_metrics",
+   "brier"
+  ],
+  "value": 0.107107,
+  "tolerance": 5e-07,
+  "printed": "0.107107",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "News bound Brier upper",
+  "study": "News bound (post hoc)",
+  "cohort": "2,290 contributing markets",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/news_bound_20261027/result.json",
+  "keys": [
+   "bootstrap",
+   "brier_improvement",
+   "one_sided_95_upper"
+  ],
+  "value": -0.000196,
+  "tolerance": 5e-07,
+  "printed": "−0.000196",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 booster LL",
+  "study": "June 1–7",
+  "cohort": "development50",
+  "model": "row_hgb7",
+  "comparator": null,
+  "artifact": "data/v7/june_replication_20261026/evaluation/result.json",
+  "keys": [
+   "cohorts",
+   "development50",
+   "primary",
+   "row_hgb7",
+   "log_loss"
+  ],
+  "value": 0.2931,
+  "tolerance": 5e-05,
+  "printed": "0.2931",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 logistic LL",
+  "study": "June 1–7",
+  "cohort": "development50",
+  "model": "activity_logit",
+  "comparator": null,
+  "artifact": "data/v7/june_replication_20261026/evaluation/result.json",
+  "keys": [
+   "cohorts",
+   "development50",
+   "primary",
+   "activity_logit",
+   "log_loss"
+  ],
+  "value": 0.3523,
+  "tolerance": 5e-05,
+  "printed": "0.3523",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 CI low",
+  "study": "June 1–7",
+  "cohort": "development50, contract-clustered",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/june_replication_20261026/bootstrap.json",
+  "keys": [
+   "cohorts",
+   "development50",
+   "activity_logit",
+   "by_contract",
+   "ci95",
+   0
+  ],
+  "value": 0.039,
+  "tolerance": 0.0005,
+  "printed": "0.039",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 CI high",
+  "study": "June 1–7",
+  "cohort": "development50, contract-clustered",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/june_replication_20261026/bootstrap.json",
+  "keys": [
+   "cohorts",
+   "development50",
+   "activity_logit",
+   "by_contract",
+   "ci95",
+   1
+  ],
+  "value": 0.08,
+  "tolerance": 0.0005,
+  "printed": "0.080",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "News bound market clusters",
+  "study": "News bound (post hoc)",
+  "cohort": "contributing markets",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/news_bound_20261027/result.json",
+  "keys": [
+   "market_clusters"
+  ],
+  "value": 2290,
+  "tolerance": 0.5,
+  "printed": "2,290",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Design sensitivity very small",
+  "study": "V3.1 design sensitivity",
+  "cohort": "simulation",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/news_bound_20261027/result.json",
+  "keys": [
+   "frozen_design_sensitivity",
+   1,
+   "promotion_probability",
+   "all_h1_h5"
+  ],
+  "value": 0.07,
+  "tolerance": 0.005,
+  "printed": "7%",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Design sensitivity small",
+  "study": "V3.1 design sensitivity",
+  "cohort": "simulation",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/news_bound_20261027/result.json",
+  "keys": [
+   "frozen_design_sensitivity",
+   2,
+   "promotion_probability",
+   "all_h1_h5"
+  ],
+  "value": 0.33,
+  "tolerance": 0.005,
+  "printed": "33%",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Design sensitivity moderate",
+  "study": "V3.1 design sensitivity",
+  "cohort": "simulation",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/news_bound_20261027/result.json",
+  "keys": [
+   "frozen_design_sensitivity",
+   3,
+   "promotion_probability",
+   "all_h1_h5"
+  ],
+  "value": 0.86,
+  "tolerance": 0.005,
+  "printed": "86%",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Design sensitivity clear",
+  "study": "V3.1 design sensitivity",
+  "cohort": "simulation",
+  "model": "B1",
+  "comparator": "B0",
+  "artifact": "data/v3_1_historical/news_bound_20261027/result.json",
+  "keys": [
+   "frozen_design_sensitivity",
+   4,
+   "promotion_probability",
+   "all_h1_h5"
+  ],
+  "value": 0.998,
+  "tolerance": 0.0005,
+  "printed": "99.8%",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 all-cohort booster LL",
+  "study": "June 1–7",
+  "cohort": "all 20 contracts",
+  "model": "row_hgb7",
+  "comparator": null,
+  "artifact": "data/v7/june_replication_20261026/evaluation/result.json",
+  "keys": [
+   "cohorts",
+   "all",
+   "primary",
+   "row_hgb7",
+   "log_loss"
+  ],
+  "value": 0.2948,
+  "tolerance": 5e-05,
+  "printed": "0.2948",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 all-cohort logistic LL",
+  "study": "June 1–7",
+  "cohort": "all 20 contracts",
+  "model": "activity_logit",
+  "comparator": null,
+  "artifact": "data/v7/june_replication_20261026/evaluation/result.json",
+  "keys": [
+   "cohorts",
+   "all",
+   "primary",
+   "activity_logit",
+   "log_loss"
+  ],
+  "value": 0.3527,
+  "tolerance": 5e-05,
+  "printed": "0.3527",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 dev issued",
+  "study": "June 1–7",
+  "cohort": "development50",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/june_replication_20261026/evaluation/result.json",
+  "keys": [
+   "cohorts",
+   "development50",
+   "issued"
+  ],
+  "value": 19304,
+  "tolerance": 0.5,
+  "printed": "19,304",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 dev missing outcomes",
+  "study": "June 1–7",
+  "cohort": "development50",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/june_replication_20261026/evaluation/result.json",
+  "keys": [
+   "cohorts",
+   "development50",
+   "missing_outcomes"
+  ],
+  "value": 2851,
+  "tolerance": 0.5,
+  "printed": "2,851",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Booster-only permutation LL increase",
+  "study": "Booster drivers (post hoc)",
+  "cohort": "June 1–7 development50",
+  "model": "row_hgb7",
+  "comparator": null,
+  "artifact": "data/v7/booster_drivers_20261027/result.json",
+  "keys": [
+   "permute_all_features_unavailable_to_logistic",
+   "mean_logloss_increase"
+  ],
+  "value": 0.013,
+  "tolerance": 0.0005,
+  "printed": "0.013",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 8-14 booster LL",
+  "study": "June 8–14",
+  "cohort": "35 new contracts",
+  "model": "row_hgb7",
+  "comparator": null,
+  "artifact": "data/v7/new_identity_test_20261026_recovered/evaluation/result.json",
+  "keys": [
+   "primary",
+   "row_hgb7",
+   "log_loss"
+  ],
+  "value": 0.4208,
+  "tolerance": 5e-05,
+  "printed": "0.4208",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Booster gap over logistic (drivers)",
+  "study": "Booster drivers (post hoc)",
+  "cohort": "June 1–7 development50",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/booster_drivers_20261027/result.json",
+  "keys": [
+   "booster_gain_over_logistic"
+  ],
+  "value": 0.059,
+  "tolerance": 0.0005,
+  "printed": "0.059",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Booster-only inputs share of gap",
+  "study": "Booster drivers (post hoc)",
+  "cohort": "June 1–7 development50",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/booster_drivers_20261027/result.json",
+  "keys": [
+   "permute_all_features_unavailable_to_logistic",
+   "share_of_booster_gap_over_logistic"
+  ],
+  "value": 0.21,
+  "tolerance": 0.005,
+  "printed": "21%",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 1-7 scheduled decisions",
+  "study": "Track B coverage",
+  "cohort": "June 1–7 development50",
+  "model": "row_hgb7",
+  "comparator": "none (denominator)",
+  "artifact": "data/v7/june_replication_20261026/evaluation/result.json",
+  "keys": [
+   "cohorts",
+   "development50",
+   "scheduled"
+  ],
+  "value": 96600,
+  "tolerance": 0,
+  "printed": "96,600",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 8-14 scheduled decisions",
+  "study": "Track B coverage",
+  "cohort": "June 8–14 new identities",
+  "model": "row_hgb7",
+  "comparator": "none (denominator)",
+  "artifact": "data/v7/new_identity_test_20261026_recovered/evaluation/result.json",
+  "keys": [
+   "scheduled"
+  ],
+  "value": 77280,
+  "tolerance": 0,
+  "printed": "77,280",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "June 8-14 issued forecasts",
+  "study": "Track B coverage",
+  "cohort": "June 8–14 new identities",
+  "model": "row_hgb7",
+  "comparator": "none (denominator)",
+  "artifact": "data/v7/new_identity_test_20261026_recovered/evaluation/result.json",
+  "keys": [
+   "issued"
+  ],
+  "value": 39656,
+  "tolerance": 0,
+  "printed": "39,656",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Online rate LL June 8-14",
+  "study": "Robustness (post hoc)",
+  "cohort": "June 8–14 new identities",
+  "model": "adaptive_rate",
+  "comparator": "—",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_8_14_new_identities",
+   "log_loss",
+   "adaptive_rate"
+  ],
+  "value": 0.4231,
+  "tolerance": 5e-05,
+  "printed": "0.4231",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Online rate LL June 1-7",
+  "study": "Robustness (post hoc)",
+  "cohort": "June 1–7 development50",
+  "model": "adaptive_rate",
+  "comparator": "—",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_1_7_development50",
+   "log_loss",
+   "adaptive_rate"
+  ],
+  "value": 0.3143,
+  "tolerance": 5e-05,
+  "printed": "0.3143",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Online rate gain CI June 8-14 lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "June 8–14 new identities",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_8_14_new_identities",
+   "gain_vs",
+   "adaptive_rate",
+   "by_contract",
+   "ci95",
+   0
+  ],
+  "value": -0.028,
+  "tolerance": 0.0005,
+  "printed": "[−0.028, 0.033]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Online rate gain CI June 1-7 lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "June 1–7 development50",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_1_7_development50",
+   "gain_vs",
+   "adaptive_rate",
+   "by_contract",
+   "ci95",
+   0
+  ],
+  "value": -0.006,
+  "tolerance": 0.0005,
+  "printed": "[−0.006, 0.057]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Two-way CI June 8-14 lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "June 8–14 new identities",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_8_14_new_identities",
+   "gain_vs",
+   "activity_logit",
+   "two_way_contract_date",
+   "ci95",
+   0
+  ],
+  "value": 0.022,
+  "tolerance": 0.0005,
+  "printed": "[0.022, 0.126]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Two-way CI June 1-7 lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "June 1–7 development50",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_1_7_development50",
+   "gain_vs",
+   "activity_logit",
+   "two_way_contract_date",
+   "ci95",
+   0
+  ],
+  "value": 0.031,
+  "tolerance": 0.0005,
+  "printed": "[0.031, 0.092]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Two-way CI legacy June 1-7 lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "June 1–7 development50",
+  "model": "row_hgb7",
+  "comparator": "legacy_hgb7",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_1_7_development50",
+   "gain_vs",
+   "legacy_hgb7",
+   "two_way_contract_date",
+   "ci95",
+   0
+  ],
+  "value": -0.007,
+  "tolerance": 0.0005,
+  "printed": "[−0.007, 0.092]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "After listed end share June 1-7",
+  "study": "Robustness (post hoc)",
+  "cohort": "June 1–7 development50",
+  "model": "—",
+  "comparator": "—",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_1_7_development50",
+   "coverage",
+   "not_issued_after_listed_end",
+   "pct"
+  ],
+  "value": 48.0,
+  "tolerance": 0.05,
+  "printed": "48.0%",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Two-way CI vs online rate June 1-7 lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "june_1_7_development50",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_1_7_development50",
+   "gain_vs",
+   "adaptive_rate",
+   "two_way_contract_date",
+   "ci95",
+   0
+  ],
+  "value": -0.018,
+  "tolerance": 0.0005,
+  "printed": "[−0.018, 0.073]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Two-way CI vs online rate June 8-14 lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "june_8_14_new_identities",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "artifact": "data/v7/dependence_coverage_20261028/result.json",
+  "keys": [
+   "blocks",
+   "june_8_14_new_identities",
+   "gain_vs",
+   "adaptive_rate",
+   "two_way_contract_date",
+   "ci95",
+   0
+  ],
+  "value": -0.04,
+  "tolerance": 0.0005,
+  "printed": "[−0.040, 0.041]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ }
+]
