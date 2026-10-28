@@ -4,7 +4,7 @@
 > `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
 > Append history to `docs/progress/2026-10.md`,not legacy PROGRESS.md.
 
-Last updated: **2026-10-28 Asia/Singapore** (report review `EVENTX_FINAL_REPORT_REVIEW_20261028.md`); V02b scheduled test window remains in progress (last process check below); V4 collector restart recorded below.
+Last updated: **2026-10-29 Asia/Singapore** (proposal assessment `EVENTX_ADDITIONAL_WORK_ASSESSMENT_20261029.md`); V02b scheduled test window remains in progress (last process check below, not refreshed by this assessment); V4 collector restart recorded below.
 
 ## Active objective and locked decisions
 
@@ -241,6 +241,14 @@ eliminate selection bias. Ten stored frozen LL values and eight new claim entrie
 No diagnostic rerun, protected outcome read, current process check or report rebuild in this latest review.
 Next-cycle spec remains unfrozen: `docs/EVENTX_NEXT_CYCLE_SPECIFICATION_DRAFT_20261028.md`;
 ~660 contributing contracts is illustrative one-way planning, not established power for the two-way test.
+Full review `EVENTX_FULL_RESEARCH_REVIEW_20261028.md` (28 Oct): online rate beaten on May13–19
+(8.6%, two-way CI[0.002,0.071]); superiority on new contracts not established. Post hoc source:
+`data/v7/online_rate_replication_20261028/result.json`. Early history means a block reset, not new listing;
+0–11-history rows contribute81.59% of small June8–14net gain but only4.44%/6.87% on May13–19/June1–7.
+29Oct assessment:`EVENTX_ADDITIONAL_WORK_ASSESSMENT_20261029.md`; prioritize focused comparison and
+cost-accounted monitoring; equivalence must exclude a justified margin, not confirm exact zero.
+29Oct: proposal 1 APPLIED to builder+draft (Table 8 May row; outcome-history paragraph with 82% / 4–7% shares and block-reset caveat; familiarity not isolated; reframed abstract/§1.3/§9.1; framework bullet first in §1.3; §9.3 pooled-vs-own-history question, recency rate, equivalence margin (Lakens 2017), cost-accounted monitoring). Review+spec revised to match; claims 40/40. Backup (proposal 2) still to do after close-out; no new cycle.
+Branch push at cf1a06f was reported28Oct, not rechecked29Oct.
 After close-out: `python report/fill_pending_20261030.py` → fill Tables4/9/11 and PENDING;
 rebuild/paginate stale DOCX/PDF, full checker, admin placeholders. No new research cycle started.
 

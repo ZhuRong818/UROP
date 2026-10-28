@@ -774,5 +774,72 @@
    "builder",
    "draft"
   ]
+ },
+ {
+  "id": "Online rate LL May 13-19",
+  "study": "Robustness (post hoc)",
+  "cohort": "May 13–19 development50",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "artifact": "data/v7/online_rate_replication_20261028/result.json",
+  "keys": [
+   "blocks",
+   "may_13_19_development50",
+   "log_loss",
+   "adaptive_rate"
+  ],
+  "value": 0.3922,
+  "tolerance": 5e-05,
+  "printed": "0.3922",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Two-way CI vs online rate May lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "May 13–19 development50",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "artifact": "data/v7/online_rate_replication_20261028/result.json",
+  "keys": [
+   "blocks",
+   "may_13_19_development50",
+   "booster_vs_rate",
+   "two_way_contract_date",
+   "ci95",
+   0
+  ],
+  "value": 0.002,
+  "tolerance": 0.0005,
+  "printed": "[0.002, 0.071]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Contract CI vs online rate May lower",
+  "study": "Robustness (post hoc)",
+  "cohort": "May 13–19 development50",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "artifact": "data/v7/online_rate_replication_20261028/result.json",
+  "keys": [
+   "blocks",
+   "may_13_19_development50",
+   "booster_vs_rate",
+   "by_contract",
+   "ci95",
+   0
+  ],
+  "value": 0.008,
+  "tolerance": 0.0005,
+  "printed": "[0.008, 0.060]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
  }
 ]

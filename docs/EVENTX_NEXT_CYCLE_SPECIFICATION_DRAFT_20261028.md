@@ -8,6 +8,9 @@ start the new cycle, which needs the user's explicit authorization.
 
 ## 1. Primary question
 
+When does information pooled across contracts add value beyond each contract's own available history?
+Operationally:
+
 On contracts and dates never used before, does a learned quote-state model forecast whether the 30-minute
 midpoint differs **beyond an online contract-rate reference** that uses only outcomes already matured at
 decision time?
@@ -33,8 +36,9 @@ question, and the current cohorts cannot answer it.
 |---|---|---|
 | Reference | global rate; frozen-style shrunk contract rate | none |
 | Reference | **online contract rate** (pseudocount 20 toward global rate; maturity lag 35 min) | own matured outcomes |
+| Reference | **recency-weighted contract rate** (half-life or window prespecified on new development data only) | own matured outcomes |
 | Factorial | logistic (L2), spline/GAM, HGB | (a) the 9 activity inputs; (b) the full point-in-time set |
-| Factorial | each of the three above | (a) or (b) plus the online rate and its matured-outcome count |
+| Factorial | each of the three above | (a) or (b) plus the online rate(s) and matured-outcome count, consistently in every arm |
 | Candidate | `hgb+rate` = HGB on (b) plus rate | as above |
 
 Matched tuning: each learner gets the same number of configurations (e.g. 20), chosen on purged, embargoed
@@ -75,7 +79,12 @@ data. Adding rows per contract helps far less than adding contracts and dates.
 
 - Primary: matched row-weighted log loss of `hgb+rate` vs online rate, two-way (contract × date) bootstrap,
   5,000 draws; Brier no worse; worst-case missing-outcome bounds; evaluate once, with a consumption receipt.
-- Secondary: factorial contrasts (H2), early-history strata (H3), per-contract and per-date wins, the
+- Warm-stratum equivalence (optional secondary): two one-sided tests against a margin justified before freezing
+  (from a practical-use criterion) with adequate planned power. It can show the difference is smaller than the
+  margin, not that it is zero; an inconclusive result remains possible (Lakens 2017, *Soc. Psychol. Personal.
+  Sci.* 8(4):355–362).
+- Secondary: factorial contrasts (H2), early-history strata (H3; history restarts only at true listing or a
+  documented gap, not at an analysis-block boundary), per-contract and per-date wins, the
   nonoverlapping 30-minute subset, calibration arm, and strata from §4.
 - All results reported whatever the sign; no refit or retuning after the test opens.
 
