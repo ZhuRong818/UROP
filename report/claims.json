@@ -841,5 +841,211 @@
    "builder",
    "draft"
   ]
+ },
+ {
+  "id": "Late June row_hgb7 LL",
+  "study": "June 15-28 test",
+  "cohort": "21 new contracts",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/late_june_test_20261027_v2/evaluation/result.json",
+  "keys": [
+   "primary",
+   "row_hgb7",
+   "log_loss"
+  ],
+  "value": 0.3859,
+  "tolerance": 5e-05,
+  "printed": "0.3859",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Late June activity_logit LL",
+  "study": "June 15-28 test",
+  "cohort": "21 new contracts",
+  "model": "activity_logit",
+  "comparator": "-",
+  "artifact": "data/v7/late_june_test_20261027_v2/evaluation/result.json",
+  "keys": [
+   "primary",
+   "activity_logit",
+   "log_loss"
+  ],
+  "value": 0.4249,
+  "tolerance": 5e-05,
+  "printed": "0.4249",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Late June contract CI lower",
+  "study": "June 15-28 test",
+  "cohort": "21 new contracts",
+  "model": "row_hgb7",
+  "comparator": "activity_logit",
+  "artifact": "data/v7/late_june_test_20261027_v2/evaluation/result.json",
+  "keys": [
+   "bootstrap",
+   "activity_logit",
+   "by_contract",
+   "ci95",
+   0
+  ],
+  "value": 0.022,
+  "tolerance": 0.0005,
+  "printed": "[0.022, 0.058]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Late June V03 LL",
+  "study": "June 15-28 test",
+  "cohort": "21 new contracts",
+  "model": "V03 hgb7",
+  "comparator": "full_logit",
+  "artifact": "data/v7/late_june_test_20261027_v2/evaluation/result.json",
+  "keys": [
+   "secondary_v03",
+   "primary",
+   "hgb7",
+   "log_loss"
+  ],
+  "value": 0.3883,
+  "tolerance": 5e-05,
+  "printed": "0.3883",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Late June V03 CI lower",
+  "study": "June 15-28 test",
+  "cohort": "21 new contracts",
+  "model": "V03 hgb7",
+  "comparator": "full_logit",
+  "artifact": "data/v7/late_june_test_20261027_v2/evaluation/result.json",
+  "keys": [
+   "secondary_v03",
+   "bootstrap_vs_hgb7",
+   "full_logit",
+   "by_contract",
+   "ci95",
+   0
+  ],
+  "value": 0.023,
+  "tolerance": 0.0005,
+  "printed": "[0.023, 0.085]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Live issued on time",
+  "study": "Live V02b",
+  "cohort": "30 contracts, 27 Oct-29 Oct",
+  "model": "V03 hgb7",
+  "comparator": "-",
+  "artifact": "data/v7/forecast_runtime_20261026_v02b/evaluation/report.json",
+  "keys": [
+   "timely"
+  ],
+  "value": 15485,
+  "tolerance": 0,
+  "printed": "15,485",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Live V03 LL",
+  "study": "Live V02b",
+  "cohort": "12,943 known outcomes",
+  "model": "V03 hgb7",
+  "comparator": "full_logit",
+  "artifact": "data/v7/forecast_runtime_20261026_v02b/evaluation/report.json",
+  "keys": [
+   "metrics",
+   "hgb7",
+   "log_loss"
+  ],
+  "value": 0.447,
+  "tolerance": 5e-05,
+  "printed": "0.4470",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Live full logit LL",
+  "study": "Live V02b",
+  "cohort": "12,943 known outcomes",
+  "model": "full_logit",
+  "comparator": "-",
+  "artifact": "data/v7/forecast_runtime_20261026_v02b/evaluation/report.json",
+  "keys": [
+   "metrics",
+   "full_logit",
+   "log_loss"
+  ],
+  "value": 0.5368,
+  "tolerance": 5e-05,
+  "printed": "0.5368",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Live contract CI lower",
+  "study": "Live V02b",
+  "cohort": "27 contributing contracts",
+  "model": "V03 hgb7",
+  "comparator": "full_logit",
+  "artifact": "data/v7/forecast_runtime_20261026_v02b/evaluation/report.json",
+  "keys": [
+   "bootstrap_contract_clustered",
+   "full_logit",
+   "ci95",
+   0
+  ],
+  "value": 0.049,
+  "tolerance": 0.0005,
+  "printed": "[0.049, 0.136]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
+ },
+ {
+  "id": "Live missing bound lower",
+  "study": "Live V02b",
+  "cohort": "15,485 issued",
+  "model": "V03 hgb7",
+  "comparator": "full_logit",
+  "artifact": "data/v7/forecast_runtime_20261026_v02b/evaluation/report.json",
+  "keys": [
+   "contrasts",
+   "full_logit",
+   "all_issued_gain_bounds",
+   0
+  ],
+  "value": -0.011,
+  "tolerance": 0.0005,
+  "printed": "[−0.011, 0.150]",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ]
  }
 ]

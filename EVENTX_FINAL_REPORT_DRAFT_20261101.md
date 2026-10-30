@@ -1,14 +1,14 @@
-# EventX: final report (DRAFT — live and V4 sections pending Friday 30 Oct)
+# EventX: final report (DRAFT — close-out results filled 30 Oct)
 
 **Student:** Zhu Rong · **Supervisor:** Lu Yao · **Due:** 1 November 2026
-**Status of this draft:** written 27 Oct 2026. The placeholders marked `[PENDING]` (V4, June 15–28 and live V02b) are filled from once-only evaluations that open on 30 Oct. Every other number is from a completed, frozen evaluation.
+**Status of this draft:** written 27 Oct 2026; the once-only close-out results (V4, June 15–28 and live V02b) were filled on 30 Oct from `data/close_out_20261030/` and the evaluation outputs. Every number is from a completed, frozen evaluation or a labelled post hoc analysis.
 
 ## 1. Summary
 
 EventX asks whether external information (news, later KOL posts) contains incremental, point-in-time predictive information about prediction-market repricing. The project has two answers so far.
 
-1. **News on top of market history: negative.** In the frozen V3.1 historical study (4,651 markets), adding counts of conservatively available, lexically associated news articles to a market-history logistic model made both average precision and Brier score worse (AP change −0.001916; Brier improvement, B0 minus B1, −0.000284). The paired block-bootstrap Brier interval was [−0.000341, −0.000230], and all five promotion gates failed. A post hoc market-cluster bootstrap (2,290 contributing markets) puts the one-sided 95% upper bound of the Brier improvement from news at −0.000196, below zero and below every positive effect size registered before labels were seen, including the smallest, "very small" one (+0.0001 Brier) (§2.1). Later opened-data diagnostics (V5/V6) traced apparent news gains to context or nonlinearity controls. The richer-news V4 confirmation (470 Polymarket contracts, 6 Sep–30 Oct) is sealed and still collecting. **[PENDING: V4 B3-vs-B0 result]**
-2. **A forecastable microstructure target: positive, replicated out of time and on new contracts.** The project defined a narrower target: the probability that a contract's YES midpoint 30 minutes later differs from its current value. In every completed frozen-model evaluation below, the frozen booster had lower matched log loss than its specified comparator: the 18-feature row_hgb7 against activity logistic regression, and the 14-feature V03 live model against its own full logistic. May 9 is development, not a frozen-model test; pending rows are not yet evaluated. A post hoc online contract rate built from each contract's matured outcomes came close to the booster on the new contracts (LL 0.4231 vs 0.4208; §3.2), so the advantage is over the specified fixed baselines, not every simple reference. Quote features appeared most useful when little contract-specific outcome history was available; their value after history accumulates remains uncertain on unseen contracts.
+1. **News on top of market history: negative.** In the frozen V3.1 historical study (4,651 markets), adding counts of conservatively available, lexically associated news articles to a market-history logistic model made both average precision and Brier score worse (AP change −0.001916; Brier improvement, B0 minus B1, −0.000284). The paired block-bootstrap Brier interval was [−0.000341, −0.000230], and all five promotion gates failed. A post hoc market-cluster bootstrap (2,290 contributing markets) puts the one-sided 95% upper bound of the Brier improvement from news at −0.000196, below zero and below every positive effect size registered before labels were seen, including the smallest, "very small" one (+0.0001 Brier) (§2.1). Later opened-data diagnostics (V5/V6) traced apparent news gains to context or nonlinearity controls. The richer-news V4 confirmation (470 Polymarket contracts, 6 Sep–30 Oct) stopped at its frozen data-provenance audit gate at close-out and was not evaluated; its holdout is unconsumed (§2).
+2. **A forecastable microstructure target: positive, replicated out of time and on new contracts.** The project defined a narrower target: the probability that a contract's YES midpoint 30 minutes later differs from its current value. In every completed frozen-model evaluation below, the frozen booster had lower matched log loss than its specified comparator: the 18-feature row_hgb7 against activity logistic regression, and the 14-feature V03 live model against its own full logistic. May 9 is development, not a frozen-model test. The live row is descriptive (no pass rule). A post hoc online contract rate built from each contract's matured outcomes came close to the booster on the new contracts (LL 0.4231 vs 0.4208; §3.2), so the advantage is over the specified fixed baselines, not every simple reference. Quote features appeared most useful when little contract-specific outcome history was available; their value after history accumulates remains uncertain on unseen contracts.
 
 | Block | Opened before? | Contracts | Booster LL | Logistic LL | LL reduction | 95% contract-clustered CI of gain, logistic minus booster (nats) |
 |---|---|---:|---:|---:|---:|---|
@@ -17,8 +17,9 @@ EventX asks whether external information (news, later KOL posts) contains increm
 | **June 1–7, unopened** (development cohort) | no | 18 | 0.2931 | 0.3523 | **16.8%** | [0.039, 0.080] (secondary) |
 | **June 8–14, unseen contracts** | no | 35 | 0.4208 | 0.4943 | **14.9%** | [0.033, 0.119] (pass rule) |
 | June 8–14, V03 live model (vs its own full logistic) | no | 35 | 0.4270 | 0.5316 | **19.7%** | [0.066, 0.147] |
-| **June 15–28, unseen contracts** | no | 21 selected | [PENDING] | [PENDING] | [PENDING] | [PENDING] |
-| **Live V02b, 27 Oct 06:35–29 Oct** | prospective | 30 | [PENDING] | [PENDING] | [PENDING] | [PENDING] |
+| **June 15–28, unseen contracts** | no | 21 | 0.3859 | 0.4249 | **9.2%** | [0.022, 0.058] (pass rule) |
+| June 15–28, V03 live model (vs its own full logistic) | no | 21 | 0.3883 | 0.4411 | **12.0%** | [0.023, 0.085] (pass rule) |
+| **Live V02b, 27 Oct 06:35–29 Oct** (V03 vs full logistic) | prospective | 27 of 30 | 0.4470 | 0.5368 | **16.7%** | [0.049, 0.136] (descriptive) |
 
 ![Evidence ladder](docs/figures/fig1_evidence_ladder.png)
 
@@ -32,13 +33,13 @@ The target is quote *activity* only. It says nothing about direction, size, reso
 |---|---|---|---|---|---|---|
 | V3.1 development (A) | purged expanding folds | 17 May–22 Jul, out-of-fold | B1 news counts vs B0 | 2,290 of 4,651 markets; 1,460,454 rows | all five gates | complete: 0/5, not promoted |
 | V3.1 holdout | 17 May–22 Jul | 22 Jul–8 Aug | B0 only (benchmark) | 300 markets; 211,718 rows | none | consumed once; deviation disclosed |
-| V4 confirmatory | 17 May–22 Jul (discovery) | 6 Sep–30 Oct, prospective collection | B3 vs B0 | 470 contracts | LL gain ≥0.001, lower bound >0, Brier/venue guards | pending |
+| V4 confirmatory | 17 May–22 Jul (discovery) | 6 Sep–30 Oct, prospective collection | B3 vs B0 | 470 contracts | LL gain ≥0.001, lower bound >0, Brier/venue guards | stopped at data gate; not evaluated |
 | May 13–19 (B) | 7–9 May, 50 dev contracts | 13–19 May | row_hgb7 vs activity logistic | 30; 27,924 / 4,553 | none (fixed-model replication) | complete |
 | June 1–7 | 7–9 May | 1–7 June, unopened | row_hgb7 vs activity logistic | 18 dev; 16,453 / 2,851 | lower LL vs activity logistic and global rate; Brier no higher | complete: passed |
 | June 8–14 | 7–9 May | 8–14 June, new contracts | row_hgb7 vs activity logistic | 35; 35,218 / 4,438 | as June 1–7 + contract-clustered lower bound >0 | complete: passed; DNS deviation |
 | June 8–14, V03 | 7–9 May (14 features) | 8–14 June | V03 hgb7 vs its full logistic | 35; 35,749 / 4,268 | registered secondary | complete |
-| June 15–28 | 7–9 May | 15–28 June, new contracts | row_hgb7 vs activity logistic; V03 secondary | 21 selected | as June 8–14, both models | pending |
-| Live V02b | 7–9 May (V03) | 27 Oct 06:35–29 Oct 23:25 UTC | V03 hgb7 vs full logistic, global rate | 30; 22,650 scheduled | none; floor ≥100 known, ≥20 per class | pending |
+| June 15–28 | 7–9 May | 15–28 June, new contracts | row_hgb7 vs activity logistic; V03 secondary | 21 selected | as June 8–14, both models | pass (both models) |
+| Live V02b | 7–9 May (V03) | 27 Oct 06:35–29 Oct 23:25 UTC | V03 hgb7 vs full logistic, global rate | 30; 22,650 scheduled | none; floor ≥100 known, ≥20 per class | floor met; descriptive |
 
 ### 1.2 Scores and uncertainty
 
@@ -60,7 +61,8 @@ The target is quote *activity* only. It says nothing about direction, size, reso
   - Primary contrast: B3 vs B0.
   - Success requires a ≥0.001-nat log-loss gain with a positive bootstrap lower bound, plus Brier and venue guards (V4's own frozen rule).
   - The label-blind health check on 27 Oct 01:09 UTC found the collector alive, 58/58 news days and 51/51 trade days with receipts, nothing pending, and 15/15 frozen hashes matching.
-  - Close sequence, exactly once: audit → consume → prepare → build → evaluate. **[PENDING]**
+  - Close sequence, exactly once: audit → consume → prepare → build → evaluate.
+  - **Result: stopped at the audit gate; not evaluated.** At close-out (30 Oct 01:57 UTC) the frozen audit rejected the first news partition (30 Aug): 64 of 103 article rows carry run status `completed` (53) or `partial` (11), not the required `ok` (the 27 Oct health check did not test this). Consume, prepare, build and evaluate did not run; no V4 outcome was read and the holdout is unconsumed. Accepting `completed` would need a new versioned audit, disclosed as a post-failure revision.
 - **V5/V6 (exploratory, opened data).**
   - In V5, a context-only gate and a nonlinear market-only model explained the apparent gain from a residual-news model. The log-loss improvement from adding the news mechanism was −0.000871 nats, interval [−0.001457, −0.000208], i.e. slightly worse.
   - V6 contract-aware linking failed its strict audit; certified support is 0/8,844 contract-days.
@@ -109,7 +111,9 @@ A failed test only says that no gain was found. An interval says how large a gai
   - The cohort was frozen from metadata only, before any price read. The ID range is [0x18, 0x28), and a contract must end after June 22.
   - An earlier v1 selection with a stricter end-date rule found only 15 of 60. It was superseded before any price read and is preserved.
   - Capture was deferred until after the live window to protect the live test (§3.3).
-  - Primary model `row_hgb7` and secondary V03 run in one once-only phase, with pass rules registered beforehand. **[PENDING]**
+  - Primary model `row_hgb7` and secondary V03 run in one once-only phase, with pass rules registered beforehand.
+  - **Result: both frozen rules met** (capture 30 Oct 01:57–02:35 UTC, evaluation 02:44 UTC). row_hgb7: LL 0.3859 vs 0.4249 for activity logistic (9.2%), Brier 0.1145 vs 0.1241, contract CI [0.022, 0.058] nats, 68,046 known / 1,639 missing of 69,685 issued (81,144 scheduled), 17/21 contracts and 14/14 dates won, missing-outcome bounds [0.029, 0.058]; vs global rate 0.094 [0.062, 0.135]. V03: LL 0.3883 vs 0.4411 (12.0%), Brier 0.1160 vs 0.1299, CI [0.023, 0.085], 68,700 known / 1,336 missing, 16/21 won.
+  - Caveats: both boosters had lower AUC than logistic (0.744 vs 0.783; 0.747 vs 0.779), so the gain is in probability levels, not ranking; vs legacy_hgb7 the 0.025-nat gain has contract CI [−0.029, 0.083]. The online contract-rate comparison (§3.2) was not prespecified for this block and has not been run.
 - **Calibration.** On June 8–14 both models are close to the diagonal below 0.2. Both under-predict at higher probabilities, the booster slightly less at the top (June 1–7 differs; see below).
 
   ![Calibration](docs/figures/fig2_calibration_june8_14.png)
@@ -165,7 +169,11 @@ The contract-clustered intervals exclude zero for sports and finance/crypto in J
 - **Known defect.** On the first grid (00:30) all 30 decisions abstained. A wrapper handoff skipped one input refresh. The failure is fail-closed and affects 0.12% of the schedule.
 - **Outage and V02b.** The host slept (lid closed on battery, 04:42 UTC) and rebooted (05:16 UTC) on 27 Oct. The V02 source cannot be restarted into its run, and its frozen evaluator needs a capture manifest the dead source never wrote, so V02 is unevaluable. A separately versioned continuation, V02b (`eventx/release/v7/forecast_runtime_20261026_v02b/`), was activated at 05:47 UTC before any V02 outcome was read. It has the same frozen files, model and cohort; grids run 27 Oct 06:35 to 29 Oct 23:25 UTC (22,650 decisions); it is evaluated once with the same close time.
 - **V02b sleep gap.** From 07:40 to 08:26 UTC on 27 Oct the lid was closed again on AC before sleep was disabled system-wide. The processes survived, but 9 grids (270 decisions) are scored as missed. `pmset disablesleep 1` was set afterwards. At 28 Oct 01:41 UTC the V02b ledger held 4,874 ready, 1,396 abstained and 270 missed decisions across 218 grids (each day's 23:30–00:25 UTC grids are excluded by design).
-- **Result:** [PENDING — run `zsh scripts/close_out_20261030.sh` (V02b evaluation first) after 29 Oct 23:57:30 UTC; report coverage, LL/Brier/AUC vs baselines, the contract-clustered CI and missing-label bounds whatever the sign.]
+- **Result (evaluated once, 30 Oct 01:57 UTC; descriptive, no pass rule).** Reporting floor met. Issued on time 15,485 of 22,650 (68.4%); 7,165 abstained, missed or uncommitted; 12,943 known / 2,542 unknown (2,709 positives); 27 of 30 contracts contributed.
+  - Log loss V03 hgb7 / full logistic / global rate: 0.4470 / 0.5368 / 0.5163. Brier 0.1403 / 0.1547 / 0.1665. AUC 0.745 / 0.726.
+  - Gain vs full logistic 16.7%, contract-clustered CI [0.049, 0.136] nats; vs global rate CI [0.034, 0.112].
+  - The full logistic was worse than the global rate in log loss but better in Brier and AUC, suggesting live miscalibration.
+  - Missing-outcome bounds over all issued forecasts: [−0.011, 0.150] vs full logistic, [−0.073, 0.102] vs global rate, so the known outcomes alone do not fix the sign. Three days, one venue, 68.4% coverage.
 
 ### 3.4 Operating a prospective forecaster: lessons
 
@@ -188,7 +196,7 @@ At the 05:19 UTC status check, the V02 ledger held 725 ready decisions, 715 abst
 - **Venue and cohort.** Track B covers one venue (Polymarket), and its cohorts are modest: 18–35 contributing contracts. Observations within a contract are dependent, which is why the intervals are contract-clustered.
 - **Comparator strength.** The primary comparison is between complete systems: row_hgb7 uses 18 inputs, activity logistic regression nine of them. It shows the booster beats the specified reference, not why; nonlinearity and the extra inputs are not separated. A post hoc online contract rate came within 0.5% of the booster's log loss on 8–14 June. No full-feature logistic, GAM or comparably tuned alternative ensemble was fitted for the June blocks. V03's same-input logistic comparison is better controlled but is a separate model.
 - **Coverage and selection.** Issued forecasts covered 19,304 of 96,600 scheduled decisions in 1–7 June (20.0%) and 39,656 of 77,280 in 8–14 June (51.3%). Much of the gap is inactive or expired contracts and the frozen quote gates, not feed failures, but scores describe the issued, active part of the market; the missing-outcome bounds do not cover unissued decisions.
-- **Joint dependence and breadth.** Contracts share dates and information shocks. A post hoc two-way contract × date bootstrap keeps both June gains over activity logistic above zero, but seven dates per block make the date dimension imprecise. Two June weeks (plus the pending fortnight) test chronological and new-contract transfer only, not new event families, sustained prospective issuance or another venue.
+- **Joint dependence and breadth.** Contracts share dates and information shocks. A post hoc two-way contract × date bootstrap keeps both June gains over activity logistic above zero, but seven dates per block make the date dimension imprecise. Three June blocks (1–28 June) test chronological and new-contract transfer only, not new event families, sustained prospective issuance or another venue.
 - **Metadata timing.** Historical replays use current rather than as-of metadata; only the live test is truly prospective.
 - **Target scope.** Quote-change activity is a microstructure target. A good score does not imply tradable edge, a directional signal or news value.
 - **Live test scale.** The prospective run lasts under three days on one laptop with 30 contracts; its interval will be wide, and coverage losses (warmups, sleeps) are part of the result.
@@ -197,4 +205,4 @@ At the 05:19 UTC status check, the V02 ledger held 725 ready decisions, 715 abst
 - **Unresolved data gaps.** In Track A, news availability is conservative but not first-delivery certified, and missing feeds are treated as unknown. KOL/social research was deferred.
 
 ## 5. Reproducibility
-The checker verifies the 24 claims in `report/claims.json` against their artifacts, confirms each printed value still appears in this draft and in the builder, and fails on any missing or changed locked file; numbers not in the claims file are not checked. Frozen releases are under `eventx/release/v7/{june_replication_20261026,new_identity_test_20261026,forecast_runtime_20261026_v02,forecast_runtime_20261026_v02b}/`, and results under the matching `data/v7/` directories. `python -m eventx.tasks.verify_report_reproducibility_20261027 [--recompute]` re-hashes every locked file and re-checks the report's headline claims (last PASS: `data/reproducibility/20261027T054042Z/report.json`). `CURRENT_STATE.md` is the handoff, and `docs/progress/2026-10.md` the log.
+The checker verifies the 50 claims in `report/claims.json` against their artifacts, confirms each printed value still appears in this draft and in the builder, and fails on any missing or changed locked file; numbers not in the claims file are not checked. Frozen releases are under `eventx/release/v7/{june_replication_20261026,new_identity_test_20261026,forecast_runtime_20261026_v02,forecast_runtime_20261026_v02b}/`, and results under the matching `data/v7/` directories. `python -m eventx.tasks.verify_report_reproducibility_20261027 [--recompute]` re-hashes every locked file and re-checks the report's headline claims (last PASS: `data/reproducibility/20261027T054042Z/report.json`). `CURRENT_STATE.md` is the handoff, and `docs/progress/2026-10.md` the log.

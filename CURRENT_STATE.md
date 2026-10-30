@@ -4,7 +4,23 @@
 > `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
 > Append history to `docs/progress/2026-10.md`,not legacy PROGRESS.md.
 
-Last updated: **2026-10-29 Asia/Singapore** (proposal assessment `EVENTX_ADDITIONAL_WORK_ASSESSMENT_20261029.md`); V02b scheduled test window remains in progress (last process check below, not refreshed by this assessment); V4 collector restart recorded below.
+Last updated: **2026-10-30 03:20Z** — CLOSE-OUT COMPLETE (see block below). Live windows closed; no live process running.
+
+## CLOSE-OUT 30 Oct 2026 (complete; all once-only; do not rerun any step)
+
+- Logs: `data/close_out_20261030/{summary,post_summary}.log`; formatted results `fill_pending.json`.
+- V02b live (`data/v7/forecast_runtime_20261026_v02b/evaluation/report.json`): floor met; 15,485/22,650 timely (68.4%);
+  12,943 known/2,542 unknown (2,709 pos); 27 contracts. LL hgb7 0.4470 / full_logit 0.5368 / global 0.5163;
+  gain vs full_logit 16.7%, contract CI [0.049, 0.136]; missing bounds [-0.011, 0.150]. Descriptive (no pass rule).
+- Late June v2 (`data/v7/late_june_test_20261027_v2/evaluation/result.json`): PASS both. row_hgb7 0.3859 vs
+  activity_logit 0.4249 (9.2%), CI [0.022, 0.058], 17/21; V03 0.3883 vs 0.4411 (12.0%), CI [0.023, 0.085].
+  Caveat: booster AUC < logistic (0.744 vs 0.783). Holdout consumed.
+- V4: STOPPED at frozen audit gate (news 2026-08-30: run_status completed 53 / partial 11 / ok 39). Consume never ran;
+  V4 holdout UNCONSUMED. Frozen audit unmodified. Any versioned re-audit needs explicit user decision.
+- Checker PASS (50/50 claims, 1,156 files, figures identical; --recompute identical). Report + draft filled;
+  docx rebuilt (49 pp); deck republished. Hash manifest `data/close_out_20261030/backup_manifest.sha256` (12,402 files).
+- Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
+  11-pt table text?; V4 gate decision. Submission due 1 Nov.
 
 ## Active objective and locked decisions
 
@@ -77,6 +93,9 @@ No protected early evaluation, external messages or trading; segment discovery i
 ## Lid-close gap 07:40-08:26Z 27Oct: processes survived; 270 decisions missed (9 grids), scored as missed per frozen rules.
 ## Close-out is AUTO: detached waiter (PID 52875) runs `zsh scripts/close_out_20261030.sh` once at 30Oct00:01Z
 ## (log `data/close_out_20261030_waiter.log`). Run by hand only if `pgrep -f close_out_20261030` is empty. Host: AC + disablesleep.
+## 30Oct02:37Z: v02b_evaluate rc=0; V4 STOPPED at audit gate (news 2026-08-30 run_status completed/partial != ok; holdout NOT consumed; needs user decision); late-June capture rc=0, evaluate running.
+## Then AUTO post stage: waiter PID 82838 (relaunched 30Oct00:25Z; first waiter timed out at 12 h) runs `scripts/post_close_out_20261030.sh` after "close-out finished":
+## fill_pending.json, checker, checker --recompute, backup_manifest.sha256 (log `post_summary.log`). No report edits; no evaluator reruns.
 
 ## 27Oct report enhancements (post hoc, no holdout/refit): news bound Brier upper -0.000196 (all prereg effects excluded);
 ## booster drivers (booster-only inputs = 21% of gap; freshness ~0); reproducibility check PASS
