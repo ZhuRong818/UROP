@@ -4,7 +4,7 @@
 > `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
 > Append history to `docs/progress/2026-10.md`,not legacy PROGRESS.md.
 
-Last updated: **2026-10-30 03:20Z** — CLOSE-OUT COMPLETE (see block below). Live windows closed; no live process running.
+Last updated: **2026-10-31 16:40Z** — history-stack test evaluated once (PASS); V4 run (negative). No evaluation process running.
 
 ## CLOSE-OUT 30 Oct 2026 (complete; all once-only; do not rerun any step)
 
@@ -17,13 +17,20 @@ Last updated: **2026-10-30 03:20Z** — CLOSE-OUT COMPLETE (see block below). Li
   Caveat: booster AUC < logistic (0.744 vs 0.783). Holdout consumed.
 - V4: v1 audit stopped (run_status != ok). User-authorized disclosed v2 audit (any status; commit 7e3a7b7) →
   chain ran once 31 Oct 14:41Z; holdout CONSUMED. B3 vs B0 NOT supported: LL improvement −0.00106 [−0.00522, 0.00121];
-  all models AUC ≈0.40 (<0.5), overpredict (0.174 vs 0.0855). Report V4 sections must be rewritten.
-- NEW CYCLE (user-authorized 31 Oct): history stack (row_hgb7 + online rate + history) dev on consumed blocks,
-  test once on new contracts 29 Jun–12 Jul (ID [0x28,0x48)). Submission moved to Tue 3 Nov.
-- Checker PASS (50/50 claims, 1,156 files, figures identical; --recompute identical). Report + draft filled;
-  docx rebuilt (49 pp); deck republished. Hash manifest `data/close_out_20261030/backup_manifest.sha256` (12,402 files).
+  all models AUC ≈0.40 (<0.5), overpredict (0.174 vs 0.0855). Report V4 sections rewritten.
+- NEW CYCLE (user-authorized 31 Oct): history stack `stack_lin` (logit row_hgb7, logit online rate, log1p history),
+  dev `data/v7/history_stack_20261031/development/result.json`, frozen `eventx/release/v7/history_stack_20261031/` (fd16f1f).
+  Test 29 Jun–12 Jul, 53 new contracts (51 contributing), evaluated ONCE 31 Oct 16:35Z — window CONSUMED; never rerun.
+  `data/v7/history_stack_20261031/test/evaluation/result.json`: PASS. LL stack 0.3348 vs rate 0.3863 (13.3%), Brier
+  0.1041 vs 0.1233; two-way CI [0.034, 0.071]; 42/51 contracts, 14/14 dates; vs row_hgb7 0.030 [0.011, 0.052];
+  missing bounds [−0.003, 0.083]. Caveat: capture lost 134/336 hours (frozen 32 MiB range budget, busy hours).
+  Submission moved to Tue 3 Nov.
+- 30 Oct: checker PASS (50/50 claims); report + draft filled; deck republished. Hash manifest `data/close_out_20261030/backup_manifest.sha256` (12,402 files).
 - Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
-  11-pt table text?; V4 gate decision. Submission due 1 Nov.
+  11-pt table text?; abstract length. Submission due Tue 3 Nov.
+- Report: §6.6 + Table 10 added; abstract (300 words), §1.3, Table 1, §8, §9, App. B/C updated; claims 58; checker PASS
+  (`data/reproducibility/20261031T164224Z`, --recompute PASS 20261031T164109Z; 1,178 files / 87 manifests); docx 52 pp.
+  Deck v12 adds `stack` slide; V4 text corrected.
 
 ## Active objective and locked decisions
 

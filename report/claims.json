@@ -1047,5 +1047,169 @@
    "builder",
    "draft"
   ]
+ },
+ {
+  "study": "V4 confirmatory",
+  "cohort": "470 contracts, 47,279 rows (price age <=30)",
+  "model": "B3",
+  "comparator": "B0",
+  "artifact": "data/v4/confirmatory/evaluation/result.json",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ],
+  "id": "V4 LL improvement B3-B0",
+  "keys": [
+   "primary_price_age_le_30",
+   "incremental_over_b0",
+   "b3",
+   "log_loss_improvement"
+  ],
+  "value": -0.00078,
+  "tolerance": 5e-06,
+  "printed": "−0.00078"
+ },
+ {
+  "study": "V4 confirmatory",
+  "cohort": "470 contracts, 47,279 rows (price age <=30)",
+  "model": "B3",
+  "comparator": "B0",
+  "artifact": "data/v4/confirmatory/evaluation/result.json",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ],
+  "id": "V4 bootstrap CI lower",
+  "keys": [
+   "primary_price_age_le_30",
+   "b3_vs_b0_bootstrap",
+   "ci_95_lower"
+  ],
+  "value": -0.0052,
+  "tolerance": 5e-05,
+  "printed": "[−0.0052, 0.0012]"
+ },
+ {
+  "study": "History stack 29 Jun-12 Jul",
+  "cohort": "51 new contracts, 65,458 known outcomes",
+  "artifact": "data/v7/history_stack_20261031/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ],
+  "tolerance": 5e-05,
+  "id": "History stack LL",
+  "model": "stack",
+  "comparator": "-",
+  "keys": [
+   "scores",
+   "stack",
+   "log_loss"
+  ],
+  "value": 0.3348,
+  "printed": "0.3348"
+ },
+ {
+  "study": "History stack 29 Jun-12 Jul",
+  "cohort": "51 new contracts, 65,458 known outcomes",
+  "artifact": "data/v7/history_stack_20261031/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ],
+  "tolerance": 5e-05,
+  "id": "History stack rate LL",
+  "model": "adaptive_rate",
+  "comparator": "-",
+  "keys": [
+   "scores",
+   "adaptive_rate",
+   "log_loss"
+  ],
+  "value": 0.3863,
+  "printed": "0.3863"
+ },
+ {
+  "study": "History stack 29 Jun-12 Jul",
+  "cohort": "51 new contracts, 65,458 known outcomes",
+  "artifact": "data/v7/history_stack_20261031/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ],
+  "tolerance": 0.0005,
+  "id": "History stack two-way CI lower",
+  "model": "stack",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "primary",
+   "stack_minus_rate_two_way",
+   "ci95",
+   0
+  ],
+  "value": 0.034,
+  "printed": "[0.034, 0.071]"
+ },
+ {
+  "study": "History stack 29 Jun-12 Jul",
+  "cohort": "51 new contracts, 65,458 known outcomes",
+  "artifact": "data/v7/history_stack_20261031/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ],
+  "tolerance": 0.0005,
+  "id": "History stack two-way CI upper",
+  "model": "stack",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "primary",
+   "stack_minus_rate_two_way",
+   "ci95",
+   1
+  ],
+  "value": 0.071,
+  "printed": "[0.034, 0.071]"
+ },
+ {
+  "study": "History stack 29 Jun-12 Jul",
+  "cohort": "51 new contracts, 65,458 known outcomes",
+  "artifact": "data/v7/history_stack_20261031/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ],
+  "tolerance": 0.0005,
+  "id": "History stack vs row_hgb7 two-way CI",
+  "model": "stack",
+  "comparator": "row_hgb7",
+  "keys": [
+   "secondary",
+   "stack_vs_row_hgb7",
+   "two_way",
+   "ci95",
+   0
+  ],
+  "value": 0.011,
+  "printed": "[0.011, 0.052]"
+ },
+ {
+  "study": "History stack 29 Jun-12 Jul",
+  "cohort": "51 new contracts, 65,458 known outcomes",
+  "artifact": "data/v7/history_stack_20261031/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder",
+   "draft"
+  ],
+  "tolerance": 0.0005,
+  "id": "History stack missing bound lower",
+  "model": "stack",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "missing_outcome_bounds_stack_vs_rate",
+   "lower"
+  ],
+  "value": -0.003,
+  "printed": "[−0.003, 0.083]"
  }
 ]
