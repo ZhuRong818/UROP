@@ -1,0 +1,24 @@
+{
+  "status": "v4_audit_revision_frozen_before_consumption",
+  "created_at": "2026-10-31T14:39:25.910004+00:00",
+  "holdout_consumed": false,
+  "v4_labels_or_metrics_read": false,
+  "artifacts": [
+    {
+      "path": "eventx/tasks/audit_v4_confirmatory_collection.py",
+      "sha256": "4b430894019c20e02120d1626e991bf2e7950f4c746211e9bed6605c58c1cf08"
+    },
+    {
+      "path": "eventx/tasks/audit_v4_confirmatory_collection_v2_20261031.py",
+      "sha256": "f2a85301cb2be66a314bd7354b9b9986d6b3f23e9ed777fdf57a04346f897bd9"
+    },
+    {
+      "path": "eventx/release/v4/AUDIT_REVISION_V2_20261031.md",
+      "sha256": "b15d56f4ce45bd70db11ce6984e38614154534dd2a31e122e14de7e541823255"
+    },
+    {
+      "path": "eventx/release/v4/holdout_implementation_manifest.json",
+      "sha256": "15cf30c159f0b2ecb59b78f85b9949a86f014e89874121a22dc7c7653bfbeceb"
+    }
+  ]
+}
