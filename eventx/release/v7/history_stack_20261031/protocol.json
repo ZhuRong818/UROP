@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-31T14:44:17.806496+00:00",
+  "authorization": "New research cycle explicitly authorized by the user on 31 Oct 2026",
+  "question": "Does information pooled across contracts (the frozen booster) add value beyond each contract's own available outcome history, when the two are combined?",
+  "candidate": "stack_lin: logistic on [logit(row_hgb7), logit(online rate), log1p(matured known outcomes)], selected by a rule fixed before held-out scores (data/v7/history_stack_20261031/development/result.json); refit on four consumed blocks",
+  "reference": "online contract rate: pseudocount 20 toward stored global rate, outcomes matured >= 2,100 s, history restarting at window start",
+  "dates": [
+    "2026-06-29",
+    "2026-06-30",
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-03",
+    "2026-07-04",
+    "2026-07-05",
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-11",
+    "2026-07-12"
+  ],
+  "excluded_period": "2026-07-22 to 2026-08-08 (consumed V3.1 holdout period) is not used",
+  "cohort": "up to 150 never-used contracts, ID range [0x28,0x48), metadata-only selection from 2026-06-28 identity hours, one contract per event, no event shared with earlier cohorts, start < 29 Jun, end > 6 Jul, salted-hash order",
+  "primary_pass_rule": "stack log loss < online rate; stack Brier <= online rate; contract x date two-way bootstrap 95% lower bound of (rate - stack) > 0; 5,000 draws, seed 20261101",
+  "secondary": [
+    "stack vs row_hgb7",
+    "row_hgb7 vs online rate",
+    "stack vs activity_logit",
+    "row_hgb7 vs activity_logit",
+    "contract-clustered intervals",
+    "missing-outcome bounds",
+    "per-contract and per-date wins",
+    "history strata 0/1-11/12-47/>=48"
+  ],
+  "power_note": "Planning from June 8-14 suggests ~170 contracts for a 0.02-nat gain at 80% power; fewer contracts widen the interval. Development held-out gains over the rate were 0.03-0.05 nats.",
+  "integrity": "Each phase runs once; evaluate once; report whatever the sign; no refit or retuning after capture; 29 Jun-12 Jul becomes consumed.",
+  "interpretation": "Historical replay with current metadata; new identities, same venue and era. Not live, not news, not profit."
+}

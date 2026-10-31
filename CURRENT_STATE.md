@@ -15,8 +15,11 @@ Last updated: **2026-10-30 03:20Z** — CLOSE-OUT COMPLETE (see block below). Li
 - Late June v2 (`data/v7/late_june_test_20261027_v2/evaluation/result.json`): PASS both. row_hgb7 0.3859 vs
   activity_logit 0.4249 (9.2%), CI [0.022, 0.058], 17/21; V03 0.3883 vs 0.4411 (12.0%), CI [0.023, 0.085].
   Caveat: booster AUC < logistic (0.744 vs 0.783). Holdout consumed.
-- V4: STOPPED at frozen audit gate (news 2026-08-30: run_status completed 53 / partial 11 / ok 39). Consume never ran;
-  V4 holdout UNCONSUMED. Frozen audit unmodified. Any versioned re-audit needs explicit user decision.
+- V4: v1 audit stopped (run_status != ok). User-authorized disclosed v2 audit (any status; commit 7e3a7b7) →
+  chain ran once 31 Oct 14:41Z; holdout CONSUMED. B3 vs B0 NOT supported: LL improvement −0.00106 [−0.00522, 0.00121];
+  all models AUC ≈0.40 (<0.5), overpredict (0.174 vs 0.0855). Report V4 sections must be rewritten.
+- NEW CYCLE (user-authorized 31 Oct): history stack (row_hgb7 + online rate + history) dev on consumed blocks,
+  test once on new contracts 29 Jun–12 Jul (ID [0x28,0x48)). Submission moved to Tue 3 Nov.
 - Checker PASS (50/50 claims, 1,156 files, figures identical; --recompute identical). Report + draft filled;
   docx rebuilt (49 pp); deck republished. Hash manifest `data/close_out_20261030/backup_manifest.sha256` (12,402 files).
 - Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
