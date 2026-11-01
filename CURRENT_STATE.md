@@ -26,6 +26,10 @@ Last updated: **2026-10-31 16:40Z** — history-stack test evaluated once (PASS)
   missing bounds [−0.003, 0.083]. Caveat: capture lost 134/336 hours (frozen 32 MiB range budget, busy hours).
   Submission moved to Tue 3 Nov.
 - 30 Oct: checker PASS (50/50 claims); report + draft filled; deck republished. Hash manifest `data/close_out_20261030/backup_manifest.sha256` (12,402 files).
+- 1 Nov: post hoc segment discovery/replication (protocol commit 493b568) DONE, descriptive: 8/10 flags replicated.
+  Booster edge over online rate sits after a recent 30-min move (+0.088 [0.042, 0.133], 17% of rows) and at wide
+  spreads; quiet states rate ≈/slightly better; no category/hour pattern. Report §6.7 + Table 11; claims 61; docx 54 pp.
+  `data/v7/segment_replication_20261101/`. A routing rule would need its own frozen test on a new window.
 - Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
   11-pt table text?; abstract length. Submission due Tue 3 Nov.
 - Report: §6.6 + Table 10 added; abstract (300 words), §1.3, Table 1, §8, §9, App. B/C updated; claims 58; checker PASS

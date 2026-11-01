@@ -1211,5 +1211,65 @@
   ],
   "value": -0.003,
   "printed": "[−0.003, 0.083]"
+ },
+ {
+  "study": "Segment replication (post hoc)",
+  "cohort": "15-28 Jun + 29 Jun-12 Jul pooled, 133,504 rows",
+  "artifact": "data/v7/segment_replication_20261101/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "model": "row_hgb7",
+  "id": "Segment moved30 interaction vs rate (replication)",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "replication_pooled",
+   "C1_vs_rate",
+   "moved30=yes",
+   "interaction"
+  ],
+  "value": 0.113,
+  "tolerance": 0.0005,
+  "printed": "Midpoint moved in last 30 min"
+ },
+ {
+  "study": "Segment replication (post hoc)",
+  "cohort": "15-28 Jun + 29 Jun-12 Jul pooled, 133,504 rows",
+  "artifact": "data/v7/segment_replication_20261101/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "model": "row_hgb7",
+  "id": "Segment moved30 gain vs activity logit (replication)",
+  "comparator": "activity_logit",
+  "keys": [
+   "replication_pooled",
+   "C2_vs_activity_logit",
+   "moved30=yes",
+   "gain"
+  ],
+  "value": 0.239,
+  "tolerance": 0.0005,
+  "printed": "+0.239 [0.192, 0.291]"
+ },
+ {
+  "study": "Segment replication (post hoc)",
+  "cohort": "15-28 Jun + 29 Jun-12 Jul pooled, 133,504 rows",
+  "artifact": "data/v7/segment_replication_20261101/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "model": "row_hgb7",
+  "id": "Segment spread>0.03 interaction vs rate (replication)",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "replication_pooled",
+   "C1_vs_rate",
+   "spread>0.03",
+   "interaction"
+  ],
+  "value": 0.101,
+  "tolerance": 0.0005,
+  "printed": "+0.091 nats [0.044, 0.149]"
  }
 ]
