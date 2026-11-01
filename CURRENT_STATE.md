@@ -34,7 +34,7 @@ Last updated: **2026-10-31 16:40Z** — history-stack test evaluated once (PASS)
   capture COMPLETE 04:41Z (216/216 hours, 0 missing, 0 protected rows); evaluated once 05:17Z: H1 moved30 PASS
   (interaction 0.113, Holm p 0.0004), H2 spread>0.03 PASS (0.091, Holm p 0.0004), H3 stack-rate 0.039 [0.028, 0.051] PASS;
   routing +0.017 vs rate, -0.022 vs stack (`data/v7/segment_confirm_20261101/test/evaluation/result.json`).
-  Written up: report §6.8/Table 12, 69 claims, checker PASS `data/reproducibility/20261101T052403Z`, 56 pages; deck v13. Window CONSUMED. Never rerun any phase.
+  Written up: report §6.8/Table 12, 69 claims, checker PASS `data/reproducibility/20261101T052403Z`, 57 pages (tables 11 pt); deck v13. Window CONSUMED. Never rerun any phase.
 - Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
   11-pt table text?; abstract length. Submission due Tue 3 Nov.
 - Report: §6.6 + Table 10 added; abstract (300 words), §1.3, Table 1, §8, §9, App. B/C updated; claims 58; checker PASS

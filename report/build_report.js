@@ -14,7 +14,8 @@ const headings = [];
 const ROOT = path.resolve(__dirname, '..');
 const FONT = 'Times New Roman';
 const BODY = 24;        // 12pt in half-points
-const SMALL = 20;       // 10pt for appendices / tables
+const SMALL = 20;       // 10pt for appendices
+const TABLE = 22;       // 11pt table text
 const LINE15 = 360;     // 1.5 line spacing
 const PAGE_W = 11906, MARGIN = 1440, TEXT_W = PAGE_W - 2 * MARGIN;  // A4, 1" margins
 
@@ -75,10 +76,10 @@ function Tbl(caption, headers, rows, fracs) {
   const widths = fracs.map(f => Math.round(f * total));
   widths[widths.length - 1] = total - widths.slice(0, -1).reduce((a, b) => a + b, 0);
   const cell = (t, i, head) => new TableCell({
-    width: { size: widths[i], type: WidthType.DXA }, margins: { top: 40, bottom: 40, left: 80, right: 80 },
+    width: { size: widths[i], type: WidthType.DXA }, margins: { top: 40, bottom: 40, left: 60, right: 60 },
     borders: { top: border, bottom: border, left: border, right: border },
     shading: head ? { type: ShadingType.CLEAR, fill: 'E8E8E8', color: 'auto' } : undefined,
-    children: [new Paragraph({ alignment: i === 0 ? AlignmentType.LEFT : AlignmentType.CENTER, children: head ? [new TextRun({ text: t, bold: true, font: FONT, size: SMALL })] : runs(String(t), SMALL) })],
+    children: [new Paragraph({ alignment: i === 0 ? AlignmentType.LEFT : AlignmentType.CENTER, children: head ? [new TextRun({ text: t, bold: true, font: FONT, size: TABLE })] : runs(String(t), TABLE) })],
   });
   return [Caption('Table', caption), new Table({ width: { size: total, type: WidthType.DXA }, columnWidths: widths,
     rows: [new TableRow({ tableHeader: true, children: headers.map((h, i) => cell(h, i, true)) }),
@@ -222,7 +223,7 @@ add(Tbl('Overview of the studies reported here. Known / missing counts are match
    ['History stack (new cycle)', 'Four opened blocks, 13 May–28 June', '29 June–12 July, unopened, new contracts', 'stack_lin vs online contract rate', '53 selected, 51 contribute; 65,458 / 8,739', 'Lower LL and Brier no higher than the rate; contract × date lower bound > 0', 'Pass'],
    ['Segment confirmation (new cycle)', 'Five opened blocks, 13 May–12 July', '13–21 July, unopened, new contracts', 'row_hgb7 gain over online rate by segment (H1, H2); stack vs rate (H3)', '80 selected, 78 contribute; 159,283 / 4,535', 'One-sided contract-clustered p, Holm over two; H3 as history stack', 'Pass (all three)'],
    ['Live V02b', '7–9 May (V03)', '27 Oct 06:35–29 Oct 23:25 UTC, prospective', 'V03 hgb7 vs full logistic and global rate', '30; 22,650 scheduled decisions', 'None; reporting floor of 100 known outcomes and 20 of each class', 'Floor met; descriptive']],
-  [0.13, 0.12, 0.15, 0.16, 0.16, 0.16, 0.12]));
+  [0.145, 0.144, 0.149, 0.14, 0.167, 0.13, 0.125]));
 add(H2('3.4 Scores, uncertainty and missing outcomes'));
 add(P('All forecasts are probabilities *p* of a binary outcome *y*. They are scored with two strictly proper scoring rules, for which lower is better:'));
 add(B('**log loss**, the mean of −[*y* ln *p* + (1 − *y*) ln(1 − *p*)] over forecasts, in nats;'));
@@ -332,7 +333,7 @@ add(Tbl('Booster log-loss reduction against activity logistic regression by cate
    ['June 8–14 sports', '12', '11,498', '10.3%', '9/12', '[0.001, 0.096]'], ['June 8–14 finance/crypto', '8', '7,167', '12.1%', '6/8', '[−0.028, 0.248]'],
    ['June 8–14 politics', '6', '6,927', '14.3%', '5/6', '[−0.016, 0.116]'], ['June 8–14 geopolitics', '4', '6,335', '28.8%', '4/4', '[0.044, 0.241]'],
    ['June 8–14 tech/science', '3', '2,680', '14.7%', '2/3', '[−0.038, 0.273]'], ['June 8–14 entertainment', '2', '611', '1.7%', '1/2', 'too few']],
-  [0.28, 0.12, 0.11, 0.12, 0.14, 0.23]));
+  [0.27, 0.12, 0.11, 0.13, 0.14, 0.23]));
 add(Figure('docs/figures/fig3_category_breakdown.png', 6.0, 'Booster log-loss reduction by market category in each June block. Point labels give the number of contracts.'));
 add(P('**Post hoc robustness checks.** After both June blocks had been consumed, three further checks were run on their stored forecasts (`eventx/tasks/analyze_v7_dependence_coverage_20261028.py`). Nothing was refit or regenerated, and the definitions were fixed in the script before its first run. Two diagnostics added after that run are labelled as such in the output.'));
 add(P('*Joint dependence.* A two-way (pigeonhole) bootstrap resamples contracts and dates independently and weights each row by the product of its contract’s and date’s multiplicities (Owen, 2007). It assumes contract and date effects combine without a strong interaction, and with seven dates per block the date dimension is estimated imprecisely. The booster’s gain over activity logistic regression stays above zero: [0.031, 0.092] nats on 1–7 June and [0.022, 0.126] on 8–14 June, against [0.039, 0.080] and [0.033, 0.119] for contracts alone. Grouping contracts by event gives the same result, because no two contributing contracts share an event. The gain over the legacy booster on 1–7 June does not survive: its two-way interval is [−0.007, 0.092].'));
@@ -343,7 +344,7 @@ add(Tbl('Post hoc comparison of the frozen booster with an online contract rate 
   [['13–19 May', '0.3583', '0.3922', '0.034 (8.6%)', '[0.008, 0.060]', '[0.002, 0.071]', '0.0170 [0.0075, 0.0275]', '0.837 / 0.807', '18/30; 7/7'],
    ['1–7 June', '0.2931', '0.3143', '0.021 (6.7%)', '[−0.006, 0.057]', '[−0.018, 0.073]', '0.0094 [0.0007, 0.0231]', '0.835 / 0.790', '11/18; 7/7'],
    ['8–14 June', '0.4208', '0.4231', '0.002 (0.5%)', '[−0.028, 0.033]', '[−0.040, 0.041]', '0.0080 [−0.0016, 0.0178]', '0.827 / 0.824', '17/35; 3/7']],
-  [0.09, 0.09, 0.09, 0.10, 0.11, 0.12, 0.15, 0.11, 0.14]));
+  [0.09, 0.10, 0.09, 0.09, 0.11, 0.12, 0.15, 0.11, 0.14]));
 add(P('On the 35 new contracts, the online rate reaches almost the booster’s log loss and AUC, and both its intervals include zero. On the development contracts, which were also used to train the booster, the booster is ahead: clearly on 13–19 May, where both intervals lie above zero, and on every date of 1–7 June, where both intervals nonetheless include zero. Intervals this wide do not show that the two forecasts are equivalent on the new contracts; they show that the block cannot separate them. The familiar and new cohorts also differ in contracts and dates, so the contrast between them does not isolate an effect of training familiarity.'));
 add(P('*Outcome history.* Grouping decisions by how many of the contract’s outcomes had matured shows where the booster gains (`eventx/tasks/analyze_v7_online_rate_replication_20261028.py`). With fewer than 12 matured outcomes, under an hour’s worth, it beats the online rate by 0.07–0.14 nats in all three blocks, and four of the six contract-clustered intervals exclude zero. With 12 or more on the new contracts, the difference is about zero. These early decisions are under 2% of forecasts. They account for about 82% of the small aggregate gain on the new contracts, but only 4–7% in the two familiar blocks, where most of the gain comes after history has accumulated. History restarts at each block boundary, so “little history” means few matured outcomes within the analysed block, not necessarily a newly listed contract. Both forecasts are available from a contract’s first decision: with no matured outcomes the online rate returns its global prior.'));
 add(P('Taken together, these post hoc analyses suggest that quote features are particularly useful when little contract-specific outcome history is available; their incremental value after substantial history accumulates remains uncertain on unseen contracts. The similar warm-period scores are consistent with persistent contract-level activity explaining much of the gain over activity logistic regression, but they do not establish that mechanism. None of this changes a frozen result or pass rule. It does change what those results show: the booster beats the specified fixed baselines, not every simple reference. When information pooled across contracts adds value beyond each contract’s own history is a question for new data (Section 9.3).'));
@@ -364,7 +365,7 @@ add(Tbl('Confirmatory history-stack test, 29 June–12 July, 51 contributing new
    ['stack vs row_hgb7', '0.3348 / 0.3649', '8.3%', '[0.011, 0.052]', '[0.013, 0.049]', '0.859 / 0.799', 'Secondary'],
    ['row_hgb7 vs online rate', '0.3649 / 0.3863', '5.5%', '[−0.014, 0.057]', '[−0.008, 0.050]', '0.799 / 0.794', 'Secondary'],
    ['stack vs activity logistic', '0.3348 / 0.4255', '21.3%', '[0.068, 0.116]', '[0.072, 0.111]', '0.859 / 0.781', 'Secondary']],
-  [0.20, 0.14, 0.12, 0.16, 0.14, 0.12, 0.12]));
+  [0.19, 0.14, 0.13, 0.16, 0.14, 0.12, 0.12]));
 add(P('The frozen rule was met. The stack had log loss 0.3348 against 0.3863 for the online rate, a gain of 0.0515 nats, with Brier 0.1041 against 0.1233. It had lower log loss on 42 of 51 contracts and on all 14 dates. The gain was positive in every history stratum, including decisions with 48 or more matured outcomes (62,716 rows, 0.052 nats, contract interval [0.037, 0.066]), so the pooled forecast kept adding value after a contract’s own history had accumulated. The stack also beat the booster alone, while the booster’s own gain over the rate, 0.021 nats, had intervals that include zero, as on 8–14 June: each component is roughly as good as the other, but they are not redundant.'));
 add(P('Three qualifications apply. First, the frozen capture limit of 32 MiB per hour was exceeded in 134 of 336 hours, mostly busy ones, so no forecasts were issued or scored in those hours; the result describes the remaining 60% of hours. Second, among the 74,197 issued forecasts, 8,739 had no observed endpoint, and the worst-case missing-outcome bounds, [−0.003, 0.083] nats, include zero. Third, as in all historical blocks, cohorts use current metadata and one venue. The test answers the question for this combination and period; it does not show which quote features carry the pooled information.'));
 
@@ -383,7 +384,7 @@ add(Tbl('Confirmatory segment test, 13–21 July, 78 contributing new contracts,
   [['H1: booster, midpoint moved in last 30 min', '28,289 (72)', '+0.091', '−0.021', '0.113 [0.070, 0.162]', '0.0004', 'Confirmed'],
    ['H2: booster, spread above 0.03', '9,331 (40)', '+0.084', '−0.007', '0.091 [0.040, 0.141]', '0.0004', 'Confirmed'],
    ['H3: stack vs online rate, all rows', '159,283 (78)', '+0.039', '—', '0.039 [0.028, 0.051] (contract × date)', '—', 'Pass']],
-  [0.24, 0.13, 0.11, 0.11, 0.19, 0.09, 0.13]));
+  [0.22, 0.13, 0.11, 0.12, 0.19, 0.10, 0.13]));
 add(P('Both segment hypotheses were confirmed. On the 17.8% of rows with a recent move the booster beat the rate by 0.091 nats, while on quiet rows the rate was slightly better (−0.021 nats), so the interaction, 0.113 nats, matched the value found in the replication blocks. Where the spread exceeded 0.03 (5.9% of rows) the gain was 0.084 nats against −0.007 elsewhere. The history stack passed again: log loss 0.3339 against 0.3730 for the rate (10.5% lower), Brier 0.1038 against 0.1184, lower log loss on 67 of 78 contracts, and missing-outcome bounds over all 163,818 issued forecasts of [0.028, 0.045] nats, which, unlike in Section 6.6, exclude zero. The stack beat the rate both after moves (+0.128 nats) and in quiet states (+0.020). The routing rule beat the rate by 0.017 nats [0.007, 0.030] but was worse than the stack by 0.022 nats [0.010, 0.035], so a hard switch between the two sources is dominated by their learned combination.'));
 add(P('Two qualifications apply. The test covers nine days on one venue, and scores describe issued forecasts: 163,818 of 198,720 scheduled decisions (82.4%) were issued, and 4,535 issued forecasts had no observed endpoint. The segments show when pooled quote information helps; they do not identify which quote features carry it.'));
 add(H1('7 Prospective Live Test'));
