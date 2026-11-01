@@ -29,6 +29,9 @@ seed 20261106, unless stated):
               per-contract random-walk offset updated online by a one-step Laplace (extended Kalman) update each time
               an outcome matures (t' <= t - 2,100 s, the online rate's lag). Prior b ~ N(0, 1); process noise 0.02
               per hour. No parameter is fitted or tuned.
+  pp_cp_seg   the same online posterior applied on top of seg_ref's held-out logit (added at the user's request on
+              2 Nov before any fold had finished; the first run was stopped with no score written, log kept as
+              run_stopped_before_first_fold.log)
 Inference: held-out per-row gain vs seg_ref and vs the online rate, contract-clustered 95% CI (2,000 draws, seed
 20261106). Output: data/v8/hawkes_posterior_20261102/result.json
 """
@@ -153,17 +156,18 @@ def main():
         for n in ['e2e', 'e2e_hx', 'e2e_hx_mkt']:
             p[n] = hgb().fit(x_of(tr, n), ytr).predict_proba(x_of(k, n))[:, 1]
         p['pp_cp'] = posterior(k, logit(p['e2e_hx_mkt']))
+        p['pp_cp_seg'] = posterior(k, logit(p['seg_ref']))
         ll = {n: logloss(y, np.clip(v, 1e-6, 1 - 1e-6)) for n, v in p.items()}
         ids = k['market_id'].to_numpy()
         res['held_out'][b] = {'log_loss': {n: float(v.mean()) for n, v in ll.items()},
                               'vs_seg_ref': {n: {'gain': float((ll['seg_ref'] - ll[n]).mean()), **one_way(ll['seg_ref'] - ll[n], ids, rng)}
-                                             for n in ['e2e', 'e2e_hx', 'e2e_hx_mkt', 'pp_cp']},
+                                             for n in ['e2e', 'e2e_hx', 'e2e_hx_mkt', 'pp_cp', 'pp_cp_seg']},
                               'vs_rate': {n: float((ll['rate'] - ll[n]).mean()) for n in ll if n != 'rate'}}
         print(json.dumps({'block': b, **res['held_out'][b]['log_loss']}), flush=True)
-    names = ['rate', 'row_hgb7', 'seg_ref', 'e2e', 'e2e_hx', 'e2e_hx_mkt', 'pp_cp']
+    names = ['rate', 'row_hgb7', 'seg_ref', 'e2e', 'e2e_hx', 'e2e_hx_mkt', 'pp_cp', 'pp_cp_seg']
     res['score_new_blocks'] = {n: float(np.mean([res['held_out'][b]['log_loss'][n] for b in NEW])) for n in names}
     res['blocks_beating_seg_ref'] = {n: int(sum(res['held_out'][b]['vs_seg_ref'][n]['gain'] > 0 for b in NEW))
-                                     for n in ['e2e', 'e2e_hx', 'e2e_hx_mkt', 'pp_cp']}
+                                     for n in ['e2e', 'e2e_hx', 'e2e_hx_mkt', 'pp_cp', 'pp_cp_seg']}
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / 'result.json').write_text(json.dumps(res, indent=1))
     print(json.dumps({k: res[k] for k in ['score_new_blocks', 'blocks_beating_seg_ref']}, indent=1))
