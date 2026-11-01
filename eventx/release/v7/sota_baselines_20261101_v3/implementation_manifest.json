@@ -1,0 +1,22 @@
+{
+ "files": {
+  "eventx/release/v7/sota_baselines_20261101_v3/AMENDMENT.md": "afa39fa5673f7206edfd6a275cdd8cc7e36227a0a03d8b5ec3c3b9b002b1e591",
+  "eventx/tasks/benchmark_v7_sota_baselines_20261101_v3.py": "5680b21432b3917b9c91cff109b454e0e3f5bdc29ac920372d4dae590889ec34",
+  "eventx/release/v7/sota_baselines_20261101_v2/implementation_manifest.json": "4f127390e43fb37025f8bea38d815cb9d334a8d030ce3b37ba0ec48145f1d88c",
+  "eventx/tasks/benchmark_v7_sota_baselines_20261101_v2.py": "41c6b935c6f2e4814156fb4f850143bb2d8c53ab9ecff83592ce18ca2e75b369",
+  "eventx/tasks/benchmark_v7_sota_baselines_20261101.py": "a20373a7a6aabf7199f9ec6e23517e5ac58d2cd7b2df2e70167ef141a095ed43",
+  ".hf_remote/TimeMoE-50M/config.json": "e8cb5b0866ec0c56eefa016a6e3c667f35c2d92ff077148213d5d054eb00a9f9",
+  ".hf_remote/TimeMoE-50M/configuration_time_moe.py": "d9b2e91a18fcc79753af7504a93382d43fa87d168318db01eb8431ef8d1b1125",
+  ".hf_remote/TimeMoE-50M/generation_config.json": "d90f7f1d9ef012f9ec0bd76fdf42e6979d086f157d65910b3b273edfb100e748",
+  ".hf_remote/TimeMoE-50M/model.safetensors": "0127209833663df6f5ae3cf1c3316f739a8dd1dae27e59036268bbfdb48f91a4",
+  ".hf_remote/TimeMoE-50M/modeling_time_moe.py": "afd34fc6799799ef7784ae55425da7e58f4dabe49f2873744af201c06ebcfae6",
+  ".hf_remote/TimeMoE-50M/ts_generation_mixin.py": "b8ed9708bb450dda5443093ce46fa84890ae119823bd897e7f86c4f50dd2814d",
+  ".hf_remote/sundial-base-128m/config.json": "173dd40c0a7e08a71b660110fd6334ee85eb9f6ce6f30df0a6cbaea3bb1ff3b4",
+  ".hf_remote/sundial-base-128m/configuration_sundial.py": "1a79b4265d7a7feabb1fadc336c2c7580157ededd7cc58655f007213447eb7e4",
+  ".hf_remote/sundial-base-128m/flow_loss.py": "fb33d3c3988015124c9f4e05728127d85afee8b416930c0e6d5097e4ced2ecf8",
+  ".hf_remote/sundial-base-128m/generation_config.json": "d90f7f1d9ef012f9ec0bd76fdf42e6979d086f157d65910b3b273edfb100e748",
+  ".hf_remote/sundial-base-128m/model.safetensors": "414435b508391f92afadd2aaeec418c806776aeccbce12e638d73a139ca5ca78",
+  ".hf_remote/sundial-base-128m/modeling_sundial.py": "4a7ce7defa6578d0ae84593587d164afb933cfa6e52aee53f709f236b00b85e4",
+  ".hf_remote/sundial-base-128m/ts_generation_mixin.py": "789577dafbd9605d4c1b2d8930ff2861277090b004b6e7ddef6011b79444942e"
+ }
+}

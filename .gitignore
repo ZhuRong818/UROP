@@ -29,3 +29,5 @@ extracts/
 report/node_modules/
 report/package-lock.json
 report/render/
+.hf_remote/
+.venv-ts/
