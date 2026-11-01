@@ -1,0 +1,8 @@
+{
+ "files": {
+  "eventx/release/v7/sota_baselines_20261101_v2/AMENDMENT.md": "cee2925758f94d2486af959f202a7e880987745ac4d8af3632c13f18ae187db0",
+  "eventx/tasks/benchmark_v7_sota_baselines_20261101_v2.py": "41c6b935c6f2e4814156fb4f850143bb2d8c53ab9ecff83592ce18ca2e75b369",
+  "eventx/release/v7/sota_baselines_20261101/implementation_manifest.json": "2b6d50a2165428c5e5d6761ae1203a9e0341345099383a4f06a2343f403333a4",
+  "eventx/tasks/benchmark_v7_sota_baselines_20261101.py": "a20373a7a6aabf7199f9ec6e23517e5ac58d2cd7b2df2e70167ef141a095ed43"
+ }
+}
