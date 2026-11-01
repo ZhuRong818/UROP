@@ -1,0 +1,30 @@
+{
+ "files": {
+  "eventx/release/v7/segment_stack_20261101/protocol.json": "1bbad8231d689a8b047e48fb7ab74410fcb19cc25061f203f00728bca2954104",
+  "eventx/tasks/run_v7_segment_stack_test_20261101.py": "555c3e89e5025454223b0af0eda8df156aea443c17897bb6d9c213d20f81cf45",
+  "eventx/tasks/develop_v7_segment_stack_20261101.py": "5cf65ebb5ddf81f2d6b9784e4986e81e2f7233f0d3813abd3dc0fdc8866425e0",
+  "data/v7/segment_stack_20261101/development/segment_stack.joblib": "0c9a0c0551262fc3e0976d9453f8feab36889a030f37f8043408b3d88fe0427d",
+  "data/v7/segment_stack_20261101/development/result.json": "47164682493c0b8febd41c70ccc10a6012556020a854eeeb5a167096119914f5",
+  "eventx/tasks/run_v7_segment_confirm_test_20261101_v2.py": "6b937d916b911f6e4f49f79184ad9ea6a1a634a34eb19ed3c5064321bc648e10",
+  "eventx/release/v7/segment_confirm_20261101_v2/implementation_manifest.json": "b42d3c5c8a6ea118dd721fb5a3bcc49f9ec575444bd2b187e3ba1c923d2c5c18",
+  "data/v7/segment_confirm_20261101/test/cohort/manifest.json": "c8d6fa8af133aa05706fc2e7885e56cad85edf67d794e6592ca58453a55f61bb",
+  "data/v7/segment_confirm_20261101/test/cohort/cohort.json": "83139dbc2459f4798df564b9e45a787ab8d96c82fafe5d490ea453861c110736",
+  "data/v7/segment_confirm_20261101/test/evaluation/issued_predictions.parquet": "03368a867d99bd02e727828f66ad7a6a389d29f9786f262e1af17060f485f327",
+  "eventx/v7/family_capture_20261101_v04.py": "0b29ede0e0a4bb042c1ba2ab8600a239dfac7af5f02d510a0c5c95377ffd3089",
+  "eventx/tasks/develop_v7_history_stack_20261031.py": "df2ddfa2285854d398b5caa08cc293738d3db04268d8dbcb6d307e6815b204a3",
+  "data/v7/history_stack_20261031/development/stack.joblib": "e0629bb9bd82eafd0fd6c718113df352479c2384b3f4bcf345947e647b8e552d",
+  "data/v7/history_stack_20261031/test/cohort/manifest.json": "102fbf432c37eefb7e64c892f9c28708b84d9e57478d96e6a27b8e791bab88a9",
+  "eventx/tasks/analyze_v7_segment_replication_20261101.py": "65929b8561f0b954b9a03e0b6b63aac06a2848a89c8b93cf8ccfa29b85c5bde4",
+  "eventx/tasks/analyze_v7_dependence_coverage_20261028.py": "5592b1345554dfc6f8c521f70f005c840d9de86472097f72282372ab2c827651",
+  "eventx/tasks/analyze_v7_online_rate_replication_20261028.py": "322689eb5417ff8db2605d4524ce306ea9247df83e5eb40494b3c08511cab932",
+  "eventx/tasks/run_v7_week_replication_20261025.py": "1a432a5c626e559e2652bdffd1744b322c2b5d30e6916c243992c8cf69c8f6fd",
+  "eventx/tasks/run_v7_archive_week_pilot_20261025.py": "cebece37f3e5546350b5ab596453663c90c0a8de7db5d7272f1a0018fc8da3e1",
+  "eventx/v7/calibration_transport_20261025.py": "a6ba3426ef125b52cb88b239cba7e894a35cc8499b42491104d8d76820a45385",
+  "eventx/v7/archive_ranges_20261024.py": "6f077026581b6e7ec556f46a9c52b75ec9daa67733d645873495c6df6a27689d",
+  "eventx/release/v7/archive_compatibility_20261024/excluded_market_ids.json": "fd544493b8eabcb16fb49dedddb6cebdef9d130b1ecc7783f4096094a4d5505a",
+  "data/v7/family_training_20261025_v02/development/frozen_models.joblib": "790c7340af7a6bd5424d3df6ec54eaf6ed866438c4f2eec9b72447e74b099de0",
+  "data/v7/family_training_20261025_v02/cohort/manifest.json": "e6f9130764cbdebb3d63291ab3264415ff42b665405f2dd942122e6d61e11b2c",
+  "data/v7/new_identity_test_20261026/cohort/manifest.json": "7944ed9cbc3b6d634220a3822a6c743014016b42d8263cd23e642073d44e8c08",
+  "data/v7/late_june_test_20261027_v2/cohort/manifest.json": "fddf7e7a76a1f3602fa33c21aad1f0fff95fa37449432e9d66068014e43db8d2"
+ }
+}

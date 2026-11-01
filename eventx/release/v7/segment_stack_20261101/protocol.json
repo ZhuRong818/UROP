@@ -1,0 +1,54 @@
+{
+ "at": "2026-11-01T09:38:48.358046+00:00",
+ "authorization": "Requested by the user on 1 Nov 2026 (\"continue with next study\"); window chosen by the user (\"22 Jul–8 Aug (deviation)\")",
+ "question": "Does a stack that also uses the two confirmed segment signals (recent quote move, wide spread) beat the frozen history stack on new contracts and dates?",
+ "development": {
+  "script": "eventx/tasks/develop_v7_segment_stack_20261101.py",
+  "selected": "seg_hgb",
+  "selection_score_new_blocks": {
+   "stack_lin": 0.341299420573862,
+   "seg_lin": 0.3393316888430359,
+   "seg_int": 0.3393178237893706,
+   "seg_hgb": 0.33535770974263446,
+   "rate": 0.38390963931725863,
+   "row_hgb7": 0.3864992299972852
+  },
+  "gain_over_stack_lin": 0.00594171083122752,
+  "go_for_confirmatory_test": true,
+  "blocks": "six opened blocks, 13 May-21 Jul"
+ },
+ "dates": [
+  "2026-07-22",
+  "2026-07-23",
+  "2026-07-24",
+  "2026-07-25",
+  "2026-07-26",
+  "2026-07-27",
+  "2026-07-28",
+  "2026-07-29",
+  "2026-07-30",
+  "2026-07-31",
+  "2026-08-01",
+  "2026-08-02",
+  "2026-08-03",
+  "2026-08-04",
+  "2026-08-05",
+  "2026-08-06",
+  "2026-08-07",
+  "2026-08-08"
+ ],
+ "deviation": "22 Jul-8 Aug is the calendar period of the consumed V3.1 holdout, excluded by every earlier Track B protocol. The pmxt archive ends at 2026-08-10T00, leaving only 9 Aug unused. User-authorized. V3.1 (and v1, V4) markets are in the frozen excluded-ID list and cannot enter cohort or capture; no V3.1 file, label or result is read; nothing is tuned from V3.1. Different data source (pmxt order book), target and model family.",
+ "cohort": "up to 200 never-used contracts, ID range [0x80,0xb8), metadata-only selection from 2026-07-21 identity hours (identity/event-type/clock columns only), one contract per event, no event shared with any earlier cohort (incl. history-stack and segment-confirm), start < 22 Jul, end > 30 Jul, salted-hash order (salt 'segment-stack-20261101:')",
+ "models": "frozen row_hgb7 and activity_logit (family_training_20261025_v02); frozen stack_lin (history_stack_20261031); seg_hgb (segment_stack_20261101/development); online rate pseudocount 20, lag 2,100 s, history restarting 22 Jul; nothing refit",
+ "primary": "d = LL(stack_lin) - LL(seg_hgb) per row; PASS if seg LL < stack LL, seg Brier <= stack Brier, and contract x date two-way bootstrap lower bound of mean d > 0 (5,000 draws, seed 20261104)",
+ "secondary": [
+  "both stacks vs online rate",
+  "d by segment (moved30 yes/no; spread <=0.03 / >0.03)",
+  "H1/H2 interactions of row_hgb7 vs rate (replication, descriptive)",
+  "missing-outcome bounds; contract and date wins"
+ ],
+ "capture": "v04 fetcher (192 MiB per hour, row-group cap 40), one retry for retryable errors; failed hours issue no forecasts",
+ "dry_run": "analyse() dry-run on the consumed 13-21 Jul predictions before freezing: reproduces stored rate, history and stack exactly (seg score there is in-sample, not evidence)",
+ "integrity": "Each phase runs once; evaluate once; report whatever the sign; no refit or retuning; 22 Jul-8 Aug becomes consumed for Track B.",
+ "interpretation": "Historical replay with current metadata; new identities, same venue and era. Not live, not news, not profit."
+}
