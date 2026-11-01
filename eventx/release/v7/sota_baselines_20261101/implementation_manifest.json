@@ -1,0 +1,15 @@
+{
+ "files": {
+  "eventx/release/v7/sota_baselines_20261101/protocol.json": "9a9b87ef7d03797549b7ccd33f670e7f2e81ad726b42eb6e1f9dfca4838ce625",
+  "eventx/tasks/benchmark_v7_sota_baselines_20261101.py": "a20373a7a6aabf7199f9ec6e23517e5ac58d2cd7b2df2e70167ef141a095ed43",
+  "eventx/tasks/rebuild_v7_sota_features_20261101.py": "b97d5f681669a68c121ce7c4c83aa83c346c5630e0c8a30f44c02da9db4b49f3",
+  "eventx/tasks/analyze_v7_segment_replication_20261101.py": "65929b8561f0b954b9a03e0b6b63aac06a2848a89c8b93cf8ccfa29b85c5bde4",
+  "eventx/tasks/analyze_v7_online_rate_replication_20261028.py": "322689eb5417ff8db2605d4524ce306ea9247df83e5eb40494b3c08511cab932",
+  "eventx/tasks/analyze_v7_dependence_coverage_20261028.py": "5592b1345554dfc6f8c521f70f005c840d9de86472097f72282372ab2c827651",
+  "data/v7/family_training_20261025_v02/development/grid_ledger.parquet": "4b7f0adfbaac7aa284e4faa0d4cbc8f31aa55dd8304904675fd41f910c5789c0",
+  "data/v7/segment_replication_20261101/features_jul.parquet": "bf4795ac5f8259d75890555c5e49d6a16ec66657b75c76b60b170f1c13d7b2dc",
+  "data/v7/segment_confirm_20261101/test/evaluation/issued_predictions.parquet": "03368a867d99bd02e727828f66ad7a6a389d29f9786f262e1af17060f485f327",
+  "data/v7/segment_stack_20261101/test/evaluation/issued_predictions.parquet": "292f037af98d0ff80d16929310118f75d86ed3eb58dcca3ab786e74712b55461",
+  "eventx/release/v7/segment_stack_20261101/implementation_manifest.json": "177a5164bde46ae14911339bb1706161650f7d8cfaad08d1afa7297a6b7f6d16"
+ }
+}

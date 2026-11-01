@@ -1,0 +1,79 @@
+{
+ "name": "sota_baselines_20261101",
+ "created_before_any_baseline_score": true,
+ "post_hoc_on_opened_blocks": true,
+ "confirmatory": false,
+ "request": "research-track requirement: baselines from ICML/NeurIPS/ICLR papers of the last two years",
+ "runner": "eventx/tasks/benchmark_v7_sota_baselines_20261101.py (docstring = full protocol)",
+ "tiers": {
+  "A": {
+   "models": {
+    "tabm": "Gorishniy et al., ICLR 2025",
+    "realmlp": "Holzmueller et al., NeurIPS 2024",
+    "tabicl": "Qu et al., ICML 2025 (checkpoint tabicl-classifier-v1-20250208)",
+    "catboost": "default; TabArena NeurIPS 2025 D&B reference"
+   },
+   "train": "family_training_20261025_v02 development ledger, 9,212 endpoint-eligible rows, 18 frozen features",
+   "eval_blocks": [
+    "may_13_19",
+    "jun_1_7",
+    "jun_8_14",
+    "jun_15_28",
+    "jun29_jul12",
+    "jul_13_21",
+    "jul22_aug8"
+   ],
+   "comparator": "row_hgb7"
+  },
+  "B": {
+   "models": {
+    "moirai_moe": "Liu et al., ICML 2025, Salesforce/moirai-moe-1.0-R-small, zero-shot"
+   },
+   "context_grids": 288,
+   "horizon_grids": 7,
+   "maturity_lag_s": 2100,
+   "samples": 100,
+   "clip": [
+    0.001,
+    0.999
+   ],
+   "comparator": "adaptive_rate",
+   "excluded": {
+    "sundial": "ICML 2025; Hugging Face remote code only, not executed on this host",
+    "time_moe": "ICLR 2025; same reason"
+   }
+  },
+  "C": {
+   "models": [
+    "tabm",
+    "realmlp"
+   ],
+   "inputs": "18 features + logit(adaptive_rate) + log1p(history)",
+   "train_blocks": [
+    "may_13_19",
+    "jun_1_7",
+    "jun_8_14",
+    "jun_15_28",
+    "jun29_jul12",
+    "jul_13_21"
+   ],
+   "eval_block": "jul22_aug8",
+   "comparator": "seg_stack"
+  }
+ },
+ "bootstrap": {
+  "draws": 5000,
+  "cluster": "contract",
+  "seed": 20261105
+ },
+ "model_seed": 20261105,
+ "packages": {
+  "pytabkit": "1.7.3",
+  "tabicl": "2.2.0",
+  "catboost": "1.2.10",
+  "torch_main": "2.8.0",
+  "uni2ts": "2.0.0",
+  "torch_ts": "2.4.1"
+ },
+ "rule": "each tier scored once; reported whatever the sign; no frozen EventX model or result changes"
+}
