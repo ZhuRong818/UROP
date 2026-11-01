@@ -1271,5 +1271,156 @@
   "value": 0.101,
   "tolerance": 0.0005,
   "printed": "+0.091 nats [0.044, 0.149]"
+ },
+ {
+  "study": "Segment confirmation test (once-only)",
+  "cohort": "13-21 Jul, 80 selected / 78 contributing new contracts, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment confirm: H1 moved30 interaction vs rate",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "primary_segments",
+   "H1_moved30",
+   "interaction"
+  ],
+  "value": 0.113,
+  "tolerance": 0.0005,
+  "printed": "0.113 [0.070, 0.162]"
+ },
+ {
+  "study": "Segment confirmation test (once-only)",
+  "cohort": "13-21 Jul, 80 selected / 78 contributing new contracts, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment confirm: H1 Holm-adjusted p",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "primary_segments",
+   "H1_moved30",
+   "holm_p"
+  ],
+  "value": 0.0004,
+  "tolerance": 5e-05,
+  "printed": "Holm-adjusted p = 0.0004"
+ },
+ {
+  "study": "Segment confirmation test (once-only)",
+  "cohort": "13-21 Jul, 80 selected / 78 contributing new contracts, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment confirm: H2 spread>0.03 interaction vs rate",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "primary_segments",
+   "H2_spread_gt_0.03",
+   "interaction"
+  ],
+  "value": 0.091,
+  "tolerance": 0.0005,
+  "printed": "0.091 [0.040, 0.141]"
+ },
+ {
+  "study": "Segment confirmation test (once-only)",
+  "cohort": "13-21 Jul, 80 selected / 78 contributing new contracts, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment confirm: H3 stack minus rate (two-way)",
+  "model": "stack",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "H3_history_stack",
+   "stack_minus_rate_two_way",
+   "mean"
+  ],
+  "value": 0.039,
+  "tolerance": 0.0005,
+  "printed": "0.039 [0.028, 0.051]"
+ },
+ {
+  "study": "Segment confirmation test (once-only)",
+  "cohort": "13-21 Jul, 80 selected / 78 contributing new contracts, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment confirm: Stack log loss",
+  "model": "stack",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "scores",
+   "stack",
+   "log_loss"
+  ],
+  "value": 0.3339,
+  "tolerance": 5e-05,
+  "printed": "0.3339 against 0.3730"
+ },
+ {
+  "study": "Segment confirmation test (once-only)",
+  "cohort": "13-21 Jul, 80 selected / 78 contributing new contracts, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment confirm: Online rate log loss",
+  "model": "adaptive_rate",
+  "comparator": "stack",
+  "keys": [
+   "scores",
+   "adaptive_rate",
+   "log_loss"
+  ],
+  "value": 0.373,
+  "tolerance": 5e-05,
+  "printed": "0.3339 against 0.3730"
+ },
+ {
+  "study": "Segment confirmation test (once-only)",
+  "cohort": "13-21 Jul, 80 selected / 78 contributing new contracts, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment confirm: Stack vs rate missing-outcome lower bound",
+  "model": "stack",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "missing_outcome_bounds_stack_vs_rate",
+   "lower"
+  ],
+  "value": 0.028,
+  "tolerance": 0.0005,
+  "printed": "[0.028, 0.045]"
+ },
+ {
+  "study": "Segment confirmation test (once-only)",
+  "cohort": "13-21 Jul, 80 selected / 78 contributing new contracts, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment confirm: Routing rule minus stack",
+  "model": "routed",
+  "comparator": "stack",
+  "keys": [
+   "routing_rule",
+   "routed_vs_stack",
+   "gain"
+  ],
+  "value": -0.022,
+  "tolerance": 0.0005,
+  "printed": "worse than the stack by 0.022 nats"
  }
 ]
