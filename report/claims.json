@@ -1422,5 +1422,270 @@
   "value": -0.022,
   "tolerance": 0.0005,
   "printed": "worse than the stack by 0.022 nats"
+ },
+ {
+  "study": "Market-state breakdown (descriptive)",
+  "cohort": "13-21 Jul segment confirmation test, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/state_table.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "State table: Active-state share",
+  "model": "-",
+  "comparator": "-",
+  "keys": [
+   "active",
+   "share"
+  ],
+  "value": 0.214,
+  "tolerance": 0.0005,
+  "printed": "21.4%"
+ },
+ {
+  "study": "Market-state breakdown (descriptive)",
+  "cohort": "13-21 Jul segment confirmation test, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/state_table.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "State table: Active-state stack reduction vs rate (%)",
+  "model": "stack",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "active",
+   "reduction_vs_rate_pct",
+   "stack"
+  ],
+  "value": 15.7,
+  "tolerance": 0.05,
+  "printed": "15.7%"
+ },
+ {
+  "study": "Market-state breakdown (descriptive)",
+  "cohort": "13-21 Jul segment confirmation test, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/state_table.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "State table: Active-state booster reduction vs rate (%)",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "active",
+   "reduction_vs_rate_pct",
+   "row_hgb7"
+  ],
+  "value": 11.0,
+  "tolerance": 0.05,
+  "printed": "11.0%"
+ },
+ {
+  "study": "Market-state breakdown (descriptive)",
+  "cohort": "13-21 Jul segment confirmation test, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/state_table.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "State table: Quiet-state booster reduction vs rate (%)",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "quiet",
+   "reduction_vs_rate_pct",
+   "row_hgb7"
+  ],
+  "value": -8.5,
+  "tolerance": 0.05,
+  "printed": "−8.5%"
+ },
+ {
+  "study": "Market-state breakdown (descriptive)",
+  "cohort": "13-21 Jul segment confirmation test, 159,283 known",
+  "artifact": "data/v7/segment_confirm_20261101/state_table.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "State table: Active-state stack reduction vs activity logit (%)",
+  "model": "stack",
+  "comparator": "activity_logit",
+  "keys": [
+   "active",
+   "stack_reduction_vs_activity_logit_pct"
+  ],
+  "value": 28.6,
+  "tolerance": 0.05,
+  "printed": "28.6%"
+ },
+ {
+  "study": "Segment-aware stack test (once-only)",
+  "cohort": "22 Jul-8 Aug (authorized deviation), 54 selected / 52 contributing new contracts, 134,341 known",
+  "artifact": "data/v7/segment_stack_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: seg_hgb log loss",
+  "model": "seg_stack",
+  "comparator": "stack",
+  "keys": [
+   "scores",
+   "seg_stack",
+   "log_loss"
+  ],
+  "value": 0.3006,
+  "tolerance": 5e-05,
+  "printed": "0.3006 against 0.3083"
+ },
+ {
+  "study": "Segment-aware stack test (once-only)",
+  "cohort": "22 Jul-8 Aug (authorized deviation), 54 selected / 52 contributing new contracts, 134,341 known",
+  "artifact": "data/v7/segment_stack_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: stack_lin log loss",
+  "model": "stack",
+  "comparator": "seg_stack",
+  "keys": [
+   "scores",
+   "stack",
+   "log_loss"
+  ],
+  "value": 0.3083,
+  "tolerance": 5e-05,
+  "printed": "0.3006 against 0.3083"
+ },
+ {
+  "study": "Segment-aware stack test (once-only)",
+  "cohort": "22 Jul-8 Aug (authorized deviation), 54 selected / 52 contributing new contracts, 134,341 known",
+  "artifact": "data/v7/segment_stack_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: seg minus stack two-way lower",
+  "model": "seg_stack",
+  "comparator": "stack",
+  "keys": [
+   "primary_seg_vs_stack",
+   "seg_minus_stack_two_way",
+   "ci95",
+   0
+  ],
+  "value": 0.002,
+  "tolerance": 0.0005,
+  "printed": "[0.002, 0.014]"
+ },
+ {
+  "study": "Segment-aware stack test (once-only)",
+  "cohort": "22 Jul-8 Aug (authorized deviation), 54 selected / 52 contributing new contracts, 134,341 known",
+  "artifact": "data/v7/segment_stack_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: seg minus stack mean",
+  "model": "seg_stack",
+  "comparator": "stack",
+  "keys": [
+   "primary_seg_vs_stack",
+   "seg_minus_stack_two_way",
+   "mean"
+  ],
+  "value": 0.0076,
+  "tolerance": 5e-05,
+  "printed": "0.0076 nats"
+ },
+ {
+  "study": "Segment-aware stack test (once-only)",
+  "cohort": "22 Jul-8 Aug (authorized deviation), 54 selected / 52 contributing new contracts, 134,341 known",
+  "artifact": "data/v7/segment_stack_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: online rate log loss",
+  "model": "adaptive_rate",
+  "comparator": "seg_stack",
+  "keys": [
+   "scores",
+   "adaptive_rate",
+   "log_loss"
+  ],
+  "value": 0.3497,
+  "tolerance": 5e-05,
+  "printed": "0.3006 / 0.3497"
+ },
+ {
+  "study": "Segment-aware stack test (once-only)",
+  "cohort": "22 Jul-8 Aug (authorized deviation), 54 selected / 52 contributing new contracts, 134,341 known",
+  "artifact": "data/v7/segment_stack_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: stack vs rate two-way lower",
+  "model": "stack",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "secondary_gains",
+   "stack_vs_adaptive_rate",
+   "all",
+   "two_way",
+   "ci95",
+   0
+  ],
+  "value": 0.024,
+  "tolerance": 0.0005,
+  "printed": "[0.024, 0.064]"
+ },
+ {
+  "study": "Segment-aware stack test (once-only)",
+  "cohort": "22 Jul-8 Aug (authorized deviation), 54 selected / 52 contributing new contracts, 134,341 known",
+  "artifact": "data/v7/segment_stack_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: H1 replication interaction",
+  "model": "row_hgb7",
+  "comparator": "adaptive_rate",
+  "keys": [
+   "segment_replication_booster_vs_rate",
+   "H1_moved30",
+   "interaction"
+  ],
+  "value": 0.152,
+  "tolerance": 0.0005,
+  "printed": "interaction 0.152 nats"
+ },
+ {
+  "study": "Segment-aware stack test (once-only)",
+  "cohort": "22 Jul-8 Aug (authorized deviation), 54 selected / 52 contributing new contracts, 134,341 known",
+  "artifact": "data/v7/segment_stack_20261101/test/evaluation/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: seg vs stack missing lower bound",
+  "model": "seg_stack",
+  "comparator": "stack",
+  "keys": [
+   "missing_outcome_bounds_seg_vs_stack",
+   "lower"
+  ],
+  "value": -0.001,
+  "tolerance": 0.0005,
+  "printed": "[−0.001, 0.017]"
+ },
+ {
+  "study": "Segment-aware stack development",
+  "cohort": "six opened blocks, LOBO",
+  "artifact": "data/v7/segment_stack_20261101/development/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "Segment-aware stack: development gain over stack_lin",
+  "model": "seg_hgb",
+  "comparator": "stack_lin",
+  "keys": [
+   "gain_over_stack_lin"
+  ],
+  "value": 0.0059,
+  "tolerance": 5e-05,
+  "printed": "0.0059 nats below"
  }
 ]
