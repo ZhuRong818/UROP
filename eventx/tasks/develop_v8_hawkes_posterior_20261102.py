@@ -32,8 +32,8 @@ seed 20261106, unless stated):
   pp_cp_seg   the same online posterior applied on top of seg_ref's held-out logit (added at the user's request on
               2 Nov before any fold had finished; the first run was stopped with no score written, log kept as
               run_stopped_before_first_fold.log)
-Inference: held-out per-row gain vs seg_ref and vs the online rate, contract-clustered 95% CI (2,000 draws, seed
-20261106). Output: data/v8/hawkes_posterior_20261102/result.json
+Inference: held-out per-row gain vs seg_ref and vs the online rate, contract-clustered 95% CI (seed 20261106;
+the imported one_way uses B = 5,000 draws — the earlier text said 2,000; corrected after the run, code unchanged). Output: data/v8/hawkes_posterior_20261102/result.json
 """
 import json
 from datetime import datetime, timezone

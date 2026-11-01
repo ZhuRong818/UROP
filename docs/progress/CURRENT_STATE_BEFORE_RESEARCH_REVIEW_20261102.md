@@ -1,0 +1,324 @@
+# EventX current state
+
+> Canonical startup handoff. Frozen artifacts govern conflicts. Detailed preceding state:
+> `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
+> Append history to `docs/progress/2026-10.md`,not legacy PROGRESS.md.
+
+Last updated: **2026-11-01 18:00Z** — SOTA baseline benchmark RUNNING (sequential driver) + v8 development study RUNNING; see 2026-11.md.
+
+## CLOSE-OUT 30 Oct 2026 (complete; all once-only; do not rerun any step)
+
+- Logs: `data/close_out_20261030/{summary,post_summary}.log`; formatted results `fill_pending.json`.
+- V02b live (`data/v7/forecast_runtime_20261026_v02b/evaluation/report.json`): floor met; 15,485/22,650 timely (68.4%);
+  12,943 known/2,542 unknown (2,709 pos); 27 contracts. LL hgb7 0.4470 / full_logit 0.5368 / global 0.5163;
+  gain vs full_logit 16.7%, contract CI [0.049, 0.136]; missing bounds [-0.011, 0.150]. Descriptive (no pass rule).
+- Late June v2 (`data/v7/late_june_test_20261027_v2/evaluation/result.json`): PASS both. row_hgb7 0.3859 vs
+  activity_logit 0.4249 (9.2%), CI [0.022, 0.058], 17/21; V03 0.3883 vs 0.4411 (12.0%), CI [0.023, 0.085].
+  Caveat: booster AUC < logistic (0.744 vs 0.783). Holdout consumed.
+- V4: v1 audit stopped (run_status != ok). User-authorized disclosed v2 audit (any status; commit 7e3a7b7) →
+  chain ran once 31 Oct 14:41Z; holdout CONSUMED. B3 vs B0 NOT supported: LL improvement −0.00106 [−0.00522, 0.00121];
+  all models AUC ≈0.40 (<0.5), overpredict (0.174 vs 0.0855). Report V4 sections rewritten.
+- NEW CYCLE (user-authorized 31 Oct): history stack `stack_lin` (logit row_hgb7, logit online rate, log1p history),
+  dev `data/v7/history_stack_20261031/development/result.json`, frozen `eventx/release/v7/history_stack_20261031/` (fd16f1f).
+  Test 29 Jun–12 Jul, 53 new contracts (51 contributing), evaluated ONCE 31 Oct 16:35Z — window CONSUMED; never rerun.
+  `data/v7/history_stack_20261031/test/evaluation/result.json`: PASS. LL stack 0.3348 vs rate 0.3863 (13.3%), Brier
+  0.1041 vs 0.1233; two-way CI [0.034, 0.071]; 42/51 contracts, 14/14 dates; vs row_hgb7 0.030 [0.011, 0.052];
+  missing bounds [−0.003, 0.083]. Caveat: capture lost 134/336 hours (frozen 32 MiB range budget, busy hours).
+  Submission moved to Tue 3 Nov.
+- 30 Oct: checker PASS (50/50 claims); report + draft filled; deck republished. Hash manifest `data/close_out_20261030/backup_manifest.sha256` (12,402 files).
+- 1 Nov: post hoc segment discovery/replication (protocol commit 493b568) DONE, descriptive: 8/10 flags replicated.
+  Booster edge over online rate sits after a recent 30-min move (+0.088 [0.042, 0.133], 17% of rows) and at wide
+  spreads; quiet states rate ≈/slightly better; no category/hour pattern. Report §6.7 + Table 11; claims 61; docx 54 pp.
+  `data/v7/segment_replication_20261101/`. A routing rule would need its own frozen test on a new window.
+- 1 Nov: SEGMENT CONFIRMATION TEST frozen (release segment_confirm_20261101 + _v2 amendment), 80 contracts, 13-21 Jul;
+  capture COMPLETE 04:41Z (216/216 hours, 0 missing, 0 protected rows); evaluated once 05:17Z: H1 moved30 PASS
+  (interaction 0.113, Holm p 0.0004), H2 spread>0.03 PASS (0.091, Holm p 0.0004), H3 stack-rate 0.039 [0.028, 0.051] PASS;
+  routing +0.017 vs rate, -0.022 vs stack (`data/v7/segment_confirm_20261101/test/evaluation/result.json`).
+  Written up: report §6.8/Table 12, 69 claims, checker PASS `data/reproducibility/20261101T052403Z`, 57 pages (tables 11 pt); deck v13.
+- 1 Nov: SEGMENT-STACK cycle (user-requested): seg_hgb developed on 6 opened blocks (gain 0.0059 vs stack_lin, go);
+  frozen `2aa96ac`, window 22 Jul–8 Aug (USER-AUTHORIZED deviation: V3.1 holdout calendar period, V3.1 markets excluded);
+  54 selected/52 contribute; 432/432 hours; evaluated once: PASS seg 0.3006 vs stack 0.3083, two-way [0.002, 0.014];
+  missing bounds [−0.001, 0.017]. Report §6.9/Table 14 + state Table 13; 83 claims; checker PASS `data/reproducibility/20261101T124302Z`;
+  60 pages; deck v14. Window CONSUMED. Never rerun any phase. Window CONSUMED. Never rerun any phase.
+- 1–2 Nov: SOTA BASELINE BENCHMARK (research-track requirement; post hoc on opened blocks, scored once each).
+  Frozen 72c0237 + v2 c178172 (TabICL no kv cache) + v4 a416a2b (TabICL 1k chunks) + v3 bb9d3d9 (Sundial, Time-MoE on nonoverlap grid; Tier C 100k).
+  Tiers: A TabM/RealMLP/TabICL/CatBoost vs row_hgb7 (7 blocks); B Moirai-MoE (+Sundial, Time-MoE) vs online rate;
+  C TabM/RealMLP end-to-end vs seg_hgb on 22 Jul–8 Aug. Output `data/v7/sota_baselines_20261101/`. Running; then
+  `python -m eventx.tasks.benchmark_v7_sota_baselines_20261101_v3 evaluate` ONCE. Report §2.6 added; §6.10 pending.
+- 2 Nov: v8 DEVELOPMENT (opened blocks, not confirmatory): `develop_v8_hawkes_posterior_20261102` (5cc784f, +pp_cp_seg
+  9d32708): e2e / +change history / +market activity / contract posterior (pp_cp, pp_cp_seg) vs seg_ref, LOBO.
+  Output `data/v8/hawkes_posterior_20261102/`. Report §6.10 + §6.11 to be written when both runs finish.
+- Old collectors STOPPED 1 Nov 17:29Z (user); launchd jobs unloaded, plists kept.
+- Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
+  11-pt table text?; abstract length. Submission due Tue 3 Nov.
+- Report: §6.6 + Table 10 added; abstract (300 words), §1.3, Table 1, §8, §9, App. B/C updated; claims 58; checker PASS
+  (`data/reproducibility/20261031T164224Z`, --recompute PASS 20261031T164109Z; 1,178 files / 87 manifests); docx 52 pp.
+  Deck v12 adds `stack` slide; V4 text corrected.
+
+## Active objective and locked decisions
+
+User authorized autonomous LOCAL research and separately versioned quote forecasting;SSH unavailable.
+Produce timely forecasts and evaluate actual endpoints; do not equate operation with predictive superiority.
+Original raw condition_120k trade classifier stays frozen:zero current prospective admissions.
+Active quote study predicts probability of observed30m midpoint change;old point-regression result stays fixed.
+Existing cohorts remain fixed. User explicitly authorized separate development segment/model discovery.
+No protected early evaluation, external messages or trading; segment discovery is not confirmation.
+
+## Completed live point-forecast experiment (audited26October)
+
+- `EVENTX_LIVE_POINT_FORECAST_AUDIT_20261026.md`;`data/v7/live_memory_completion_20261026/`.
+- Source/base/segment stopped normally25Oct14:03–14:04UTC;PIDsabsent26Oct01:00UTC.
+  No active quote-forecast service;lastdisplayedpredictions expired. Original release jobs separate.
+- Base562decisions,269timely,293abstentions,0missed;257observed/12unavailable outcomes.
+  OnlyUSrecessioncontractcontributed;GDPcontractzero.12changedrows(twooverlapcomponents,notindependentevents).
+- Snapshot257:MAEpersistence0.0002334630350194548,ridge0.00030554478497860934(+30.87501623250457%).
+  Short240:MAEpersistence0.0002499999999999995,ridge0.00029924255872(+19.69702348800024%).
+- Segment265timely/253observed/12unavailable;6activeobserved,referenceMAE0,candidate0.0008025987158923308.
+  All253:referenceMAE0.00023715415019762802,candidate0.00025618811183934336(+8.025987158923309%).
+- Auditpassed269feature/prediction+269endpointreplays,1815payloadhashes,chains/deadlines/frozenmodels.
+  No primaryMAEwin or promotion;minor snapshotRMSEgain retained assecondary. No news/independentclaim.
+- Live gate limits RECEIPT age,not source-message age:163/269sourceages>120s,median143.01200008392334s.
+  Historical classifier hasdifferent18features/source-agegates;these aredifferenttasks,do notpoolclaims.
+- Previouszero-forecast shadow/development/history preserved in
+  `docs/progress/CURRENT_STATE_BEFORE_LIVE_COMPLETION_20261026.md`;oldmodels remainfrozen.
+
+## Earlier quote experiments
+- April25–30,May4–6 andMay10–12opened;no retuning. Oldpointfailure and18featuremodels preserved.
+- Fullhistory:`docs/progress/CURRENT_STATE_BEFORE_CLOCK_CORRECTION_20261026.md`;frozenreportsgovern.
+
+## Seven-day fixed-model replication (25October)
+
+- COMPLETED:`EVENTX_SEVEN_DAY_REPLICATION_20261025.md`;`data/v7/week_replication_20261025/`.
+- May13–19,all60existingIDs;current/legacy boosters+3baselines unchanged,no fit/newidentities.
+- Developmentcohort:27924known/32477issued/96600grids,30contracts;
+  LLcurrent0.3583213732070323,logistic0.4524090254527762,legacy0.4283494185894651.
+- Training-excluded:2033known/2694issued/19320grids,6contracts;
+  LLcurrent0.255471891359488,logistic0.2646930812520174,legacy0.3348654193966712.
+- Sources168/168hours,3failedattempts/3recovered;5982429YES events.
+- Allcurrent-validforecasts retained;missing-label bounds(notCIs),strict/nonoverlap/date/contract metricsreported.
+  QA9579hashentries/45metricsets passed. Historical only,no news/livepromotion.
+- LLgainvslogistic20.797032541864066%development/3.4837290982115996%excluded;excludednonoverlapreverses.
+  Developmentmissing-labelboundspositive;excludedboundscrosszero. No unconditionaltransferclaim.
+- May13–19nowconsumed;no retuning. Same60conveniencecontracts;historicalstatus/expiry/independence unresolved.
+
+## Frozen classifier runtime (26October)
+
+- COMPLETED:`EVENTX_FROZEN_FORECAST_RUNTIME_20261026_REV2.md`;release`forecast_runtime_20261026_v01`.
+- Emitter/evaluator+41dependenciesfrozen;51checks+syntheticintegrationPASS;model/target/cohortunchanged.
+- Sourceprefix/durabledeadline receipts;onlinepacketvalidation;closed-windowonce-onlyevaluator.
+- Capturedeadline event reached;wallstop117.089msearly=>normalcheckFAIL;ready0/16,gateFAIL.
+- Nativepacketsvalid6/24;clocksteps1;diagnosis`data/v7/forecast_runtime_20261026_v01/readiness_diagnosis.json`.
+- Delivery:`eventx/release/v7/forecast_runtime_20261026_v01/delivery_addendum_manifest.json`;no activation/forecasts/labels/test.
+- ActivationBLOCKEDbyfreshgate;preservefailureandrepairinnewversion,nothresholdrelaxation.
+- Root cause = host clock (see `EVENTX_JUNE_OUT_OF_TIME_TEST_20261026.md`): macOS sntp returned all-zero selected
+  packets while host ~287ms fast; OS stepped wall clock -110ms at11:51:08 (warmup reset, stop117ms early);
+  afterwards host ~+0.11s slow > 100ms budget. Fix needs disciplined host or new monotonic+validated-offset version.
+
+## ACTIVE (27Oct05:47Z): V02b live continuation — do not disturb. V02 died in 04:42Z sleep/05:16Z reboot; unevaluable
+## (no capture manifest). V02b = same frozen files/model/cohort, new dir `data/v7/forecast_runtime_20261026_v02b`, release
+## `eventx/release/v7/forecast_runtime_20261026_v02b/`; grids 27Oct06:35–29Oct23:25Z (22,650). Status:
+## `python -m eventx.tasks.status_v7_forecast_runtime_20261026_v02b`. Never restart its source.
+## V4 collector restarted 05:44Z from checkpoint (PID 12937, receipt 20261027T054414Z_12937), audit PASS.
+## 28Oct01:42Z check OK (6,540 decisions logged; sleep disabled). Report reviewed; docx rebuild after close-out.
+## 28Oct11:12Z label-free snapshot:7,109ready/timely,2,581abstained,270missed(9,960total;71.38%issued).
+## Source/emitter status fresh,WSconnected,clockvalid; external process check verified source14152/emitter14287,
+## V4collector12937/waiter52875. V4checkpoint59news/52tradedays,lastsuccess28Oct00:01:03Z,errornull.
+## Lid-close gap 07:40-08:26Z 27Oct: processes survived; 270 decisions missed (9 grids), scored as missed per frozen rules.
+## Close-out is AUTO: detached waiter (PID 52875) runs `zsh scripts/close_out_20261030.sh` once at 30Oct00:01Z
+## (log `data/close_out_20261030_waiter.log`). Run by hand only if `pgrep -f close_out_20261030` is empty. Host: AC + disablesleep.
+## 30Oct02:37Z: v02b_evaluate rc=0; V4 STOPPED at audit gate (news 2026-08-30 run_status completed/partial != ok; holdout NOT consumed; needs user decision); late-June capture rc=0, evaluate running.
+## Then AUTO post stage: waiter PID 82838 (relaunched 30Oct00:25Z; first waiter timed out at 12 h) runs `scripts/post_close_out_20261030.sh` after "close-out finished":
+## fill_pending.json, checker, checker --recompute, backup_manifest.sha256 (log `post_summary.log`). No report edits; no evaluator reruns.
+
+## 27Oct report enhancements (post hoc, no holdout/refit): news bound Brier upper -0.000196 (all prereg effects excluded);
+## booster drivers (booster-only inputs = 21% of gap; freshness ~0); reproducibility check PASS
+## `python -m eventx.tasks.verify_report_reproducibility_20261027`; deck https://claude.ai/artifact/GUwWkTTYXQkfBm9BsXPCJe. See 2026-10.md.
+
+## (was ACTIVE) V02 three-day prospective test (activated 26Oct 17:53:53Z; activations 1-2 superseded, 0 forecasts) — do not disturb
+
+- `EVENTX_NEW_IDENTITY_AND_RUNTIME_V02_20261026.md`; release `eventx/release/v7/forecast_runtime_20261026_v02/`.
+- Grids 27Oct00:30–29Oct23:25 UTC, 30 metadata-selected contracts, frozen V03 model; source+emitter running (caffeinate).
+- SUPERSEDED by V02b after the 27Oct outage: V02 is unevaluable (no capture manifest); do not run its evaluator.
+  Health (label-free): `python -m eventx.tasks.status_v7_forecast_runtime_20261026_v02`. No restart of source into same dir.
+- 27Oct01:08Z live: 181/240 ready over 8 grids, 0 emitter restarts. Known defect: grid 00:30 all-abstained
+  (primed-input handoff not refreshed -> pong >35s; fail-closed, 30/24840 decisions); later grids normal; not patched.
+- 27Oct03:24-04:41Z host swap stall (my concurrent QA job; swap 20.3/21.5GB): 4 grids missed + warmup abstentions.
+  NO heavy jobs on this host until 30Oct00:00Z. Late-June test v2 cohort frozen (21 contracts), capture deferred to after close:
+  `python -m eventx.tasks.run_v7_late_june_test_20261027_v2 capture` then `... evaluate` (each once). v1 (15/60 shortfall) superseded, never captured.
+- Readiness (fixed collector) PASS 156/180 ready/27 markets; V01 runtime stays frozen/failed. Report deadline 1 Nov.
+- New-identity June8–14 PASS: row_hgb7 -14.9% LL vs logistic, CI[0.033,0.119]; V03 -19.7%, CI[0.066,0.147].
+  June8–14 consumed for both models; June15–28 still unopened.
+
+## June out-of-time test of frozen quote-change booster (26October) — PASS
+
+- `EVENTX_JUNE_OUT_OF_TIME_TEST_20261026.md`;`data/v7/june_replication_20261026/`;release`eventx/release/v7/june_replication_20261026/`.
+- June1–7 unopened (no prior June quote reads; before OOT/V3.1/V4). Same60IDs, frozen row_hgb7 + 4 baselines, no fit.
+- 168/168 hours, 0 protected rows; 20/60 contracts active; 22034 issued, 18677 known/2468 positive, 3357 unknown.
+- development50 LL row_hgb7 0.2930988249673845 vs logistic 0.35225 (-16.79%), legacy 0.328517, global 0.385413;
+  Brier 0.08483 vs 0.10027. Contract-clustered 95% CI of gain vs logistic [0.0391,0.0805] nats (18 contracts).
+- 7/7 dates and 17/20 contracts beat logistic; nonoverlap/strict agree. Excluded10 only 2 contracts (-13.80%).
+- Missing-label bounds vs logistic [-0.0010,0.0998] (dev50). Historical replay, not live; June now CONSUMED for this model.
+
+## Clock correction (26October)
+
+- COMPLETED:`EVENTX_CLOCK_ALIGNMENT_AND_READINESS_20261026.md`;canonical`source_time_study_20261026_v03`.
+- IndependentGoogleSNTPoffset+58.124..61ms;officialWSformatmilliseconds,/timeonlyseconds. No systemtimechanges.
+- V03leadcap250ms;BOTHsourceandavailability<=decision;rawtimesunchanged;as-ofclockhealth andstepguards.
+- Refit41400gridrows/3688predictions identicalV02;38checksPASS;old15.986910020304176%developmentgain unchanged.
+- Fresh40mincapture completed;strictready4→V03ready4,contributing2contracts;inputgatePASS.
+- Clockrounds8,passing7;detectedsteps0;sourcelead>250ms:0/100.
+- QA16as-offeatures+16clockchecks;allpotentiallyadmittingnativepacketsvalid.
+- Release:`eventx/release/v7/source_time_study_20261026_v03/delivery_manifest.json`;no activeforecastservice/test.
+
+## Source-time preparation history
+- V01day-reset defect repaired inV02;V02strict-clock inputgate failed. All failures preserved.
+- Development:May7–8fit6304;May9known3102/535positive;refit9406/20contracts;unknown586/3688.
+- All-issuedlogisticgainbounds[-0.08159266365256779,0.10053014535673122],notCIs.
+- Full history:`docs/progress/CURRENT_STATE_BEFORE_RUNTIME_FREEZE_20261026.md`;V02/V03frozenreportsgovern.
+
+## Live-input compatibility (26October)
+
+- COMPLETED input audit:`EVENTX_LIVE_INPUT_COMPATIBILITY_20261026.md`;
+  `data/v7/live_input_compatibility_20261026/`;21unit checks passed,no labels/models/test.
+- Original18feature arithmetic:10969development vectors matched exactly,maxerror0.
+- Live projection zero errors;old model BLOCKED:archive receipt grouping/clock/dedup equivalence unverified.
+  Published31Julycollector is not verified May deployment. Raw WS cannot silently substitute.
+- Separate14feature source-time contract frozen;requiresNEWfit andtarget/validation protocol.
+  Drops numerical ages/receipt-group counts,retains120s freshness/availability gates.
+- New replay:11084/41400development inputs;286/562live inputs,211mechanically ready.
+  Wire/durable clocks still change2eligibility decisions and some lags;coverage is not accuracy.
+- Release:`eventx/release/v7/live_input_compatibility_20261026/delivery_manifest.json`.
+  No forecast admissions,new test orservice restart;frozen18featuremodel unchanged.
+
+## Other source evidence retained
+- Detailed source/provider/release evidence:`docs/progress/CURRENT_STATE_CHANGE_PROB_DETAIL_20261025.md`.
+- Six release episodes29Oct–4Dec and12provisional links retained;exact evidence/terminal gates unresolved.
+- Provider52records map52fills/29transactions;47late-unrecovered records chainmatched. No general parity fix.
+- Quote/source redesign does not repair original trade-model eligibility,news timestamps or historical status.
+
+## Selected market model: retain raw condition_120k
+
+Canonical: `data/v5/market_condition_tuning_20261012/`, selected_model.joblib SHA256
+`d5d5a8c12fd999674f687c712e14f3a4406e7ab5ec34774baf1828f644f73a3c`.
+Histogram gradient booster,13base+9trailing features;600iterations,lr0.05,7leaves,
+depth3,minleaf100,L2=10,120k fit rows. Task: probability of large **absolute** YES
+log-odds movement over30m;not direction/exact magnitude/resolution. Every5m grid.
+
+- Opened fold5:112,616 matched rows, LL0.3429489298145635,
+  Brier0.10905976503729453, AP0.3462485264100695.
+- LL reduction0.5415604842619057% vs previous HGB;1.7012452641439602% vs earlier
+  tree. Older9.68% logistic comparison is a separate364,903-row panel.
+- Five condition-group ablations worsen both folds; retain full features.
+  Fold4-selected Platt calibration worsens fold5 LL to0.3434057612588951;
+  do not promote it or tune from these already-open results.
+- Evidence: `MARKET_MODEL_TUNING_20261012.md`, `MARKET_MODEL_NEXT_STEP_20261014.md`;
+  `data/v5/market_ablation_calibration_20261014/`. No independent/current-regime
+  confirmation. The current capture task leaves all these artifacts unchanged.
+
+## Latest news evidence and bottlenecks
+
+- Canonical ledger:`data/v7/verified_event_ledger_20261015_v02/`;report`EVENTX_VERIFIED_EVENT_LEDGER_AND_COVERAGE_20261015.md`.
+- Two assistant reviewers agreed32material-context links/12articles;78pairs64agreements/14disagreements.
+  Not independent human gold;zero exact-predicate links.95fresh rows,27movements,fourcontracts/fivedates;
+  allJulyFOMC,fold5zero. Source/rule/independent-episode problems remain. Full detail in archived handoff.
+- Release/article lags min80.868757/median180.344525minutes;zero<=60m. Hypothetical windows are not gains.
+- Earlier matched5388-row M/E/T/C fold5:LL M0.24272243956157083,E0.24232437076003854(best),
+  T0.24239546292985711,C0.24238825908649334;C-T gain0.000007203843363788398nats,belowE.
+- Signedextractorv0.3.3:11links/twoarticles,zeroOOFcoverage;relaxed144articles/1056rows,fold5six/17.
+  147377deduplicated documents/479179legacy associations processed. No demonstrated incremental news gain.
+  `MARKET_NEWS_CONTINUATION_20261014.md`;new change-probability study contains no news features.
+
+## Frozen evaluations and integrity
+
+- **Consumed OOT** `eventx-oot-7c4fd487edb3928b9253`: never rerun
+  `eventx.tasks.run_frozen_b0_oot_final`; never tune from it.
+- **Consumed V3.1 holdout** `[2026-07-22,2026-08-08)`: never rerun
+  `eventx.tasks.evaluate_v3_1_historical_holdout` or evaluate B1 there.
+  B0-only211,718rows/300markets,AP0.171628/Brier0.107107; documented prevalence
+  disclosure deviation. Historical holdout did not test news.
+- Original v1 test was exposed by a noncanonical B0; do not call it untouched.
+- **V4 frozen**:470 Polymarket contracts; confirmation `[2026-09-06,2026-10-30)`.
+  B3 versus B0 primary, minimum0.001nats paired-bootstrap/Brier/venue guards.
+  It does not independently confirm condition_120k. Frozen files unchanged.
+- Do not read V4 future prices/outcomes, create examples/labels/predictions or report
+  prevalence/metrics before close and consumption receipt. No early evaluation.
+- Last V4 label-blind operational check was **14 October08:01:46UTC**, not a current
+  process claim:425receiptsets,45news/38tradedays through13October,zero backlog,
+  all15 frozen hashes matched. `data/v4/health_checks/20261014T080146Z/report.json`.
+  This did not certify source completeness or sealed payload integrity.
+- 27Oct01:09Z label-blind check PASS: collector+guard alive, news58/58, trades51/51 receipts, 0 pending,
+  15/15 hashes, no protected outputs. `data/v4/health_checks/20261027T010946Z/report.json`.
+  Collector seals Oct29 just after 30Oct00:00Z, then status=sealed_collection_complete_pending_data_gate and exits.
+- After close, exactly once: audit_v4_confirmatory_collection →
+  consume_v4_confirmatory_holdout → prepare_v4_confirmatory_inputs →
+  build_v4_confirmatory_examples → evaluate_v4_confirmatory. Stop at failed gate.
+- Never modify hash-locked files in place; create a new version/manifest.
+  Preserve all failed experiments, original reviews and unrelated dirty changes.
+- Keep secrets in .env; never print credentials. Missing/failed feeds remain unknown,
+  not zero news. No silent non-Lumid substitution into existing studies.
+
+## Other research branches / remaining gates
+
+- V5/V7 historical development is outcome-open; cannot confirm redesigned models.
+  Learned representations need forward-training-only fitting in a new cycle.
+  Existing dependence/coverage simulations failed; no inference candidate adopted.
+- V5 PROTOCOL_V1_1 is a working design, not a completed research freeze.
+  Historical feed reconciliation, metadata/version/status and family boundaries
+  remain unresolved. Lumid has no PIT ingestion before17May; older rows are backfills.
+- V6 strict audit failed39/40 conservative relevance errors; cycle closed, no rerun/
+  resample. Relaxed reviewed positives reuse five articles; no certified predictive
+  admissions. Unsent nine-article/15-contract source request remains in
+  `portfolio/LUMID_EVENTX_V6_SINGLE_FILE_REQUEST_20261002.md`.
+- V2.3 unchanged14-market pilot; verify source/consumption receipts before evaluation.
+  No v2 collection/model selection without explicit cycle authorization; current work
+  authorizes V7 sources and a separate quote-forecast experiment.
+- KOL deferred after association failures. EventXBenchT2 validation/test labels sealed;
+  do not open/bulk-download silver data without a new gate.
+- PORTEND is separate portfolio work; not part of the market-news research task.
+- Paper A: `MARKET_NEWS_PAPER_A_DRAFT_20261010_REV2.md`; human scientific review,
+  author/venue details/release rights remain. Slides:`eventx/release/presentation_20261012/rev6/`,
+  through12October only; later research not automatically incorporated.
+
+## Next actions
+
+Earlier report/gap reviews applied to draft + builder; detailed history in 2026-10.md.
+Latest review: `EVENTX_ONLINE_RATE_REVIEW_20261028.md` — all five corrections APPLIED 28 Oct to builder, draft and next-cycle spec (two-way CIs vs online rate in Table 8; claims 37/37; see 2026-10.md).
+Post hoc `data/v7/dependence_coverage_20261028/result.json`: contract×date gain intervals versus activity
+logistic remain positive, but June1–7 versus legacy crosses zero. Online rate LL0.4230527841302451 vs
+booster0.4207686547802655 on June8–14; contract CI[-0.028285100093127343,0.03294878629158783],
+two-way CI[-0.03960718276617395,0.04131171734541459]. No demonstrated equivalence or mechanism attribution.
+Correct cold-start wording: online rate forecasts immediately using global prior; only personalization waits.
+It has no additional offline fit, but uses a trained prior/fixed pseudocount. Coverage diagnostics do not
+eliminate selection bias. Ten stored frozen LL values and eight new claim entries checked; builder syntax PASS.
+No diagnostic rerun, protected outcome read, current process check or report rebuild in this latest review.
+Next-cycle spec remains unfrozen: `docs/EVENTX_NEXT_CYCLE_SPECIFICATION_DRAFT_20261028.md`;
+~660 contributing contracts is illustrative one-way planning, not established power for the two-way test.
+Full review `EVENTX_FULL_RESEARCH_REVIEW_20261028.md` (28 Oct): online rate beaten on May13–19
+(8.6%, two-way CI[0.002,0.071]); superiority on new contracts not established. Post hoc source:
+`data/v7/online_rate_replication_20261028/result.json`. Early history means a block reset, not new listing;
+0–11-history rows contribute81.59% of small June8–14net gain but only4.44%/6.87% on May13–19/June1–7.
+29Oct assessment:`EVENTX_ADDITIONAL_WORK_ASSESSMENT_20261029.md`; prioritize focused comparison and
+cost-accounted monitoring; equivalence must exclude a justified margin, not confirm exact zero.
+29Oct: proposal 1 APPLIED to builder+draft (Table 8 May row; outcome-history paragraph with 82% / 4–7% shares and block-reset caveat; familiarity not isolated; reframed abstract/§1.3/§9.1; framework bullet first in §1.3; §9.3 pooled-vs-own-history question, recency rate, equivalence margin (Lakens 2017), cost-accounted monitoring). Review+spec revised to match; claims 40/40. Backup (proposal 2) still to do after close-out; no new cycle.
+Branch push at cf1a06f was reported28Oct, not rechecked29Oct.
+After close-out: `python report/fill_pending_20261030.py` → fill Tables4/9/11 and PENDING;
+rebuild/paginate stale DOCX/PDF, full checker, admin placeholders. No new research cycle started.
+
+1. Preserve closed live point-forecast failure and historical classifier gains as separate evidence.
+2. Preserve failed V01; V02 was superseded after outage and V02b was activated27Oct05:47:20Z.
+   Follow the V02b close-out instructions above; never restart its source or run an early evaluation.
+3. Continue original release capture and reserved29Oct–4Dec episodes; exact evidence/terminal gates remain.
+4. Preserve seven-day replication;May13–19opened. Address missing outcomes and historical status
+   before claiming usable live accuracy. New model/eligibility choices require new evaluation blocks.
+5. Keep V4 operational checks separate; follow its frozen close/consumption sequence exactly once.
+6. June1–7 andJune8–14 are consumed; preserve their frozen results. June15–28 capture/evaluation
+   remains deferred until after the live close, using the already-frozen21-contractv2cohort.
+
+## Authoritative references
+
+V4:`eventx/release/v4/{protocol.json,holdout_implementation_manifest.json,model_freeze_manifest.json}`.
+V3.1:`eventx/release/v3_1_historical_primary/`; consumed result
+`data/v3_1_historical/primary/holdout/evaluation_result.json`.
+V5:`eventx/release/v5/{PROTOCOL_V1_1.md,REVISION_IMPLEMENTATION_20260910.md}`.
+Detailed handoff:`docs/progress/CURRENT_STATE_ARCHIVE_20261023_ELIGIBILITY.md`;
+monthly evidence:`docs/progress/2026-10.md`;legacy PROGRESS.md ends21August.

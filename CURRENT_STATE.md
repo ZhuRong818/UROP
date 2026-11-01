@@ -2,9 +2,9 @@
 
 > Canonical startup handoff. Frozen artifacts govern conflicts. Detailed preceding state:
 > `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
-> Append history to `docs/progress/2026-10.md`,not legacy PROGRESS.md.
+> Append current history to `docs/progress/2026-11.md`, not legacy PROGRESS.md.
 
-Last updated: **2026-10-31 16:40Z** — history-stack test evaluated once (PASS); V4 run (negative). No evaluation process running.
+Last updated: **2026-11-02 Asia/Singapore** — benchmark + v8 review; active process snapshot and limits below. See 2026-11.md.
 
 ## CLOSE-OUT 30 Oct 2026 (complete; all once-only; do not rerun any step)
 
@@ -40,11 +40,34 @@ Last updated: **2026-10-31 16:40Z** — history-stack test evaluated once (PASS)
   54 selected/52 contribute; 432/432 hours; evaluated once: PASS seg 0.3006 vs stack 0.3083, two-way [0.002, 0.014];
   missing bounds [−0.001, 0.017]. Report §6.9/Table 14 + state Table 13; 83 claims; checker PASS `data/reproducibility/20261101T124302Z`;
   60 pages; deck v14. Window CONSUMED. Never rerun any phase. Window CONSUMED. Never rerun any phase.
+- 1–2 Nov: SOTA BASELINE BENCHMARK (research-track requirement; post hoc on opened blocks, scored once each).
+  Frozen 72c0237 + v2 c178172 (TabICL no kv cache) + v4 a416a2b (TabICL 1k chunks) + v3 bb9d3d9 (Sundial, Time-MoE on nonoverlap grid; Tier C 100k).
+  Tiers: A TabM/RealMLP/TabICL/CatBoost vs row_hgb7 (7 blocks); B Moirai-MoE (+Sundial, Time-MoE) vs online rate;
+  C TabM/RealMLP end-to-end vs seg_hgb on 22 Jul–8 Aug. Output `data/v7/sota_baselines_20261101/`. Running; then
+  `python -m eventx.tasks.benchmark_v7_sota_baselines_20261101_v3 evaluate` ONCE. Report §2.6 added; §6.10 pending.
+- 2 Nov: v8 DEVELOPMENT (opened blocks, not confirmatory): `develop_v8_hawkes_posterior_20261102` (5cc784f, +pp_cp_seg
+  9d32708): e2e / +change history / +market activity / contract posterior (pp_cp, pp_cp_seg) vs seg_ref, LOBO.
+  Output `data/v8/hawkes_posterior_20261102/`. Report §6.10 + §6.11 to be written when both runs finish.
+- Old collectors STOPPED 1 Nov 17:29Z (user); launchd jobs unloaded, plists kept.
 - Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
   11-pt table text?; abstract length. Submission due Tue 3 Nov.
 - Report: §6.6 + Table 10 added; abstract (300 words), §1.3, Table 1, §8, §9, App. B/C updated; claims 58; checker PASS
   (`data/reproducibility/20261031T164224Z`, --recompute PASS 20261031T164109Z; 1,178 files / 87 manifests); docx 52 pp.
   Deck v12 adds `stack` slide; V4 text corrected.
+
+## 2 November review — active work and interpretation
+
+- `EVENTX_RESEARCH_CHANGE_REVIEW_20261102.md`: benchmark strengthens comparisons; v8 is development only.
+- Read-only process snapshot: TierC24822/v873522 running; TabICL37362/Sundial18412 paused;
+  sequence driver63989 waiting. Moirai7/7 forecast files, TabM/RealMLP7/7 each; benchmark not scored.
+  v8 log had two completed old-cohort folds; final result absent at inspection. No job changed.
+- LOBO trains on later dates except last fold. TierC100k vs seg full data is resource-constrained comparison;
+  neural default validation is random, not purged forward. Time-series probabilities use a disclosed adaptation.
+- v8 docstring2,000bootstrap draws conflicts with imported function5,000; report actual implementation.
+  Builder§2.6 wrongly still excludes Sundial/Time-MoE. Correct write-up, not running model definitions.
+- Completed history/segment tests remain primary evidence; no v8 promotion from opened-block results.
+- Historical runtime sections below preserve earlier failures/status, not current execution instructions.
+  Snapshot before this correction: `docs/progress/CURRENT_STATE_BEFORE_RESEARCH_REVIEW_20261102.md`.
 
 ## Active objective and locked decisions
 
@@ -105,7 +128,7 @@ No protected early evaluation, external messages or trading; segment discovery i
   packets while host ~287ms fast; OS stepped wall clock -110ms at11:51:08 (warmup reset, stop117ms early);
   afterwards host ~+0.11s slow > 100ms budget. Fix needs disciplined host or new monotonic+validated-offset version.
 
-## ACTIVE (27Oct05:47Z): V02b live continuation — do not disturb. V02 died in 04:42Z sleep/05:16Z reboot; unevaluable
+## HISTORICAL (27Oct05:47Z): V02b continuation — now closed and consumed; never restart. V02 died in 04:42Z sleep/05:16Z reboot; unevaluable
 ## (no capture manifest). V02b = same frozen files/model/cohort, new dir `data/v7/forecast_runtime_20261026_v02b`, release
 ## `eventx/release/v7/forecast_runtime_20261026_v02b/`; grids 27Oct06:35–29Oct23:25Z (22,650). Status:
 ## `python -m eventx.tasks.status_v7_forecast_runtime_20261026_v02b`. Never restart its source.
@@ -115,8 +138,8 @@ No protected early evaluation, external messages or trading; segment discovery i
 ## Source/emitter status fresh,WSconnected,clockvalid; external process check verified source14152/emitter14287,
 ## V4collector12937/waiter52875. V4checkpoint59news/52tradedays,lastsuccess28Oct00:01:03Z,errornull.
 ## Lid-close gap 07:40-08:26Z 27Oct: processes survived; 270 decisions missed (9 grids), scored as missed per frozen rules.
-## Close-out is AUTO: detached waiter (PID 52875) runs `zsh scripts/close_out_20261030.sh` once at 30Oct00:01Z
-## (log `data/close_out_20261030_waiter.log`). Run by hand only if `pgrep -f close_out_20261030` is empty. Host: AC + disablesleep.
+## HISTORICAL close-out (now completed; do not execute): detached waiter (PID 52875) runs `zsh scripts/close_out_20261030.sh` once at 30Oct00:01Z
+## (log `data/close_out_20261030_waiter.log`). Do not run again; the once-only close-out is complete. Host: AC + disablesleep.
 ## 30Oct02:37Z: v02b_evaluate rc=0; V4 STOPPED at audit gate (news 2026-08-30 run_status completed/partial != ok; holdout NOT consumed; needs user decision); late-June capture rc=0, evaluate running.
 ## Then AUTO post stage: waiter PID 82838 (relaunched 30Oct00:25Z; first waiter timed out at 12 h) runs `scripts/post_close_out_20261030.sh` after "close-out finished":
 ## fill_pending.json, checker, checker --recompute, backup_manifest.sha256 (log `post_summary.log`). No report edits; no evaluator reruns.
@@ -272,38 +295,16 @@ log-odds movement over30m;not direction/exact magnitude/resolution. Every5m grid
 
 ## Next actions
 
-Earlier report/gap reviews applied to draft + builder; detailed history in 2026-10.md.
-Latest review: `EVENTX_ONLINE_RATE_REVIEW_20261028.md` — all five corrections APPLIED 28 Oct to builder, draft and next-cycle spec (two-way CIs vs online rate in Table 8; claims 37/37; see 2026-10.md).
-Post hoc `data/v7/dependence_coverage_20261028/result.json`: contract×date gain intervals versus activity
-logistic remain positive, but June1–7 versus legacy crosses zero. Online rate LL0.4230527841302451 vs
-booster0.4207686547802655 on June8–14; contract CI[-0.028285100093127343,0.03294878629158783],
-two-way CI[-0.03960718276617395,0.04131171734541459]. No demonstrated equivalence or mechanism attribution.
-Correct cold-start wording: online rate forecasts immediately using global prior; only personalization waits.
-It has no additional offline fit, but uses a trained prior/fixed pseudocount. Coverage diagnostics do not
-eliminate selection bias. Ten stored frozen LL values and eight new claim entries checked; builder syntax PASS.
-No diagnostic rerun, protected outcome read, current process check or report rebuild in this latest review.
-Next-cycle spec remains unfrozen: `docs/EVENTX_NEXT_CYCLE_SPECIFICATION_DRAFT_20261028.md`;
-~660 contributing contracts is illustrative one-way planning, not established power for the two-way test.
-Full review `EVENTX_FULL_RESEARCH_REVIEW_20261028.md` (28 Oct): online rate beaten on May13–19
-(8.6%, two-way CI[0.002,0.071]); superiority on new contracts not established. Post hoc source:
-`data/v7/online_rate_replication_20261028/result.json`. Early history means a block reset, not new listing;
-0–11-history rows contribute81.59% of small June8–14net gain but only4.44%/6.87% on May13–19/June1–7.
-29Oct assessment:`EVENTX_ADDITIONAL_WORK_ASSESSMENT_20261029.md`; prioritize focused comparison and
-cost-accounted monitoring; equivalence must exclude a justified margin, not confirm exact zero.
-29Oct: proposal 1 APPLIED to builder+draft (Table 8 May row; outcome-history paragraph with 82% / 4–7% shares and block-reset caveat; familiarity not isolated; reframed abstract/§1.3/§9.1; framework bullet first in §1.3; §9.3 pooled-vs-own-history question, recency rate, equivalence margin (Lakens 2017), cost-accounted monitoring). Review+spec revised to match; claims 40/40. Backup (proposal 2) still to do after close-out; no new cycle.
-Branch push at cf1a06f was reported28Oct, not rechecked29Oct.
-After close-out: `python report/fill_pending_20261030.py` → fill Tables4/9/11 and PENDING;
-rebuild/paginate stale DOCX/PDF, full checker, admin placeholders. No new research cycle started.
-
-1. Preserve closed live point-forecast failure and historical classifier gains as separate evidence.
-2. Preserve failed V01; V02 was superseded after outage and V02b was activated27Oct05:47:20Z.
-   Follow the V02b close-out instructions above; never restart its source or run an early evaluation.
-3. Continue original release capture and reserved29Oct–4Dec episodes; exact evidence/terminal gates remain.
-4. Preserve seven-day replication;May13–19opened. Address missing outcomes and historical status
-   before claiming usable live accuracy. New model/eligibility choices require new evaluation blocks.
-5. Keep V4 operational checks separate; follow its frozen close/consumption sequence exactly once.
-6. June1–7 andJune8–14 are consumed; preserve their frozen results. June15–28 capture/evaluation
-   remains deferred until after the live close, using the already-frozen21-contractv2cohort.
+1. Finish existing benchmark/v8 runs under their committed definitions; no opportunistic new candidates.
+2. Preflight expected prediction files and row keys before the once-only benchmark evaluation; process exit
+   alone does not certify completion. Do not rerun any consumed frozen evaluation.
+3. Write §6.10 as descriptive benchmark and §6.11 as development; resolve review issues in
+   `EVENTX_RESEARCH_CHANGE_REVIEW_20261102.md`. Keep completed confirmation as the headline evidence.
+4. Update draft, claims/checker, tables, appendices, rendered report and deck after complete results;
+   submission Tue3Nov. Preserve all failures, amendments and the disclosed calendar-overlap deviation.
+5. A selected v8 candidate needs its own new frozen confirmation; opened blocks cannot provide that.
+6. Off-host backup and administrative placeholders remain outstanding per handoff; no transfer or
+   deployment initiated by this review. Legacy PROGRESS.md unchanged; use November monthly log.
 
 ## Authoritative references
 
@@ -312,4 +313,4 @@ V3.1:`eventx/release/v3_1_historical_primary/`; consumed result
 `data/v3_1_historical/primary/holdout/evaluation_result.json`.
 V5:`eventx/release/v5/{PROTOCOL_V1_1.md,REVISION_IMPLEMENTATION_20260910.md}`.
 Detailed handoff:`docs/progress/CURRENT_STATE_ARCHIVE_20261023_ELIGIBILITY.md`;
-monthly evidence:`docs/progress/2026-10.md`;legacy PROGRESS.md ends21August.
+monthly evidence:`docs/progress/2026-11.md` (October archive:`docs/progress/2026-10.md`);legacy PROGRESS.md ends21August.
