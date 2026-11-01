@@ -30,6 +30,9 @@ Last updated: **2026-10-31 16:40Z** — history-stack test evaluated once (PASS)
   Booster edge over online rate sits after a recent 30-min move (+0.088 [0.042, 0.133], 17% of rows) and at wide
   spreads; quiet states rate ≈/slightly better; no category/hour pattern. Report §6.7 + Table 11; claims 61; docx 54 pp.
   `data/v7/segment_replication_20261101/`. A routing rule would need its own frozen test on a new window.
+- 1 Nov: SEGMENT CONFIRMATION TEST frozen (release segment_confirm_20261101 + _v2 amendment), 80 contracts, 13-21 Jul;
+  capture RUNNING (`data/v7/segment_confirm_20261101/capture.log`); then evaluate ONCE with
+  `python -m eventx.tasks.run_v7_segment_confirm_test_20261101_v2 evaluate`. Never rerun any phase.
 - Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
   11-pt table text?; abstract length. Submission due Tue 3 Nov.
 - Report: §6.6 + Table 10 added; abstract (300 words), §1.3, Table 1, §8, §9, App. B/C updated; claims 58; checker PASS
