@@ -301,7 +301,7 @@ log-odds movement over30m;not direction/exact magnitude/resolution. Every5m grid
 2. Deck: add benchmark + v8 slides.
 3. Never rerun the benchmark evaluate, any consumed frozen evaluation, or tune from these results.
 4. A v8 candidate (e2e_hx) needs its own new frozen prospective confirmation; opened blocks cannot provide that.
-5. User: push approval; `sudo pmset -a disablesleep 0`; off-host backup of data/; project number/acknowledgements.
+5. Pushed through 5dda7f4 (user-approved 2 Nov). User: `sudo pmset -a disablesleep 0`; off-host backup of data/; project number/acknowledgements.
    Legacy PROGRESS.md unchanged; use November monthly log.
 
 ## Authoritative references

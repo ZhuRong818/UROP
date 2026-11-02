@@ -93,7 +93,8 @@ const footer = (prefix) => ({ default: new Footer({ children: [new Paragraph({ a
 // ======================================================================================
 // CONTENT
 // ======================================================================================
-const TITLE = 'Leakage-Safe Forecasting of Prediction-Market Repricing: News Signals and a Replicated Quote-Change Forecaster';
+const TITLE = 'From Social Signals to Market Reactions: Novel Information versus Social Amplification in Polymarket';
+const SUBTITLE = 'Leakage-Safe Forecasting of Prediction-Market Repricing: News Signals and a Replicated Quote-Change Forecaster';
 const STUDENT = 'Zhu Rong';
 const ADVISOR = 'Lu Yao';
 const YEAR = '2026/2027';
@@ -102,7 +103,8 @@ const cover = [
   new Paragraph({ spacing: { before: 2400 }, children: [] }),
   Center('UNDERGRADUATE RESEARCH OPPORTUNITY PROGRAMME', 28, true, 80),
   Center('(UROP) PROJECT REPORT', 28, true, 1200),
-  Center(TITLE, 36, true, 1200),
+  Center(TITLE, 36, true, 240),
+  Center(SUBTITLE, 26, false, 1000),
   Center('By', 24, false, 120),
   Center(STUDENT, 28, true, 1600),
   Center('[Department of Computer Science]', 24, false, 80),
@@ -115,14 +117,15 @@ const titlePage = [
   new Paragraph({ pageBreakBefore: true, spacing: { before: 1200 }, children: [] }),
   Center('UNDERGRADUATE RESEARCH OPPORTUNITY PROGRAMME', 26, true, 80),
   Center('(UROP) PROJECT REPORT', 26, true, 800),
-  Center(TITLE, 30, true, 800),
+  Center(TITLE, 30, true, 200),
+  Center(SUBTITLE, 24, false, 600),
   Center('By', 24, false, 120),
   Center(STUDENT, 26, true, 800),
   Center('[Department of Computer Science]', 24, false, 80),
   Center('School of Computing', 24, false, 80),
   Center('National University of Singapore', 24, false, 80),
   Center(YEAR, 24, false, 900),
-  new Paragraph({ children: runs('Project No: [[project number]]'), spacing: { after: 80 } }),
+  new Paragraph({ children: runs('Project No: U398070'), spacing: { after: 80 } }),
   new Paragraph({ children: runs(`Advisor: ${ADVISOR}`), spacing: { after: 240 } }),
   new Paragraph({ children: runs('**Deliverables:**'), spacing: { after: 80 } }),
   new Paragraph({ children: runs('Report: 1 Volume'), spacing: { after: 40 } }),
