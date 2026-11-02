@@ -4,7 +4,7 @@
 > `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
 > Append current history to `docs/progress/2026-11.md`, not legacy PROGRESS.md.
 
-Last updated: **2026-11-02 ~11:00 Asia/Singapore** — benchmark scored once; §6.10/§6.11 written; no jobs running. See 2026-11.md.
+Last updated: **2026-11-02 12:20 Asia/Singapore** — final 67-page PDF reviewed; corrections pending. See review below and 2026-11.md.
 
 ## CLOSE-OUT 30 Oct 2026 (complete; all once-only; do not rerun any step)
 
@@ -16,7 +16,7 @@ Last updated: **2026-11-02 ~11:00 Asia/Singapore** — benchmark scored once; §
   activity_logit 0.4249 (9.2%), CI [0.022, 0.058], 17/21; V03 0.3883 vs 0.4411 (12.0%), CI [0.023, 0.085].
   Caveat: booster AUC < logistic (0.744 vs 0.783). Holdout consumed.
 - V4: v1 audit stopped (run_status != ok). User-authorized disclosed v2 audit (any status; commit 7e3a7b7) →
-  chain ran once 31 Oct 14:41Z; holdout CONSUMED. B3 vs B0 NOT supported: LL improvement −0.00106 [−0.00522, 0.00121];
+  chain ran once 31 Oct 14:41Z; holdout CONSUMED. B3 vs B0 NOT supported: sample LL improvement −0.000782 [−0.00522, 0.00121] (bootstrap mean −0.001065);
   all models AUC ≈0.40 (<0.5), overpredict (0.174 vs 0.0855). Report V4 sections rewritten.
 - NEW CYCLE (user-authorized 31 Oct): history stack `stack_lin` (logit row_hgb7, logit online rate, log1p history),
   dev `data/v7/history_stack_20261031/development/result.json`, frozen `eventx/release/v7/history_stack_20261031/` (fd16f1f).
@@ -69,6 +69,18 @@ Last updated: **2026-11-02 ~11:00 Asia/Singapore** — benchmark scored once; §
 - Completed history/segment tests remain primary evidence; no v8 promotion from opened-block results.
 - Historical runtime sections below preserve earlier failures/status, not current execution instructions.
   Snapshot before this correction: `docs/progress/CURRENT_STATE_BEFORE_RESEARCH_REVIEW_20261102.md`.
+
+## 2 November final PDF review — corrections pending
+
+- `EVENTX_FINAL_PDF_REVIEW_20261102.md`: reviewed 67-page `report/EventX_UROP_Report_preview.pdf`
+  (SHA256 d86090d878a3860b719525f0616c10e3837f960447cb6e11d551148149e55bd0). Strong UROP evidence;
+  correct claims, method details and unfinished presentation before submission. Report/PDF not edited.
+- All 105 registered numerical/source claims match artifacts. This is not a complete PDF semantic audit.
+- Seven benchmark blocks: **268 distinct contracts**, 285 contract–block appearances, 506,723 known-outcome rows;
+  Table 1 currently says 285 contracts. Sundial improves the rate on 7/7; stack is better on 3 shared blocks.
+- Fix stale temporal/dependence scope, protected-window exception, Appendix A logistic settings/feature marks,
+  acknowledgement placeholder and abstract spillover. Qualify source-of-gain and coverage interpretations.
+- No evaluation, bootstrap, fitting or capture rerun. Further model confirmation needs a new frozen prospective test.
 
 ## Active objective and locked decisions
 
@@ -296,8 +308,8 @@ log-odds movement over30m;not direction/exact magnitude/resolution. Every5m grid
 
 ## Next actions
 
-1. Report: §6.10 (benchmark, descriptive) + §6.11 (v8, development) written; abstract, §1.3, Table 1, §8, §9.3
-   (e2e_hx = next frozen-test candidate), App. B/C updated; 105 claims; 67 pages. Read full PDF before submission Tue 3 Nov.
+1. Report in CP3209 format (42 body pages, 9,789 words, abstract 184 words; title U398070). §6.10/§6.11 written; abstract, §1.3, Table 1, §8, §9.3
+   (e2e_hx = next frozen-test candidate), App. B/C updated; 105 claims; 67 pages. Full PDF review complete; apply `EVENTX_FINAL_PDF_REVIEW_20261102.md` corrections before submission Tue 3 Nov.
 2. Deck: add benchmark + v8 slides.
 3. Never rerun the benchmark evaluate, any consumed frozen evaluation, or tune from these results.
 4. A v8 candidate (e2e_hx) needs its own new frozen prospective confirmation; opened blocks cannot provide that.
