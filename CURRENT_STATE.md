@@ -4,7 +4,7 @@
 > `docs/progress/CURRENT_STATE_ARCHIVE_20261024_BEFORE_MEMORY_FORECAST.md`.
 > Append current history to `docs/progress/2026-11.md`, not legacy PROGRESS.md.
 
-Last updated: **2026-11-02 Asia/Singapore** — benchmark + v8 review; active process snapshot and limits below. See 2026-11.md.
+Last updated: **2026-11-02 ~11:00 Asia/Singapore** — benchmark scored once; §6.10/§6.11 written; no jobs running. See 2026-11.md.
 
 ## CLOSE-OUT 30 Oct 2026 (complete; all once-only; do not rerun any step)
 
@@ -43,11 +43,15 @@ Last updated: **2026-11-02 Asia/Singapore** — benchmark + v8 review; active pr
 - 1–2 Nov: SOTA BASELINE BENCHMARK (research-track requirement; post hoc on opened blocks, scored once each).
   Frozen 72c0237 + v2 c178172 (TabICL no kv cache) + v4 a416a2b (TabICL 1k chunks) + v3 bb9d3d9 (Sundial, Time-MoE on nonoverlap grid; Tier C 100k).
   Tiers: A TabM/RealMLP/TabICL/CatBoost vs row_hgb7 (7 blocks); B Moirai-MoE (+Sundial, Time-MoE) vs online rate;
-  C TabM/RealMLP end-to-end vs seg_hgb on 22 Jul–8 Aug. Output `data/v7/sota_baselines_20261101/`. Running; then
-  `python -m eventx.tasks.benchmark_v7_sota_baselines_20261101_v3 evaluate` ONCE. Report §2.6 added; §6.10 pending.
+  C TabM/RealMLP end-to-end vs seg_hgb on 22 Jul–8 Aug. Output `data/v7/sota_baselines_20261101/`.
+  Sequence DONE 02:47Z; preflight 51 files, 0 problems; evaluated ONCE (`result.json`, `result_v3.json`) — never rerun.
+  A: 0/7 blocks for every baseline vs row_hgb7 (mean LL hgb7 0.3627; CatBoost 0.4174, TabICL 0.4331, RealMLP 0.4563,
+  TabM 0.8229; all CIs < 0, AUC lower everywhere). B (half-hour grid, 84,044 rows): Sundial 0.3526 vs rate 0.3691, 7/7
+  (CI>0 on 4) but stack better where available; Time-MoE 1/7; Moirai-MoE 0/7 (all rows 0.5599 vs 0.3703).
+  C: RealMLP e2e 0.3241, TabM e2e 0.3411 vs seg_hgb 0.3006 (both CIs < 0). Report §6.10/Table 15.
 - 2 Nov: v8 DEVELOPMENT (opened blocks, not confirmatory): `develop_v8_hawkes_posterior_20261102` (5cc784f, +pp_cp_seg
   9d32708): e2e / +change history / +market activity / contract posterior (pp_cp, pp_cp_seg) vs seg_ref, LOBO.
-  Output `data/v8/hawkes_posterior_20261102/`. Report §6.10 + §6.11 to be written when both runs finish.
+  Output `data/v8/hawkes_posterior_20261102/`. DONE: e2e_hx 0.3150 vs seg_ref 0.3282 (dev only). Report §6.11/Table 16.
 - Old collectors STOPPED 1 Nov 17:29Z (user); launchd jobs unloaded, plists kept.
 - Remaining (user): push; `sudo pmset -a disablesleep 0`; off-host backup; project number/acknowledgements;
   11-pt table text?; abstract length. Submission due Tue 3 Nov.
@@ -58,13 +62,10 @@ Last updated: **2026-11-02 Asia/Singapore** — benchmark + v8 review; active pr
 ## 2 November review — active work and interpretation
 
 - `EVENTX_RESEARCH_CHANGE_REVIEW_20261102.md`: benchmark strengthens comparisons; v8 is development only.
-- Read-only process snapshot: TierC24822/v873522 running; TabICL37362/Sundial18412 paused;
-  sequence driver63989 waiting. Moirai7/7 forecast files, TabM/RealMLP7/7 each; benchmark not scored.
-  v8 log had two completed old-cohort folds; final result absent at inspection. No job changed.
+- No benchmark/v8 process running (sequence finished 2 Nov 02:47Z; v8 finished earlier).
 - LOBO trains on later dates except last fold. TierC100k vs seg full data is resource-constrained comparison;
   neural default validation is random, not purged forward. Time-series probabilities use a disclosed adaptation.
-- v8 docstring2,000bootstrap draws conflicts with imported function5,000; report actual implementation.
-  Builder§2.6 wrongly still excludes Sundial/Time-MoE. Correct write-up, not running model definitions.
+- Review items resolved (c0f859e): v8 docstring 5,000 draws; §2.6 includes Sundial/Time-MoE.
 - Completed history/segment tests remain primary evidence; no v8 promotion from opened-block results.
 - Historical runtime sections below preserve earlier failures/status, not current execution instructions.
   Snapshot before this correction: `docs/progress/CURRENT_STATE_BEFORE_RESEARCH_REVIEW_20261102.md`.
@@ -295,16 +296,13 @@ log-odds movement over30m;not direction/exact magnitude/resolution. Every5m grid
 
 ## Next actions
 
-1. Finish existing benchmark/v8 runs under their committed definitions; no opportunistic new candidates.
-2. Preflight expected prediction files and row keys before the once-only benchmark evaluation; process exit
-   alone does not certify completion. Do not rerun any consumed frozen evaluation.
-3. Write §6.10 as descriptive benchmark and §6.11 as development; resolve review issues in
-   `EVENTX_RESEARCH_CHANGE_REVIEW_20261102.md`. Keep completed confirmation as the headline evidence.
-4. Update draft, claims/checker, tables, appendices, rendered report and deck after complete results;
-   submission Tue3Nov. Preserve all failures, amendments and the disclosed calendar-overlap deviation.
-5. A selected v8 candidate needs its own new frozen confirmation; opened blocks cannot provide that.
-6. Off-host backup and administrative placeholders remain outstanding per handoff; no transfer or
-   deployment initiated by this review. Legacy PROGRESS.md unchanged; use November monthly log.
+1. Report: §6.10 (benchmark, descriptive) + §6.11 (v8, development) written; abstract, §1.3, Table 1, §8, §9.3
+   (e2e_hx = next frozen-test candidate), App. B/C updated; 105 claims; 67 pages. Read full PDF before submission Tue 3 Nov.
+2. Deck: add benchmark + v8 slides.
+3. Never rerun the benchmark evaluate, any consumed frozen evaluation, or tune from these results.
+4. A v8 candidate (e2e_hx) needs its own new frozen prospective confirmation; opened blocks cannot provide that.
+5. User: push approval; `sudo pmset -a disablesleep 0`; off-host backup of data/; project number/acknowledgements.
+   Legacy PROGRESS.md unchanged; use November monthly log.
 
 ## Authoritative references
 

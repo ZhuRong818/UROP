@@ -1687,5 +1687,454 @@
   "value": 0.0059,
   "tolerance": 5e-05,
   "printed": "0.0059 nats below"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: e2e_hx mean held-out log loss",
+  "model": "e2e_hx",
+  "comparator": "seg_ref",
+  "keys": [
+   "score_new_blocks",
+   "e2e_hx"
+  ],
+  "value": 0.315,
+  "tolerance": 5e-05,
+  "printed": "'0.3150'"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: seg_ref mean held-out log loss",
+  "model": "seg_ref",
+  "comparator": "seg_ref",
+  "keys": [
+   "score_new_blocks",
+   "seg_ref"
+  ],
+  "value": 0.3282,
+  "tolerance": 5e-05,
+  "printed": "'0.3282'"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: e2e mean held-out log loss",
+  "model": "e2e",
+  "comparator": "seg_ref",
+  "keys": [
+   "score_new_blocks",
+   "e2e"
+  ],
+  "value": 0.327,
+  "tolerance": 5e-05,
+  "printed": "'0.3270'"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: pp_cp mean held-out log loss",
+  "model": "pp_cp",
+  "comparator": "seg_ref",
+  "keys": [
+   "score_new_blocks",
+   "pp_cp"
+  ],
+  "value": 0.3229,
+  "tolerance": 5e-05,
+  "printed": "'0.3229'"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: pp_cp_seg mean held-out log loss",
+  "model": "pp_cp_seg",
+  "comparator": "seg_ref",
+  "keys": [
+   "score_new_blocks",
+   "pp_cp_seg"
+  ],
+  "value": 0.3234,
+  "tolerance": 5e-05,
+  "printed": "'0.3234'"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: e2e_hx_mkt mean held-out log loss",
+  "model": "e2e_hx_mkt",
+  "comparator": "seg_ref",
+  "keys": [
+   "score_new_blocks",
+   "e2e_hx_mkt"
+  ],
+  "value": 0.3159,
+  "tolerance": 5e-05,
+  "printed": "'0.3159'"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: forward fold e2e_hx gain over seg_ref",
+  "model": "gain",
+  "comparator": "seg_ref",
+  "keys": [
+   "held_out",
+   "jul22_aug8",
+   "vs_seg_ref",
+   "e2e_hx",
+   "gain"
+  ],
+  "value": 0.0124,
+  "tolerance": 5e-05,
+  "printed": "0.0124 nats [0.0066, 0.0186]"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: forward fold e2e_hx CI lower",
+  "model": "e2e_hx",
+  "comparator": "seg_ref",
+  "keys": [
+   "held_out",
+   "jul22_aug8",
+   "vs_seg_ref",
+   "e2e_hx",
+   "ci95",
+   0
+  ],
+  "value": 0.0066,
+  "tolerance": 5e-05,
+  "printed": "0.0124 nats [0.0066, 0.0186]"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: largest fold gain e2e_hx",
+  "model": "gain",
+  "comparator": "seg_ref",
+  "keys": [
+   "held_out",
+   "jun_8_14",
+   "vs_seg_ref",
+   "e2e_hx",
+   "gain"
+  ],
+  "value": 0.0173,
+  "tolerance": 5e-05,
+  "printed": "gains 0.0075 to 0.0173 nats"
+ },
+ {
+  "study": "v8 development (opened blocks)",
+  "cohort": "seven opened blocks, LOBO",
+  "artifact": "data/v8/hawkes_posterior_20261102/result.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "v8: smallest fold gain e2e_hx",
+  "model": "gain",
+  "comparator": "seg_ref",
+  "keys": [
+   "held_out",
+   "jun_1_7",
+   "vs_seg_ref",
+   "e2e_hx",
+   "gain"
+  ],
+  "value": 0.0075,
+  "tolerance": 5e-05,
+  "printed": "gains 0.0075 to 0.0173 nats"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA C: RealMLP e2e log loss",
+  "model": "realmlp_e2e",
+  "comparator": "seg_hgb",
+  "keys": [
+   "tiers",
+   "C",
+   "jul22_aug8",
+   "metrics",
+   "realmlp_e2e",
+   "log_loss"
+  ],
+  "value": 0.3241,
+  "tolerance": 5e-05,
+  "printed": "0.3241 / 0.3006"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA C: TabM e2e log loss",
+  "model": "tabm_e2e",
+  "comparator": "seg_hgb",
+  "keys": [
+   "tiers",
+   "C",
+   "jul22_aug8",
+   "metrics",
+   "tabm_e2e",
+   "log_loss"
+  ],
+  "value": 0.3411,
+  "tolerance": 5e-05,
+  "printed": "0.3411 / 0.3006"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA C: RealMLP e2e gain vs seg_hgb",
+  "model": "realmlp_e2e",
+  "comparator": "seg_hgb",
+  "keys": [
+   "tiers",
+   "C",
+   "jul22_aug8",
+   "vs_seg_stack",
+   "realmlp_e2e",
+   "gain_nats"
+  ],
+  "value": -0.0234,
+  "tolerance": 5e-05,
+  "printed": "RealMLP by 0.0234 nats"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA C: RealMLP e2e CI upper",
+  "model": "realmlp_e2e",
+  "comparator": "seg_hgb",
+  "keys": [
+   "tiers",
+   "C",
+   "jul22_aug8",
+   "vs_seg_stack",
+   "realmlp_e2e",
+   "by_contract",
+   "ci95",
+   1
+  ],
+  "value": -0.011,
+  "tolerance": 0.0005,
+  "printed": "[−0.040, −0.011]"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA C: TabM e2e gain vs seg_hgb",
+  "model": "tabm_e2e",
+  "comparator": "seg_hgb",
+  "keys": [
+   "tiers",
+   "C",
+   "jul22_aug8",
+   "vs_seg_stack",
+   "tabm_e2e",
+   "gain_nats"
+  ],
+  "value": -0.0405,
+  "tolerance": 5e-05,
+  "printed": "TabM by 0.0405"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA C: TabM e2e CI upper",
+  "model": "tabm_e2e",
+  "comparator": "seg_hgb",
+  "keys": [
+   "tiers",
+   "C",
+   "jul22_aug8",
+   "vs_seg_stack",
+   "tabm_e2e",
+   "by_contract",
+   "ci95",
+   1
+  ],
+  "value": -0.029,
+  "tolerance": 0.0005,
+  "printed": "[−0.054, −0.029]"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA B: Sundial log loss jul22_aug8",
+  "model": "sundial",
+  "comparator": "stack",
+  "keys": [
+   "tiers",
+   "B_nonoverlap",
+   "jul22_aug8",
+   "metrics",
+   "sundial",
+   "log_loss"
+  ],
+  "value": 0.327,
+  "tolerance": 5e-05,
+  "printed": "0.3068 against 0.3270"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA B: stack log loss jul22_aug8 half-hour grid",
+  "model": "stack",
+  "comparator": "sundial",
+  "keys": [
+   "tiers",
+   "B_nonoverlap",
+   "jul22_aug8",
+   "metrics",
+   "stack",
+   "log_loss"
+  ],
+  "value": 0.3068,
+  "tolerance": 5e-05,
+  "printed": "0.3068 against 0.3270"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA B: Sundial blocks beating rate",
+  "model": "sundial",
+  "comparator": "online rate",
+  "keys": [
+   "summary",
+   "B_nonoverlap_blocks_beating_online_rate",
+   "sundial"
+  ],
+  "value": 7,
+  "tolerance": 0,
+  "printed": "'7 of 7'"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA B: Time-MoE blocks beating rate",
+  "model": "time_moe",
+  "comparator": "online rate",
+  "keys": [
+   "summary",
+   "B_nonoverlap_blocks_beating_online_rate",
+   "time_moe"
+  ],
+  "value": 1,
+  "tolerance": 0,
+  "printed": "'1 of 7'"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA A: CatBoost blocks beating row_hgb7",
+  "model": "catboost",
+  "comparator": "row_hgb7",
+  "keys": [
+   "summary",
+   "A_blocks_baseline_beats_row_hgb7",
+   "catboost"
+  ],
+  "value": 0,
+  "tolerance": 0,
+  "printed": "'0 of 7'"
+ },
+ {
+  "study": "SOTA baseline benchmark (descriptive, scored once)",
+  "cohort": "seven opened blocks",
+  "artifact": "data/v7/sota_baselines_20261101/result_v3.json",
+  "must_appear_in": [
+   "builder"
+  ],
+  "id": "SOTA A: TabICL blocks beating row_hgb7",
+  "model": "tabicl",
+  "comparator": "row_hgb7",
+  "keys": [
+   "summary",
+   "A_blocks_baseline_beats_row_hgb7",
+   "tabicl"
+  ],
+  "value": 0,
+  "tolerance": 0,
+  "printed": "'0 of 7'"
  }
 ]
